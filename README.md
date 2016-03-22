@@ -2,6 +2,10 @@
 
 This is a python implementation of the IAM Policy Expander Minimizer.
 
+# Install:
+
+`pip install iampoliciesgonewild`
+
 # Usage:
 
 ```python
