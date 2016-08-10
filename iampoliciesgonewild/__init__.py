@@ -200,7 +200,7 @@ def expand_policy(policy=None, expand_deny=False):
         if statement['Effect'].lower() == 'deny' and not expand_deny:
             continue
         actions = get_actions_from_statement(statement)
-        if statement.has_key('NotAction'):
+        if 'NotAction' in statement:
             del statement['NotAction']
         statement['Action'] = sorted(list(actions))
 
