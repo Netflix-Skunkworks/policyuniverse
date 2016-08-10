@@ -69,7 +69,13 @@ def _expand_wildcard_action(action):
     :param action: 'autoscaling:*'
     :return: A list of all autoscaling permissions matching the wildcard
     """
-    if isinstance(action, basestring):
+    if isinstance(action, list):
+        expanded_actions = []
+        for item in action:
+            expanded_actions.extend(_expand_wildcard_action(item))
+        return expanded_actions
+
+    else:
         if '*' in action:
             pre_wildcard = action.split('*')[0]
             expanded = [expanded_action.lower() for expanded_action in all_permissions if expanded_action.startswith(pre_wildcard.lower())]
@@ -82,13 +88,7 @@ def _expand_wildcard_action(action):
 
         return [action.lower()]
 
-    elif isinstance(action, list):
-        expanded_actions = []
-        for item in action:
-            expanded_actions.extend(_expand_wildcard_action(item))
-        return expanded_actions
-
-    raise Exception("Action must be a list or a subtype of basetring")
+    raise Exception("Action must be a list or a string")
 
 
 def _get_desired_actions_from_statement(statement):
