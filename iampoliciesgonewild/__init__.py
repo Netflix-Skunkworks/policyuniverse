@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 import json
 import os
 import sys
@@ -86,7 +88,7 @@ def _expand_wildcard_action(action):
             expanded_actions.extend(_expand_wildcard_action(item))
         return expanded_actions
 
-    raise Exception("Action must be a list or a subtype of basestring")
+    raise Exception("Action must be a list or a subtype of basetring")
 
 
 def _get_desired_actions_from_statement(statement):
@@ -113,7 +115,7 @@ def _get_denied_prefixes_from_desired(desired_actions):
 
 def _check_min_permission_length(permission, minchars=None):
     if minchars and len(permission) < int(minchars) and permission != '':
-        print >> sys.stderr, "Skipping prefix {} because length of {}".format(permission, len(permission))
+        print("Skipping prefix {} because length of {}".format(permission, len(permission)) , file = sys.stderr)
         return True
     return False
 
@@ -149,7 +151,7 @@ def minimize_statement_actions(statement, minchars=None):
                 break
 
         if not found_prefix:
-            print "Could not suitable prefix. Defaulting to {}".format(prefixes[-1])
+            print("Could not suitable prefix. Defaulting to {}".format(prefixes[-1]))
             minimized_actions.add(prefixes[-1])
 
     # sort the actions
@@ -223,5 +225,5 @@ def minimize_policy(policy=None, minchars=None):
     end_size = len(str_end_pol)
 
     # print str_end_pol
-    print >> sys.stderr, "Start size: {}. End size: {}".format(size, end_size)
+    print("Start size: {}. End size: {}".format(size, end_size), file = sys.stderr)
     return policy
