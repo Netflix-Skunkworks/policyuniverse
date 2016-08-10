@@ -162,13 +162,13 @@ def minimize_statement_actions(statement, minchars=None):
 def get_actions_from_statement(statement):
     allowed_actions = set()
 
-    if type(statement.get('Action', [])) in (str, unicode):
+    if not type(statement.get('Action', [])) == list:
         statement['Action'] = [statement['Action']]
 
     for action in statement.get('Action', []):
         allowed_actions = allowed_actions.union(set(_expand_wildcard_action(action)))
 
-    if type(statement.get('NotAction', [])) in (str, unicode):
+    if not type(statement.get('NotAction', [])) == list:
         statement['NotAction'] = [statement['NotAction']]
 
     inverted_actions = set()
