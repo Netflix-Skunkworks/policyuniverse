@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 import json
 import os
 import sys
@@ -67,7 +69,13 @@ def _expand_wildcard_action(action):
     :param action: 'autoscaling:*'
     :return: A list of all autoscaling permissions matching the wildcard
     """
-    if isinstance(action, basestring):
+    if isinstance(action, list):
+        expanded_actions = []
+        for item in action:
+            expanded_actions.extend(_expand_wildcard_action(item))
+        return expanded_actions
+
+    else:
         if '*' in action:
             pre_wildcard = action.split('*')[0]
             expanded = [expanded_action.lower() for expanded_action in all_permissions if expanded_action.startswith(pre_wildcard.lower())]
@@ -80,13 +88,7 @@ def _expand_wildcard_action(action):
 
         return [action.lower()]
 
-    elif isinstance(action, list):
-        expanded_actions = []
-        for item in action:
-            expanded_actions.extend(_expand_wildcard_action(item))
-        return expanded_actions
-
-    raise Exception("Action must be a list or a subtype of basestring")
+    raise Exception("Action must be a list or a string")
 
 
 def _get_desired_actions_from_statement(statement):
@@ -113,7 +115,7 @@ def _get_denied_prefixes_from_desired(desired_actions):
 
 def _check_min_permission_length(permission, minchars=None):
     if minchars and len(permission) < int(minchars) and permission != '':
-        print >> sys.stderr, "Skipping prefix {} because length of {}".format(permission, len(permission))
+        print("Skipping prefix {} because length of {}".format(permission, len(permission)) , file = sys.stderr)
         return True
     return False
 
@@ -149,7 +151,7 @@ def minimize_statement_actions(statement, minchars=None):
                 break
 
         if not found_prefix:
-            print "Could not suitable prefix. Defaulting to {}".format(prefixes[-1])
+            print("Could not suitable prefix. Defaulting to {}".format(prefixes[-1]))
             minimized_actions.add(prefixes[-1])
 
     # sort the actions
@@ -162,13 +164,13 @@ def minimize_statement_actions(statement, minchars=None):
 def get_actions_from_statement(statement):
     allowed_actions = set()
 
-    if type(statement.get('Action', [])) in (str, unicode):
+    if not type(statement.get('Action', [])) == list:
         statement['Action'] = [statement['Action']]
 
     for action in statement.get('Action', []):
         allowed_actions = allowed_actions.union(set(_expand_wildcard_action(action)))
 
-    if type(statement.get('NotAction', [])) in (str, unicode):
+    if not type(statement.get('NotAction', [])) == list:
         statement['NotAction'] = [statement['NotAction']]
 
     inverted_actions = set()
@@ -198,7 +200,7 @@ def expand_policy(policy=None, expand_deny=False):
         if statement['Effect'].lower() == 'deny' and not expand_deny:
             continue
         actions = get_actions_from_statement(statement)
-        if statement.has_key('NotAction'):
+        if 'NotAction' in statement:
             del statement['NotAction']
         statement['Action'] = sorted(list(actions))
 
@@ -223,5 +225,5 @@ def minimize_policy(policy=None, minchars=None):
     end_size = len(str_end_pol)
 
     # print str_end_pol
-    print >> sys.stderr, "Start size: {}. End size: {}".format(size, end_size)
+    print("Start size: {}. End size: {}".format(size, end_size), file = sys.stderr)
     return policy

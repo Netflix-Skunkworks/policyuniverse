@@ -9,5 +9,11 @@ setup(name='iampoliciesgonewild',
       author='Patrick Kelley',
       author_email='pkelley@netflix.com',
       url='https://github.com/monkeysecurity/iampoliciesgonewild',
-      packages=['iampoliciesgonewild']
+      packages=['iampoliciesgonewild'],
+      package_data={
+          'iampoliciesgonewild': [
+              'master_permissions.json',
+          ]
+      },
+      include_package_data=True
      )
