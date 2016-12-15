@@ -88,10 +88,7 @@ def _expand_wildcard_action(action):
                 return [action.lower()]
 
             return expanded
-
         return [action.lower()]
-
-    raise Exception("Action must be a list or a string")
 
 
 def _get_desired_actions_from_statement(statement):
