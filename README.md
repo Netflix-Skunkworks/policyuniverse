@@ -2,6 +2,8 @@
 
 [![Version](http://img.shields.io/pypi/v/iampoliciesgonewild.svg?style=flat)](https://pypi.python.org/pypi/iampoliciesgonewild/)
 
+[![Build Status](https://travis-ci.org/monkeysecurity/iampoliciesgonewild.svg?branch=master)](https://travis-ci.org/monkeysecurity/iampoliciesgonewild)
+
 This is a python implementation of the IAM Policy Expander Minimizer.
 
 # Install:
