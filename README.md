@@ -4,6 +4,8 @@
 
 [![Build Status](https://travis-ci.org/monkeysecurity/iampoliciesgonewild.svg?branch=master)](https://travis-ci.org/monkeysecurity/iampoliciesgonewild)
 
+[![Coverage Status](https://coveralls.io/repos/github/monkeysecurity/iampoliciesgonewild/badge.svg?branch=master)](https://coveralls.io/github/monkeysecurity/iampoliciesgonewild?branch=master)
+
 This is a python implementation of the IAM Policy Expander Minimizer.
 
 # Install:

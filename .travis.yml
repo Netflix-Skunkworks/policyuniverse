@@ -5,6 +5,14 @@ matrix:
     - python: "2.7"
     - python: "3.5"
 
+cache:
+  directories:
+    - .pip_download_cache
+
+env:
+  global:
+    - PIP_DOWNLOAD_CACHE=".pip_download_cache"
+
 before_script:
   - python setup.py develop
   - pip install pytest
