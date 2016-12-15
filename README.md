@@ -1,5 +1,7 @@
 # IAMPoliciesGoneWild
 
+[![Version](http://img.shields.io/pypi/v/iampoliciesgonewild.svg?style=flat)](https://pypi.python.org/pypi/iampoliciesgonewild/)
+
 This is a python implementation of the IAM Policy Expander Minimizer.
 
 # Install:
