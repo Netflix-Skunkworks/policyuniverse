@@ -3,16 +3,16 @@
 # from distutils.core import setup
 from setuptools import setup
 
-setup(name='iampoliciesgonewild',
+setup(name='policyuniverse',
       version='1.0.6.2',
       description='AWS IAM Policy Expander Minimizer',
       author='Patrick Kelley',
       author_email='pkelley@netflix.com',
-      url='https://github.com/monkeysecurity/iampoliciesgonewild',
+      url='https://github.com/Netflix-Skunkworks/policyuniverse',
       keywords = ['iam', 'policy', 'wildcard'],
-      packages=['iampoliciesgonewild'],
+      packages=['policyuniverse'],
       package_data={
-          'iampoliciesgonewild': [
+          'policyuniverse': [
               'master_permissions.json',
           ]
       },

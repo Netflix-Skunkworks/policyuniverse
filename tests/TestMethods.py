@@ -1,14 +1,14 @@
 import unittest
 import copy
-from iampoliciesgonewild import expand_policy
-from iampoliciesgonewild import minimize_policy
-from iampoliciesgonewild import expand_minimize_over_policies
-from iampoliciesgonewild import get_actions_from_statement
-from iampoliciesgonewild import all_permissions
-from iampoliciesgonewild import minimize_statement_actions
-from iampoliciesgonewild import _get_prefixes_for_action
-from iampoliciesgonewild import _expand_wildcard_action
-from iampoliciesgonewild import _get_desired_actions_from_statement
+from policyuniverse import expand_policy
+from policyuniverse import minimize_policy
+from policyuniverse import expand_minimize_over_policies
+from policyuniverse import get_actions_from_statement
+from policyuniverse import all_permissions
+from policyuniverse import minimize_statement_actions
+from policyuniverse import _get_prefixes_for_action
+from policyuniverse import _expand_wildcard_action
+from policyuniverse import _get_desired_actions_from_statement
 
 
 WILDCARD_ACTION_1 = "swf:res*"

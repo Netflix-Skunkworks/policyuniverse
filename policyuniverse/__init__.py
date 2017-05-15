@@ -185,7 +185,7 @@ def get_actions_from_statement(statement):
 
 
 def _invert_actions(actions):
-    from iampoliciesgonewild import all_permissions
+    from policyuniverse import all_permissions
     return all_permissions.difference(actions)
 
 

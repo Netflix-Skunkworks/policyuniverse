@@ -1,22 +1,22 @@
-# IAMPoliciesGoneWild
+# PolicyUniverse
 
-[![Version](http://img.shields.io/pypi/v/iampoliciesgonewild.svg?style=flat)](https://pypi.python.org/pypi/iampoliciesgonewild/)
+[![Version](http://img.shields.io/pypi/v/policyuniverse.svg?style=flat)](https://pypi.python.org/pypi/policyuniverse/)
 
-[![Build Status](https://travis-ci.org/monkeysecurity/iampoliciesgonewild.svg?branch=master)](https://travis-ci.org/monkeysecurity/iampoliciesgonewild)
+[![Build Status](https://travis-ci.org/Netflix-Skunkworks/policyuniverse.svg?branch=master)](https://travis-ci.org/Netflix-Skunkworks/policyuniverse)
 
-[![Coverage Status](https://coveralls.io/repos/github/monkeysecurity/iampoliciesgonewild/badge.svg?branch=master&1)](https://coveralls.io/github/monkeysecurity/iampoliciesgonewild?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/Netflix-Skunkworks/policyuniverse/badge.svg?branch=master&1)](https://coveralls.io/github/Netflix-Skunkworks/policyuniverse?branch=master)
 
 This is a python implementation of the IAM Policy Expander Minimizer.
 
 # Install:
 
-`pip install iampoliciesgonewild`
+`pip install policyuniverse`
 
 # Usage:
 
 ```python
-from iampoliciesgonewild import expand_policy
-from iampoliciesgonewild import minimize_policy
+from policyuniverse import expand_policy
+from policyuniverse import minimize_policy
 
 policy = {
         "Statement": [{
