@@ -6,7 +6,11 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/Netflix-Skunkworks/policyuniverse/badge.svg?branch=master&1)](https://coveralls.io/github/Netflix-Skunkworks/policyuniverse?branch=master)
 
-This is a python implementation of the IAM Policy Expander Minimizer.
+This package expands wildcards in AWS IAM Policies using permissions obtained from the AWS Policy Generator.
+
+See the [list of all AWS permissions](policyuniverse/master_permissions.json).
+
+_This package can also minify an AWS policy to help you stay under policy size limits. Avoid doing this if possible, as it creates ugly policies._ 💩
 
 # Install:
 
