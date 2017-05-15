@@ -23,6 +23,7 @@ script:
 
 after_success:
   - coveralls
+  - coverage report
 
 notifications:
   email:
