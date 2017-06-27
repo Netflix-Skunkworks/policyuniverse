@@ -1,4 +1,5 @@
 from __future__ import print_function
+import copy
 import fnmatch
 import json
 import os
@@ -23,10 +24,7 @@ master_permissions_path = os.path.join(
 # Make sure indent=2 and sort_keys=True.
 
 
-with open(master_permissions_path) as json_data:
-    global_permissions = json.load(json_data)
-    json_data.close()
-
+global_permissions = json.load(open(master_permissions_path, 'r'))
 all_permissions = set()
 
 for technology_name in global_permissions:
@@ -190,13 +188,12 @@ def _invert_actions(actions):
 
 
 def expand_policy(policy=None, expand_deny=False):
+    # Perform a deepcopy to avoid mutating the input
+    result = copy.deepcopy(policy)
 
-    # str_pol = json.dumps(policy, indent=2)
-    # size = len(str_pol)
-
-    if type(policy['Statement']) is dict:
-        policy['Statement'] = [policy['Statement']]
-    for statement in policy['Statement']:
+    if type(result['Statement']) is dict:
+        result['Statement'] = [result['Statement']]
+    for statement in result['Statement']:
         if statement['Effect'].lower() == 'deny' and not expand_deny:
             continue
         actions = get_actions_from_statement(statement)
@@ -204,12 +201,7 @@ def expand_policy(policy=None, expand_deny=False):
             del statement['NotAction']
         statement['Action'] = sorted(list(actions))
 
-    # str_end_pol = json.dumps(policy, indent=2)
-    # end_size = len(str_end_pol)
-
-    # print str_end_pol
-    # print >> sys.stderr, "Start size: {}. End size: {}".format(size, end_size)
-    return policy
+    return result
 
 
 def minimize_policy(policy=None, minchars=None):
