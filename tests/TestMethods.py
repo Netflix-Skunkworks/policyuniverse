@@ -6,6 +6,7 @@ from policyuniverse import expand_minimize_over_policies
 from policyuniverse import get_actions_from_statement
 from policyuniverse import all_permissions
 from policyuniverse import minimize_statement_actions
+from policyuniverse import score_policy
 from policyuniverse import _get_prefixes_for_action
 from policyuniverse import _expand_wildcard_action
 from policyuniverse import _get_desired_actions_from_statement
@@ -207,6 +208,87 @@ class TestMethods(unittest.TestCase):
     def test_minimize_statement_actions(self):
         statement = dict(Effect="Deny")
         self.assertRaises(Exception, minimize_statement_actions, statement)
+
+    def test_score_policy_controlplane_mutating(self):
+        policy = {
+            "Statement": [{
+                "Action": ["iam:PutRolePolicy"],
+                "Resource": "*",
+                "Effect": "Allow"
+            },{
+                "Action": [
+                    "s3:PutBucketPolicy",
+                    "s3:PutBucketACL"
+                    ],
+                "Resource": "*",
+                "Effect": "Allow"
+            },{
+                "Action": [
+                    "sqs:SetQueueAttributes",
+                    "sqs:AddPermission"
+                    ],
+                "Resource": "*",
+                "Effect": "Allow"
+            },{
+                "Action": [
+                    "sns:SetTopicAttributes",
+                    "sns:AddPermission"
+                    ],
+                "Resource": "*",
+                "Effect": "Allow"
+            }]
+        }
+        score, service_tags, service_score = score_policy(policy)
+        self.assertEqual(service_tags['iam'], {'CONTROL_PLANE', 'MUTATING'})
+        self.assertEqual(service_score['iam'], 7)
+        self.assertEqual(service_tags['s3'], {'CONTROL_PLANE', 'MUTATING'})
+        self.assertEqual(service_score['s3'], 7)
+        self.assertEqual(service_tags['sqs'], {'CONTROL_PLANE', 'MUTATING'})
+        self.assertEqual(service_score['sqs'], 7)
+        self.assertEqual(service_tags['sns'], {'CONTROL_PLANE', 'MUTATING'})
+        self.assertEqual(service_score['sns'], 7)
+        self.assertEqual(score, 47)
+
+
+    def test_score_policy_dataplane_mutating(self):
+        policy = {
+            "Statement": [{
+                "Action": [
+                    "s3:PutObject",
+                    "s3:PutObjectACL"
+                    ],
+                "Resource": "*",
+                "Effect": "Allow"
+            },{
+                "Action": [
+                    "sqs:SendMessage"
+                    ],
+                "Resource": "*",
+                "Effect": "Allow"
+            },{
+                "Action": [
+                    "sns:Publish"
+                    ],
+                "Resource": "*",
+                "Effect": "Allow"
+            },{
+                "Action": [
+                    "iam:ListRoles",
+                    ],
+                "Resource": "*",
+                "Effect": "Allow"
+            }]
+        }
+        score, service_tags, service_score = score_policy(policy)
+        self.assertEqual(service_tags['s3'], {'DATA_PLANE', 'MUTATING'})
+        self.assertEqual(service_score['s3'], 6)
+        self.assertEqual(service_tags['sqs'], {'DATA_PLANE', 'SIDE_EFFECT'})
+        self.assertEqual(service_score['sqs'], 5)
+        self.assertEqual(service_tags['sns'], {'DATA_PLANE', 'SIDE_EFFECT'})
+        self.assertEqual(service_score['sns'], 5)
+        self.assertEqual(service_tags['iam'], {'READ'})
+        self.assertEqual(service_score['iam'], 1)
+        self.assertEqual(score, 23)
 
 
 if __name__ == '__main__':

@@ -182,6 +182,43 @@ def get_actions_from_statement(statement):
     return allowed_actions
 
 
+def get_actions_from_policy(policy):
+    policy_actions = set()
+    
+    if type(policy['Statement']) is dict:
+        policy['Statement'] = [policy['Statement']]
+    for statement in policy['Statement']:
+        if statement['Effect'].lower() == 'deny':
+            continue
+        actions = get_actions_from_statement(statement)
+        if 'NotAction' in statement:
+            del statement['NotAction']
+        statement['Action'] = sorted(list(actions))
+        policy_actions = policy_actions.union(actions)
+    
+    return policy_actions
+
+
+def score_policy(policy):
+    from policyuniverse.apiapi import score_permission
+    from collections import defaultdict
+    
+    policy_score = 0
+    service_tags = defaultdict(set)
+    service_score = defaultdict(int)
+    policy_actions = get_actions_from_policy(policy)
+    for permission in policy_actions:
+        service = permission.split(':')[0].lower()
+        score, tags = score_permission(permission)
+        if score and tags:
+            service_tags[service] = service_tags[service].union(tags)
+            service_score[service] = max(service_score[service], score)
+            policy_score += score
+        else:
+            print('Skipping {perm}'.format(perm=permission))
+    return policy_score, service_tags, service_score
+
+
 def _invert_actions(actions):
     from policyuniverse import all_permissions
     return all_permissions.difference(actions)
