@@ -4,6 +4,12 @@ import fnmatch
 import json
 import os
 import sys
+import logging
+
+
+# Logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 master_permissions_path = os.path.join(
     os.path.dirname(os.path.realpath(__file__)),

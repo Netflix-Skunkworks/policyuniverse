@@ -6,7 +6,9 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/Netflix-Skunkworks/policyuniverse/badge.svg?branch=master&1)](https://coveralls.io/github/Netflix-Skunkworks/policyuniverse?branch=master)
 
-This package expands wildcards in AWS IAM Policies using permissions obtained from the AWS Policy Generator.
+This package provides classes to parse AWS IAM and Resource Policies.
+
+Additionally, this package can expand wildcards in AWS Policies using permissions obtained from the AWS Policy Generator.
 
 See the [list of all AWS permissions](policyuniverse/master_permissions.json).
 
@@ -18,6 +20,168 @@ _This package can also minify an AWS policy to help you stay under policy size l
 
 # Usage:
 
+- [ARN class](#readingarns)
+- [Policy class](#iamandresourcepolicies)
+- [Statement class](#statements)
+- [Expanding and Minification](#expandingandminification)
+
+## Reading ARNs
+
+```python
+from policyuniverse.arn import ARN
+arn = ARN('arn:aws:iam::012345678910:role/SomeTestRoleForTesting')
+assert arn.error == False
+assert arn.tech == 'iam'
+assert arn.region == ''  # IAM is universal/global
+assert arn.account_number == '012345678910'
+assert arn.name == 'role/SomeTestRoleForTesting'
+assert arn.partition == 'aws'
+assert arn.root == False  # Not the root ARN
+assert arn.service == False  # Not an AWS service like lambda.amazonaws.com
+
+arn = ARN('012345678910')
+assert arn.account_number == '012345678910'
+
+arn = ARN('lambda.amazonaws.com')
+assert arn.service == True
+assert arn.tech == 'lambda'
+```
+
+## IAM and Resource Policies
+
+### Policy with multiple statements
+```python
+# Two statements, both with conditions
+policy05 = dict(
+    Version='2010-08-14',
+    Statement=[
+        dict(
+            Effect='Allow',
+            Principal='arn:aws:iam::012345678910:root',
+            Action=['s3:*'],
+            Resource='*',
+            Condition={
+                'IpAddress': {
+                    'AWS:SourceIP': ['0.0.0.0/0']
+                }}),
+        dict(
+            Effect='Allow',
+            Principal='arn:aws:iam::*:role/Hello',
+            Action=['ec2:*'],
+            Resource='*',
+            Condition={
+                'StringLike': {
+                    'AWS:SourceOwner': '012345678910'
+                }})
+        ])
+
+from policyuniverse.policy import Policy
+from policyuniverse.statement import ConditionTuple, PrincipalTuple
+
+policy = Policy(policy05)
+assert policy.whos_allowed() == set([
+    PrincipalTuple(category='principal', value='arn:aws:iam::*:role/Hello'),
+    PrincipalTuple(category='principal', value='arn:aws:iam::012345678910:root'),
+    ConditionTuple(category='cidr', value='0.0.0.0/0'),
+    ConditionTuple(category='account', value='012345678910')
+])
+
+# The given policy is not internet accessible.
+# The first statement is limited by the principal, and the condition is basically a no-op.
+# The second statement has a wildcard principal, but uses the condition to lock it down.
+assert policy.is_internet_accessible() == False
+```
+
+### Internet Accessible Policy:
+
+```python
+# An internet accessible policy:
+policy01 = dict(
+    Version='2012-10-08',
+    Statement=dict(
+        Effect='Allow',
+        Principal='*',
+        Action=['rds:*'],
+        Resource='*',
+        Condition={
+            'IpAddress': {
+                'AWS:SourceIP': ['0.0.0.0/0']
+            }
+        }))
+
+policy = Policy(policy01)
+assert policy.is_internet_accessible() == True
+assert policy.internet_accessible_actions() == set(['rds:*'])
+```
+
+## Statements
+
+A policy is simply a collection of statements.
+
+```python
+statement12 = dict(
+    Effect='Allow',
+    Principal='*',
+    Action=['rds:*'],
+    Resource='*',
+    Condition={
+        'StringEquals': {
+            'AWS:SourceVPC': 'vpc-111111',
+            'AWS:Sourcevpce': 'vpce-111111',
+            'AWS:username': 'Admin',
+            'AWS:SourceOwner': '012345678910',
+            'AWS:SourceAccount': '012345678910'
+        },
+        'StringLike': {
+            'AWS:userid': 'AROAI1111111111111111:*'
+        },
+        'ARNLike': {
+            'AWS:SourceArn': 'arn:aws:iam::012345678910:role/Admin'
+        },
+        'IpAddressIfExists': {
+            'AWS:SourceIP': [
+                '123.45.67.89',
+                '10.0.7.0/24',
+                '172.16.0.0/16']
+        }
+    })
+
+from policyuniverse.statement import Statement
+from policyuniverse.statement import ConditionTuple, PrincipalTuple
+
+statement = Statement(statement12)
+assert statement.effect == 'Allow'
+assert statement.actions == set(['rds:*'])
+
+# rds:* expands out to ~79 individual permissions
+assert len(statement.actions_expanded) == 79
+
+assert statement.uses_not_principal() == False
+assert statement.principals == set(['*'])
+assert statement.condition_arns == set(['arn:aws:iam::012345678910:role/Admin'])
+assert statement.condition_accounts == set(['012345678910'])
+assert statement.condition_userids == set(['AROAI1111111111111111:*'])
+assert statement.condition_usernames == set(['Admin'])
+assert statement.condition_cidrs == set(['10.0.7.0/24', '172.16.0.0/16', '123.45.67.89'])
+assert statement.condition_vpcs == set(['vpc-111111'])
+assert statement.condition_vpces == set(['vpce-111111'])
+assert statement.is_internet_accessible() == False
+assert statement.whos_allowed() == set([
+    PrincipalTuple(category='principal', value='*'),
+    ConditionTuple(category='cidr', value='123.45.67.89'),
+    ConditionTuple(category='account', value='012345678910'),
+    ConditionTuple(category='userid', value='AROAI1111111111111111:*'),
+    ConditionTuple(category='vpc', value='vpc-111111'),
+    ConditionTuple(category='arn', value='arn:aws:iam::012345678910:role/Admin'),
+    ConditionTuple(category='cidr', value='172.16.0.0/16'),
+    ConditionTuple(category='vpce', value='vpce-111111'),
+    ConditionTuple(category='cidr', value='10.0.7.0/24'),
+    ConditionTuple(category='username', value='Admin')])
+
+```
+
+
+## Expanding and Minification
 ```python
 from policyuniverse import expand_policy
 from policyuniverse import minimize_policy

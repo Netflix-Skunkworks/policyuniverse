@@ -19,7 +19,10 @@ before_script:
   - pip install coveralls
 
 script:
-  - coverage run -m py.test tests/TestMethods.py || exit 1
+  - coverage run -a -m py.test policyuniverse/tests/test_expander_minimizer.py || exit 1
+  - coverage run -a -m py.test policyuniverse/tests/test_arn.py || exit 1
+  - coverage run -a -m py.test policyuniverse/tests/test_statement.py || exit 1
+  - coverage run -a -m py.test policyuniverse/tests/test_policy.py || exit 1
 
 after_success:
   - coveralls
