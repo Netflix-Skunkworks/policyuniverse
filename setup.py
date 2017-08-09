@@ -4,8 +4,8 @@
 from setuptools import setup
 
 setup(name='policyuniverse',
-      version='1.0.6.4',
-      description='AWS IAM Policy Expander Minimizer',
+      version='1.0.7.0',
+      description='AWS IAM Policy Utilities',
       author='Patrick Kelley',
       author_email='pkelley@netflix.com',
       url='https://github.com/Netflix-Skunkworks/policyuniverse',
