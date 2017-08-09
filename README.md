@@ -20,10 +20,10 @@ _This package can also minify an AWS policy to help you stay under policy size l
 
 # Usage:
 
-- [ARN class](#readingarns)
-- [Policy class](#iamandresourcepolicies)
+- [ARN class](#reading-arns)
+- [Policy class](#iam-and-resource-policies)
 - [Statement class](#statements)
-- [Expanding and Minification](#expandingandminification)
+- [Expanding and Minification](#expanding-and-minification)
 
 ## Reading ARNs
 
