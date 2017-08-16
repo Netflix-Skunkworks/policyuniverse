@@ -128,7 +128,6 @@ statement12 = dict(
         'StringEquals': {
             'AWS:SourceVPC': 'vpc-111111',
             'AWS:Sourcevpce': 'vpce-111111',
-            'AWS:username': 'Admin',
             'AWS:SourceOwner': '012345678910',
             'AWS:SourceAccount': '012345678910'
         },
@@ -161,7 +160,6 @@ assert statement.principals == set(['*'])
 assert statement.condition_arns == set(['arn:aws:iam::012345678910:role/Admin'])
 assert statement.condition_accounts == set(['012345678910'])
 assert statement.condition_userids == set(['AROAI1111111111111111:*'])
-assert statement.condition_usernames == set(['Admin'])
 assert statement.condition_cidrs == set(['10.0.7.0/24', '172.16.0.0/16', '123.45.67.89'])
 assert statement.condition_vpcs == set(['vpc-111111'])
 assert statement.condition_vpces == set(['vpce-111111'])
@@ -175,8 +173,7 @@ assert statement.whos_allowed() == set([
     ConditionTuple(category='arn', value='arn:aws:iam::012345678910:role/Admin'),
     ConditionTuple(category='cidr', value='172.16.0.0/16'),
     ConditionTuple(category='vpce', value='vpce-111111'),
-    ConditionTuple(category='cidr', value='10.0.7.0/24'),
-    ConditionTuple(category='username', value='Admin')])
+    ConditionTuple(category='cidr', value='10.0.7.0/24')])
 
 ```
 

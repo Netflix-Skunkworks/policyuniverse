@@ -306,7 +306,6 @@ class StatementTestCase(unittest.TestCase):
         self.assertEquals(statement.condition_arns, set(['arn:aws:iam::012345678910:role/Admin']))
         self.assertEquals(statement.condition_accounts, set(['012345678910']))
         self.assertEquals(statement.condition_userids, set(['AROAI1111111111111111:*']))
-        self.assertEquals(statement.condition_usernames, set(['Admin']))
         self.assertEquals(statement.condition_cidrs, set(['123.45.67.89', '10.0.7.0/24', '172.16.0.0/16']))
         self.assertEquals(statement.condition_vpcs, set(['vpc-111111']))
         self.assertEquals(statement.condition_vpces, set(['vpce-111111']))

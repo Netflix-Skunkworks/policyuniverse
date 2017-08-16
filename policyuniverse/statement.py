@@ -137,7 +137,6 @@ class Statement(object):
         - A limiting ARN
         - Account Identifier
         - User ID
-        - User Name
         - Source IP / CIDR
         - VPC
         - VPC Endpoint
@@ -153,7 +152,6 @@ class Statement(object):
             'aws:sourceowner': 'account',
             'aws:sourceaccount': 'account',
             'aws:userid': 'userid',
-            'aws:username': 'username',
             'aws:sourceip': 'cidr',
             'aws:sourcevpc': 'vpc',
             'aws:sourcevpce': 'vpce'
@@ -189,10 +187,6 @@ class Statement(object):
     @property
     def condition_userids(self):
         return self._condition_field('userid') 
-
-    @property
-    def condition_usernames(self):
-        return self._condition_field('username') 
 
     @property
     def condition_cidrs(self):
