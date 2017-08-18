@@ -22,6 +22,7 @@
 from policyuniverse.policy import Policy
 from policyuniverse import logger
 import unittest
+import json
 
 
 policy01 = dict(
@@ -143,3 +144,54 @@ class PolicyTestCase(unittest.TestCase):
         self.assertEquals(len(principal_allowed), 2)
         condition_account_allowed = set([item for item in allowed if item.category == 'account'])
         self.assertEquals(len(condition_account_allowed), 1)
+    
+    def test_evasion_policies(self):
+        """Some policies that may have been crafted to evade policycheckers."""
+        S3_PUBLIC_BUCKET_POLICY = \
+            '{"Version":"2008-10-17","Statement":[' + \
+                '{' + \
+                    '"Effect":"Allow","Principal":{"AWS":"*"},' + \
+                    '"Action":["s3:GetObject","s3:GetObjectTorrent"],' + \
+                    '"Resource":"arn:aws:s3:::%s/*",' + \
+                    '"Condition":{"StringNotLike":{"aws:UserAgent":"|_(..)_|"},"NotIpAddress":{"aws:SourceIp":"8.8.8.8"}}' + \
+                '}' + \
+            ']}'
+
+        policy = Policy(json.loads(S3_PUBLIC_BUCKET_POLICY))
+        self.assertTrue(policy.is_internet_accessible())
+
+        S3_REPLICATION_DESTINATION_POLICY = \
+            '{"Version":"2008-10-17","Statement":[' + \
+                '{' + \
+                    '"Effect":"Allow","Principal":{"AWS":"arn:aws:iam::%s:root"},' + \
+                    '"Action":["s3:*"],"Resource":"arn:aws:s3:::%s/*"' + \
+                '},' + \
+                '{' + \
+                    '"Effect":"Allow","Principal":{"AWS":"*"},' + \
+                    '"Action":["s3:GetObject"],' + \
+                    '"Resource":"arn:aws:s3:::%s/*",' + \
+                    '"Condition":{"StringNotLike":{"aws:UserAgent": "|_(..)_|"},"NotIpAddress":{"aws:SourceIp":"8.8.8.8"}}' + \
+                '}' + \
+            ']}'
+
+        policy = Policy(json.loads(S3_REPLICATION_DESTINATION_POLICY))
+        self.assertTrue(policy.is_internet_accessible())
+
+        SQS_NOTIFICATION_POLICY = \
+            '{"Version":"2008-10-17","Statement":[' + \
+                '{' + \
+                    '"Effect":"Allow","Principal":"*",' + \
+                    '"Action":["SQS:ReceiveMessage","SQS:DeleteMessage"],' + \
+                    '"Resource":"%s",' + \
+                    '"Condition":{"StringNotLike":{"aws:UserAgent": "|_(..)_|"},"NotIpAddress":{"aws:SourceIp":"8.8.8.8"}}' + \
+                '},' + \
+                '{' + \
+                    '"Effect":"Allow","Principal":{"AWS":"*"},' + \
+                    '"Action":["SQS:SendMessage"],' + \
+                    '"Resource":"%s",' + \
+                    '"Condition":{"ArnLike":{"aws:SourceArn":"arn:aws:s3:*:*:%s"}}' + \
+                '}' + \
+            ']}'
+
+        policy = Policy(json.loads(SQS_NOTIFICATION_POLICY))
+        self.assertTrue(policy.is_internet_accessible())
