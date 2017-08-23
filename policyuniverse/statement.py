@@ -151,6 +151,7 @@ class Statement(object):
             'aws:sourcearn': 'arn',
             'aws:sourceowner': 'account',
             'aws:sourceaccount': 'account',
+            'kms:calleraccount': 'account',
             'aws:userid': 'userid',
             'aws:sourceip': 'cidr',
             'aws:sourcevpc': 'vpc',

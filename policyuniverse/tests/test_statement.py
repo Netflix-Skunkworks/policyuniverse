@@ -256,6 +256,19 @@ statement22 = dict(
             'AWS:SourceArn': 'arn:aws:iam:::user/MyUser'
         }})
 
+# KMS decided to use their own Condition Keys:
+statement23 = dict(
+    Effect='Allow',
+    Principal='*',
+    Action=['kms:*'],
+    Resource='*',
+    Condition={
+            "StringEquals": {
+              "kms:ViaService": "lightsail.us-east-1.amazonaws.com",
+              "kms:CallerAccount": "222222222222"
+            }
+          })
+
 
 class StatementTestCase(unittest.TestCase):
     def test_statement_effect(self):
@@ -313,6 +326,9 @@ class StatementTestCase(unittest.TestCase):
         statement = Statement(statement13)
         self.assertEquals(statement.condition_arns, set(['arn:aws:iam::012345678910:role/Admin']))
         self.assertEquals(len(statement.condition_userids), 0)
+
+        statement = Statement(statement23)
+        self.assertEquals(statement.condition_accounts, set(['222222222222']))
 
     def test_statement_internet_accessible(self):
         self.assertTrue(Statement(statement14).is_internet_accessible())
