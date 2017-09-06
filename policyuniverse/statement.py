@@ -100,7 +100,7 @@ class Statement(object):
         principal = self.statement.get("Principal", None)
         if not principal:
             # It is possible not to define a principal, AWS ignores these statements.
-            return None 
+            return principals
 
         if isinstance(principal, dict):
 

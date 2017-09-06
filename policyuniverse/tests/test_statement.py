@@ -298,7 +298,7 @@ class StatementTestCase(unittest.TestCase):
         statement_wo_principal = dict(statement06)
         del statement_wo_principal['Principal']
         statement = Statement(statement_wo_principal)
-        self.assertEquals(statement.principals, None)
+        self.assertEquals(statement.principals, set([]))
 
     def test_statement_conditions(self):
         statement = Statement(statement07)
