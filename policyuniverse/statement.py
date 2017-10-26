@@ -56,6 +56,7 @@ class Statement(object):
     def uses_not_principal(self):
         return 'NotPrincipal' in self.statement
 
+    @property
     def resources(self):
         if 'NotResource' in self.statement:
             return set(['*'])
