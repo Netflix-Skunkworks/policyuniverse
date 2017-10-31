@@ -281,7 +281,6 @@ statement25 = dict(
     Effect='Allow',
     Principal='*',
     Action=['ec2:authorizesecuritygroupingress', 'ec2:AuthorizeSecuritygroupEgress', 'iam:putrolepolicy'],
-    # Action=['iam:putrolepolicy'],
     Resource='*')
 
 # Testing action groups
