@@ -34,7 +34,7 @@ administrator_access_path = os.path.join(
 # Make sure indent=2 and sort_keys=True.
 
 # NEW 10/30/2017:
-# To update the administrator_access.json (for action grouping/classification),
+# To update the action_categories.json (for action grouping/classification),
 # Attach the "AdministratorAccess" managed policy to an IAM Role and with the inspector open,
 # browse to the policy summary.  Find the REST call made to this URL:
 # https://console.aws.amazon.com/iam/api/policies/arn:aws:iam::aws:policy%C2%B6AdministratorAccess/version/v1/policysummary

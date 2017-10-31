@@ -72,7 +72,7 @@ def categories_for_actions(actions):
     Returns:
         {
             'ec2': {'DataPlaneMutating'},
-            'iam': {'Permissions', 'DataPlaneListRead', 'DataPlaneMutating'})
+            'iam': {'Permissions', 'DataPlaneListRead'})
         }
     """
     groups = defaultdict(set)
