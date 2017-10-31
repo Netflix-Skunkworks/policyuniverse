@@ -12,6 +12,9 @@ def reformat_console_data(filename):
     URL is:
     https://console.aws.amazon.com/iam/api/policies/arn:aws:iam::aws:policy%C2%B6AdministratorAccess/version/v1/policysummary
 
+    Must be authenticated, and probably also requires CSRF token, so I typically
+    just pull the contents from the Network tab of the Chrome inspector.
+    
     This method will reformat that into a structure containing only
     the data we care about.
     """
@@ -43,3 +46,20 @@ def groups_for_actions(actions):
         service = action.split(':')[0]
         groups[service] = groups[service].union(set(action_groups.get(action, set())))
     return groups
+
+def actions_for_groups(groups_filter):
+    """
+    Returns set of actions containing each group passed in.
+    
+    Param:
+        groups=['ReadWrite', 'ReadOnly']
+    
+    Returns:
+        set of matching actions
+    """
+    actions = set()
+    for action, groups in action_groups.items():
+        # <= for sets means subset
+        if set(groups_filter) <= set(groups):
+           actions.add(action)
+    return actions

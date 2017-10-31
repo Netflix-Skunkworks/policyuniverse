@@ -36,3 +36,23 @@ class ActionGroupTestCase(unittest.TestCase):
         actions = ['iam:putrolepolicy']
         groups = groups_for_actions(actions)
         self.assertEqual(groups['iam'], {u'Permissions'})
+
+    def test_actions_for_groups(self):
+        from policyuniverse.action_groups import actions_for_groups
+        
+        # Permission actions are never ReadWrite actions.
+        groups = ['Permissions', 'ReadWrite']
+        self.assertEqual(0, len(actions_for_groups(groups)))
+
+        # ReadWrite indicates a data plane operation.
+        # All ReadOnly or ListOnly permissions also have ReadWrite
+        read_only_actions = actions_for_groups(['ReadOnly'])
+        list_only_actions = actions_for_groups(['ListOnly'])
+        data_actions = actions_for_groups(['ReadWrite'])
+
+        # The < sign for sets means proper-subset
+        self.assertTrue(read_only_actions < data_actions)
+        self.assertTrue(list_only_actions < data_actions)
+
+        # All ListOnly permissions are also ReadOnly
+        self.assertTrue(list_only_actions < read_only_actions)
