@@ -14,7 +14,7 @@ setup(name='policyuniverse',
       package_data={
           'policyuniverse': [
               'master_permissions.json',
-              'administrator_access.json',
+              'action_categories.json',
           ]
       },
       include_package_data=True,
