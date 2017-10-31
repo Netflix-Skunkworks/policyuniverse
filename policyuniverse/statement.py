@@ -56,6 +56,16 @@ class Statement(object):
     def uses_not_principal(self):
         return 'NotPrincipal' in self.statement
 
+    @property
+    def resources(self):
+        if 'NotResource' in self.statement:
+            return set(['*'])
+
+        resources = self.statement.get('Resource')
+        if not isinstance(resources, list):
+            resources = [resources]
+        return set(resources)
+
     def whos_allowed(self):
         """Returns set containing any entries from principal and condition section.
         
