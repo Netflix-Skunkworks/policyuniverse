@@ -47,7 +47,7 @@ administrator_access_path = os.path.join(
 
 
 global_permissions = json.load(open(master_permissions_path, 'r'))
-action_groups = json.load(open(administrator_access_path, 'r'))
+action_categories = json.load(open(administrator_access_path, 'r'))
 all_permissions = set()
 
 for technology_name in global_permissions:

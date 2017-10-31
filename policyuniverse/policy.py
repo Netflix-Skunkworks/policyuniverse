@@ -53,7 +53,7 @@ class Policy(object):
     def action_summary(self):
         action_groups = defaultdict(set)
         for statement in self.statements:
-            for service, groups in statement.action_summary():
+            for service, groups in statement.action_summary().items():
                 action_groups[service] = action_groups[service].union(groups)
         return action_groups
 
