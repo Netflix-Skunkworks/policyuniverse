@@ -15,6 +15,10 @@ master_permissions_path = os.path.join(
     os.path.dirname(os.path.realpath(__file__)),
     'master_permissions.json')
 
+administrator_access_path = os.path.join(
+    os.path.dirname(os.path.realpath(__file__)),
+    'action_categories.json')
+
 # To update the master_permissions.json, open this URL in chrome:
 # https://awspolicygen.s3.amazonaws.com/policygen.html
 # Bring up the console from the inspector and type:
@@ -29,15 +33,27 @@ master_permissions_path = os.path.join(
 
 # Make sure indent=2 and sort_keys=True.
 
+# NEW 10/30/2017:
+# To update the administrator_access.json (for action grouping/classification),
+# Attach the "AdministratorAccess" managed policy to an IAM Role and with the inspector open,
+# browse to the policy summary.  Find the REST call made to this URL:
+# https://console.aws.amazon.com/iam/api/policies/arn:aws:iam::aws:policy%C2%B6AdministratorAccess/version/v1/policysummary
+# Download the contents of that URL to a file called action_categories_new.json
+# Start an interactive python session:
+# > import policyuniverse
+# > policyuniverse.action_groups.reformat_console_data('action_categories_new.json')
+# > CTRL-D
+# Delete action_categories_new.json and submit a PR with the chagnes to action_categories.json
+
 
 global_permissions = json.load(open(master_permissions_path, 'r'))
+action_groups = json.load(open(administrator_access_path, 'r'))
 all_permissions = set()
 
 for technology_name in global_permissions:
     technology_prefix = global_permissions[technology_name]["StringPrefix"]
     for action in global_permissions[technology_name]["Actions"]:
         all_permissions.add("{}:{}".format(technology_prefix, action.lower()))
-
 
 policy_headers = ['rolepolicies', 'grouppolicies', 'userpolicies', 'policy']
 

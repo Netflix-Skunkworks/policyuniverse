@@ -22,6 +22,7 @@
 from policyuniverse.arn import ARN
 from policyuniverse import _expand_wildcard_action, get_actions_from_statement
 from policyuniverse import logger
+from policyuniverse.action_groups import groups_for_actions
 
 import re
 from collections import namedtuple
@@ -52,6 +53,9 @@ class Statement(object):
         if not isinstance(actions, list):
             actions = [actions]
         return set(actions)
+
+    def action_summary(self):
+        return groups_for_actions(self.actions_expanded)
 
     def uses_not_principal(self):
         return 'NotPrincipal' in self.statement

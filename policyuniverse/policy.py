@@ -20,6 +20,7 @@
 
 """
 from policyuniverse.statement import Statement
+from collections import defaultdict
 
 
 class Policy(object):
@@ -48,6 +49,13 @@ class Policy(object):
         for statement in self.statements:
             condition_entries = condition_entries.union(statement.condition_entries)
         return condition_entries
+
+    def action_summary(self):
+        action_groups = defaultdict(set)
+        for statement in self.statements:
+            for service, groups in statement.action_summary():
+                action_groups[service] = action_groups[service].union(groups)
+        return action_groups
 
     def is_internet_accessible(self):
         for statement in self.statements:
