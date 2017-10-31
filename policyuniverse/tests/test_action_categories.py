@@ -13,7 +13,7 @@
 #     See the License for the specific language governing permissions and
 #     limitations under the License.
 """
-.. module: policyuniverse.tests.test_action_groups
+.. module: policyuniverse.tests.test_action_categories
     :platform: Unix
 
 .. version:: $$VERSION$$

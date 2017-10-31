@@ -51,11 +51,11 @@ class Policy(object):
         return condition_entries
 
     def action_summary(self):
-        action_groups = defaultdict(set)
+        action_categories = defaultdict(set)
         for statement in self.statements:
             for service, groups in statement.action_summary().items():
-                action_groups[service] = action_groups[service].union(groups)
-        return action_groups
+                action_categories[service] = action_categories[service].union(groups)
+        return action_categories
 
     def is_internet_accessible(self):
         for statement in self.statements:

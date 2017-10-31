@@ -41,7 +41,7 @@ administrator_access_path = os.path.join(
 # Download the contents of that URL to a file called action_categories_new.json
 # Start an interactive python session:
 # > import policyuniverse
-# > policyuniverse.action_groups.reformat_console_data('action_categories_new.json')
+# > policyuniverse.action_categories.reformat_console_data('action_categories_new.json')
 # > CTRL-D
 # Delete action_categories_new.json and submit a PR with the chagnes to action_categories.json
 
