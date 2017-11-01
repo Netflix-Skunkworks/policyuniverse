@@ -120,6 +120,14 @@ class PolicyTestCase(unittest.TestCase):
             Policy(policy03).internet_accessible_actions(),
             set(['ec2:*']))
 
+    def test_action_summary(self):
+        summary = Policy(policy05).action_summary()
+        self.assertEqual(summary,
+            {
+                'ec2': {'DataPlaneMutating', 'DataPlaneListRead'},
+                's3': {'DataPlaneMutating', 'DataPlaneListRead', 'Permissions'}
+            })
+
     def test_principals(self):
         self.assertEquals(
             Policy(policy04).principals,
