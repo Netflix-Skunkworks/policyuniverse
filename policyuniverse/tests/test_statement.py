@@ -269,6 +269,27 @@ statement23 = dict(
             }
           })
 
+# Testing action groups
+statement24 = dict(
+    Effect='Allow',
+    Principal='*',
+    Action=['ec2:authorizesecuritygroupingress', 'ec2:AuthorizeSecuritygroupEgress'],
+    Resource='*')
+
+# Testing action groups
+statement25 = dict(
+    Effect='Allow',
+    Principal='*',
+    Action=['ec2:authorizesecuritygroupingress', 'ec2:AuthorizeSecuritygroupEgress', 'iam:putrolepolicy'],
+    Resource='*')
+
+# Testing action groups
+statement26 = dict(
+    Effect='Allow',
+    Principal='*',
+    Action=['iam:putrolepolicy', 'iam:listroles'],
+    Resource='*')
+
 
 class StatementTestCase(unittest.TestCase):
     def test_statement_effect(self):
@@ -278,6 +299,16 @@ class StatementTestCase(unittest.TestCase):
     def test_statement_not_principal(self):
         statement = Statement(statement01)
         self.assertTrue(statement.uses_not_principal())
+
+    def test_statement_summary(self):
+        statement = Statement(statement24)
+        self.assertEqual(statement.action_summary(), {'ec2': {'DataPlaneMutating'}})
+
+        statement = Statement(statement25)
+        self.assertEqual(statement.action_summary(), {'ec2': {'DataPlaneMutating'}, 'iam': {'Permissions'}})
+
+        statement = Statement(statement26)
+        self.assertEqual(statement.action_summary(), {'iam': {'Permissions', 'DataPlaneListRead'}})
 
     def test_statement_principals(self):
         statement = Statement(statement02)
