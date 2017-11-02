@@ -54,7 +54,8 @@ class ActionGroupTestCase(unittest.TestCase):
 
         for action in write_actions:
             # write actions shouldn't start with "get" unless they are miscategorized.
-            if action in {'states:getactivitytask', 'glue:getmapping', 'cognito-identity:getid'}:
+            if action in {'states:getactivitytask', 'glue:getmapping', 'cognito-identity:getid', 'ec2:describefpgaimages'}:
                 continue
             print(action)
             self.assertFalse(':get' in action)
+            self.assertFalse(':describe' in action)
