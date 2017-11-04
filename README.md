@@ -11,6 +11,7 @@ This package provides classes to parse AWS IAM and Resource Policies.
 Additionally, this package can expand wildcards in AWS Policies using permissions obtained from the AWS Policy Generator.
 
 See the [list of all AWS permissions](policyuniverse/master_permissions.json).
+See the [list of all permission categories](policyuniverse/action_categories.json).
 
 _This package can also minify an AWS policy to help you stay under policy size limits. Avoid doing this if possible, as it creates ugly policies._ 💩
 
@@ -23,6 +24,7 @@ _This package can also minify an AWS policy to help you stay under policy size l
 - [ARN class](#reading-arns)
 - [Policy class](#iam-and-resource-policies)
 - [Statement class](#statements)
+- [Action Categories](#action-categories)
 - [Expanding and Minification](#expanding-and-minification)
 
 ## Reading ARNs
@@ -177,6 +179,26 @@ assert statement.whos_allowed() == set([
 
 ```
 
+
+## Action Categories
+```python
+policy = {
+        "Statement": [{
+            "Action": ["s3:put*", "sqs:get*", "sns:*"],
+            "Resource": "*",
+            "Effect": "Allow"
+          }]
+      }
+
+from policyuniverse.policy import Policy
+p = Policy(policy)
+for k, v in p.action_summary().items():
+    print(k,v)
+>>> ('s3', set([u'DataPlaneMutating', u'Permissions']))
+>>> ('sqs', set([u'DataPlaneListRead']))
+>>> ('sns', set([u'DataPlaneListRead', u'DataPlaneMutating', u'Permissions']))
+```
+Possible categories are `Permissions`, `DataPlaneMutating`, and `DataPlaneListRead`.  This data can be used to summarize statements and policies and to look for sensitive permissions.
 
 ## Expanding and Minification
 ```python
