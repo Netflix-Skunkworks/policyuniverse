@@ -50,6 +50,8 @@ class Statement(object):
 
     def _actions(self):
         actions = self.statement.get('Action')
+        if not actions:
+            return set()
         if not isinstance(actions, list):
             actions = [actions]
         return set(actions)
