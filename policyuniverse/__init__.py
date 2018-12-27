@@ -40,8 +40,8 @@ administrator_access_path = os.path.join(
 # https://console.aws.amazon.com/iam/api/policies/arn:aws:iam::aws:policy%C2%B6AdministratorAccess/version/v1/policysummary
 # Download the contents of that URL to a file called action_categories_new.json
 # Start an interactive python session:
-# > import policyuniverse
-# > policyuniverse.action_categories.reformat_console_data('action_categories_new.json')
+# > from policyuniverse.action_categories import reformat_console_data
+# > reformat_console_data('action_categories_new.json')
 # > CTRL-D
 # Delete action_categories_new.json and submit a PR with the chagnes to action_categories.json
 
