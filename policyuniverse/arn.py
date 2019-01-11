@@ -58,7 +58,7 @@ class ARN(object):
             return
 
         self.error = True
-        logger.warn('ARN Could not parse [{}].'.format(input))
+        logger.warning('ARN Could not parse [{}].'.format(input))
 
     def _from_arn(self, arn_match, input):
         self.partition = arn_match.group(1)

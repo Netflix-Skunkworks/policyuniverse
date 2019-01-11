@@ -4,7 +4,7 @@
 from setuptools import setup
 
 setup(name='policyuniverse',
-      version='1.1.0.1',
+      version='1.2.0.1',
       description='AWS IAM Policy Utilities',
       author='Patrick Kelley',
       author_email='pkelley@netflix.com',
@@ -13,8 +13,7 @@ setup(name='policyuniverse',
       packages=['policyuniverse'],
       package_data={
           'policyuniverse': [
-              'master_permissions.json',
-              'action_categories.json',
+              'data.json'
           ]
       },
       include_package_data=True,

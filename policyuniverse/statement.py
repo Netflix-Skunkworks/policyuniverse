@@ -20,7 +20,7 @@
 
 """
 from policyuniverse.arn import ARN
-from policyuniverse import _expand_wildcard_action, get_actions_from_statement
+from policyuniverse.expander_minimizer import _expand_wildcard_action, get_actions_from_statement
 from policyuniverse import logger
 from policyuniverse.action_categories import categories_for_actions
 
@@ -278,7 +278,7 @@ class Statement(object):
 
         arn = ARN(arn_input)
         if arn.error:
-            logger.warn('Auditor could not parse ARN {arn}.'.format(arn=arn_input))
+            logger.warning('Auditor could not parse ARN {arn}.'.format(arn=arn_input))
             return '*' in arn_input
 
         if arn.tech == 's3':
@@ -286,7 +286,7 @@ class Statement(object):
             return False
 
         if not arn.account_number and not arn.service:
-            logger.warn('Auditor could not parse Account Number from ARN {arn}.'.format(arn=arn_input))
+            logger.warning('Auditor could not parse Account Number from ARN {arn}.'.format(arn=arn_input))
             return True
 
         if arn.account_number == '*':

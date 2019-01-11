@@ -10,8 +10,7 @@ This package provides classes to parse AWS IAM and Resource Policies.
 
 Additionally, this package can expand wildcards in AWS Policies using permissions obtained from the AWS Policy Generator.
 
-See the [list of all AWS permissions](policyuniverse/master_permissions.json).
-See the [list of all permission categories](policyuniverse/action_categories.json).
+See the [Service and Permissions data](policyuniverse/data.json).
 
 _This package can also minify an AWS policy to help you stay under policy size limits. Avoid doing this if possible, as it creates ugly policies._ 💩
 
@@ -154,8 +153,8 @@ statement = Statement(statement12)
 assert statement.effect == 'Allow'
 assert statement.actions == set(['rds:*'])
 
-# rds:* expands out to ~79 individual permissions
-assert len(statement.actions_expanded) == 79
+# rds:* expands out to ~88 individual permissions
+assert len(statement.actions_expanded) == 88
 
 assert statement.uses_not_principal() == False
 assert statement.principals == set(['*'])
@@ -202,8 +201,8 @@ Possible categories are `Permissions`, `DataPlaneMutating`, and `DataPlaneListRe
 
 ## Expanding and Minification
 ```python
-from policyuniverse import expand_policy
-from policyuniverse import minimize_policy
+from policyuniverse.expander_minimizer import expand_policy
+from policyuniverse.expander_minimizer import minimize_policy
 
 policy = {
         "Statement": [{
