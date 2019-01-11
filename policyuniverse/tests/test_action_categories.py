@@ -41,12 +41,14 @@ class ActionGroupTestCase(unittest.TestCase):
         permission_actions = actions_for_category('Permissions')
 
         for action in permission_actions:
+            if action in {'xray:getencryptionconfig'}:
+                continue
             self.assertFalse(':list' in action)
             self.assertFalse(':get' in action)
 
         for action in read_only_actions:
             # read actions shouldn't start with "Put" unless they are miscategorized.
-            if action == 'ssm:putconfigurepackageresult':
+            if action in {'ssm:putconfigurepackageresult', 'sagemaker:createpresignednotebookinstanceurl'}:
                 continue
             self.assertFalse(':put' in action)
             self.assertFalse(':create' in action)
@@ -54,8 +56,7 @@ class ActionGroupTestCase(unittest.TestCase):
 
         for action in write_actions:
             # write actions shouldn't start with "get" unless they are miscategorized.
-            if action in {'states:getactivitytask', 'glue:getmapping', 'cognito-identity:getid', 'ec2:describefpgaimages'}:
+            if action in {'states:getactivitytask', 'glue:getmapping', 'cognito-identity:getid', 'ec2:describefpgaimages', 'quicksight:getgroupmapping', 'redshift:getclustercredentials', 'fms:getcompliancedetail', 'connect:getfederationtokens'}:
                 continue
-            print(action)
             self.assertFalse(':get' in action)
             self.assertFalse(':describe' in action)
