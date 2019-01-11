@@ -113,10 +113,10 @@ class PolicyTestCase(unittest.TestCase):
         self.assertTrue(Policy(policy03).is_internet_accessible())
 
     def test_internet_accessible_actions(self):
-        self.assertEquals(
+        self.assertEqual(
             Policy(policy01).internet_accessible_actions(),
             set(['rds:*']))
-        self.assertEquals(
+        self.assertEqual(
             Policy(policy03).internet_accessible_actions(),
             set(['ec2:*']))
 
@@ -129,13 +129,13 @@ class PolicyTestCase(unittest.TestCase):
             })
 
     def test_principals(self):
-        self.assertEquals(
+        self.assertEqual(
             Policy(policy04).principals,
             set(['arn:aws:iam::012345678910:root', 'arn:aws:iam::*:role/Hello']))
 
     def test_condition_entries(self):
         from policyuniverse.statement import ConditionTuple
-        self.assertEquals(
+        self.assertEqual(
             Policy(policy05).condition_entries,
             set([
                 ConditionTuple(category='cidr', value='0.0.0.0/0'),
@@ -144,14 +144,14 @@ class PolicyTestCase(unittest.TestCase):
 
     def test_whos_allowed(self):
         allowed = Policy(policy03).whos_allowed()
-        self.assertEquals(len(allowed), 2)
+        self.assertEqual(len(allowed), 2)
 
         allowed = Policy(policy04).whos_allowed()
-        self.assertEquals(len(allowed), 3)
+        self.assertEqual(len(allowed), 3)
         principal_allowed = set([item for item in allowed if item.category == 'principal'])
-        self.assertEquals(len(principal_allowed), 2)
+        self.assertEqual(len(principal_allowed), 2)
         condition_account_allowed = set([item for item in allowed if item.category == 'account'])
-        self.assertEquals(len(condition_account_allowed), 1)
+        self.assertEqual(len(condition_account_allowed), 1)
     
     def test_evasion_policies(self):
         """Some policies that may have been crafted to evade policycheckers."""
