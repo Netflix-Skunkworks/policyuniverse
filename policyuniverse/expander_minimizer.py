@@ -19,6 +19,7 @@
 .. moduleauthor::  Patrick Kelley <pkelley@netflix.com>
 
 """
+from __future__ import print_function
 from policyuniverse import all_permissions
 import json
 import fnmatch
@@ -105,7 +106,7 @@ def _get_denied_prefixes_from_desired(desired_actions):
 
 def _check_min_permission_length(permission, minchars=None):
     if minchars and len(permission) < int(minchars) and permission != '':
-        print("Skipping prefix {} because length of {}".format(permission, len(permission)) , file = sys.stderr)
+        print("Skipping prefix {} because length of {}".format(permission, len(permission)), file=sys.stderr)
         return True
     return False
 
