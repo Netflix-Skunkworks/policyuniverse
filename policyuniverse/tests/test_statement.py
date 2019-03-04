@@ -315,6 +315,28 @@ statement28 = dict(
             'AWS:SourceAccount': '123456789123'
         }})
 
+# aws:PrincipalOrgID
+statement29 = dict(
+    Effect='Allow',
+    Principal='*',
+    Action=['rds:*'],
+    Resource='*',
+    Condition={
+        'StringEquals': {
+            'AWS:PrincipalOrgID': 'o-xxxxxxxxxx'
+        }})
+
+# aws:PrincipalOrgID Wildcard
+statement30 = dict(
+    Effect='Allow',
+    Principal='*',
+    Action=['rds:*'],
+    Resource='*',
+    Condition={
+        'StringLike': {
+            'AWS:PrincipalOrgID': 'o-*'
+        }})
+
 
 class StatementTestCase(unittest.TestCase):
     def test_statement_effect(self):
@@ -392,6 +414,12 @@ class StatementTestCase(unittest.TestCase):
         statement = Statement(statement23)
         self.assertEqual(statement.condition_accounts, set(['222222222222']))
 
+        statement = Statement(statement29)
+        self.assertEqual(statement.condition_orgids, set(['o-xxxxxxxxxx']))
+
+        statement = Statement(statement30)
+        self.assertEqual(statement.condition_orgids, set(['o-*']))
+
     def test_statement_internet_accessible(self):
         self.assertTrue(Statement(statement14).is_internet_accessible())
         self.assertTrue(Statement(statement15).is_internet_accessible())
@@ -430,4 +458,10 @@ class StatementTestCase(unittest.TestCase):
         self.assertTrue(Statement(statement27).is_internet_accessible())
 
         # 28 is like 10, but with the mistake of not providing a list for ForAny/ForAll
-        self.assertTrue(Statement(statement27).is_internet_accessible())
+        self.assertTrue(Statement(statement28).is_internet_accessible())
+
+        # AWS:PrincipalOrgID
+        self.assertFalse(Statement(statement29).is_internet_accessible())
+
+        # AWS:PrincipalOrgID Wildcard
+        self.assertTrue(Statement(statement30).is_internet_accessible())
