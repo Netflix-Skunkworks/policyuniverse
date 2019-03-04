@@ -34,7 +34,7 @@ class ARN(object):
     service = False
 
     def __init__(self, input):
-        arn_match = re.search('^arn:([^:]*):([^:]*):([^:]*):(|\*|[\d]{12}|cloudfront):(.+)$', input)
+        arn_match = re.search('^arn:([^:]*):([^:]*):([^:]*):(|\*|[\d]{12}|cloudfront|aws):(.+)$', input)
         if arn_match:
             if arn_match.group(2) == "iam" and arn_match.group(5) == "root":
                 self.root = True
