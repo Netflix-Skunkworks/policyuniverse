@@ -185,6 +185,12 @@ class Statement(object):
         for condition_operator in condition.keys():
             if any(regex.match(condition_operator) for regex in relevant_condition_operators):
                 for key, value in condition[condition_operator].items():
+
+                    # ForAllValues and ForAnyValue must be paired with a list.
+                    # Otherwise, skip over entries.
+                    if not isinstance(value, list) and condition_operator.lower().startswith('for'):
+                        continue
+
                     if key.lower() in key_mapping:
                         if isinstance(value, list):
                             for v in value:
