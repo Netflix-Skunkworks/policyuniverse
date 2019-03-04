@@ -42,7 +42,8 @@ class ARNTestCase(unittest.TestCase):
             'arn:aws:ec2:ap-northeast-1:012345678910:security-group/*',
             'arn:aws-cn:ec2:ap-northeast-1:012345678910:security-group/*',
             'arn:aws-us-gov:ec2:gov-west-1:012345678910:instance/*',
-            'arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity EXXXXXXXXXXXXX'
+            'arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity EXXXXXXXXXXXXX',
+            'arn:aws:iam::aws:policy/AlexaForBusinessDeviceSetup'
         ]
 
         # Proper ARN Tests:
