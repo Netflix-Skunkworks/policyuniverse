@@ -71,7 +71,7 @@ statement07 = dict(
     Resource='*',
     Condition={
         'ForAllValues:ARNEqualsIfExists': {
-            'AWS:SourceArn': 'arn:aws:iam::012345678910:role/SomeTestRoleForTesting'
+            'AWS:SourceArn': ['arn:aws:iam::012345678910:role/SomeTestRoleForTesting']
         }})
 
 statement08 = dict(
@@ -113,8 +113,8 @@ statement10 = dict(
     Resource='*',
     Condition={
         'ForAnyValue:StringEquals': {
-            'AWS:SourceOwner': '012345678910',
-            'AWS:SourceAccount': '123456789123'
+            'AWS:SourceOwner': ['012345678910'],
+            'AWS:SourceAccount': ['123456789123']
         }})
 
 statement11 = dict(
@@ -290,6 +290,31 @@ statement26 = dict(
     Action=['iam:putrolepolicy', 'iam:listroles'],
     Resource='*')
 
+# Testing ForAnyValue/ForAllValues without list
+# Like statement 07, but this one shouldn't work
+statement27 = dict(
+    Effect='Allow',
+    Principal='*',
+    Action=['rds:*'],
+    Resource='*',
+    Condition={
+        'ForAllValues:ARNEqualsIfExists': {
+            'AWS:SourceArn': 'arn:aws:iam::012345678910:role/SomeTestRoleForTesting'
+        }})
+
+# Testing ForAnyValue/ForAllValues without list
+# Like statement 10, but this one shouldn't work
+statement28 = dict(
+    Effect='Allow',
+    Principal='*',
+    Action=['rds:*'],
+    Resource='*',
+    Condition={
+        'ForAnyValue:StringEquals': {
+            'AWS:SourceOwner': '012345678910',
+            'AWS:SourceAccount': '123456789123'
+        }})
+
 
 class StatementTestCase(unittest.TestCase):
     def test_statement_effect(self):
@@ -335,6 +360,9 @@ class StatementTestCase(unittest.TestCase):
         statement = Statement(statement07)
         self.assertEqual(statement.condition_arns, set(['arn:aws:iam::012345678910:role/SomeTestRoleForTesting']))
 
+        statement = Statement(statement27)
+        self.assertEqual(statement.condition_arns, set([]))
+
         statement = Statement(statement08)
         self.assertEqual(statement.condition_arns,
             set(['arn:aws:iam::012345678910:role/SomeTestRoleForTesting',
@@ -342,6 +370,9 @@ class StatementTestCase(unittest.TestCase):
 
         statement = Statement(statement10)
         self.assertEqual(statement.condition_accounts, set(['012345678910', '123456789123']))
+
+        statement = Statement(statement28)
+        self.assertEqual(statement.condition_accounts, set([]))
 
         statement = Statement(statement11)
         self.assertEqual(statement.condition_accounts, set(['012345678910', '123456789123']))
@@ -394,3 +425,9 @@ class StatementTestCase(unittest.TestCase):
         self.assertFalse(Statement(statement21).is_internet_accessible())
         # 22 is a likely malformed user ARN, but lacking an account number
         self.assertTrue(Statement(statement22).is_internet_accessible())
+
+        # 27 is like 07, but with the mistake of not providing a list for ForAny/ForAll
+        self.assertTrue(Statement(statement27).is_internet_accessible())
+
+        # 28 is like 10, but with the mistake of not providing a list for ForAny/ForAll
+        self.assertTrue(Statement(statement27).is_internet_accessible())
