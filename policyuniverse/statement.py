@@ -152,11 +152,13 @@ class Statement(object):
         The alerting code that relies on this data must ensure the condition has at least one of the following:
         - A limiting ARN
         - Account Identifier
+        - AWS Organization Principal Org ID
         - User ID
         - Source IP / CIDR
         - VPC
         - VPC Endpoint
-        
+
+        https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html
         """
         conditions = list()
         condition = self.statement.get('Condition')
@@ -167,6 +169,7 @@ class Statement(object):
             'aws:sourcearn': 'arn',
             'aws:sourceowner': 'account',
             'aws:sourceaccount': 'account',
+            'aws:principalorgid': 'org-id',
             'kms:calleraccount': 'account',
             'aws:userid': 'userid',
             'aws:sourceip': 'cidr',
@@ -200,6 +203,10 @@ class Statement(object):
     @property
     def condition_accounts(self):
         return self._condition_field('account') 
+
+    @property
+    def condition_orgids(self):
+        return self._condition_field('org-id') 
 
     @property
     def condition_userids(self):
