@@ -30,14 +30,14 @@ class ActionGroupTestCase(unittest.TestCase):
         groups = categories_for_actions(actions)
         self.assertIn('ec2', groups.keys())
         self.assertIn('iam', groups.keys())
-        self.assertEqual(groups['ec2'], {'DataPlaneMutating'})
-        self.assertEqual(groups['iam'], {u'Permissions', 'DataPlaneListRead'})
+        self.assertEqual(groups['ec2'], {'Write'})
+        self.assertEqual(groups['iam'], {u'Permissions', 'List'})
 
     def test_actions_for_category(self):
         from policyuniverse.action_categories import actions_for_category
 
-        read_only_actions = actions_for_category('DataPlaneListRead')
-        write_actions = actions_for_category('DataPlaneMutating')
+        read_only_actions = actions_for_category('Read')
+        write_actions = actions_for_category('Write')
         permission_actions = actions_for_category('Permissions')
 
         for action in permission_actions:
