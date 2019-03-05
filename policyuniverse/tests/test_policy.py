@@ -106,6 +106,19 @@ policy05 = dict(
                 }})
         ])
 
+# AWS Organizations
+policy06 = dict(
+    Version='2010-08-14',
+    Statement=[dict(
+        Effect='Allow',
+        Principal='*',
+        Action=['rds:*'],
+        Resource='*',
+        Condition={
+            'StringEquals': {
+                'AWS:PrincipalOrgID': 'o-xxxxxxxxxx'
+            }})])
+
 class PolicyTestCase(unittest.TestCase):
     def test_internet_accessible(self):
         self.assertTrue(Policy(policy01).is_internet_accessible())
@@ -142,6 +155,12 @@ class PolicyTestCase(unittest.TestCase):
                 ConditionTuple(category='account', value='012345678910')
             ]))
 
+        self.assertEqual(
+            Policy(policy06).condition_entries,
+            set([
+                ConditionTuple(category='org-id', value='o-xxxxxxxxxx')
+            ]))
+
     def test_whos_allowed(self):
         allowed = Policy(policy03).whos_allowed()
         self.assertEqual(len(allowed), 2)
@@ -152,6 +171,9 @@ class PolicyTestCase(unittest.TestCase):
         self.assertEqual(len(principal_allowed), 2)
         condition_account_allowed = set([item for item in allowed if item.category == 'account'])
         self.assertEqual(len(condition_account_allowed), 1)
+
+        allowed = Policy(policy06).whos_allowed()
+        self.assertEqual(len(allowed), 2)
     
     def test_evasion_policies(self):
         """Some policies that may have been crafted to evade policycheckers."""
