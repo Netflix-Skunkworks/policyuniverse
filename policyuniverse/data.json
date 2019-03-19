@@ -97,7 +97,7 @@
   },
   "Account": {
     "actions": {
-      "account:DisableRegion": {
+      "DisableRegion": {
         "aws_action_groups": [
           "ReadWrite"
         ],
@@ -112,7 +112,7 @@
           "doc_page_rel": ""
         }
       },
-      "account:EnableRegion": {
+      "EnableRegion": {
         "aws_action_groups": [
           "ReadWrite"
         ],
