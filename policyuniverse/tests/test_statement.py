@@ -349,13 +349,13 @@ class StatementTestCase(unittest.TestCase):
 
     def test_statement_summary(self):
         statement = Statement(statement24)
-        self.assertEqual(statement.action_summary(), {'ec2': {'DataPlaneMutating'}})
+        self.assertEqual(statement.action_summary(), {'ec2': {'Write'}})
 
         statement = Statement(statement25)
-        self.assertEqual(statement.action_summary(), {'ec2': {'DataPlaneMutating'}, 'iam': {'Permissions'}})
+        self.assertEqual(statement.action_summary(), {'ec2': {'Write'}, 'iam': {'Permissions'}})
 
         statement = Statement(statement26)
-        self.assertEqual(statement.action_summary(), {'iam': {'Permissions', 'DataPlaneListRead'}})
+        self.assertEqual(statement.action_summary(), {'iam': {'Permissions', 'List'}})
 
     def test_statement_principals(self):
         statement = Statement(statement02)
