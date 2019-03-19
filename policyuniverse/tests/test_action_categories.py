@@ -30,14 +30,15 @@ class ActionGroupTestCase(unittest.TestCase):
         groups = categories_for_actions(actions)
         self.assertIn('ec2', groups.keys())
         self.assertIn('iam', groups.keys())
-        self.assertEqual(groups['ec2'], {'DataPlaneMutating'})
-        self.assertEqual(groups['iam'], {u'Permissions', 'DataPlaneListRead'})
+        self.assertEqual(groups['ec2'], {'Write'})
+        self.assertEqual(groups['iam'], {u'Permissions', 'List'})
 
     def test_actions_for_category(self):
         from policyuniverse.action_categories import actions_for_category
 
-        read_only_actions = actions_for_category('DataPlaneListRead')
-        write_actions = actions_for_category('DataPlaneMutating')
+        read_only_actions = actions_for_category('Read')
+        list_only_actions = actions_for_category('List')
+        write_actions = actions_for_category('Write')
         permission_actions = actions_for_category('Permissions')
 
         for action in permission_actions:
@@ -46,17 +47,23 @@ class ActionGroupTestCase(unittest.TestCase):
             self.assertFalse(':list' in action)
             self.assertFalse(':get' in action)
 
+        for action in list_only_actions:
+            self.assertFalse(":put" in action)
+            self.assertFalse(':create' in action)
+            self.assertFalse(':attach' in action)
+
         for action in read_only_actions:
             # read actions shouldn't start with "Put" unless they are miscategorized.
-            if action in {'ssm:putconfigurepackageresult', 'sagemaker:createpresignednotebookinstanceurl'}:
+            if action in {'ssm:putconfigurepackageresult', 'mobiletargeting:puteventstream', 'mobiletargeting:putevents'}:
                 continue
+            # self.assertFalse(':list' in action)  # Tons of list* permissions are mis-categorized(?) as Read.
             self.assertFalse(':put' in action)
             self.assertFalse(':create' in action)
             self.assertFalse(':attach' in action)
 
         for action in write_actions:
             # write actions shouldn't start with "get" unless they are miscategorized.
-            if action in {'states:getactivitytask', 'glue:getmapping', 'cognito-identity:getid', 'ec2:describefpgaimages', 'quicksight:getgroupmapping', 'redshift:getclustercredentials', 'fms:getcompliancedetail', 'connect:getfederationtokens'}:
+            if action in {'states:getactivitytask', 'glue:getmapping', 'cognito-identity:getid', 'ec2:describefpgaimages', 'quicksight:getgroupmapping', 'redshift:getclustercredentials', 'fms:getcompliancedetail', 'connect:getfederationtokens', 'redshift:describesnapshotschedules'}:
                 continue
             self.assertFalse(':get' in action)
             self.assertFalse(':describe' in action)

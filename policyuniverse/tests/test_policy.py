@@ -137,8 +137,8 @@ class PolicyTestCase(unittest.TestCase):
         summary = Policy(policy05).action_summary()
         self.assertEqual(summary,
             {
-                'ec2': {'DataPlaneMutating', 'DataPlaneListRead'},
-                's3': {'DataPlaneMutating', 'DataPlaneListRead', 'Permissions'}
+                'ec2': {'List', 'Write', 'Read'},
+                's3': {'Write', 'Read', 'List', 'Permissions'}
             })
 
     def test_principals(self):

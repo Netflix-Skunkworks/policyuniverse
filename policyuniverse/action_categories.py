@@ -24,17 +24,20 @@ def translate_aws_action_groups(groups):
     An action with Permission never has any other groups.
     
     This method will take the AWS categories and translate them to one of the following:
-    
-    - DataPlaneMutating
-    - DataPlaneListRead
+
+    - List
+    - Read
+    - ReadWrite
     - Permissions
     """
     if 'Permissions' in groups:
         return 'Permissions'
-    if 'ReadOnly' in groups or 'ListOnly' in groups:
-        return 'DataPlaneListRead'
+    if 'ListOnly' in groups:
+        return 'List'
+    if 'ReadOnly' in groups:
+        return 'Read'
     if 'ReadWrite' in groups:
-        return 'DataPlaneMutating'
+        return 'Write'
     return 'Unknown'
 
 
@@ -58,8 +61,8 @@ def categories_for_actions(actions):
     
     Returns:
         {
-            'ec2': {'DataPlaneMutating'},
-            'iam': {'Permissions', 'DataPlaneListRead'})
+            'ec2': {'Write'},
+            'iam': {'Permissions', 'List'})
         }
     """
     groups = defaultdict(set)
@@ -73,7 +76,7 @@ def actions_for_category(category):
     Returns set of actions containing each group passed in.
     
     Param:
-        category must be in {'Permissions', 'DataPlaneMutating', 'DataPlaneListRead}
+        category must be in {'Permissions', 'List', 'Read', 'Write'}
     
     Returns:
         set of matching actions
