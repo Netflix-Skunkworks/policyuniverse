@@ -42,19 +42,21 @@ class ActionGroupTestCase(unittest.TestCase):
         permission_actions = actions_for_category('Permissions')
 
         for action in permission_actions:
-            if action in {'xray:getencryptionconfig'}:
+            if action in {'xray:getencryptionconfig'}:  # miscategorized AWS actions
                 continue
             self.assertFalse(':list' in action)
             self.assertFalse(':get' in action)
 
         for action in list_only_actions:
+            if action in {'lightsail:createcloudformationstack'}:  # miscategorized AWS actions
+                continue
             self.assertFalse(":put" in action)
             self.assertFalse(':create' in action)
             self.assertFalse(':attach' in action)
 
         for action in read_only_actions:
             # read actions shouldn't start with "Put" unless they are miscategorized.
-            if action in {'ssm:putconfigurepackageresult', 'mobiletargeting:puteventstream', 'mobiletargeting:putevents'}:
+            if action in {'ssm:putconfigurepackageresult', 'mobiletargeting:puteventstream', 'mobiletargeting:putevents'}:  # miscategorized AWS actions
                 continue
             # self.assertFalse(':list' in action)  # Tons of list* permissions are mis-categorized(?) as Read.
             self.assertFalse(':put' in action)
@@ -63,7 +65,7 @@ class ActionGroupTestCase(unittest.TestCase):
 
         for action in write_actions:
             # write actions shouldn't start with "get" unless they are miscategorized.
-            if action in {'states:getactivitytask', 'glue:getmapping', 'cognito-identity:getid', 'ec2:describefpgaimages', 'quicksight:getgroupmapping', 'redshift:getclustercredentials', 'fms:getcompliancedetail', 'connect:getfederationtokens', 'redshift:describesnapshotschedules'}:
+            if action in {'lightsail:getinstanceaccessdetails', 'redshift:getclustercredentials', 'states:getactivitytask', 'cognito-identity:getid', 'glue:getmapping', 'lightsail:getrelationaldatabasemasteruserpassword', 'connect:getfederationtokens'}:  # miscategorized AWS actions
                 continue
             self.assertFalse(':get' in action)
             self.assertFalse(':describe' in action)
