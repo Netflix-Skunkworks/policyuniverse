@@ -6,11 +6,12 @@ from policyuniverse import _action_categories
 
 def translate_aws_action_groups(groups):
     """
-    Problem - AWS provides the following four groups:
+    Problem - AWS provides the following five groups:
         - Permissions
         - ReadWrite
         - ListOnly
         - ReadOnly
+        - Tagging
     
     The meaning of these groups was not immediately obvious to me.
     
@@ -19,6 +20,7 @@ def translate_aws_action_groups(groups):
     ReadOnly: Always used with ReadWrite. Indicates a read-only data-plane operation.
     ListOnly: Always used with [ReadWrite, ReadOnly]. Indicates an action which
         lists resources, which is a subcategory of read-only data-plane operations.
+    Tagging: Always used with ReadWrite. Indicates a permission that can mutate tags.
     
     So an action with ReadWrite, but without ReadOnly, is a mutating data-plane operation.
     An action with Permission never has any other groups.
@@ -27,6 +29,7 @@ def translate_aws_action_groups(groups):
 
     - List
     - Read
+    - Tagging
     - ReadWrite
     - Permissions
     """
@@ -36,6 +39,8 @@ def translate_aws_action_groups(groups):
         return 'List'
     if 'ReadOnly' in groups:
         return 'Read'
+    if 'Tagging' in groups:
+        return 'Tagging'
     if 'ReadWrite' in groups:
         return 'Write'
     return 'Unknown'
@@ -76,7 +81,7 @@ def actions_for_category(category):
     Returns set of actions containing each group passed in.
     
     Param:
-        category must be in {'Permissions', 'List', 'Read', 'Write'}
+        category must be in {'Permissions', 'List', 'Read', 'Tagging', 'Write'}
     
     Returns:
         set of matching actions
