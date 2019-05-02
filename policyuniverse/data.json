@@ -1049,7 +1049,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Adds metadata tags to a resource.",
         "docs": {
@@ -1063,7 +1063,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Removes metadata tags from a resource.",
         "docs": {
@@ -2467,7 +2467,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -2485,7 +2485,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -3231,7 +3231,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Creates one or more tags for configuration items. Tags are metadata that help you categorize IT assets. This API accepts a list of multiple configuration items.",
         "docs": {
@@ -3258,7 +3258,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Deletes the association between configuration items and one or more tags. This API accepts a list of multiple configuration items.",
         "docs": {
@@ -3674,7 +3674,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -3997,7 +3997,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -4014,7 +4014,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -5162,7 +5162,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Adds one or more tags to a certificate.",
         "docs": {
@@ -5273,7 +5273,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Remove one or more tags from a certificate. A tag consists of a key-value pair",
         "docs": {
@@ -5356,7 +5356,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -5590,7 +5590,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -5607,7 +5607,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -7741,7 +7741,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Adds tags to a resource.",
         "docs": {
@@ -7755,7 +7755,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Removes tags from a resource.",
         "docs": {
@@ -9062,7 +9062,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "This action creates a new web distribution with tags (POST /2016-11-25/distribution?WithTags).",
         "docs": {
@@ -9102,7 +9102,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "This action creates a new RTMP distribution with tags (POST /2016-11-25/streaming-distribution?WithTags).",
         "docs": {
@@ -9342,7 +9342,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Add tags to a CloudFront resource (POST /2016-11-25/tagging?Operation=Tag?Resource=<RESOURCE>).",
         "docs": {
@@ -9356,7 +9356,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Remove tags from a CloudFront resource (POST /2016-11-25/tagging?Operation=Untag?Resource=<RESOURCE>).",
         "docs": {
@@ -9426,7 +9426,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Adds or overwrites one or more tags for the specified AWS CloudHSM resource",
         "docs": {
@@ -9768,7 +9768,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Removes one or more tags from the specified AWS CloudHSM resource",
         "docs": {
@@ -9782,7 +9782,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Adds or overwrites one or more tags for the specified AWS CloudHSM cluster.",
         "docs": {
@@ -9796,7 +9796,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Removes the specified tag or tags from the specified AWS CloudHSM cluster.",
         "docs": {
@@ -9827,7 +9827,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Attaches resource tags to an Amazon CloudSearch domain.",
         "docs": {
@@ -10139,7 +10139,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Removes the specified resource tags from an Amazon ES domain.",
         "docs": {
@@ -10250,7 +10250,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Grants permission to add one or more tags to a trail, up to a limit of 10",
         "docs": {
@@ -10389,7 +10389,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Grants permission to remove tags from a trail",
         "docs": {
@@ -10709,7 +10709,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -10726,7 +10726,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -10912,7 +10912,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
@@ -10975,7 +10975,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -11006,7 +11006,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -12713,7 +12713,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Add tags to one or more on-premises instances.",
         "docs": {
@@ -13177,7 +13177,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Remove tags from one or more on-premises instances.",
         "docs": {
@@ -14196,7 +14196,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -14240,7 +14240,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
@@ -15729,7 +15729,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -15747,7 +15747,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
@@ -16549,7 +16549,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -16567,7 +16567,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
@@ -17685,7 +17685,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Adds metadata tags to a DMS resource, including replication instance, endpoint, security group, and migration task",
         "docs": {
@@ -18119,7 +18119,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Removes metadata tags from a DMS resource",
         "docs": {
@@ -18292,7 +18292,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "datapipeline:PipelineCreator",
           "datapipeline:Tag"
@@ -18519,7 +18519,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "datapipeline:PipelineCreator",
           "datapipeline:Tag"
@@ -18963,7 +18963,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -20706,7 +20706,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Adds or overwrites one or more tags for the specified Amazon Directory Services directory.",
         "docs": {
@@ -21230,7 +21230,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Removes tags from an Amazon Directory Services directory.",
         "docs": {
@@ -21890,7 +21890,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Associate a set of tags with an Amazon DynamoDB resource",
         "docs": {
@@ -21904,7 +21904,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Removes the association of tags from an Amazon DynamoDB resource.",
         "docs": {
@@ -22354,7 +22354,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "The TagResource action associates a set of tags with a DAX resource.",
         "docs": {
@@ -22368,7 +22368,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "The UntagResource action removes the association of tags from a DAX resource.",
         "docs": {
@@ -23350,7 +23350,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "ec2:CreateAction"
         ],
@@ -23847,7 +23847,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Deletes the specified set of tags from the specified set of resources.",
         "docs": {
@@ -26778,7 +26778,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Launches the specified number of instances using an AMI for which you have permissions.",
         "docs": {
@@ -27049,7 +27049,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "autoscaling:InstanceTypes",
           "autoscaling:LaunchConfigurationName",
@@ -27090,7 +27090,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -27185,7 +27185,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -27858,7 +27858,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -27888,7 +27888,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -27931,7 +27931,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -28231,7 +28231,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Adds the specified tags to the specified load balancer. Each load balancer can have a maximum of 10 tags.",
         "docs": {
@@ -28607,7 +28607,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Removes one or more tags from the specified load balancer.",
         "docs": {
@@ -28742,7 +28742,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "elasticmapreduce:RequestTag/${TagKey}"
         ],
@@ -28771,7 +28771,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "elasticmapreduce:RequestTag/${TagKey}"
         ],
@@ -29066,7 +29066,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Grants permission to remove tags from an Amazon EMR resource.",
         "docs": {
@@ -29080,7 +29080,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "elasticmapreduce:RequestTag/${TagKey}"
         ],
@@ -29180,7 +29180,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "The AddTagsToResource action adds up to 10 cost allocation tags to the named resource.",
         "docs": {
@@ -29702,7 +29702,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "The RemoveTagsFromResource action removes the tags identified by the TagKeys list from the named resource.",
         "docs": {
@@ -29785,7 +29785,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Grants permission to add tags to an Elastic Beanstalk resource and to update tag values.",
         "docs": {
@@ -30236,7 +30236,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Grants permission to remove tags from an Elastic Beanstalk resource.",
         "docs": {
@@ -31408,7 +31408,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -31425,7 +31425,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -31776,7 +31776,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Grants permission to attach resource tags to an Amazon ES domain.",
         "docs": {
@@ -32099,7 +32099,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Grants permission to remove tags from Amazon ES domains.",
         "docs": {
@@ -32199,7 +32199,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -32216,7 +32216,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -32233,7 +32233,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -32318,7 +32318,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -32335,7 +32335,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -33564,7 +33564,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Adds the specified tags to a vault",
         "docs": {
@@ -33913,7 +33913,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Removes one or more tags from the set of tags attached to a vault",
         "docs": {
@@ -36572,7 +36572,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -36590,7 +36590,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
@@ -39128,7 +39128,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Grants permission to add tags to an IAM role.",
         "docs": {
@@ -39142,7 +39142,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Grants permission to add tags to an IAM user.",
         "docs": {
@@ -39156,7 +39156,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Grants permission to remove the specified tags from the role.",
         "docs": {
@@ -39170,7 +39170,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Grants permission to remove the specified tags from the user.",
         "docs": {
@@ -39884,7 +39884,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Sets tags (key and value pairs) to the assessment template that is specified by the ARN of the assessment template.",
         "docs": {
@@ -40149,7 +40149,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Creates a billing group.",
         "docs": {
@@ -40280,7 +40280,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Creates a thing group.",
         "docs": {
@@ -40294,7 +40294,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Creates a new thing type.",
         "docs": {
@@ -40334,7 +40334,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Deletes the specified billing group.",
         "docs": {
@@ -40491,7 +40491,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Deletes the specified thing group.",
         "docs": {
@@ -40518,7 +40518,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Deletes the specified thing type.",
         "docs": {
@@ -41756,7 +41756,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Tag a specified resource",
         "docs": {
@@ -41811,7 +41811,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Untag a specified resource",
         "docs": {
@@ -42819,7 +42819,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
@@ -42837,7 +42837,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
@@ -44344,7 +44344,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "kms:CallerAccount",
           "kms:ViaService"
@@ -44361,7 +44361,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "kms:CallerAccount",
           "kms:ViaService"
@@ -44427,7 +44427,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Adds or updates tags for the specified Amazon Kinesis stream. Each stream can have up to 10 tags.",
         "docs": {
@@ -44727,7 +44727,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Description for SplitShard",
         "docs": {
@@ -45145,7 +45145,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -45162,7 +45162,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -46288,7 +46288,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -46448,7 +46448,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
@@ -46466,7 +46466,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "license-manager:ResourceTag/${TagKey}"
         ],
@@ -48373,7 +48373,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Adds one or more tags to an object, up to a limit of 10. Each tag consists of a key and an optional value",
         "docs": {
@@ -48543,7 +48543,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Deletes the specified tags associated with an ML object. After this operation is complete, you can't recover deleted tags",
         "docs": {
@@ -50327,7 +50327,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -50344,7 +50344,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -50429,7 +50429,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -50446,7 +50446,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -50463,7 +50463,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -50480,7 +50480,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -50549,7 +50549,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -50739,7 +50739,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -51434,7 +51434,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -51452,7 +51452,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -54886,7 +54886,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -54904,7 +54904,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -55905,7 +55905,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Adds metadata tags to an Amazon RDS resource.",
         "docs": {
@@ -56023,7 +56023,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Creates a new Amazon Aurora DB cluster.",
         "docs": {
@@ -56050,7 +56050,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Create a new DB cluster parameter group.",
         "docs": {
@@ -56064,7 +56064,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Creates a snapshot of a DB cluster.",
         "docs": {
@@ -56078,7 +56078,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Creates a new DB instance.",
         "docs": {
@@ -56092,7 +56092,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Creates a DB instance that acts as a Read Replica of a source DB instance.",
         "docs": {
@@ -56106,7 +56106,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Creates a new DB parameter group.",
         "docs": {
@@ -56120,7 +56120,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Creates a new DB security group. DB security groups control access to a DB instance.",
         "docs": {
@@ -56134,7 +56134,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Creates a DBSnapshot.",
         "docs": {
@@ -56148,7 +56148,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Creates a new DB subnet group.",
         "docs": {
@@ -56162,7 +56162,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Creates an RDS event notification subscription.",
         "docs": {
@@ -56189,7 +56189,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Creates a new option group.",
         "docs": {
@@ -57194,7 +57194,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Removes metadata tags from an Amazon RDS resource.",
         "docs": {
@@ -57669,7 +57669,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Adds one or more tags to a specified resource",
         "docs": {
@@ -57826,7 +57826,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Deletes a tag or tags from a resource",
         "docs": {
@@ -59502,7 +59502,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Add tags to AWS resources",
         "docs": {
@@ -59516,7 +59516,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Remove tags from AWS resources",
         "docs": {
@@ -59547,7 +59547,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Creates a group with a specified name, description, and resource query.",
         "docs": {
@@ -59661,7 +59661,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Tags a specified resource group",
         "docs": {
@@ -59675,7 +59675,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Removes tags associated with a specified resource group",
         "docs": {
@@ -60197,7 +60197,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Grants permission to add, edit, or delete tags for a health check or a hosted zone",
         "docs": {
@@ -61213,7 +61213,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Grants permission to add one or more tags to a specified resource.",
         "docs": {
@@ -61227,7 +61227,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Grants permission to remove one or more tags from a specified resource.",
         "docs": {
@@ -61298,7 +61298,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Grants permission to delete the specified tags for a domain",
         "docs": {
@@ -61569,7 +61569,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Grants permission to add or update tags for a specified domain",
         "docs": {
@@ -61729,7 +61729,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "s3:ExistingObjectTag/<key>",
           "s3:authtype",
@@ -61768,7 +61768,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "s3:ExistingObjectTag/<key>",
           "s3:authtype",
@@ -62687,7 +62687,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "s3:authtype",
           "s3:signatureage",
@@ -62872,7 +62872,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "s3:ExistingObjectTag/<key>",
           "s3:RequestObjectTag/<key>",
@@ -62921,7 +62921,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "s3:ExistingObjectTag/<key>",
           "s3:RequestObjectTag/<key>",
@@ -63000,7 +63000,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "s3:authtype",
           "s3:signatureage",
@@ -64710,7 +64710,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Add tags to the specified SQS queue.",
         "docs": {
@@ -64724,7 +64724,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Remove tags from the specified SQS queue.",
         "docs": {
@@ -66758,7 +66758,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Adds or overwrites one or more tags for the specified Amazon SageMaker resource.",
         "docs": {
@@ -67146,7 +67146,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Deletes the specified set of tags from an Amazon SageMaker resource.",
         "docs": {
@@ -68027,7 +68027,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/tag-key",
           "aws:TagKeys",
@@ -68256,7 +68256,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/tag-key",
           "aws:TagKeys",
@@ -68276,7 +68276,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:TagKeys",
           "secretsmanager:ResourceTag/tag-key",
@@ -69450,7 +69450,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Copies the specified source product to the specified target product or a new product.",
         "docs": {
@@ -69477,7 +69477,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Creates a portfolio",
         "docs": {
@@ -69504,7 +69504,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Creates a product and that product's first provisioning artifact",
         "docs": {
@@ -69518,7 +69518,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Adds a new provisioned product plan",
         "docs": {
@@ -69953,7 +69953,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Executes a provisioned product plan",
         "docs": {
@@ -69967,7 +69967,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Executes a provisioned product plan",
         "docs": {
@@ -70239,7 +70239,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Provisions a product with a specified provisioning artifact and launch parameters",
         "docs": {
@@ -70364,7 +70364,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Updates the metadata fields and/or tags of an existing portfolio",
         "docs": {
@@ -70378,7 +70378,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Updates the metadata fields and/or tags of an existing product",
         "docs": {
@@ -71260,7 +71260,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -71277,7 +71277,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -71526,7 +71526,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -71543,7 +71543,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -71621,7 +71621,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -72414,7 +72414,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -72939,7 +72939,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Adds or overwrites one or more tags for the specified resource.",
         "docs": {
@@ -74219,7 +74219,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Removes all tags from the specified resource.",
         "docs": {
@@ -74931,7 +74931,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -74962,7 +74962,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -78759,7 +78759,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Tagging",
         "condition_keys": [],
         "description": "Creates tags for a WorkSpace.",
         "docs": {

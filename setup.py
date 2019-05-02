@@ -4,12 +4,12 @@
 from setuptools import setup
 
 setup(name='policyuniverse',
-      version='1.3.0.2',
+      version='1.3.1.1',
       description='AWS IAM Policy Utilities',
       author='Patrick Kelley',
       author_email='pkelley@netflix.com',
       url='https://github.com/Netflix-Skunkworks/policyuniverse',
-      keywords = ['iam', 'policy', 'wildcard'],
+      keywords = ['iam', 'arn', 'action_groups', 'condition', 'policy', 'statement', 'wildcard'],
       packages=['policyuniverse'],
       package_data={
           'policyuniverse': [

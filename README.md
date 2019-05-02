@@ -193,11 +193,11 @@ from policyuniverse.policy import Policy
 p = Policy(policy)
 for k, v in p.action_summary().items():
     print(k,v)
->>> ('s3', set([u'Write', u'Permissions']))
->>> ('sqs', set([u'List', u'Read']))
+>>> ('s3', set([u'Write', u'Permissions', u'Tagging']))
+>>> ('sqs', set([u'List']))
 >>> ('sns', set([u'List', u'Read', u'Write', u'Permissions']))
 ```
-Possible categories are `Permissions`, `Write`, `Read`, and `List`.  This data can be used to summarize statements and policies and to look for sensitive permissions.
+Possible categories are `Permissions`, `Write`, `Read`, `Tagging`, and `List`.  This data can be used to summarize statements and policies and to look for sensitive permissions.
 
 ## Expanding and Minification
 ```python
