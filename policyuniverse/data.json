@@ -1049,7 +1049,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Adds metadata tags to a resource.",
         "docs": {
@@ -1063,7 +1063,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Removes metadata tags from a resource.",
         "docs": {
@@ -2467,7 +2467,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -2485,7 +2485,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -3231,7 +3231,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Creates one or more tags for configuration items. Tags are metadata that help you categorize IT assets. This API accepts a list of multiple configuration items.",
         "docs": {
@@ -3258,7 +3258,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Deletes the association between configuration items and one or more tags. This API accepts a list of multiple configuration items.",
         "docs": {
@@ -3674,7 +3674,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -3997,7 +3997,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -4014,7 +4014,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -5162,7 +5162,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Adds one or more tags to a certificate.",
         "docs": {
@@ -5273,7 +5273,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Remove one or more tags from a certificate. A tag consists of a key-value pair",
         "docs": {
@@ -5356,7 +5356,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -5590,7 +5590,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -5607,7 +5607,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -5843,6 +5843,32 @@
           "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/okta_sso.html"
         }
       },
+      "CreateBot": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create a bot for an Amazon Chime Enterprise account",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "API_CreateBot.html",
+          "doc_page_rel": "API_CreateBot.html"
+        }
+      },
+      "CreateBotMembership": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to add a bot to a chat room in your Amazon Chime Enterprise account",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "API_CreateBotMembership.html",
+          "doc_page_rel": "API_CreateBotMembership.html"
+        }
+      },
       "CreateCDRBucket": {
         "aws_action_groups": [
           "ReadWrite"
@@ -5958,6 +5984,19 @@
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}claim-domain.html",
           "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/claim-domain.html"
+        }
+      },
+      "DeleteEventsConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete an events configuration for a bot to receive outgoing events",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "API_DeleteEventsConfiguration.html",
+          "doc_page_rel": "API_DeleteEventsConfiguration.html"
         }
       },
       "DeleteGroups": {
@@ -6133,6 +6172,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/okta_sso.html"
         }
       },
+      "GetBot": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve details for the specified bot",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "API_GetBot.html",
+          "doc_page_rel": "API_GetBot.html"
+        }
+      },
       "GetCDRBucket": {
         "aws_action_groups": [
           "ReadOnly",
@@ -6159,6 +6212,20 @@
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}claim-domain.html",
           "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/claim-domain.html"
+        }
+      },
+      "GetEventsConfiguration": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve details for an events configuration for a bot to receive outgoing events",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "API_GetEventsConfiguration.html",
+          "doc_page_rel": "API_GetEventsConfiguration.html"
         }
       },
       "GetGlobalSettings": {
@@ -6414,6 +6481,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/okta_sso.html"
         }
       },
+      "ListBots": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to list the bots associated with the administrator's Amazon Chime Enterprise account",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "API_ListBots.html",
+          "doc_page_rel": "API_ListBots.html"
+        }
+      },
       "ListCDRBucket": {
         "aws_action_groups": [
           "ListOnly",
@@ -6617,6 +6698,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/API_LogoutUser.html"
         }
       },
+      "PutEventsConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to update details for an events configuration for a bot to receive outgoing events",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "API_PutEventsConfiguration.html",
+          "doc_page_rel": "API_PutEventsConfiguration.html"
+        }
+      },
       "PutVoiceConnectorOrigination": {
         "aws_action_groups": [
           "ReadWrite"
@@ -6654,6 +6748,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/API_PutVoiceConnectorTerminationCredentials.html"
+        }
+      },
+      "RegenerateSecurityToken": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to regenerate the security token for the specified bot",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "API_RegenerateSecurityToken.html",
+          "doc_page_rel": "API_RegenerateSecurityToken.html"
         }
       },
       "RenameAccount": {
@@ -6852,6 +6959,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/API_UpdateAccountSettings.html"
+        }
+      },
+      "UpdateBot": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to update the status of the specified bot",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "API_UpdateBot.html",
+          "doc_page_rel": "API_UpdateBot.html"
         }
       },
       "UpdateCDRSettings": {
@@ -7741,7 +7861,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Adds tags to a resource.",
         "docs": {
@@ -7755,7 +7875,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Removes tags from a resource.",
         "docs": {
@@ -7890,7 +8010,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "servicediscovery:NamespaceArn"
+        ],
         "description": "Creates a service.",
         "docs": {
           "api_doc": "API_CreateService.html",
@@ -7929,7 +8051,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "servicediscovery:ServiceArn"
+        ],
         "description": "Deletes the records and the health check, if any, that Amazon Route 53 created for the specified instance.",
         "docs": {
           "api_doc": "API_DeregisterInstance.html",
@@ -7943,7 +8067,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "servicediscovery:NamespaceName",
+          "servicediscovery:ServiceName"
+        ],
         "description": "Discovers registered instances for a specified namespace and service.",
         "docs": {
           "api_doc": "API_DiscoverInstances.html",
@@ -7957,7 +8084,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "servicediscovery:ServiceArn"
+        ],
         "description": "Gets information about a specified instance.",
         "docs": {
           "api_doc": "API_GetInstance.html",
@@ -7971,7 +8100,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "servicediscovery:ServiceArn"
+        ],
         "description": "Gets the current health status (Healthy, Unhealthy, or Unknown) of one or more instances.",
         "docs": {
           "api_doc": "API_GetInstancesHealthStatus.html",
@@ -8028,7 +8159,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "servicediscovery:ServiceArn"
+        ],
         "description": "Gets summary information about the instances that were registered with a specified service.",
         "docs": {
           "api_doc": "API_ListInstances.html",
@@ -8086,7 +8219,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "servicediscovery:ServiceArn"
+        ],
         "description": "Registers an instance based on the settings in a specified service.",
         "docs": {
           "api_doc": "API_RegisterInstance.html",
@@ -8099,7 +8234,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "servicediscovery:ServiceArn"
+        ],
         "description": "Updates the current health status for an instance that has a custom health check.",
         "docs": {
           "api_doc": "API_UpdateInstanceCustomHealthStatus.html",
@@ -8130,8 +8267,8 @@
       "api_doc_root": "https://docs.aws.amazon.com//cloud-map/latest/api/",
       "api_reference_doc_page": "",
       "authz_doc_page": "",
-      "concepts_doc_root": "",
-      "context_keys_doc_root": ""
+      "concepts_doc_root": "https://docs.aws.amazon.com//cloud-map/latest/dg/",
+      "context_keys_doc_root": "https://docs.aws.amazon.com//cloud-map/latest/dg/"
     },
     "prefix": "servicediscovery"
   },
@@ -9062,7 +9199,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "This action creates a new web distribution with tags (POST /2016-11-25/distribution?WithTags).",
         "docs": {
@@ -9102,7 +9239,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "This action creates a new RTMP distribution with tags (POST /2016-11-25/streaming-distribution?WithTags).",
         "docs": {
@@ -9342,7 +9479,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Add tags to a CloudFront resource (POST /2016-11-25/tagging?Operation=Tag?Resource=<RESOURCE>).",
         "docs": {
@@ -9356,7 +9493,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Remove tags from a CloudFront resource (POST /2016-11-25/tagging?Operation=Untag?Resource=<RESOURCE>).",
         "docs": {
@@ -9426,7 +9563,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Adds or overwrites one or more tags for the specified AWS CloudHSM resource",
         "docs": {
@@ -9768,7 +9905,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Removes one or more tags from the specified AWS CloudHSM resource",
         "docs": {
@@ -9782,7 +9919,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Adds or overwrites one or more tags for the specified AWS CloudHSM cluster.",
         "docs": {
@@ -9796,7 +9933,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Removes the specified tag or tags from the specified AWS CloudHSM cluster.",
         "docs": {
@@ -9827,7 +9964,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Attaches resource tags to an Amazon CloudSearch domain.",
         "docs": {
@@ -10139,7 +10276,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Removes the specified resource tags from an Amazon ES domain.",
         "docs": {
@@ -10250,7 +10387,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to add one or more tags to a trail, up to a limit of 10",
         "docs": {
@@ -10389,7 +10526,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to remove tags from a trail",
         "docs": {
@@ -10709,7 +10846,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -10726,7 +10863,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -10912,7 +11049,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
@@ -10975,7 +11112,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -11006,7 +11143,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -12713,7 +12850,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Add tags to one or more on-premises instances.",
         "docs": {
@@ -13177,7 +13314,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Remove tags from one or more on-premises instances.",
         "docs": {
@@ -13440,6 +13577,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_GetThirdPartyJobDetails.html"
+        }
+      },
+      "ListActionExecutions": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Returns a list of the most recent action executions that has happened in a pipeline.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_ListActionExecutions.html"
         }
       },
       "ListActionTypes": {
@@ -14196,7 +14347,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -14240,7 +14391,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
@@ -14835,6 +14986,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminSetUserMFAPreference.html"
+        }
+      },
+      "AdminSetUserPassword": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Sets the specified user's password in a user pool as an administrator. Works on any user.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminSetUserPassword.html"
         }
       },
       "AdminSetUserSettings": {
@@ -15729,7 +15893,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -15747,7 +15911,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
@@ -16549,7 +16713,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -16567,7 +16731,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
@@ -16758,6 +16922,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_DeletePendingAggregationRequest.html"
+        }
+      },
+      "DeleteRemediationConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes the remediation configuration",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_DeleteRemediationConfiguration.html"
         }
       },
       "DeleteRetentionConfiguration": {
@@ -16982,6 +17159,36 @@
           "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_DescribePendingAggregationRequests.html"
         }
       },
+      "DescribeRemediationConfigurations": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Returns the details of one or more remediation configurations",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_DescribeRemediationConfigurations.html"
+        }
+      },
+      "DescribeRemediationExecutionStatus": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Provides a detailed view of a Remediation Execution for a set of resources including state, timestamps and any error messages for steps that have failed",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_DescribeRemediationExecutionStatus.html"
+        }
+      },
       "DescribeRetentionConfigurations": {
         "aws_action_groups": [
           "ListOnly",
@@ -17195,12 +17402,30 @@
           "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_ListDiscoveredResources.html"
         }
       },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "List the tags for AWS Config resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_ListTagsForResource.html"
+        }
+      },
       "PutAggregationAuthorization": {
         "aws_action_groups": [
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Authorizes the aggregator account and region to collect data from the source account and region",
         "docs": {
           "api_doc": "",
@@ -17213,7 +17438,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Adds or updates an AWS Config rule for evaluating whether your AWS resources comply with your desired configurations",
         "docs": {
           "api_doc": "",
@@ -17226,7 +17454,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates and updates the configuration aggregator with the selected source accounts and regions",
         "docs": {
           "api_doc": "",
@@ -17273,6 +17504,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_PutEvaluations.html"
         }
       },
+      "PutRemediationConfigurations": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Adds or updates the remediation configuration with a specific AWS Config rule with the selected target or action",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_PutRemediationConfigurations.html"
+        }
+      },
       "PutRetentionConfiguration": {
         "aws_action_groups": [
           "ReadWrite"
@@ -17284,6 +17528,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_PutRetentionConfiguration.html"
+        }
+      },
+      "SelectResourceConfig": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Accepts a structured query language (SQL) SELECT command, performs the corresponding search, and returns resource configurations matching the properties",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_SelectResourceConfig.html"
         }
       },
       "StartConfigRulesEvaluation": {
@@ -17312,6 +17570,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_StartConfigurationRecorder.html"
         }
       },
+      "StartRemediationExecution": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Runs an on-demand remediation for the specified AWS Config rules against the last known remediation configuration",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_StartRemediationExecution.html"
+        }
+      },
       "StopConfigurationRecorder": {
         "aws_action_groups": [
           "ReadWrite"
@@ -17324,6 +17595,39 @@
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_StopConfigurationRecorder.html"
         }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Associates the specified tags to a resource with the specified resourceArn",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_TagResource.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "Deletes specified tags from a resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_UntagResource.html"
+        }
       }
     },
     "arn_format": "arn:<partition>:config:<region>:<account>:<resourceType>/<resourceId>",
@@ -17333,7 +17637,7 @@
       "actions_doc_root": "https://docs.aws.amazon.com/config/latest/APIReference/",
       "api_detail_root": "",
       "api_doc_root": "",
-      "api_reference_doc_page": "",
+      "api_reference_doc_page": "${DocHomeURL}config/latest/APIReference/",
       "authz_doc_page": "https://docs.aws.amazon.com/config/latest/developerguide/example-policies.html",
       "concepts_doc_root": "https://docs.aws.amazon.com/config/latest/developerguide/",
       "context_keys_doc_root": ""
@@ -17685,7 +17989,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Adds metadata tags to a DMS resource, including replication instance, endpoint, security group, and migration task",
         "docs": {
@@ -18119,7 +18423,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Removes metadata tags from a DMS resource",
         "docs": {
@@ -18292,7 +18596,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "datapipeline:PipelineCreator",
           "datapipeline:Tag"
@@ -18519,7 +18823,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "datapipeline:PipelineCreator",
           "datapipeline:Tag"
@@ -18963,7 +19267,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -20706,8 +21010,11 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Adds or overwrites one or more tags for the specified Amazon Directory Services directory.",
         "docs": {
           "api_doc": "",
@@ -20743,10 +21050,14 @@
       },
       "ConnectDirectory": {
         "aws_action_groups": [
-          "ReadWrite"
+          "ReadWrite",
+          "Tagging"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates an AD Connector to connect to an on-premises directory.",
         "docs": {
           "api_doc": "",
@@ -20795,15 +21106,36 @@
       },
       "CreateDirectory": {
         "aws_action_groups": [
-          "ReadWrite"
+          "ReadWrite",
+          "Tagging"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a Simple AD directory.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/directoryservice/latest/devguide/API_CreateDirectory.html"
+        }
+      },
+      "CreateIdentityPoolDirectory": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Creates a IdentityPool Directory in the AWS cloud.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/directoryservice/latest/devguide/"
         }
       },
       "CreateLogSubscription": {
@@ -20821,10 +21153,14 @@
       },
       "CreateMicrosoftAD": {
         "aws_action_groups": [
-          "ReadWrite"
+          "ReadWrite",
+          "Tagging"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a Microsoft AD in the AWS cloud.",
         "docs": {
           "api_doc": "",
@@ -20894,7 +21230,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/directoryservice/latest/devguide/API_DeleteLogSubscription"
+          "doc_page_rel": "https://docs.aws.amazon.com/directoryservice/latest/devguide/API_DeleteLogSubscription.html"
         }
       },
       "DeleteSnapshot": {
@@ -21087,6 +21423,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/directoryservice/latest/devguide/API_EnableSso.html"
         }
       },
+      "GetAuthorizedApplicationDetails": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": ""
+        }
+      },
       "GetDirectoryLimits": {
         "aws_action_groups": [
           "ReadOnly",
@@ -21122,7 +21472,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "",
+        "description": "Obtains the aws applications authorized for a directory.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -21154,7 +21504,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/directoryservice/latest/devguide/API_ListLogSubscriptions"
+          "doc_page_rel": "https://docs.aws.amazon.com/directoryservice/latest/devguide/API_ListLogSubscriptions.html"
         }
       },
       "ListSchemaExtensions": {
@@ -21230,8 +21580,11 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Removes tags from an Amazon Directory Services directory.",
         "docs": {
           "api_doc": "",
@@ -21371,17 +21724,17 @@
         }
       }
     },
-    "arn_format": "",
-    "arn_regex": "",
+    "arn_format": "arn:<partition>:ds:<region>:<accountID>:<relative-id>",
+    "arn_regex": "^arn:<partition>:ds:.+",
     "description": "AWS Directory Service",
     "docs": {
       "actions_doc_root": "https://docs.aws.amazon.com/directoryservice/latest/devguide/",
       "api_detail_root": "",
       "api_doc_root": "",
-      "api_reference_doc_page": "",
+      "api_reference_doc_page": "${DocHomeURL}directory-service/index.html",
       "authz_doc_page": "https://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_AuthNAccess.html",
       "concepts_doc_root": "https://docs.aws.amazon.com/directoryservice/latest/admin-guide/",
-      "context_keys_doc_root": ""
+      "context_keys_doc_root": "https://docs.aws.amazon.com/directoryservice/latest/devguide/"
     },
     "prefix": "ds"
   },
@@ -21890,7 +22243,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Associate a set of tags with an Amazon DynamoDB resource",
         "docs": {
@@ -21904,7 +22257,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Removes the association of tags from an Amazon DynamoDB resource.",
         "docs": {
@@ -22354,7 +22707,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "The TagResource action associates a set of tags with a DAX resource.",
         "docs": {
@@ -22368,7 +22721,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "The UntagResource action removes the association of tags from a DAX resource.",
         "docs": {
@@ -23350,7 +23703,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "ec2:CreateAction"
         ],
@@ -23847,7 +24200,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Deletes the specified set of tags from the specified set of resources.",
         "docs": {
@@ -26778,7 +27131,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Launches the specified number of instances using an AMI for which you have permissions.",
         "docs": {
@@ -27049,7 +27402,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "autoscaling:InstanceTypes",
           "autoscaling:LaunchConfigurationName",
@@ -27090,7 +27443,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -27185,7 +27538,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -27858,7 +28211,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -27888,7 +28241,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -27931,7 +28284,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -28231,7 +28584,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Adds the specified tags to the specified load balancer. Each load balancer can have a maximum of 10 tags.",
         "docs": {
@@ -28607,7 +28960,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Removes one or more tags from the specified load balancer.",
         "docs": {
@@ -28742,7 +29095,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "elasticmapreduce:RequestTag/${TagKey}"
         ],
@@ -28771,7 +29124,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "elasticmapreduce:RequestTag/${TagKey}"
         ],
@@ -29066,7 +29419,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to remove tags from an Amazon EMR resource.",
         "docs": {
@@ -29080,7 +29433,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "elasticmapreduce:RequestTag/${TagKey}"
         ],
@@ -29180,7 +29533,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "The AddTagsToResource action adds up to 10 cost allocation tags to the named resource.",
         "docs": {
@@ -29702,7 +30055,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "The RemoveTagsFromResource action removes the tags identified by the TagKeys list from the named resource.",
         "docs": {
@@ -29785,7 +30138,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to add tags to an Elastic Beanstalk resource and to update tag values.",
         "docs": {
@@ -30236,7 +30589,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to remove tags from an Elastic Beanstalk resource.",
         "docs": {
@@ -31408,7 +31761,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -31425,7 +31778,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -31776,7 +32129,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to attach resource tags to an Amazon ES domain.",
         "docs": {
@@ -32099,7 +32452,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to remove tags from Amazon ES domains.",
         "docs": {
@@ -32199,7 +32552,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -32216,7 +32569,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -32233,7 +32586,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -32318,7 +32671,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -32335,7 +32688,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -33564,7 +33917,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Adds the specified tags to a vault",
         "docs": {
@@ -33913,7 +34266,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Removes one or more tags from the set of tags attached to a vault",
         "docs": {
@@ -34238,7 +34591,7 @@
     },
     "arn_format": "arn:aws:globalaccelerator::<account>:accelerator/<AcceleratorId>",
     "arn_regex": "^arn:aws:globalaccelerator::.+:.+",
-    "description": "Global Accelerator",
+    "description": "AWS Global Accelerator",
     "docs": {
       "actions_doc_root": "https://docs.aws.amazon.com/global-accelerator/latest/api/",
       "api_detail_root": "",
@@ -36572,7 +36925,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -36590,7 +36943,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
@@ -39128,7 +39481,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to add tags to an IAM role.",
         "docs": {
@@ -39142,7 +39495,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to add tags to an IAM user.",
         "docs": {
@@ -39156,7 +39509,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to remove the specified tags from the role.",
         "docs": {
@@ -39170,7 +39523,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to remove the specified tags from the user.",
         "docs": {
@@ -39884,7 +40237,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Sets tags (key and value pairs) to the assessment template that is specified by the ARN of the assessment template.",
         "docs": {
@@ -39993,7 +40346,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Adds a thing to the specified billing group.",
         "docs": {
           "api_doc": "",
@@ -40006,7 +40361,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Adds a thing to the specified thing group.",
         "docs": {
           "api_doc": "",
@@ -40019,7 +40376,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Associates a group with a continuous job.",
         "docs": {
           "api_doc": "",
@@ -40053,6 +40412,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_AttachPrincipalPolicy.html"
         }
       },
+      "AttachSecurityProfile": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Associates a Device Defender security profile with a thing group or with this account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_AttachSecurityProfile.html"
+        }
+      },
       "AttachThingPrincipal": {
         "aws_action_groups": [
           "ReadWrite"
@@ -40064,6 +40438,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_AttachThingPrincipal.html"
+        }
+      },
+      "CancelAuditTask": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Cancels an audit that is in progress. The audit can be either scheduled or on-demand.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_CancelAuditTask.html"
         }
       },
       "CancelCertificateTransfer": {
@@ -40084,7 +40471,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Cancels a job.",
         "docs": {
           "api_doc": "",
@@ -40097,7 +40486,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Cancels a job execution on a particular device.",
         "docs": {
           "api_doc": "",
@@ -40149,8 +40540,11 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a billing group.",
         "docs": {
           "api_doc": "",
@@ -40171,12 +40565,32 @@
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_CreateCertificateFromCsr.html"
         }
       },
+      "CreateDynamicThingGroup": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Creates a Dynamic Thing Group",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_CreateDynamicThingGroup.html"
+        }
+      },
       "CreateJob": {
         "aws_action_groups": [
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a job.",
         "docs": {
           "api_doc": "",
@@ -40202,7 +40616,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates an OTA update job.",
         "docs": {
           "api_doc": "",
@@ -40249,12 +40667,50 @@
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_CreateRoleAlias.html"
         }
       },
+      "CreateScheduledAudit": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Creates a scheduled audit that is run at a specified time interval.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_CreateScheduledAudit.html"
+        }
+      },
+      "CreateSecurityProfile": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Creates a Device Defender security profile.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_CreateSecurityProfile.html"
+        }
+      },
       "CreateStream": {
         "aws_action_groups": [
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a new AWS IoT stream",
         "docs": {
           "api_doc": "",
@@ -40267,7 +40723,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Creates a thing in the thing registry.",
         "docs": {
           "api_doc": "",
@@ -40280,8 +40738,11 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a thing group.",
         "docs": {
           "api_doc": "",
@@ -40294,8 +40755,11 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a new thing type.",
         "docs": {
           "api_doc": "",
@@ -40308,12 +40772,28 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a rule.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_CreateTopicRule.html"
+        }
+      },
+      "DeleteAccountAuditConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes the audit configuration associated with the account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DeleteAccountAuditConfiguration.html"
         }
       },
       "DeleteAuthorizer": {
@@ -40334,8 +40814,10 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified billing group.",
         "docs": {
           "api_doc": "",
@@ -40369,12 +40851,27 @@
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DeleteCertificate.html"
         }
       },
-      "DeleteJob": {
+      "DeleteDynamicThingGroup": {
         "aws_action_groups": [
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
+        "description": "Deletes the specified Dynamic Thing Group",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DeleteDynamicThingGroup.html"
+        }
+      },
+      "DeleteJob": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes a job and its related job executions.",
         "docs": {
           "api_doc": "",
@@ -40387,7 +40884,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes a job execution.",
         "docs": {
           "api_doc": "",
@@ -40400,7 +40899,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes an OTA update job.",
         "docs": {
           "api_doc": "",
@@ -40460,12 +40961,44 @@
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DeleteRoleAlias.html"
         }
       },
+      "DeleteScheduledAudit": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Deletes a scheduled audit.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DeleteScheduledAudit.html"
+        }
+      },
+      "DeleteSecurityProfile": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Deletes a Device Defender security profile.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DeleteSecurityProfile.html"
+        }
+      },
       "DeleteStream": {
         "aws_action_groups": [
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes a specified stream.",
         "docs": {
           "api_doc": "",
@@ -40491,8 +41024,10 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified thing group.",
         "docs": {
           "api_doc": "",
@@ -40518,8 +41053,10 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified thing type.",
         "docs": {
           "api_doc": "",
@@ -40532,7 +41069,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified rule.",
         "docs": {
           "api_doc": "",
@@ -40558,12 +41097,42 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deprecates the specified thing type.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DeprecateThingType.html"
+        }
+      },
+      "DescribeAccountAuditConfiguration": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Gets information about audit configurations for the account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DescribeAccountAuditConfiguration.html"
+        }
+      },
+      "DescribeAuditTask": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Gets information about a Device Defender audit.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DescribeAuditTask.html"
         }
       },
       "DescribeAuthorizer": {
@@ -40586,7 +41155,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Gets information about the specified billing group.",
         "docs": {
           "api_doc": "",
@@ -40684,7 +41255,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Describes a job.",
         "docs": {
           "api_doc": "",
@@ -40698,7 +41271,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Describes a job execution.",
         "docs": {
           "api_doc": "",
@@ -40720,13 +41295,47 @@
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DescribeRoleAlias.html"
         }
       },
+      "DescribeScheduledAudit": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Gets information about a scheduled audit.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DescribeScheduledAudit.html"
+        }
+      },
+      "DescribeSecurityProfile": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Gets information about a Device Defender security profile.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DescribeSecurityProfile.html"
+        }
+      },
       "DescribeStream": {
         "aws_action_groups": [
           "ReadOnly",
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Gets information about the specified stream.",
         "docs": {
           "api_doc": "",
@@ -40754,7 +41363,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Gets information about the specified thing group.",
         "docs": {
           "api_doc": "",
@@ -40782,7 +41393,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Gets information about the specified thing type.",
         "docs": {
           "api_doc": "",
@@ -40814,6 +41427,21 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DetachPrincipalPolicy.html"
+        }
+      },
+      "DetachSecurityProfile": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Disassociates a Device Defender security profile from a thing group or from this account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DetachSecurityProfile.html"
         }
       },
       "DetachThingPrincipal": {
@@ -40889,7 +41517,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Gets a job document.",
         "docs": {
           "api_doc": "",
@@ -40917,7 +41547,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Gets the information about the OTA update job.",
         "docs": {
           "api_doc": "",
@@ -40981,6 +41613,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_GetRegistrationCode.html"
         }
       },
+      "GetStatistics": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Get statistics for IoT fleet index",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_GetStatistics.html"
+        }
+      },
       "GetThingShadow": {
         "aws_action_groups": [
           "ReadOnly",
@@ -41023,6 +41669,23 @@
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_GetV2LoggingOptions.html"
         }
       },
+      "ListActiveViolations": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Lists the active violations for a given Device Defender security profile or Thing.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_ListActiveViolations.html"
+        }
+      },
       "ListAttachedPolicies": {
         "aws_action_groups": [
           "ListOnly",
@@ -41036,6 +41699,36 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_ListAttachedPolicies.html"
+        }
+      },
+      "ListAuditFindings": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists the findings (results) of a Device Defender audit or of the audits performed during a specified time period.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_ListAuditFindings.html"
+        }
+      },
+      "ListAuditTasks": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists the Device Defender audits that have been performed during a given time period.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_ListAuditTasks.html"
         }
       },
       "ListAuthorizers": {
@@ -41293,6 +41986,53 @@
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_ListRoleAliases.html"
         }
       },
+      "ListScheduledAudits": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists all of your scheduled audits.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_ListScheduledAudits.html"
+        }
+      },
+      "ListSecurityProfiles": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists the Device Defender security profiles you have created.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_ListSecurityProfiles.html"
+        }
+      },
+      "ListSecurityProfilesForTarget": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Lists the Device Defender security profiles attached to a target.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_ListSecurityProfilesForTarget.html"
+        }
+      },
       "ListStreams": {
         "aws_action_groups": [
           "ListOnly",
@@ -41336,6 +42076,21 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_ListTargetsForPolicy.html"
+        }
+      },
+      "ListTargetsForSecurityProfile": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists the targets associated with a given Device Defender security profile.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_ListTargetsForSecurityProfile.html"
         }
       },
       "ListThingGroups": {
@@ -41450,7 +42205,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Lists all things in the specified billing group.",
         "docs": {
           "api_doc": "",
@@ -41465,7 +42222,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Lists all things in the specified thing group.",
         "docs": {
           "api_doc": "",
@@ -41501,6 +42260,23 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_ListV2LoggingLevels.html"
+        }
+      },
+      "ListViolationEvents": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Lists the Device Defender security profile violations discovered during the given time period.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_ListViolationEvents.html"
         }
       },
       "Publish": {
@@ -41586,7 +42362,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Removes thing from the specified billing group.",
         "docs": {
           "api_doc": "",
@@ -41599,7 +42377,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Removes thing from the specified thing group.",
         "docs": {
           "api_doc": "",
@@ -41712,6 +42492,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_StartNextPendingJobExecution.html"
         }
       },
+      "StartOnDemandAuditTask": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Starts an on-demand Device Defender audit.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_StartOnDemandAuditTask.html"
+        }
+      },
       "StartThingRegistrationTask": {
         "aws_action_groups": [
           "ReadWrite"
@@ -41756,8 +42549,12 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Tag a specified resource",
         "docs": {
           "api_doc": "",
@@ -41811,13 +42608,29 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Untag a specified resource",
         "docs": {
           "api_doc": "",
           "doc_page": "API_UntagResource.html",
           "doc_page_rel": "API_UntagResource.html"
+        }
+      },
+      "UpdateAccountAuditConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Configures or reconfigures the Device Defender audit settings for this account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_UpdateAccountAuditConfiguration.html"
         }
       },
       "UpdateAuthorizer": {
@@ -41838,7 +42651,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Updates information associated with the specified billing group.",
         "docs": {
           "api_doc": "",
@@ -41872,6 +42687,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_UpdateCertificate.html"
         }
       },
+      "UpdateDynamicThingGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates a Dynamic Thing Group",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_UpdateDynamicThingGroup.html"
+        }
+      },
       "UpdateEventConfigurations": {
         "aws_action_groups": [
           "ReadWrite"
@@ -41903,7 +42731,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Updates a job.",
         "docs": {
           "api_doc": "",
@@ -41937,12 +42767,44 @@
           "doc_page_rel": "API_UpdateRoleAlias.html"
         }
       },
+      "UpdateScheduledAudit": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Updates a scheduled audit, including what checks are performed and how often the audit takes place.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "API_UpdateScheduledAudit.html",
+          "doc_page_rel": "API_UpdateScheduledAudit.html"
+        }
+      },
+      "UpdateSecurityProfile": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Updates a Device Defender security profile.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "API_UpdateSecurityProfile.html",
+          "doc_page_rel": "API_UpdateSecurityProfile.html"
+        }
+      },
       "UpdateStream": {
         "aws_action_groups": [
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Updates the data for a stream.",
         "docs": {
           "api_doc": "",
@@ -41968,7 +42830,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Updates information associated with the specified thing group.",
         "docs": {
           "api_doc": "",
@@ -41981,7 +42845,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Updates the thing groups to which the thing belongs.",
         "docs": {
           "api_doc": "",
@@ -42001,6 +42867,20 @@
           "doc_page": "${ConceptsDocRoot}policy-actions.html",
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/policy-actions.html"
         }
+      },
+      "ValidateSecurityProfileBehaviors": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Validates a Device Defender security profile behaviors specification.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "API_ValidateSecurityProfileBehaviors.html",
+          "doc_page_rel": "API_ValidateSecurityProfileBehaviors.html"
+        }
       }
     },
     "arn_format": "arn:aws:iot:<region>:<account_ID>:<type>/<name>",
@@ -42013,7 +42893,7 @@
       "api_reference_doc_page": "",
       "authz_doc_page": "https://docs.aws.amazon.com/iot/latest/developerguide/authorization.html",
       "concepts_doc_root": "https://docs.aws.amazon.com/iot/latest/developerguide/",
-      "context_keys_doc_root": ""
+      "context_keys_doc_root": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/"
     },
     "prefix": "iot"
   },
@@ -42819,7 +43699,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
@@ -42837,7 +43717,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
@@ -43824,6 +44704,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/kms/latest/APIReference/API_CancelKeyDeletion.html"
         }
       },
+      "ConnectCustomKeyStore": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to connect or reconnect a custom key store to its associated AWS CloudHSM cluster.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kms/latest/APIReference/API_ConnectCustomKeyStore.html"
+        }
+      },
       "CreateAlias": {
         "aws_action_groups": [
           "ReadWrite"
@@ -43833,11 +44726,24 @@
           "kms:CallerAccount",
           "kms:ViaService"
         ],
-        "description": "Grants permission to create an alias for a customer master key (CMK). Aliases are optional display names that you can associate with CMKs.",
+        "description": "Grants permission to create an alias for a customer master key (CMK). Aliases are optional friendly names that you can associate with customer master keys.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateAlias.html"
+        }
+      },
+      "CreateCustomKeyStore": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create a custom key store that is associated with an AWS CloudHSM cluster that you own and manage.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateCustomKeyStore.html"
         }
       },
       "CreateGrant": {
@@ -43904,11 +44810,24 @@
           "kms:CallerAccount",
           "kms:ViaService"
         ],
-        "description": "Grants permission to delete an alias, which is an optional friendly name for a customer master key.",
+        "description": "Grants permission to delete an alias. Aliases are optional friendly names that you can associate with customer master keys.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/kms/latest/APIReference/API_DeleteAlias.html"
+        }
+      },
+      "DeleteCustomKeyStore": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete a custom key store.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kms/latest/APIReference/API_DeleteCustomKeyStore.html"
         }
       },
       "DeleteImportedKeyMaterial": {
@@ -43925,6 +44844,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/kms/latest/APIReference/API_DeleteImportedKeyMaterial.html"
+        }
+      },
+      "DescribeCustomKeyStores": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to view detailed information about custom key stores in the account and region.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kms/latest/APIReference/API_DescribeCustomKeyStores.html"
         }
       },
       "DescribeKey": {
@@ -43974,6 +44907,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/kms/latest/APIReference/API_DisableKeyRotation.html"
+        }
+      },
+      "DisconnectCustomKeyStore": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to disconnect the custom key store from its associated AWS CloudHSM cluster.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kms/latest/APIReference/API_DisconnectCustomKeyStore.html"
         }
       },
       "EnableKey": {
@@ -44151,7 +45097,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to view the aliases that are defined in the account. Aliases are optional display names that you can associate with customer master keys.",
+        "description": "Grants permission to view the aliases that are defined in the account. Aliases are optional friendly names that you can associate with customer master keys.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -44167,6 +45113,7 @@
         "calculated_action_group": "List",
         "condition_keys": [
           "kms:CallerAccount",
+          "kms:GrantIsForAWSResource",
           "kms:ViaService"
         ],
         "description": "Grants permission to view all grants for a customer master key.",
@@ -44272,8 +45219,8 @@
         "description": "Grants permission to decrypt data as part of the process that decrypts and reencrypts the data within AWS KMS.",
         "docs": {
           "api_doc": "",
-          "doc_page": "API_ReEncrypt.html",
-          "doc_page_rel": "API_ReEncrypt.html"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kms/latest/APIReference/API_ReEncrypt.html"
         }
       },
       "ReEncryptTo": {
@@ -44290,8 +45237,8 @@
         "description": "Grants permission to encrypt data as part of the process that decrypts and reencrypts the data within AWS KMS.",
         "docs": {
           "api_doc": "",
-          "doc_page": "API_ReEncrypt.html",
-          "doc_page_rel": "API_ReEncrypt.html"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kms/latest/APIReference/API_ReEncrypt.html"
         }
       },
       "RetireGrant": {
@@ -44314,6 +45261,7 @@
         "calculated_action_group": "Permissions",
         "condition_keys": [
           "kms:CallerAccount",
+          "kms:GrantIsForAWSResource",
           "kms:ViaService"
         ],
         "description": "Grants permission to revoke a grant, which denies permission for all operations that depend on the grant.",
@@ -44344,7 +45292,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "kms:CallerAccount",
           "kms:ViaService"
@@ -44361,7 +45309,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "kms:CallerAccount",
           "kms:ViaService"
@@ -44382,11 +45330,24 @@
           "kms:CallerAccount",
           "kms:ViaService"
         ],
-        "description": "Grants permission to associate an alias with a different customer master key.",
+        "description": "Grants permission to associate an alias with a different customer master key. An alias is an optional friendly name that you can associate with a customer master key.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/kms/latest/APIReference/API_UpdateAlias.html"
+        }
+      },
+      "UpdateCustomKeyStore": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to change the properties of a custom key store.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kms/latest/APIReference/API_UpdateCustomKeyStore.html"
         }
       },
       "UpdateKeyDescription": {
@@ -44427,7 +45388,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Adds or updates tags for the specified Amazon Kinesis stream. Each stream can have up to 10 tags.",
         "docs": {
@@ -44727,7 +45688,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Description for SplitShard",
         "docs": {
@@ -44791,8 +45752,21 @@
     },
     "prefix": "kinesis"
   },
-  "Kinesis Analytics": {
+  "Kinesis Analytics V2": {
     "actions": {
+      "AddApplicationCloudWatchLoggingOption": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Adds cloudwatch logging option to the application.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_AddApplicationCloudWatchLoggingOption.html"
+        }
+      },
       "AddApplicationInput": {
         "aws_action_groups": [
           "ReadWrite"
@@ -44803,7 +45777,20 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_AddApplicationInput.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_AddApplicationInput.html"
+        }
+      },
+      "AddApplicationInputProcessingConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Adds input processing configuration to the application.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_AddApplicationInputProcessingConfiguration.html"
         }
       },
       "AddApplicationOutput": {
@@ -44816,7 +45803,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_AddApplicationOutput.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_AddApplicationOutput.html"
         }
       },
       "AddApplicationReferenceDataSource": {
@@ -44829,7 +45816,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_AddApplicationReferenceDataSource.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_AddApplicationReferenceDataSource.html"
         }
       },
       "CreateApplication": {
@@ -44842,7 +45829,20 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_CreateApplication.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_CreateApplication.html"
+        }
+      },
+      "CreateApplicationSnapshot": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Creates a snapshot for an application.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_CreateApplicationSnapshot.html"
         }
       },
       "DeleteApplication": {
@@ -44855,7 +45855,33 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_DeleteApplication.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_DeleteApplication.html"
+        }
+      },
+      "DeleteApplicationCloudWatchLoggingOption": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes the specified cloudwatch logging option of the application.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_DeleteApplicationCloudWatchLoggingOption.html"
+        }
+      },
+      "DeleteApplicationInputProcessingConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes the specified input processing configuration of the application.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_DeleteApplicationInputProcessingConfiguration.html"
         }
       },
       "DeleteApplicationOutput": {
@@ -44868,7 +45894,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_DeleteApplicationOutput.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_DeleteApplicationOutput.html"
         }
       },
       "DeleteApplicationReferenceDataSource": {
@@ -44881,7 +45907,20 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_DeleteApplicationReferenceDataSource.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_DeleteApplicationReferenceDataSource.html"
+        }
+      },
+      "DeleteApplicationSnapshot": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes a snapshot for an application.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_DeleteApplicationSnapshot.html"
         }
       },
       "DescribeApplication": {
@@ -44895,7 +45934,21 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_DescribeApplication.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_DescribeApplication.html"
+        }
+      },
+      "DescribeApplicationSnapshot": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes an application snapshot.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_DescribeApplicationSnapshot.html"
         }
       },
       "DiscoverInputSchema": {
@@ -44909,7 +45962,21 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_DiscoverInputSchema.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_DiscoverInputSchema.html"
+        }
+      },
+      "ListApplicationSnapshots": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Lists the snapshots for an application.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ListApplicationSnapshots.html"
         }
       },
       "ListApplications": {
@@ -44924,7 +45991,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_ListApplications.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ListApplications.html"
         }
       },
       "StartApplication": {
@@ -44937,7 +46004,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_StartsApplication.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_StartsApplication.html"
         }
       },
       "StopApplication": {
@@ -44950,7 +46017,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_StopApplication.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_StopApplication.html"
         }
       },
       "UpdateApplication": {
@@ -44963,20 +46030,20 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_UpdateApplication.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_UpdateApplication.html"
         }
       }
     },
     "arn_format": "arn:aws:kinesisanalytics:<region>:<account_ID>:application/<applicationname>",
     "arn_regex": "^arn:aws:kinesisanalytics:.+:[0-9]+:application/[a-zA-Z0-9_.-]+",
-    "description": "Amazon Kinesis Analytics",
+    "description": "Amazon Kinesis Analytics V2",
     "docs": {
-      "actions_doc_root": "https://docs.aws.amazon.com/kinesisanalytics/latest/dev/",
+      "actions_doc_root": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/",
       "api_detail_root": "",
       "api_doc_root": "",
-      "api_reference_doc_page": "https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_Reference.html",
-      "authz_doc_page": "https://docs.aws.amazon.com/kinesisanalytics/latest/dev/authentication-and-access-control.html",
-      "concepts_doc_root": "https://docs.aws.amazon.com/kinesisanalytics/latest/dev/",
+      "api_reference_doc_page": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_Reference.html",
+      "authz_doc_page": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/authentication-and-access-control.html",
+      "concepts_doc_root": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/",
       "context_keys_doc_root": ""
     },
     "prefix": "kinesisanalytics"
@@ -45145,7 +46212,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -45162,7 +46229,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -46288,7 +47355,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -46448,7 +47515,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
@@ -46466,7 +47533,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "license-manager:ResourceTag/${TagKey}"
         ],
@@ -48373,7 +49440,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Adds one or more tags to an object, up to a limit of 10. Each tag consists of a key and an optional value",
         "docs": {
@@ -48543,7 +49610,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Deletes the specified tags associated with an ML object. After this operation is complete, you can't recover deleted tags",
         "docs": {
@@ -50327,7 +51394,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -50344,7 +51411,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -50429,7 +51496,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -50446,7 +51513,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -50463,7 +51530,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -50480,7 +51547,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -50549,7 +51616,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -50739,7 +51806,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -50784,6 +51851,19 @@
         "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to update a channel",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com//medialive/latest/ug/editing-deleting-channel.html"
+        }
+      },
+      "UpdateChannelClass": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to update the class of a channel",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -51434,7 +52514,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -51452,7 +52532,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -54886,7 +55966,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -54904,7 +55984,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -55905,7 +56985,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Adds metadata tags to an Amazon RDS resource.",
         "docs": {
@@ -56023,7 +57103,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Creates a new Amazon Aurora DB cluster.",
         "docs": {
@@ -56050,7 +57130,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Create a new DB cluster parameter group.",
         "docs": {
@@ -56064,7 +57144,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Creates a snapshot of a DB cluster.",
         "docs": {
@@ -56078,7 +57158,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Creates a new DB instance.",
         "docs": {
@@ -56092,7 +57172,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Creates a DB instance that acts as a Read Replica of a source DB instance.",
         "docs": {
@@ -56106,7 +57186,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Creates a new DB parameter group.",
         "docs": {
@@ -56120,7 +57200,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Creates a new DB security group. DB security groups control access to a DB instance.",
         "docs": {
@@ -56134,7 +57214,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Creates a DBSnapshot.",
         "docs": {
@@ -56148,7 +57228,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Creates a new DB subnet group.",
         "docs": {
@@ -56162,7 +57242,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Creates an RDS event notification subscription.",
         "docs": {
@@ -56189,7 +57269,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Creates a new option group.",
         "docs": {
@@ -57194,7 +58274,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Removes metadata tags from an Amazon RDS resource.",
         "docs": {
@@ -57669,7 +58749,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Adds one or more tags to a specified resource",
         "docs": {
@@ -57826,7 +58906,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Deletes a tag or tags from a resource",
         "docs": {
@@ -59502,7 +60582,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Add tags to AWS resources",
         "docs": {
@@ -59516,7 +60596,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Remove tags from AWS resources",
         "docs": {
@@ -59547,7 +60627,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Creates a group with a specified name, description, and resource query.",
         "docs": {
@@ -59661,7 +60741,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Tags a specified resource group",
         "docs": {
@@ -59675,7 +60755,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Removes tags associated with a specified resource group",
         "docs": {
@@ -60197,7 +61277,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to add, edit, or delete tags for a health check or a hosted zone",
         "docs": {
@@ -61213,7 +62293,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to add one or more tags to a specified resource.",
         "docs": {
@@ -61227,7 +62307,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to remove one or more tags from a specified resource.",
         "docs": {
@@ -61298,7 +62378,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to delete the specified tags for a domain",
         "docs": {
@@ -61569,7 +62649,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to add or update tags for a specified domain",
         "docs": {
@@ -61729,7 +62809,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "s3:ExistingObjectTag/<key>",
           "s3:authtype",
@@ -61768,7 +62848,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "s3:ExistingObjectTag/<key>",
           "s3:authtype",
@@ -62687,7 +63767,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "s3:authtype",
           "s3:signatureage",
@@ -62872,7 +63952,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "s3:ExistingObjectTag/<key>",
           "s3:RequestObjectTag/<key>",
@@ -62921,7 +64001,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "s3:ExistingObjectTag/<key>",
           "s3:RequestObjectTag/<key>",
@@ -63000,7 +64080,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "s3:authtype",
           "s3:signatureage",
@@ -64710,7 +65790,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Add tags to the specified SQS queue.",
         "docs": {
@@ -64724,7 +65804,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Remove tags from the specified SQS queue.",
         "docs": {
@@ -65622,6 +66702,19 @@
         "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Updates group information",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "UpdatePermissionSet": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Update the permission set.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -66758,7 +67851,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Adds or overwrites one or more tags for the specified Amazon SageMaker resource.",
         "docs": {
@@ -67146,7 +68239,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Deletes the specified set of tags from an Amazon SageMaker resource.",
         "docs": {
@@ -68027,7 +69120,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/tag-key",
           "aws:TagKeys",
@@ -68256,7 +69349,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/tag-key",
           "aws:TagKeys",
@@ -68276,7 +69369,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:TagKeys",
           "secretsmanager:ResourceTag/tag-key",
@@ -69450,7 +70543,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Copies the specified source product to the specified target product or a new product.",
         "docs": {
@@ -69477,7 +70570,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Creates a portfolio",
         "docs": {
@@ -69504,7 +70597,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Creates a product and that product's first provisioning artifact",
         "docs": {
@@ -69518,7 +70611,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Adds a new provisioned product plan",
         "docs": {
@@ -69953,7 +71046,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Executes a provisioned product plan",
         "docs": {
@@ -69967,7 +71060,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Executes a provisioned product plan",
         "docs": {
@@ -70239,7 +71332,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Provisions a product with a specified provisioning artifact and launch parameters",
         "docs": {
@@ -70364,7 +71457,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Updates the metadata fields and/or tags of an existing portfolio",
         "docs": {
@@ -70378,7 +71471,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Updates the metadata fields and/or tags of an existing product",
         "docs": {
@@ -71260,7 +72353,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -71277,7 +72370,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -71526,7 +72619,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -71543,7 +72636,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:TagKeys"
         ],
@@ -71621,7 +72714,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -71705,7 +72798,9 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "aws:ResourceTag/${TagKey}"
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
         ],
         "description": "This operation creates a cached volume on a specified cached gateway. This operation is supported only for the gateway-cached volume architecture.",
         "docs": {
@@ -71784,7 +72879,9 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "aws:ResourceTag/${TagKey}"
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
         ],
         "description": "This operation creates a volume on a specified gateway.",
         "docs": {
@@ -71798,7 +72895,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a virtual tape by using your own barcode.",
         "docs": {
           "api_doc": "",
@@ -71812,7 +72912,9 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "aws:ResourceTag/${TagKey}"
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
         ],
         "description": "Creates one or more virtual tapes. You write data to the virtual tapes and then archive the tapes.",
         "docs": {
@@ -72414,9 +73516,8 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
-          "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
         ],
@@ -72939,7 +74040,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Adds or overwrites one or more tags for the specified resource.",
         "docs": {
@@ -74219,7 +75320,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Removes all tags from the specified resource.",
         "docs": {
@@ -74931,7 +76032,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -74962,7 +76063,7 @@
           "ReadWrite",
           "Tagging"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -78759,7 +79860,7 @@
           "Tagging",
           "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Creates tags for a WorkSpace.",
         "docs": {
