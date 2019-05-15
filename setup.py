@@ -4,7 +4,7 @@
 from setuptools import setup
 
 setup(name='policyuniverse',
-      version='1.3.1.1',
+      version='1.3.1.2',
       description='AWS IAM Policy Utilities',
       author='Patrick Kelley',
       author_email='pkelley@netflix.com',
