@@ -16,7 +16,7 @@
     :platform: Unix
 
 .. version:: $$VERSION$$
-.. moduleauthor::  Patrick Kelley <patrickbarrettkelley@gmail.com> @scriptsrc
+.. moduleauthor::  Patrick Kelley <patrickbarrettkelley@gmail.com> @patrickbkelley
 
 """
 
