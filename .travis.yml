@@ -2,8 +2,12 @@ language: python
 
 matrix:
   include:
-    - python: "2.7"
-    - python: "3.6"
+    - name: "Legacy Py2.7"
+      python: "2.7"
+      env: PYTHONVER=py27
+    - name: "Python3.6"
+      python: "3.6"
+      env: PYTHONVER=py36
 
 cache:
   directories:
@@ -15,7 +19,7 @@ env:
 
 before_script:
   - pip install -e .
-  - pip install -e .["dev"]
+  - if [ $PYTHONVER == "py36"]; then pip install -e .["dev"]; fi
   - pip install -e .["tests"]
 
 script:
@@ -23,7 +27,7 @@ script:
   - coverage run -a -m py.test policyuniverse/tests/test_arn.py || exit 1
   - coverage run -a -m py.test policyuniverse/tests/test_statement.py || exit 1
   - coverage run -a -m py.test policyuniverse/tests/test_policy.py || exit 1
-  - black --check policyuniverse || exit 1
+  - if [ $PYTHONVER == "py36"]; then black --check policyuniverse || exit 1; fi
 
 after_success:
   - coveralls
