@@ -16,11 +16,14 @@
     :platform: Unix
 
 .. version:: $$VERSION$$
-.. moduleauthor::  Patrick Kelley <pkelley@netflix.com>
+.. moduleauthor::  Patrick Kelley <patrickbarrettkelley@gmail.com> @scriptsrc
 
 """
 from policyuniverse.arn import ARN
-from policyuniverse.expander_minimizer import _expand_wildcard_action, get_actions_from_statement
+from policyuniverse.expander_minimizer import (
+    _expand_wildcard_action,
+    get_actions_from_statement,
+)
 from policyuniverse import logger
 from policyuniverse.action_categories import categories_for_actions
 
@@ -28,12 +31,11 @@ import re
 from collections import namedtuple
 
 
-PrincipalTuple = namedtuple('Principal', 'category value')
-ConditionTuple = namedtuple('Condition', 'category value')
+PrincipalTuple = namedtuple("Principal", "category value")
+ConditionTuple = namedtuple("Condition", "category value")
 
 
 class Statement(object):
-
     def __init__(self, statement):
         self.statement = statement
         self.condition_entries = self._condition_entries()
@@ -42,14 +44,14 @@ class Statement(object):
 
     @property
     def effect(self):
-        return self.statement.get('Effect')
+        return self.statement.get("Effect")
 
     @property
     def actions_expanded(self):
         return set(get_actions_from_statement(self.statement))
 
     def _actions(self):
-        actions = self.statement.get('Action')
+        actions = self.statement.get("Action")
         if not actions:
             return set()
         if not isinstance(actions, list):
@@ -60,14 +62,14 @@ class Statement(object):
         return categories_for_actions(self.actions_expanded)
 
     def uses_not_principal(self):
-        return 'NotPrincipal' in self.statement
+        return "NotPrincipal" in self.statement
 
     @property
     def resources(self):
-        if 'NotResource' in self.statement:
-            return set(['*'])
+        if "NotResource" in self.statement:
+            return set(["*"])
 
-        resources = self.statement.get('Resource')
+        resources = self.statement.get("Resource")
         if not isinstance(resources, list):
             resources = [resources]
         return set(resources)
@@ -94,7 +96,7 @@ class Statement(object):
         """
         who = set()
         for principal in self.principals:
-            principal = PrincipalTuple(category='principal', value=principal)
+            principal = PrincipalTuple(category="principal", value=principal)
             who.add(principal)
         who = who.union(self.condition_entries)
         return who
@@ -120,11 +122,11 @@ class Statement(object):
 
         if isinstance(principal, dict):
 
-            if 'AWS' in principal:
-                self._add_or_extend(principal['AWS'], principals)
+            if "AWS" in principal:
+                self._add_or_extend(principal["AWS"], principals)
 
-            if 'Service' in principal:
-                self._add_or_extend(principal['Service'], principals)
+            if "Service" in principal:
+                self._add_or_extend(principal["Service"], principals)
 
         else:
             self._add_or_extend(principal, principals)
@@ -161,80 +163,102 @@ class Statement(object):
         https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html
         """
         conditions = list()
-        condition = self.statement.get('Condition')
+        condition = self.statement.get("Condition")
         if not condition:
             return conditions
 
         key_mapping = {
-            'aws:sourcearn': 'arn',
-            'aws:sourceowner': 'account',
-            'aws:sourceaccount': 'account',
-            'aws:principalorgid': 'org-id',
-            'kms:calleraccount': 'account',
-            'aws:userid': 'userid',
-            'aws:sourceip': 'cidr',
-            'aws:sourcevpc': 'vpc',
-            'aws:sourcevpce': 'vpce'
+            "aws:sourcearn": "arn",
+            "aws:sourceowner": "account",
+            "aws:sourceaccount": "account",
+            "aws:principalorgid": "org-id",
+            "kms:calleraccount": "account",
+            "aws:userid": "userid",
+            "aws:sourceip": "cidr",
+            "aws:sourcevpc": "vpc",
+            "aws:sourcevpce": "vpce",
         }
 
         relevant_condition_operators = [
-            re.compile('((ForAllValues|ForAnyValue):)?ARN(Equals|Like)(IfExists)?', re.IGNORECASE),
-            re.compile('((ForAllValues|ForAnyValue):)?String(Equals|Like)(IgnoreCase)?(IfExists)?', re.IGNORECASE),
-            re.compile('((ForAllValues|ForAnyValue):)?IpAddress(IfExists)?', re.IGNORECASE)]
+            re.compile(
+                "((ForAllValues|ForAnyValue):)?ARN(Equals|Like)(IfExists)?",
+                re.IGNORECASE,
+            ),
+            re.compile(
+                "((ForAllValues|ForAnyValue):)?String(Equals|Like)(IgnoreCase)?(IfExists)?",
+                re.IGNORECASE,
+            ),
+            re.compile(
+                "((ForAllValues|ForAnyValue):)?IpAddress(IfExists)?", re.IGNORECASE
+            ),
+        ]
 
         for condition_operator in condition.keys():
-            if any(regex.match(condition_operator) for regex in relevant_condition_operators):
+            if any(
+                regex.match(condition_operator)
+                for regex in relevant_condition_operators
+            ):
                 for key, value in condition[condition_operator].items():
 
                     # ForAllValues and ForAnyValue must be paired with a list.
                     # Otherwise, skip over entries.
-                    if not isinstance(value, list) and condition_operator.lower().startswith('for'):
+                    if not isinstance(
+                        value, list
+                    ) and condition_operator.lower().startswith("for"):
                         continue
 
                     if key.lower() in key_mapping:
                         if isinstance(value, list):
                             for v in value:
                                 conditions.append(
-                                    ConditionTuple(value=v, category=key_mapping[key.lower()]))
+                                    ConditionTuple(
+                                        value=v, category=key_mapping[key.lower()]
+                                    )
+                                )
                         else:
                             conditions.append(
-                                ConditionTuple(value=value, category=key_mapping[key.lower()]))
+                                ConditionTuple(
+                                    value=value, category=key_mapping[key.lower()]
+                                )
+                            )
 
         return conditions
 
     @property
     def condition_arns(self):
-        return self._condition_field('arn') 
+        return self._condition_field("arn")
 
     @property
     def condition_accounts(self):
-        return self._condition_field('account') 
+        return self._condition_field("account")
 
     @property
     def condition_orgids(self):
-        return self._condition_field('org-id') 
+        return self._condition_field("org-id")
 
     @property
     def condition_userids(self):
-        return self._condition_field('userid') 
+        return self._condition_field("userid")
 
     @property
     def condition_cidrs(self):
-        return self._condition_field('cidr') 
+        return self._condition_field("cidr")
 
     @property
     def condition_vpcs(self):
-        return self._condition_field('vpc') 
+        return self._condition_field("vpc")
 
     @property
     def condition_vpces(self):
-        return self._condition_field('vpce') 
+        return self._condition_field("vpce")
 
     def _condition_field(self, field):
-        return set([entry.value for entry in self.condition_entries if entry.category == field])
+        return set(
+            [entry.value for entry in self.condition_entries if entry.category == field]
+        )
 
     def is_internet_accessible(self):
-        if self.effect != 'Allow':
+        if self.effect != "Allow":
             return False
 
         if not self.is_condition_internet_accessible():
@@ -261,48 +285,52 @@ class Statement(object):
         return False
 
     def _is_condition_entry_internet_accessible(self, entry):
-        if entry.category == 'arn':
+        if entry.category == "arn":
             return self._arn_internet_accessible(entry.value)
 
-        if entry.category == 'userid':
+        if entry.category == "userid":
             return self._userid_internet_accessible(entry.value)
 
-        if entry.category == 'cidr':
+        if entry.category == "cidr":
             return self._cidr_internet_accessible(entry.value)
 
-        return '*' in entry.value 
+        return "*" in entry.value
 
     def _cidr_internet_accessible(self, cidr):
         """The caller will want to inspect the CIDRs directly.
         This will only look for /0's.
         """
-        return cidr.endswith('/0')
+        return cidr.endswith("/0")
 
     def _userid_internet_accessible(self, userid):
         # Trailing wildcards are okay for userids:
         # AROAIIIIIIIIIIIIIIIII:*
-        if userid.index('*') == len(userid)-1:
+        if userid.index("*") == len(userid) - 1:
             return False
         return True
 
     def _arn_internet_accessible(self, arn_input):
-        if '*' == arn_input:
+        if "*" == arn_input:
             return True
 
         arn = ARN(arn_input)
         if arn.error:
-            logger.warning('Auditor could not parse ARN {arn}.'.format(arn=arn_input))
-            return '*' in arn_input
+            logger.warning("Auditor could not parse ARN {arn}.".format(arn=arn_input))
+            return "*" in arn_input
 
-        if arn.tech == 's3':
+        if arn.tech == "s3":
             # S3 ARNs typically don't have account numbers.
             return False
 
         if not arn.account_number and not arn.service:
-            logger.warning('Auditor could not parse Account Number from ARN {arn}.'.format(arn=arn_input))
+            logger.warning(
+                "Auditor could not parse Account Number from ARN {arn}.".format(
+                    arn=arn_input
+                )
+            )
             return True
 
-        if arn.account_number == '*':
+        if arn.account_number == "*":
             return True
 
         return False

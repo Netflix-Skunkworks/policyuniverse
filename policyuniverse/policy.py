@@ -16,7 +16,7 @@
     :platform: Unix
 
 .. version:: $$VERSION$$
-.. moduleauthor::  Patrick Kelley <pkelley@netflix.com>
+.. moduleauthor::  Patrick Kelley <patrickbarrettkelley@gmail.com> @scriptsrc
 
 """
 from policyuniverse.statement import Statement
@@ -24,12 +24,11 @@ from collections import defaultdict
 
 
 class Policy(object):
-
     def __init__(self, policy):
         self.policy = policy
         self.statements = []
 
-        statement_structure = self.policy.get('Statement', [])
+        statement_structure = self.policy.get("Statement", [])
         if not isinstance(statement_structure, list):
             statement_structure = [statement_structure]
 
@@ -73,6 +72,6 @@ class Policy(object):
     def whos_allowed(self):
         allowed = set()
         for statement in self.statements:
-            if statement.effect == 'Allow':
+            if statement.effect == "Allow":
                 allowed = allowed.union(statement.whos_allowed())
         return allowed

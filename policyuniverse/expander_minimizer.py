@@ -16,7 +16,7 @@
     :platform: Unix
 
 .. version:: $$VERSION$$
-.. moduleauthor::  Patrick Kelley <pkelley@netflix.com>
+.. moduleauthor::  Patrick Kelley <<patrickbarrettkelley@gmail.com> @scriptsrc
 
 """
 from __future__ import print_function
@@ -26,7 +26,7 @@ import fnmatch
 import sys
 import copy
 
-policy_headers = ['rolepolicies', 'grouppolicies', 'userpolicies', 'policy']
+policy_headers = ["rolepolicies", "grouppolicies", "userpolicies", "policy"]
 
 
 def expand_minimize_over_policies(policies, activity, **kwargs):
@@ -34,7 +34,9 @@ def expand_minimize_over_policies(policies, activity, **kwargs):
         if header in policies:
             output = {header: {}}
             for policy in policies[header]:
-                output[header][policy] = activity(policy=policies[header][policy], **kwargs)
+                output[header][policy] = activity(
+                    policy=policies[header][policy], **kwargs
+                )
             return output
 
     return activity(policy=policies, **kwargs)
@@ -45,12 +47,12 @@ def _get_prefixes_for_action(action):
     :param action: iam:cat
     :return: [ "iam:", "iam:c", "iam:ca", "iam:cat" ]
     """
-    (technology, permission) = action.split(':')
+    (technology, permission) = action.split(":")
     retval = ["{}:".format(technology)]
     phrase = ""
     for char in permission:
         newphrase = "{}{}".format(phrase, char)
-        retval.append("{}:{}".format(technology,newphrase))
+        retval.append("{}:{}".format(technology, newphrase))
         phrase = newphrase
     return retval
 
@@ -67,11 +69,11 @@ def _expand_wildcard_action(action):
         return expanded_actions
 
     else:
-        if '*' in action:
+        if "*" in action:
             expanded = [
-                expanded_action.lower() for expanded_action in all_permissions if fnmatch.fnmatchcase(
-                    expanded_action.lower(), action.lower()
-                )
+                expanded_action.lower()
+                for expanded_action in all_permissions
+                if fnmatch.fnmatchcase(expanded_action.lower(), action.lower())
             ]
 
             # if we get a wildcard for a tech we've never heard of, just return the wildcard
@@ -84,11 +86,13 @@ def _expand_wildcard_action(action):
 
 def _get_desired_actions_from_statement(statement):
     desired_actions = set()
-    actions = _expand_wildcard_action(statement['Action'])
+    actions = _expand_wildcard_action(statement["Action"])
 
     for action in actions:
         if action not in all_permissions:
-            raise Exception("Desired action not found in master permission list. {}".format(action))
+            raise Exception(
+                "Desired action not found in master permission list. {}".format(action)
+            )
         desired_actions.add(action)
 
     return desired_actions
@@ -105,8 +109,13 @@ def _get_denied_prefixes_from_desired(desired_actions):
 
 
 def _check_min_permission_length(permission, minchars=None):
-    if minchars and len(permission) < int(minchars) and permission != '':
-        print("Skipping prefix {} because length of {}".format(permission, len(permission)), file=sys.stderr)
+    if minchars and len(permission) < int(minchars) and permission != "":
+        print(
+            "Skipping prefix {} because length of {}".format(
+                permission, len(permission)
+            ),
+            file=sys.stderr,
+        )
         return True
     return False
 
@@ -114,7 +123,7 @@ def _check_min_permission_length(permission, minchars=None):
 def minimize_statement_actions(statement, minchars=None):
     minimized_actions = set()
 
-    if statement['Effect'] != 'Allow':
+    if statement["Effect"] != "Allow":
         raise Exception("Minification does not currently work on Deny statements.")
 
     desired_actions = _get_desired_actions_from_statement(statement)
@@ -130,7 +139,7 @@ def minimize_statement_actions(statement, minchars=None):
         prefixes = _get_prefixes_for_action(action)
         for prefix in prefixes:
 
-            permission = prefix.split(':')[1]
+            permission = prefix.split(":")[1]
             if _check_min_permission_length(permission, minchars=minchars):
                 continue
 
@@ -155,17 +164,17 @@ def minimize_statement_actions(statement, minchars=None):
 def get_actions_from_statement(statement):
     allowed_actions = set()
 
-    if not type(statement.get('Action', [])) == list:
-        statement['Action'] = [statement['Action']]
+    if not type(statement.get("Action", [])) == list:
+        statement["Action"] = [statement["Action"]]
 
-    for action in statement.get('Action', []):
+    for action in statement.get("Action", []):
         allowed_actions = allowed_actions.union(set(_expand_wildcard_action(action)))
 
-    if not type(statement.get('NotAction', [])) == list:
-        statement['NotAction'] = [statement['NotAction']]
+    if not type(statement.get("NotAction", [])) == list:
+        statement["NotAction"] = [statement["NotAction"]]
 
     inverted_actions = set()
-    for action in statement.get('NotAction', []):
+    for action in statement.get("NotAction", []):
         inverted_actions = inverted_actions.union(set(_expand_wildcard_action(action)))
 
     if inverted_actions:
@@ -177,6 +186,7 @@ def get_actions_from_statement(statement):
 
 def _invert_actions(actions):
     from policyuniverse import all_permissions
+
     return all_permissions.difference(actions)
 
 
@@ -184,15 +194,15 @@ def expand_policy(policy=None, expand_deny=False):
     # Perform a deepcopy to avoid mutating the input
     result = copy.deepcopy(policy)
 
-    if type(result['Statement']) is dict:
-        result['Statement'] = [result['Statement']]
-    for statement in result['Statement']:
-        if statement['Effect'].lower() == 'deny' and not expand_deny:
+    if type(result["Statement"]) is dict:
+        result["Statement"] = [result["Statement"]]
+    for statement in result["Statement"]:
+        if statement["Effect"].lower() == "deny" and not expand_deny:
             continue
         actions = get_actions_from_statement(statement)
-        if 'NotAction' in statement:
-            del statement['NotAction']
-        statement['Action'] = sorted(list(actions))
+        if "NotAction" in statement:
+            del statement["NotAction"]
+        statement["Action"] = sorted(list(actions))
 
     return result
 
@@ -202,13 +212,13 @@ def minimize_policy(policy=None, minchars=None):
     str_pol = json.dumps(policy, indent=2)
     size = len(str_pol)
 
-    for statement in policy['Statement']:
+    for statement in policy["Statement"]:
         minimized_actions = minimize_statement_actions(statement, minchars=minchars)
-        statement['Action'] = minimized_actions
+        statement["Action"] = minimized_actions
 
     str_end_pol = json.dumps(policy, indent=2)
     end_size = len(str_end_pol)
 
     # print str_end_pol
-    print("Start size: {}. End size: {}".format(size, end_size), file = sys.stderr)
+    print("Start size: {}. End size: {}".format(size, end_size), file=sys.stderr)
     return policy
