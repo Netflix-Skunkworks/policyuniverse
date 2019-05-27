@@ -35,115 +35,105 @@ from policyuniverse.expander_minimizer import _get_desired_actions_from_statemen
 WILDCARD_ACTION_1 = "swf:res*"
 
 WILDCARD_POLICY_1 = {
-"Statement": [{
-    "Action": [WILDCARD_ACTION_1],
-    "Resource": "*",
-    "Effect": "Allow"
-  }]
+    "Statement": [{"Action": [WILDCARD_ACTION_1], "Resource": "*", "Effect": "Allow"}]
 }
 
-EXPANDED_ACTIONS_1 = ["swf:respondactivitytaskcanceled",
-  "swf:respondactivitytaskcompleted",
-  "swf:respondactivitytaskfailed",
-  "swf:responddecisiontaskcompleted"]
+EXPANDED_ACTIONS_1 = [
+    "swf:respondactivitytaskcanceled",
+    "swf:respondactivitytaskcompleted",
+    "swf:respondactivitytaskfailed",
+    "swf:responddecisiontaskcompleted",
+]
 
 EXPANDED_POLICY_1 = {
-"Statement": [{
-    "Action": EXPANDED_ACTIONS_1,
-    "Resource": "*",
-    "Effect": "Allow"
-  }]
+    "Statement": [{"Action": EXPANDED_ACTIONS_1, "Resource": "*", "Effect": "Allow"}]
 }
 
 WILDCARD_POLICY_2 = {
-"Statement": [{
-    "Action": ["swf:*activitytaskc*"],
-    "Resource": "*",
-    "Effect": "Allow"
-  }]
+    "Statement": [
+        {"Action": ["swf:*activitytaskc*"], "Resource": "*", "Effect": "Allow"}
+    ]
 }
 
 EXPANDED_POLICY_2 = {
-"Statement": [{
-    "Action": [
-      "swf:respondactivitytaskcanceled",
-      "swf:respondactivitytaskcompleted"
-    ],
-    "Resource": "*",
-    "Effect": "Allow"
-  }]
+    "Statement": [
+        {
+            "Action": [
+                "swf:respondactivitytaskcanceled",
+                "swf:respondactivitytaskcompleted",
+            ],
+            "Resource": "*",
+            "Effect": "Allow",
+        }
+    ]
 }
 
 POLICIES_1 = {
-    'policy': {
-        'policyname1': WILDCARD_POLICY_1,
-        'policyname2': WILDCARD_POLICY_2
-    }
+    "policy": {"policyname1": WILDCARD_POLICY_1, "policyname2": WILDCARD_POLICY_2}
 }
 
 EXPANDED_POLICIES_1 = {
-    'policy': {
-        'policyname1': EXPANDED_POLICY_1,
-        'policyname2': EXPANDED_POLICY_2
-    }
+    "policy": {"policyname1": EXPANDED_POLICY_1, "policyname2": EXPANDED_POLICY_2}
 }
 
-AUTOSCALING_PERMISSIONS = sorted([
-  "autoscaling:attachinstances",
-  "autoscaling:attachloadbalancertargetgroups",
-  "autoscaling:attachloadbalancers",
-  "autoscaling:batchdeletescheduledaction",
-  "autoscaling:batchputscheduledupdategroupaction",
-  "autoscaling:completelifecycleaction",
-  "autoscaling:createautoscalinggroup",
-  "autoscaling:createlaunchconfiguration",
-  "autoscaling:createorupdatetags",
-  "autoscaling:deleteautoscalinggroup",
-  "autoscaling:deletelaunchconfiguration",
-  "autoscaling:deletelifecyclehook",
-  "autoscaling:deletenotificationconfiguration",
-  "autoscaling:deletepolicy",
-  "autoscaling:deletescheduledaction",
-  "autoscaling:deletetags",
-  "autoscaling:describeaccountlimits",
-  "autoscaling:describeadjustmenttypes",
-  "autoscaling:describeautoscalinggroups",
-  "autoscaling:describeautoscalinginstances",
-  "autoscaling:describeautoscalingnotificationtypes",
-  "autoscaling:describelaunchconfigurations",
-  "autoscaling:describelifecyclehooktypes",
-  "autoscaling:describelifecyclehooks",
-  "autoscaling:describeloadbalancertargetgroups",
-  "autoscaling:describeloadbalancers",
-  "autoscaling:describemetriccollectiontypes",
-  "autoscaling:describenotificationconfigurations",
-  "autoscaling:describepolicies",
-  "autoscaling:describescalingactivities",
-  "autoscaling:describescalingprocesstypes",
-  "autoscaling:describescheduledactions",
-  "autoscaling:describetags",
-  "autoscaling:describeterminationpolicytypes",
-  "autoscaling:detachinstances",
-  "autoscaling:detachloadbalancertargetgroups",
-  "autoscaling:detachloadbalancers",
-  "autoscaling:disablemetricscollection",
-  "autoscaling:enablemetricscollection",
-  "autoscaling:enterstandby",
-  "autoscaling:executepolicy",
-  "autoscaling:exitstandby",
-  "autoscaling:putlifecyclehook",
-  "autoscaling:putnotificationconfiguration",
-  "autoscaling:putscalingpolicy",
-  "autoscaling:putscheduledupdategroupaction",
-  "autoscaling:recordlifecycleactionheartbeat",
-  "autoscaling:resumeprocesses",
-  "autoscaling:setdesiredcapacity",
-  "autoscaling:setinstancehealth",
-  "autoscaling:setinstanceprotection",
-  "autoscaling:suspendprocesses",
-  "autoscaling:terminateinstanceinautoscalinggroup",
-  "autoscaling:updateautoscalinggroup"
-])
+AUTOSCALING_PERMISSIONS = sorted(
+    [
+        "autoscaling:attachinstances",
+        "autoscaling:attachloadbalancertargetgroups",
+        "autoscaling:attachloadbalancers",
+        "autoscaling:batchdeletescheduledaction",
+        "autoscaling:batchputscheduledupdategroupaction",
+        "autoscaling:completelifecycleaction",
+        "autoscaling:createautoscalinggroup",
+        "autoscaling:createlaunchconfiguration",
+        "autoscaling:createorupdatetags",
+        "autoscaling:deleteautoscalinggroup",
+        "autoscaling:deletelaunchconfiguration",
+        "autoscaling:deletelifecyclehook",
+        "autoscaling:deletenotificationconfiguration",
+        "autoscaling:deletepolicy",
+        "autoscaling:deletescheduledaction",
+        "autoscaling:deletetags",
+        "autoscaling:describeaccountlimits",
+        "autoscaling:describeadjustmenttypes",
+        "autoscaling:describeautoscalinggroups",
+        "autoscaling:describeautoscalinginstances",
+        "autoscaling:describeautoscalingnotificationtypes",
+        "autoscaling:describelaunchconfigurations",
+        "autoscaling:describelifecyclehooktypes",
+        "autoscaling:describelifecyclehooks",
+        "autoscaling:describeloadbalancertargetgroups",
+        "autoscaling:describeloadbalancers",
+        "autoscaling:describemetriccollectiontypes",
+        "autoscaling:describenotificationconfigurations",
+        "autoscaling:describepolicies",
+        "autoscaling:describescalingactivities",
+        "autoscaling:describescalingprocesstypes",
+        "autoscaling:describescheduledactions",
+        "autoscaling:describetags",
+        "autoscaling:describeterminationpolicytypes",
+        "autoscaling:detachinstances",
+        "autoscaling:detachloadbalancertargetgroups",
+        "autoscaling:detachloadbalancers",
+        "autoscaling:disablemetricscollection",
+        "autoscaling:enablemetricscollection",
+        "autoscaling:enterstandby",
+        "autoscaling:executepolicy",
+        "autoscaling:exitstandby",
+        "autoscaling:putlifecyclehook",
+        "autoscaling:putnotificationconfiguration",
+        "autoscaling:putscalingpolicy",
+        "autoscaling:putscheduledupdategroupaction",
+        "autoscaling:recordlifecycleactionheartbeat",
+        "autoscaling:resumeprocesses",
+        "autoscaling:setdesiredcapacity",
+        "autoscaling:setinstancehealth",
+        "autoscaling:setinstanceprotection",
+        "autoscaling:suspendprocesses",
+        "autoscaling:terminateinstanceinautoscalinggroup",
+        "autoscaling:updateautoscalinggroup",
+    ]
+)
 
 
 def dc(o):
@@ -155,7 +145,6 @@ def dc(o):
 
 
 class TestMethods(unittest.TestCase):
-
     def test_expand_1(self):
         expanded_policy = expand_policy(policy=dc(WILDCARD_POLICY_1))
         self.assertEqual(expanded_policy, EXPANDED_POLICY_1)
@@ -163,20 +152,22 @@ class TestMethods(unittest.TestCase):
             "Statement": {
                 "NotAction": ["ec2:thispermissiondoesntexist"],
                 "Resource": "*",
-                "Effect": "Deny"
+                "Effect": "Deny",
             }
         }
         expected_policy = {
-            "Statement": [{
-                "NotAction": ["ec2:thispermissiondoesntexist"],
-                "Resource": "*",
-                "Effect": "Deny"
-            }]
+            "Statement": [
+                {
+                    "NotAction": ["ec2:thispermissiondoesntexist"],
+                    "Resource": "*",
+                    "Effect": "Deny",
+                }
+            ]
         }
         expanded_policy = expand_policy(policy=dc(policy), expand_deny=False)
         self.assertEqual(expanded_policy, expected_policy)
         expanded_policy = expand_policy(policy=dc(policy), expand_deny=True)
-        self.assertEqual(type(expanded_policy['Statement']), list)
+        self.assertEqual(type(expanded_policy["Statement"]), list)
 
     def test_expand_2(self):
         expanded_policy = expand_policy(policy=dc(WILDCARD_POLICY_2))
@@ -187,34 +178,38 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(result, EXPANDED_POLICIES_1)
 
     def test_expand_minimize_over_policies_1(self):
-        result = expand_minimize_over_policies(EXPANDED_POLICY_1, minimize_policy, minchars=3)
+        result = expand_minimize_over_policies(
+            EXPANDED_POLICY_1, minimize_policy, minchars=3
+        )
         self.assertEqual(result, WILDCARD_POLICY_1)
 
     def test_get_prefixes_for_action(self):
-        result = _get_prefixes_for_action('iam:cat')
-        self.assertEqual(result, ['iam:', 'iam:c', 'iam:ca', 'iam:cat'])
+        result = _get_prefixes_for_action("iam:cat")
+        self.assertEqual(result, ["iam:", "iam:c", "iam:ca", "iam:cat"])
 
     def test_expand_wildcard_action(self):
-        result = _expand_wildcard_action(['autoscaling:*'])
+        result = _expand_wildcard_action(["autoscaling:*"])
         self.assertEqual(sorted(result), AUTOSCALING_PERMISSIONS)
 
     def test_expand_wildcard_action_2(self):
-        result = _expand_wildcard_action('thistechdoesntexist:*')
-        self.assertEqual(result, ['thistechdoesntexist:*'])
+        result = _expand_wildcard_action("thistechdoesntexist:*")
+        self.assertEqual(result, ["thistechdoesntexist:*"])
 
     def test_expand_wildcard_action_3(self):
-        result = _expand_wildcard_action('ec2:DescribeInstances')
-        self.assertEqual(result, ['ec2:describeinstances'])
+        result = _expand_wildcard_action("ec2:DescribeInstances")
+        self.assertEqual(result, ["ec2:describeinstances"])
 
     def test_get_desired_actions_from_statement(self):
-        result = _get_desired_actions_from_statement(dc(WILDCARD_POLICY_1['Statement'][0]))
+        result = _get_desired_actions_from_statement(
+            dc(WILDCARD_POLICY_1["Statement"][0])
+        )
         self.assertEqual(result, set(EXPANDED_ACTIONS_1))
 
     def test_get_desired_actions_from_statement_1(self):
         statement = {
             "Action": ["ec2:thispermissiondoesntexist"],
             "Resource": "*",
-            "Effect": "Allow"
+            "Effect": "Allow",
         }
         self.assertRaises(Exception, _get_desired_actions_from_statement, statement)
 
@@ -223,7 +218,7 @@ class TestMethods(unittest.TestCase):
             "Action": "ec2:thispermissiondoesntexist",
             "NotAction": list(all_permissions),
             "Resource": "*",
-            "Effect": "Allow"
+            "Effect": "Allow",
         }
         expected_result = {"ec2:thispermissiondoesntexist"}
         result = get_actions_from_statement(statement)
