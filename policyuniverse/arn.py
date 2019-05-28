@@ -16,7 +16,7 @@
     :platform: Unix
 
 .. version:: $$VERSION$$
-.. moduleauthor:: Patrick Kelley <pkelley@netflix.com>
+.. moduleauthor:: Patrick Kelley <patrickbarrettkelley@gmail.com> @patrickbkelley
 
 """
 from policyuniverse import logger
@@ -34,7 +34,9 @@ class ARN(object):
     service = False
 
     def __init__(self, input):
-        arn_match = re.search('^arn:([^:]*):([^:]*):([^:]*):(|\*|[\d]{12}|cloudfront|aws):(.+)$', input)
+        arn_match = re.search(
+            r"^arn:([^:]*):([^:]*):([^:]*):(|\*|[\d]{12}|cloudfront|aws):(.+)$", input
+        )
         if arn_match:
             if arn_match.group(2) == "iam" and arn_match.group(5) == "root":
                 self.root = True
@@ -42,23 +44,23 @@ class ARN(object):
             self._from_arn(arn_match, input)
             return
 
-        acct_number_match = re.search('^(\d{12})+$', input)
+        acct_number_match = re.search(r"^(\d{12})+$", input)
         if acct_number_match:
             self._from_account_number(input)
             return
 
-        aws_service_match = re.search('^(([^.]+)(.[^.]+)?)\.amazon(aws)?\.com$', input)
+        aws_service_match = re.search(r"^(([^.]+)(.[^.]+)?)\.amazon(aws)?\.com$", input)
         if aws_service_match:
             self._from_aws_service(input, aws_service_match.group(1))
             return
 
-        aws_service_match = re.search('^([^.]+).aws.internal$', input)
+        aws_service_match = re.search(r"^([^.]+).aws.internal$", input)
         if aws_service_match:
             self._from_aws_service(input, aws_service_match.group(1))
             return
 
         self.error = True
-        logger.warning('ARN Could not parse [{}].'.format(input))
+        logger.warning("ARN Could not parse [{}].".format(input))
 
     def _from_arn(self, arn_match, input):
         self.partition = arn_match.group(1)

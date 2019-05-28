@@ -6,6 +6,8 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/Netflix-Skunkworks/policyuniverse/badge.svg?branch=master&1)](https://coveralls.io/github/Netflix-Skunkworks/policyuniverse?branch=master)
 
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
+
 This package provides classes to parse AWS IAM and Resource Policies.
 
 Additionally, this package can expand wildcards in AWS Policies using permissions obtained from the AWS Policy Generator.
