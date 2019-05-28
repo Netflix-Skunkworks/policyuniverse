@@ -33,28 +33,28 @@ def translate_aws_action_groups(groups):
     - ReadWrite
     - Permissions
     """
-    if 'Permissions' in groups:
-        return 'Permissions'
-    if 'ListOnly' in groups:
-        return 'List'
-    if 'ReadOnly' in groups:
-        return 'Read'
-    if 'Tagging' in groups:
-        return 'Tagging'
-    if 'ReadWrite' in groups:
-        return 'Write'
-    return 'Unknown'
+    if "Permissions" in groups:
+        return "Permissions"
+    if "ListOnly" in groups:
+        return "List"
+    if "ReadOnly" in groups:
+        return "Read"
+    if "Tagging" in groups:
+        return "Tagging"
+    if "ReadWrite" in groups:
+        return "Write"
+    return "Unknown"
 
 
 def build_action_categories_from_service_data(service_data):
     action_categories = dict()
     for service_name in service_data:
         service_body = service_data[service_name]
-        prefix = service_body['prefix']
-        service_actions = service_body['actions']
+        prefix = service_body["prefix"]
+        service_actions = service_body["actions"]
         for service_action, service_action_body in service_actions.items():
-            key = '{}:{}'.format(prefix, service_action.lower())
-            action_categories[key]=service_action_body['calculated_action_group']
+            key = "{}:{}".format(prefix, service_action.lower())
+            action_categories[key] = service_action_body["calculated_action_group"]
     return action_categories
 
 
@@ -72,9 +72,10 @@ def categories_for_actions(actions):
     """
     groups = defaultdict(set)
     for action in actions:
-        service = action.split(':')[0]
+        service = action.split(":")[0]
         groups[service].add(_action_categories.get(action))
     return groups
+
 
 def actions_for_category(category):
     """
@@ -89,5 +90,5 @@ def actions_for_category(category):
     actions = set()
     for action, action_category in _action_categories.items():
         if action_category == category:
-           actions.add(action)
+            actions.add(action)
     return actions

@@ -2,8 +2,12 @@ language: python
 
 matrix:
   include:
-    - python: "2.7"
-    - python: "3.5"
+    - name: "Legacy Py2.7"
+      python: "2.7"
+      env: PYTHONVER=py27
+    - name: "Python3.6"
+      python: "3.6"
+      env: PYTHONVER=py36
 
 cache:
   directories:
@@ -14,15 +18,16 @@ env:
     - PIP_DOWNLOAD_CACHE=".pip_download_cache"
 
 before_script:
-  - python setup.py develop
-  - pip install pytest
-  - pip install coveralls
+  - pip install -e .
+  - if [ $PYTHONVER == "py36"]; then pip install -e .["dev"]; fi
+  - pip install -e .["tests"]
 
 script:
   - coverage run -a -m py.test policyuniverse/tests/test_expander_minimizer.py || exit 1
   - coverage run -a -m py.test policyuniverse/tests/test_arn.py || exit 1
   - coverage run -a -m py.test policyuniverse/tests/test_statement.py || exit 1
   - coverage run -a -m py.test policyuniverse/tests/test_policy.py || exit 1
+  - if [ $PYTHONVER == "py36"]; then black --check policyuniverse || exit 1; fi
 
 after_success:
   - coveralls
@@ -30,5 +35,5 @@ after_success:
 
 notifications:
   email:
-    - pkelley@netflix.com
-    - opticrealm@gmail.com
+    - patrickbarrettkelley@gmail.com
+    - nmedida@netflix.com

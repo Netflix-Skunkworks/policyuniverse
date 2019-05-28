@@ -16,9 +16,10 @@
     :platform: Unix
 
 .. version:: $$VERSION$$
-.. moduleauthor::  Patrick Kelley <pkelley@netflix.com>
+.. moduleauthor::  Patrick Kelley <patrickbarrettkelley@gmail.com> @patrickbkelley
 
 """
+
 
 def build_service_actions_from_service_data(service_data):
     permissions = set()
@@ -28,6 +29,7 @@ def build_service_actions_from_service_data(service_data):
         for action in service_actions:
             permissions.add("{}:{}".format(prefix, action.lower()))
     return permissions
+
 
 # TODO: Helper Action class
 # May also want to create a service.py
