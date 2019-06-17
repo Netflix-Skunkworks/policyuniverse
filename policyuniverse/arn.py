@@ -24,6 +24,7 @@ import re
 
 
 class ARN(object):
+    arn = None
     tech = None
     region = None
     account_number = None
@@ -63,6 +64,7 @@ class ARN(object):
         logger.warning("ARN Could not parse [{}].".format(input))
 
     def _from_arn(self, arn_match, input):
+        self.arn = input
         self.partition = arn_match.group(1)
         self.tech = arn_match.group(2)
         self.region = arn_match.group(3)
