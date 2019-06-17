@@ -35,6 +35,7 @@ class ARN(object):
     service = False
 
     def __init__(self, input):
+        self.arn = input
         arn_match = re.search(
             r"^arn:([^:]*):([^:]*):([^:]*):(|\*|[\d]{12}|cloudfront|aws):(.+)$", input
         )
@@ -64,7 +65,6 @@ class ARN(object):
         logger.warning("ARN Could not parse [{}].".format(input))
 
     def _from_arn(self, arn_match, input):
-        self.arn = input
         self.partition = arn_match.group(1)
         self.tech = arn_match.group(2)
         self.region = arn_match.group(3)
