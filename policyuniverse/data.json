@@ -1219,6 +1219,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html"
         }
       },
+      "CreateDeployment": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Create a deployment for manual deploy apps. (Apps are not connected to repository)",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html"
+        }
+      },
       "CreateDomainAssociation": {
         "aws_action_groups": [
           "ReadWrite"
@@ -1226,6 +1239,19 @@
         "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Create a new DomainAssociation on an App",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html"
+        }
+      },
+      "CreateWebHook": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Create a new webhook on an App.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -1284,6 +1310,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html"
         }
       },
+      "DeleteWebHook": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Delete a webhook by id.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html"
+        }
+      },
       "GetApp": {
         "aws_action_groups": [
           "ReadOnly",
@@ -1334,6 +1373,20 @@
         "calculated_action_group": "Read",
         "condition_keys": [],
         "description": "Get a job for a branch, part of an Amplify App.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html"
+        }
+      },
+      "GetWebHook": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Retrieves webhook info that corresponds to a webhookId.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -1400,6 +1453,34 @@
           "doc_page_rel": "https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html"
         }
       },
+      "ListWebHooks": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "List webhooks on an App.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html"
+        }
+      },
+      "StartDeployment": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Start a deployment for manual deploy apps. (Apps are not connected to repository)",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html"
+        }
+      },
       "StartJob": {
         "aws_action_groups": [
           "ReadWrite"
@@ -1420,6 +1501,39 @@
         "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Stop a job that is in progress, for an Amplify branch, part of Amplify App.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:TagKeys",
+          "aws:RequestTag/${TagKey}"
+        ],
+        "description": "This action tags an AWS Amplify Console resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "This action removes a tag from an AWS Amplify Console resource.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -1459,6 +1573,19 @@
         "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Update a DomainAssociation on an App.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html"
+        }
+      },
+      "UpdateWebHook": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Update a webhook.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -1787,6 +1914,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_ListVirtualServices.html"
         }
       },
+      "StreamAggregatedResources": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Allows an Envoy Proxy to receive streamed resources for a VirtualNode.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/userguide/envoy.html"
+        }
+      },
       "TagResource": {
         "aws_action_groups": [
           "ReadWrite"
@@ -2051,6 +2192,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateStreamingURL.html"
         }
       },
+      "CreateUsageReportSubscription": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create a usage report subscription. Usage reports are generated daily",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateUsageReportSubscription.html"
+        }
+      },
       "CreateUser": {
         "aws_action_groups": [
           "ReadWrite"
@@ -2150,6 +2304,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_DeleteStack.html"
+        }
+      },
+      "DeleteUsageReportSubscription": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to disable usage report generation",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_DeleteUsageReportSubscription.html"
         }
       },
       "DeleteUser": {
@@ -2261,6 +2428,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_DescribeStacks.html"
+        }
+      },
+      "DescribeUsageReportSubscriptions": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve a list that describes one or more usage report subscriptions",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_DescribeUsageReportSubscriptions.html"
         }
       },
       "DescribeUserStackAssociations": {
@@ -2913,6 +3094,37 @@
           "doc_page_rel": "https://docs.aws.amazon.com/appsync/latest/APIReference/API_ListResolvers.html"
         }
       },
+      "ListResolversByFunction": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "List the resolvers that are associated with a specific function.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appsync/latest/APIReference/API_ListResolversByFunction.html"
+        }
+      },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "List the tags for a resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appsync/latest/APIReference/API_ListTagsForResource.html"
+        }
+      },
       "ListTypes": {
         "aws_action_groups": [
           "ReadWrite",
@@ -2939,6 +3151,40 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/appsync/latest/APIReference/API_StartSchemaCreation.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Tag a resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appsync/latest/APIReference/API_TagResource.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "Untag a resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appsync/latest/APIReference/API_UntagResource.html"
         }
       },
       "UpdateApiKey": {
@@ -12121,6 +12367,20 @@
   },
   "CodeCommit": {
     "actions": {
+      "BatchDescribeMergeConflicts": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to get information about multiple merge conflicts when attempting to merge two commits using either the three-way merge or the squash merge option",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_BatchDescribeMergeConflicts.html"
+        }
+      },
       "BatchGetPullRequests": {
         "aws_action_groups": [
           "ReadOnly",
@@ -12219,6 +12479,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_CreateRepository.html"
         }
       },
+      "CreateUnreferencedMergeCommit": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "codecommit:References"
+        ],
+        "description": "Grants permission to create an unreferenced commit that contains the result of merging two commits using either the three-way or the squash merge option; does not control Git merge actions",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_CreateUnreferencedMergeCommit.html"
+        }
+      },
       "DeleteBranch": {
         "aws_action_groups": [
           "ReadWrite"
@@ -12273,6 +12548,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_DeleteRepository.html"
+        }
+      },
+      "DescribeMergeConflicts": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to get information about specific merge conflicts when attempting to merge two commits using either the three-way or the squash merge option",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_DescribeMergeConflicts.html"
         }
       },
       "DescribePullRequestEvents": {
@@ -12443,6 +12732,22 @@
           "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_GetFolder.html"
         }
       },
+      "GetMergeCommit": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "codecommit:References"
+        ],
+        "description": "Grants permission to get information about a merge commit created by one of the merge options for pull requests that creates merge commits. Not all merge options create merge commits. This permission does not control Git merge actions",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_GetMergeCommit.html"
+        }
+      },
       "GetMergeConflicts": {
         "aws_action_groups": [
           "ReadOnly",
@@ -12455,6 +12760,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_GetMergeConflicts.html"
+        }
+      },
+      "GetMergeOptions": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to get information about merge options for pull requests that can be used to merge two commits; does not control Git merge actions",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_GetMergeOptions.html"
         }
       },
       "GetObjectIdentifier": {
@@ -12629,6 +12948,66 @@
           "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_ListRepositories.html"
         }
       },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list the resource attached to a CodeCommit resource ARN",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_ListTagsForResource.html"
+        }
+      },
+      "MergeBranchesByFastForward": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "codecommit:References"
+        ],
+        "description": "Grants permission to merge two commits into the specified destination branch using the fast-forward merge option",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_MergeBranchesByFastForward.html"
+        }
+      },
+      "MergeBranchesBySquash": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "codecommit:References"
+        ],
+        "description": "Grants permission to merge two commits into the specified destination branch using the squash merge option",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_MergeBranchesBySquash.html"
+        }
+      },
+      "MergeBranchesByThreeWay": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "codecommit:References"
+        ],
+        "description": "Grants permission to merge two commits into the specified destination branch using the three-way merge option",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_MergeBranchesByThreeWay.html"
+        }
+      },
       "MergePullRequestByFastForward": {
         "aws_action_groups": [
           "ReadWrite"
@@ -12642,6 +13021,36 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_MergePullRequestByFastForward.html"
+        }
+      },
+      "MergePullRequestBySquash": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "codecommit:References"
+        ],
+        "description": "Grants permission to close a pull request and attempt to merge it into the specified destination branch for that pull request at the specified commit using the squash merge option",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_MergePullRequestBySquash.html"
+        }
+      },
+      "MergePullRequestByThreeWay": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "codecommit:References"
+        ],
+        "description": "Grants permission to close a pull request and attempt to merge it into the specified destination branch for that pull request at the specified commit using the three-way merge option",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_MergePullRequestByThreeWay.html"
         }
       },
       "PostCommentForComparedCommit": {
@@ -12711,6 +13120,23 @@
           "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_PutRepositoryTriggers.html"
         }
       },
+      "TagResource": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to attach resource tags to a CodeCommit resource ARN",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_TagResource.html"
+        }
+      },
       "TestRepositoryTriggers": {
         "aws_action_groups": [
           "ReadWrite"
@@ -12722,6 +13148,21 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_TestRepositoryTriggers.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to disassociate resource tags from a CodeCommit resource ARN",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/API_UntagResource.html"
         }
       },
       "UpdateComment": {
@@ -13637,6 +14078,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_ListPipelines.html"
         }
       },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Lists tags for a CodePipeline resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_ListTagsForResource.html"
+        }
+      },
       "ListWebhooks": {
         "aws_action_groups": [
           "ListOnly",
@@ -13806,6 +14261,39 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_StartPipelineExecution.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Tags a CodePipeline resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_TagResource.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "Removes a tag from a CodePipeline resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_UntagResource.html"
         }
       },
       "UpdatePipeline": {
@@ -17896,6 +18384,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetReservationUtilization.html"
         }
       },
+      "GetRightsizingRecommendation": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve the rightsizing recommendations for your account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetRightsizingRecommendation.html"
+        }
+      },
       "GetTags": {
         "aws_action_groups": [
           "ReadOnly",
@@ -17908,6 +18410,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetTags.html"
+        }
+      },
+      "GetUsageForecast": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve a usage forecast for a forecast time period.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetUsageForecast.html"
         }
       }
     },
@@ -17954,6 +18470,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/describe-report-definitions.html"
         }
       },
+      "ModifyReportDefinition": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Modify Cost and Usage Report Definition",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/modify-report-definition.html"
+        }
+      },
       "PutReportDefinition": {
         "aws_action_groups": [
           "ReadWrite"
@@ -17998,6 +18527,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/dms/latest/APIReference/API_AddTagsToResource.html"
         }
       },
+      "ApplyPendingMaintenanceAction": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Applies a pending maintenance action to a resource (for example, to a replication instance).",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/dms/latest/APIReference/API_ApplyPendingMaintenanceAction.html"
+        }
+      },
       "CreateEndpoint": {
         "aws_action_groups": [
           "ReadWrite"
@@ -18009,6 +18551,23 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateEndpoint.html"
+        }
+      },
+      "CreateEventSubscription": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "dms:req-tag/${TagKey}"
+        ],
+        "description": "Creates an AWS DMS event notification subscription.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateEventSubscription.html"
         }
       },
       "CreateReplicationInstance": {
@@ -18048,6 +18607,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationTask.html"
+        }
+      },
+      "DeleteCertificate": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes the specified certificate",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/dms/latest/APIReference/API_DeleteCertificate.html"
         }
       },
       "DeleteEndpoint": {
@@ -18255,6 +18827,23 @@
           "doc_page_rel": "https://docs.aws.amazon.com/dms/latest/APIReference/API_DescribeRefreshSchemasStatus.html"
         }
       },
+      "DescribeReplicationInstanceTaskLogs": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Returns information about the task logs for the specified task.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/dms/latest/APIReference/API_DescribeReplicationInstanceTaskLogs.html"
+        }
+      },
       "DescribeReplicationInstances": {
         "aws_action_groups": [
           "ReadOnly",
@@ -18281,6 +18870,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/dms/latest/APIReference/API_DescribeReplicationSubnetGroups.html"
+        }
+      },
+      "DescribeReplicationTaskAssessmentResults": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Returns the task assessment results from Amazon S3. This action always returns the latest results.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/dms/latest/APIReference/API_DescribeReplicationTaskAssessmentResults.html"
         }
       },
       "DescribeReplicationTasks": {
@@ -18323,6 +18926,22 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/dms/latest/APIReference/API_DescribeTableStatistics.html"
+        }
+      },
+      "ImportCertificate": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Uploads the specified certificate.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/dms/latest/APIReference/API_ImportCertificate.html"
         }
       },
       "ListTagsForResource": {
@@ -18405,6 +19024,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/dms/latest/APIReference/API_ModifyReplicationTask.html"
         }
       },
+      "RebootReplicationInstance": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Reboots a replication instance. Rebooting results in a momentary outage, until the replication instance becomes available again.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/dms/latest/APIReference/API_RebootReplicationInstance.html"
+        }
+      },
       "RefreshSchemas": {
         "aws_action_groups": [
           "ReadWrite"
@@ -18416,6 +19048,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/dms/latest/APIReference/API_RefreshSchemas.html"
+        }
+      },
+      "ReloadTables": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Reloads the target database table with the source data.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/dms/latest/APIReference/API_ReloadTables.html"
         }
       },
       "RemoveTagsFromResource": {
@@ -18443,6 +19088,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/dms/latest/APIReference/API_StartReplicationTask.html"
+        }
+      },
+      "StartReplicationTaskAssessment": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Starts the replication task assessment for unsupported data types in the source database.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/dms/latest/APIReference/API_StartReplicationTaskAssessment.html"
         }
       },
       "StopReplicationTask": {
@@ -20354,6 +21012,19 @@
   },
   "Direct Connect": {
     "actions": {
+      "AcceptDirectConnectGatewayAssociationProposal": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Accepts a proposal request to attach a virtual private gateway to a Direct Connect gateway.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_AcceptDirectConnectGatewayAssociationProposal.html"
+        }
+      },
       "AllocateConnectionOnInterconnect": {
         "aws_action_groups": [
           "ReadWrite"
@@ -20404,6 +21075,22 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_AllocatePublicVirtualInterface.html"
+        }
+      },
+      "AllocateTransitVirtualInterface": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Provisions a transit virtual interface to be owned by a different customer.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_AllocateTransitVirtualInterface.html"
         }
       },
       "AssociateConnectionWithLag": {
@@ -20487,6 +21174,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_ConfirmPublicVirtualInterface.html"
         }
       },
+      "ConfirmTransitVirtualInterface": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Accept ownership of a transit virtual interface created by another customer",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_ConfirmTransitVirtualInterface.html"
+        }
+      },
       "CreateBGPPeer": {
         "aws_action_groups": [
           "ReadWrite"
@@ -20537,6 +21237,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreateDirectConnectGatewayAssociation.html"
+        }
+      },
+      "CreateDirectConnectGatewayAssociationProposal": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Creates a proposal to associate the specified virtual private gateway with the specified Direct Connect gateway.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreateDirectConnectGatewayAssociationProposal.html"
         }
       },
       "CreateInterconnect": {
@@ -20591,6 +21304,22 @@
           "doc_page_rel": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreatePublicVirtualInterface.html"
         }
       },
+      "CreateTransitVirtualInterface": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Creates a new transit virtual interface.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreateTransitVirtualInterface.html"
+        }
+      },
       "DeleteBGPPeer": {
         "aws_action_groups": [
           "ReadWrite"
@@ -20641,6 +21370,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DeleteDirectConnectGatewayAssociation.html"
+        }
+      },
+      "DeleteDirectConnectGatewayAssociationProposal": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes the association proposal request between the specified Direct Connect gateway and virtual private gateway.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DeleteDirectConnectGatewayAssociationProposal.html"
         }
       },
       "DeleteInterconnect": {
@@ -20722,6 +21464,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeConnectionsOnInterconnect.html"
+        }
+      },
+      "DescribeDirectConnectGatewayAssociationProposals": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes one or more association proposals for connection between a virtual private gateway and a Direct Connect gateway.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeDirectConnectGatewayAssociationProposals.html"
         }
       },
       "DescribeDirectConnectGatewayAssociations": {
@@ -20932,6 +21688,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UntagResource.html"
+        }
+      },
+      "UpdateDirectConnectGatewayAssociation": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates the specified attributes of the Direct Connect gateway association.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateDirectConnectGatewayAssociation.html"
         }
       },
       "UpdateLag": {
@@ -23672,6 +24441,39 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSnapshot.html"
         }
       },
+      "CreateSnapshots": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "ec2:AvailabilityZone",
+          "ec2:EbsOptimized",
+          "ec2:InstanceProfile",
+          "ec2:InstanceType",
+          "ec2:PlacementGroup",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:RootDeviceType",
+          "ec2:Tenancy",
+          "aws:TagKeys",
+          "aws:RequestTag/${TagKey}",
+          "ec2:ParentVolume",
+          "ec2:Region",
+          "ec2:Encrypted",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:VolumeIops",
+          "ec2:VolumeSize",
+          "ec2:VolumeType"
+        ],
+        "description": "Creates a snapshots of an EBS volumes which attached to an EC2 instance and stores them in Amazon S3.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSnapshots.html"
+        }
+      },
       "CreateSpotDatafeedSubscription": {
         "aws_action_groups": [
           "ReadWrite"
@@ -25888,6 +26690,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DetachVpnGateway.html"
         }
       },
+      "DisableEbsEncryptionByDefault": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Disable the default EBS encryption by enabled for your account in the current region",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DisableEbsEncryptionByDefault.html"
+        }
+      },
       "DisableTransitGatewayRouteTablePropagation": {
         "aws_action_groups": [
           "ReadWrite"
@@ -26031,6 +26846,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DisassociateVpcCidrBlock.html"
         }
       },
+      "EnableEbsEncryptionByDefault": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Enables EBS encryption by default for your account in the current Region",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EnableEbsEncryptionByDefault.html"
+        }
+      },
       "EnableTransitGatewayRouteTablePropagation": {
         "aws_action_groups": [
           "ReadWrite"
@@ -26165,6 +26993,34 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetConsoleScreenshot.html"
+        }
+      },
+      "GetEbsDefaultKmsKeyId": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Get EBS Default Kms Key Id",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetEbsDefaultKmsKeyId.html"
+        }
+      },
+      "GetEbsEncryptionByDefault": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes whether EBS encryption by default is enabled for your account in the current Region",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetEbsEncryptionByDefault.html"
         }
       },
       "GetHostReservationPurchasePreview": {
@@ -26370,6 +27226,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyClientVpnEndpoint.html"
+        }
+      },
+      "ModifyEbsDefaultKmsKeyId": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Changes the default customer master key (CMK) for EBS encryption by default for your account in this Region",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ModifyEbsDefaultKmsKeyId.html"
         }
       },
       "ModifyFleet": {
@@ -26723,6 +27592,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVpcTenancy.html"
         }
       },
+      "ModifyVpnConnection": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Modifies the target gateway of a AWS Site-to-Site VPN connection",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVpnConnection.html"
+        }
+      },
       "MonitorInstances": {
         "aws_action_groups": [
           "ReadWrite"
@@ -27007,6 +27889,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotInstances.html"
+        }
+      },
+      "ResetEbsDefaultKmsKeyId": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Resets the default customer master key (CMK) for EBS encryption for your account in this Region to the AWS managed CMK for EBS",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ResetEbsDefaultKmsKeyId.html"
         }
       },
       "ResetFpgaImageAttribute": {
@@ -28534,6 +29429,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/eks/latest/APIReference/API_ListUpdates.html"
+        }
+      },
+      "UpdateClusterConfig": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Update Amazon EKS cluster configurations (eg: API server endpoint access).",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eks/latest/APIReference/API_UpdateClusterConfig.html"
         }
       },
       "UpdateClusterVersion": {
@@ -34657,6 +35565,62 @@
           "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-BatchDeleteTable"
         }
       },
+      "BatchDeleteTableVersion": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to delete one or more versions of a table",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-DeleteTableVersion"
+        }
+      },
+      "BatchGetCrawlers": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve one or more crawlers",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-crawling.html#aws-glue-api-crawler-crawling-BatchGetCrawlers"
+        }
+      },
+      "BatchGetDevEndpoints": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve one or more development endpoints",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-dev-endpoint.html#aws-glue-api-dev-endpoint-BatchGetDevEndpoints"
+        }
+      },
+      "BatchGetJobs": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve one or more jobs",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-job.html#aws-glue-api-jobs-job-BatchGetJobs"
+        }
+      },
       "BatchGetPartition": {
         "aws_action_groups": [
           "ReadOnly",
@@ -34669,6 +35633,47 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-BatchGetPartition"
+        }
+      },
+      "BatchGetTriggers": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve one or more triggers",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-BatchGetTriggers"
+        }
+      },
+      "BatchGetWorkflows": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve one or more workflows",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-workflow.html#aws-glue-api-workflow-BatchGetWorkflows"
+        }
+      },
+      "BatchStopJobRun": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to stop one or more job runs for a job",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-runs.html#aws-glue-api-jobs-runs-BatchStopStartJobRun"
         }
       },
       "CreateClassifier": {
@@ -34827,6 +35832,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-functions.html#aws-glue-api-catalog-functions-CreateUserDefinedFunction"
         }
       },
+      "CreateWorkflow": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create a workflow",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-workflow.html#aws-glue-api-workflow-CreateWorkflow"
+        }
+      },
       "DeleteClassifier": {
         "aws_action_groups": [
           "ReadWrite"
@@ -34957,6 +35975,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-DeleteTable"
         }
       },
+      "DeleteTableVersion": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to delete a version of a table",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-DeleteTableVersion"
+        }
+      },
       "DeleteTrigger": {
         "aws_action_groups": [
           "ReadWrite"
@@ -34981,6 +36013,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-functions.html#aws-glue-api-catalog-functions-DeleteUserDefinedFunction"
+        }
+      },
+      "DeleteWorkflow": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete a workflow",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-workflow.html#aws-glue-api-workflow-DeleteWorkflow"
         }
       },
       "GetCatalogImportStatus": {
@@ -35346,6 +36391,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-GetTable"
         }
       },
+      "GetTableVersion": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve a version of a table",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-GetTableVersion"
+        }
+      },
       "GetTableVersions": {
         "aws_action_groups": [
           "ReadOnly",
@@ -35372,6 +36431,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-GetTables"
+        }
+      },
+      "GetTags": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve all tags associated with a resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-tags.html#aws-glue-api-tags-UntagResource"
         }
       },
       "GetTrigger": {
@@ -35430,6 +36503,62 @@
           "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-functions.html#aws-glue-api-catalog-functions-GetUserDefinedFunctions"
         }
       },
+      "GetWorkflow": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve a workflow",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-workflow.html#aws-glue-api-workflow-GetWorkflow"
+        }
+      },
+      "GetWorkflowRun": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve a workflow run",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-workflow.html#aws-glue-api-workflow-GetWorkflowRun"
+        }
+      },
+      "GetWorkflowRunProperties": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve workflow run properties",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-workflow.html#aws-glue-api-workflow-GetWorkflowRunProperties"
+        }
+      },
+      "GetWorkflowRuns": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve all runs of a workflow",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-workflow.html#aws-glue-api-workflow-GetWorkflowRuns"
+        }
+      },
       "ImportCatalogToGlue": {
         "aws_action_groups": [
           "ReadWrite"
@@ -35441,6 +36570,81 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-migration.html#aws-glue-api-catalog-migration-ImportCatalogToGlue"
+        }
+      },
+      "ListCrawlers": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve all crawlers",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-crawling.html#aws-glue-api-crawler-crawling-ListCrawlers"
+        }
+      },
+      "ListDevEndpoints": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve all development endpoints",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-dev-endpoint.html#aws-glue-api-dev-endpoint-ListDevEndpoints"
+        }
+      },
+      "ListJobs": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve all current jobs",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-job.html#aws-glue-api-jobs-job-ListJobs"
+        }
+      },
+      "ListTriggers": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve all triggers",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-ListTriggers"
+        }
+      },
+      "ListWorkflows": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve all workflows",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-workflow.html#aws-glue-api-workflow-ListWorkflows"
         }
       },
       "PutDataCatalogEncryptionSettings": {
@@ -35467,6 +36671,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-security.html#aws-glue-api-jobs-security-PutResourcePolicy"
+        }
+      },
+      "PutWorkflowRunProperties": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to update workflow run properties",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-workflow.html#aws-glue-api-workflow-PutWorkflowRunProperties"
         }
       },
       "ResetJobBookmark": {
@@ -35534,6 +36751,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-StartTrigger"
         }
       },
+      "StartWorkflowRun": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to start running a workflow",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-workflow.html#aws-glue-api-workflow-StartWorkflowRun"
+        }
+      },
       "StopCrawler": {
         "aws_action_groups": [
           "ReadWrite"
@@ -35571,6 +36801,34 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-StopTrigger"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to add tags to a resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-tags.html#aws-glue-api-tags-TagResource"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to remove tags associated with a resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-tags.html#aws-glue-api-tags-UntagResource"
         }
       },
       "UpdateClassifier": {
@@ -35701,6 +36959,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-functions.html#aws-glue-api-catalog-functions-UpdateUserDefinedFunction"
+        }
+      },
+      "UpdateWorkflow": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to update a workflow",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-workflow.html#aws-glue-api-workflow-UpdateWorkflow"
         }
       }
     },
@@ -38497,6 +39768,22 @@
           "doc_page_rel": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_GenerateCredentialReport.html"
         }
       },
+      "GenerateOrganizationsAccessReport": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "iam:OrganizationsPolicyId"
+        ],
+        "description": "Grants permission to generate an access report for an AWS Organizations entity",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_GenerateOrganizationsAccessReport.html"
+        }
+      },
       "GenerateServiceLastAccessedDetails": {
         "aws_action_groups": [
           "ReadOnly",
@@ -38679,6 +39966,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_GetOpenIDConnectProvider.html"
+        }
+      },
+      "GetOrganizationsAccessReport": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve an AWS Organizations access report",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_GetOrganizationsAccessReport.html"
         }
       },
       "GetPolicy": {
@@ -43820,6 +45121,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents/latest/APIReference/API_BatchPutMessage.html"
         }
       },
+      "BatchUpdateDetector": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Update an detector within the AWS IoT Events system.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchUpdateDetector.html"
+        }
+      },
       "CreateDetectorModel": {
         "aws_action_groups": [
           "ReadWrite"
@@ -43990,6 +45304,20 @@
           "doc_page_rel": ""
         }
       },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Lists the tags (metadata) which you have assigned to the resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_ListTagsForResource.html"
+        }
+      },
       "PutLoggingOptions": {
         "aws_action_groups": [
           "ReadWrite"
@@ -44001,6 +45329,39 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents/latest/APIReference/API_PutLoggingOptions.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Adds to or modifies the tags of the given resource. Tags are metadata which can be used to manage a resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_TagResource.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "Removes the given tags (metadata) from the resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_UntagResource.html"
         }
       },
       "UpdateDetectorModel": {
@@ -44027,6 +45388,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents/latest/APIReference/API_UpdateInput.html"
+        }
+      },
+      "UpdateInputRouting": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates input routing.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_UpdateInputRouting.html"
         }
       }
     },
@@ -45994,6 +47368,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ListApplications.html"
         }
       },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Fetch the tags associated with the application.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ListTagsForResource.html"
+        }
+      },
       "StartApplication": {
         "aws_action_groups": [
           "ReadWrite"
@@ -46018,6 +47406,39 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_StopApplication.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Add tags to the application.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_TagResource.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "Remove the specified tags from the application.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_UntagResource.html"
         }
       },
       "UpdateApplication": {
@@ -46092,6 +47513,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_DescribeStream.html"
+        }
+      },
+      "GetDASHStreamingSessionURL": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Creates a URL for MPEG-DASH video streaming.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_GetDASHStreamingSessionURL.html"
         }
       },
       "GetDataEndpoint": {
@@ -49347,6 +50782,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#CreateCluster"
         }
       },
+      "CreateConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create a configuration.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/configurations.html#CreateConfiguration"
+        }
+      },
       "DeleteCluster": {
         "aws_action_groups": [
           "ReadWrite"
@@ -49374,6 +50822,48 @@
           "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn.html#DescribeCluster"
         }
       },
+      "DescribeClusterOperation": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Returns a description of the cluster operation specified by the ARN.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/operations-clusteroperationarn.html#DescribeClusterOperation"
+        }
+      },
+      "DescribeConfiguration": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to describe a configuration.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/configurations-configurationarn.html#DescribeConfiguration"
+        }
+      },
+      "DescribeConfigurationRevision": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to describe a configuration revision.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/configurations-configurationarn-revision.html#DescribeConfigurationRevision"
+        }
+      },
       "GetBootstrapBrokers": {
         "aws_action_groups": [
           "ReadWrite",
@@ -49386,6 +50876,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-bootstrap-brokers.html#GetBootstrapBrokers"
+        }
+      },
+      "ListClusterOperations": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Returns a list of all the operations that have been performed on the specified MSK cluster.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-operations.html#ListClusterOperations"
         }
       },
       "ListClusters": {
@@ -49403,6 +50907,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#ListClusters"
         }
       },
+      "ListConfigurations": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to return a list of all configurations in the current account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/configurations.html#CreateConfiguration"
+        }
+      },
       "ListNodes": {
         "aws_action_groups": [
           "ReadWrite",
@@ -49416,6 +50935,79 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-nodes.html#ListNodes"
+        }
+      },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to list tags of a MSK resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/tags-resourcearn.html#ListTagsForResource"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to tag a MSK resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/tags-resourcearn.html#TagResource"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to remove tags from a MSK resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/tags-resourcearn.html#UntagResource"
+        }
+      },
+      "UpdateBrokerStorage": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates the storage size of the broker nodes of the cluster",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-nodes-storage.html#UpdateBrokerStorage"
+        }
+      },
+      "UpdateClusterConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Update Kafka configuration running on a cluster.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-configuration.html#UpdateClusterConfiguration"
         }
       }
     },
@@ -54967,6 +56559,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/organizations/latest/APIReference/API_ListRoots.html"
         }
       },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list all tags for the specified resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/organizations/latest/APIReference/API_ListTagsForResource.html"
+        }
+      },
       "ListTargetsForPolicy": {
         "aws_action_groups": [
           "ListOnly",
@@ -55006,6 +56613,34 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/organizations/latest/APIReference/API_RemoveAccountFromOrganization.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [],
+        "description": "Grants permission to add one or more tags to the specified resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/organizations/latest/APIReference/API_TagResource.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [],
+        "description": "Grants permission to remove one or more tags from the specified resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/organizations/latest/APIReference/API_UntagResource.html"
         }
       },
       "UpdateOrganizationalUnit": {
@@ -56542,6 +58177,142 @@
   },
   "Private Marketplace": {
     "actions": {
+      "AssociateProductsWithPrivateMarketplace": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Adds new approved products to the Private Marketplace. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/private-marketplace.html"
+        }
+      },
+      "CreatePrivateMarketplace": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Creates a Private Marketplace for the individual account, or for the entire AWS Organization if one exists. This action can only be performed by the master account if using an AWS Organization.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/private-marketplace.html"
+        }
+      },
+      "CreatePrivateMarketplaceProfile": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Creates a Private Marketplace Profile that customizes the white label experience on the AWS Marketplace website for the individual account, or for the entire AWS Organization if one exists. This action can only be performed by the master account if using an AWS Organization.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/private-marketplace.html"
+        }
+      },
+      "DescribePrivateMarketplaceProducts": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Describes the status of requested products in the Private Marketplace for administrative purposes. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/private-marketplace.html"
+        }
+      },
+      "DescribePrivateMarketplaceProfile": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes details about the Private Marketplace Profile for administrative purposes. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/private-marketplace.html"
+        }
+      },
+      "DescribePrivateMarketplaceStatus": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes the status of the Private Marketplace for administrative purposes. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/private-marketplace.html"
+        }
+      },
+      "DisassociateProductsFromPrivateMarketplace": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Removes approved products from the Private Marketplace. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/private-marketplace.html"
+        }
+      },
+      "ListPrivateMarketplaceProducts": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Queryable list for the products and status of products in the Private Marketplace for administrative purposes. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/private-marketplace.html"
+        }
+      },
+      "StartPrivateMarketplace": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Starts the Private Marketplace, enabling the customized AWS Marketplace experience, and enabling restrictions on the procurement of products based on what is available in the Private Marketplace. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/private-marketplace.html"
+        }
+      },
+      "StopPrivateMarketplace": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Stops the Private Marketplace, disabling the customized AWS Marketplace experience and removing the Private Marketplace procurement restrictions on products. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/private-marketplace.html"
+        }
+      },
       "Subscribe": {
         "aws_action_groups": [
           "ReadWrite"
@@ -56566,6 +58337,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/controlling-access/ControllingAccessToAWSMarketplaceSubscriptions.html#SummaryOfAWSMarketplaceSubscriptionsPermissions"
+        }
+      },
+      "UpdatePrivateMarketplaceProfile": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates the Private Marketplace Profile that customizes the white label experience on the AWS Marketplace website for the individual account, or for the entire AWS Organization if one exists. This action can be performed by any account in an AWS Organization, provided the user has permissions to do so, and the Organization's Service Control Policies allow it.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/private-marketplace.html"
         }
       },
       "ViewSubscriptions": {
@@ -60431,6 +62215,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/ram/latest/APIReference/API_GetResourceShares.html"
         }
       },
+      "ListPendingInvitationResources": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Lists the resources in a resource share that is shared with you but that the invitation is still pending for",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/ram/latest/APIReference/API_ListPendingInvitationResources.html"
+        }
+      },
       "ListPrincipals": {
         "aws_action_groups": [
           "ListOnly",
@@ -60821,6 +62619,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/API_Operations.htmlAPI_BatchDescribeSimulationJob.html"
         }
       },
+      "CancelDeploymentJob": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Cancel a deployment job",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/API_Operations.htmlAPI_CancelDeploymentJob.html"
+        }
+      },
       "CancelSimulationJob": {
         "aws_action_groups": [
           "ReadWrite"
@@ -60936,6 +62747,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/API_Operations.htmlAPI_CreateSimulationJob.html"
+        }
+      },
+      "DeleteFleet": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Delete a deployment fleet",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/API_Operations.htmlAPI_DeleteFleet.html"
         }
       },
       "DeleteRobot": {
@@ -61164,6 +62988,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/API_Operations.htmlAPI_ListSimulationJobs.html"
         }
       },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "List tags for a RoboMaker resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/API_Operations.htmlAPI_ListTagsForResource.html"
+        }
+      },
       "RegisterRobot": {
         "aws_action_groups": [
           "ReadWrite"
@@ -61201,6 +63040,37 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/API_Operations.htmlAPI_SyncDeploymentJob.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:TagKeys",
+          "aws:RequestTag/${TagKey}"
+        ],
+        "description": "Add tags to a RoboMaker resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/API_Operations.htmlAPI_TagResource.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "Remove tags from a RoboMaker resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/API_Operations.htmlAPI_UntagResource.html"
         }
       },
       "UpdateRobotApplication": {
@@ -62732,6 +64602,26 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUT.html"
         }
       },
+      "CreateJob": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3:authtype",
+          "s3:signatureage",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256",
+          "s3:RequestJobPriority",
+          "s3:RequestJobOperation"
+        ],
+        "description": "Creates a new Amazon S3 Batch Operations job.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTAccountPOSTCreateJob.html"
+        }
+      },
       "DeleteBucket": {
         "aws_action_groups": [
           "ReadWrite"
@@ -62862,6 +64752,25 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectDELETEtagging.html"
+        }
+      },
+      "DescribeJob": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "s3:authtype",
+          "s3:signatureage",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "description": "Retrieves the configuration parameters and status for an Amazon S3 batch operations job.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTAccountGETDescribeJob.html"
         }
       },
       "GetAccelerateConfiguration": {
@@ -63009,6 +64918,23 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETnotification.html"
+        }
+      },
+      "GetBucketObjectLockConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3:authtype",
+          "s3:signatureage",
+          "s3:signatureversion"
+        ],
+        "description": "GET Object Lock configuration for a specific bucket",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETObjectLockConfiguration.html"
         }
       },
       "GetBucketPolicy": {
@@ -63258,6 +65184,42 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectGETacl.html"
+        }
+      },
+      "GetObjectLegalHold": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3:authtype",
+          "s3:signatureage",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "description": "GET Object Legal Hold for a specific object",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectGETLegalHold.html"
+        }
+      },
+      "GetObjectRetention": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3:authtype",
+          "s3:signatureage",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "description": "GET Object Legal Hold for a specific object",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectGETRetention.html"
         }
       },
       "GetObjectTagging": {
@@ -63539,6 +65501,25 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETVersion.html"
         }
       },
+      "ListJobs": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "s3:authtype",
+          "s3:signatureage",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "description": "Lists current jobs and jobs that have ended recently.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTAccountGETListJobs.html"
+        }
+      },
       "ListMultipartUploadParts": {
         "aws_action_groups": [
           "ReadOnly",
@@ -63706,6 +65687,23 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTnotification.html"
+        }
+      },
+      "PutBucketObjectLockConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3:authtype",
+          "s3:signatureage",
+          "s3:signatureversion"
+        ],
+        "description": "PUT Object Lock configuration on a specific bucket",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTObjectLockConfiguration.html"
         }
       },
       "PutBucketPolicy": {
@@ -63947,6 +65945,46 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectPUTacl.html"
         }
       },
+      "PutObjectLegalHold": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3:authtype",
+          "s3:signatureage",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256",
+          "s3:object-lock-legal-hold"
+        ],
+        "description": "PUT Object Legal Hold on a specific object",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectPUTLegalHold.html"
+        }
+      },
+      "PutObjectRetention": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3:authtype",
+          "s3:signatureage",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256",
+          "s3:object-lock-mode",
+          "s3:object-lock-retain-until-date",
+          "s3:object-lock-remaining-retention-days"
+        ],
+        "description": "PUT Object Retention on a specific object",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectPUTRetention.html"
+        }
+      },
       "PutObjectTagging": {
         "aws_action_groups": [
           "Tagging",
@@ -64110,6 +66148,48 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectPOSTrestore.html"
+        }
+      },
+      "UpdateJobPriority": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3:authtype",
+          "s3:signatureage",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256",
+          "s3:RequestJobPriority",
+          "s3:ExistingJobPriority",
+          "s3:ExistingJobOperation"
+        ],
+        "description": "Updates an existing job's priority.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTAccountPOSTUpdateJobPriority.html"
+        }
+      },
+      "UpdateJobStatus": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3:authtype",
+          "s3:signatureage",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256",
+          "s3:ExistingJobPriority",
+          "s3:ExistingJobOperation",
+          "s3:JobSuspendedCause"
+        ],
+        "description": "Updates the status for the specified job.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/RESTAccountPOSTUpdateJobStatus.html"
         }
       }
     },
@@ -65379,6 +67459,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/sns/latest/api/API_ListSubscriptionsByTopic.html"
         }
       },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "List all tags added to the specified Amazon SNS topic.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/sns/latest/api/API_ListTagsForResource.html"
+        }
+      },
       "ListTopics": {
         "aws_action_groups": [
           "ListOnly",
@@ -65514,6 +67608,23 @@
           "doc_page_rel": "https://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html"
         }
       },
+      "TagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Add tags to the specified Amazon SNS topic.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/sns/latest/api/API_TagResource.html"
+        }
+      },
       "Unsubscribe": {
         "aws_action_groups": [
           "ReadWrite"
@@ -65525,6 +67636,23 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/sns/latest/api/API_Unsubscribe.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Remove tags from the specified Amazon SNS topic.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/sns/latest/api/API_UntagResource.html"
         }
       }
     },
@@ -67140,6 +69268,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/STS/latest/APIReference/API_DecodeAuthorizationMessage.html"
+        }
+      },
+      "GetAccessKeyInfo": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Returns details about the access key id passed as a parameter to the request.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/STS/latest/APIReference/API_GetAccessKeyInfo.html"
         }
       },
       "GetCallerIdentity": {
@@ -69491,6 +71633,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/batch-import-findings.html"
         }
       },
+      "CreateActionTarget": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create custom actions using the API. You can use custom actions on findings and insights in Security Hub to send them.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_CreateActionTarget.html"
+        }
+      },
       "CreateInsight": {
         "aws_action_groups": [
           "ReadWrite"
@@ -69530,6 +71685,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/decline-invitations.html"
         }
       },
+      "DeleteActionTarget": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete custom actions using the API.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DeleteActionTarget.html"
+        }
+      },
       "DeleteInsight": {
         "aws_action_groups": [
           "ReadWrite"
@@ -69567,6 +71735,48 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/delete-members.html"
+        }
+      },
+      "DescribeActionTargets": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve a list of custom actions using the API.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeActionTargets.html"
+        }
+      },
+      "DescribeHub": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve information about the hub resource in your account using the API.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeHub.html"
+        }
+      },
+      "DescribeProducts": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Returns information about the products available that you can subscribe to.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeProducts.html"
         }
       },
       "DisableImportFindingsForProduct": {
@@ -69803,6 +72013,47 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/list-members.html"
+        }
+      },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list of tags associated with a resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_ListTagsForResource.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to add tags to a resource using the API.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_TagResource.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to remove tags from a resource using the API.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_UntagResource.html"
         }
       },
       "UpdateFindings": {
@@ -70460,6 +72711,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/servicecatalog/latest/dg/API_AcceptPortfolioShare.html"
         }
       },
+      "AssociateBudgetWithResource": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Associates a budget with a resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/servicecatalog/latest/dg/API_AssociateBudgetWithResource.html"
+        }
+      },
       "AssociatePrincipalWithPortfolio": {
         "aws_action_groups": [
           "ReadWrite"
@@ -70949,6 +73213,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/servicecatalog/latest/dg/API_DescribeServiceAction.html"
         }
       },
+      "DescribeServiceActionExecutionParameters": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Gets the default parameters if you executed the specified Service Action on the specified Provisioned Product.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/servicecatalog/latest/dg/API_DescribeServiceActionExecutionParameters.html"
+        }
+      },
       "DescribeTagOption": {
         "aws_action_groups": [
           "ReadOnly",
@@ -70974,6 +73252,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/servicecatalog/latest/dg/API_DisableAWSOrganizationsAccess.html"
+        }
+      },
+      "DisassociateBudgetFromResource": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Disassociates a budget from a resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/servicecatalog/latest/dg/API_DisassociateBudgetFromResource.html"
         }
       },
       "DisassociatePrincipalFromPortfolio": {
@@ -71096,6 +73387,21 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ListAcceptedPortfolioShares.html"
+        }
+      },
+      "ListBudgetsForResource": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists all the budgets associated to a resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ListBudgetsForResource.html"
         }
       },
       "ListConstraintsForPortfolio": {
@@ -71312,6 +73618,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ListServiceActionsForProvisioningArtifact.html"
         }
       },
+      "ListStackInstancesForProvisionedProduct": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists account, region and status of each stack instances that are associated with a CFN_STACKSET type provisioned product",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ListStackInstancesForProvisionedProduct.html"
+        }
+      },
       "ListTagOptions": {
         "aws_action_groups": [
           "ListOnly",
@@ -71495,6 +73816,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/servicecatalog/latest/dg/API_UpdateProvisionedProduct.html"
+        }
+      },
+      "UpdateProvisionedProductProperties": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates the properties of an existing provisioned product",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/servicecatalog/latest/dg/API_UpdateProvisionedProductProperties.html"
         }
       },
       "UpdateProvisioningArtifact": {
@@ -74062,6 +76396,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CancelCommand.html"
         }
       },
+      "CancelMaintenanceWindowExecution": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Attempts to cancel the execution specified by the WindowExecution ID.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CancelMaintenanceWindowExecution.html"
+        }
+      },
       "CreateActivation": {
         "aws_action_groups": [
           "ReadWrite"
@@ -74127,6 +76474,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateMaintenanceWindow.html"
         }
       },
+      "CreateOpsItem": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Create a new OpsItem",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateOpsItem.html"
+        }
+      },
       "CreatePatchBaseline": {
         "aws_action_groups": [
           "ReadWrite"
@@ -74190,6 +76550,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DeleteDocument.html"
+        }
+      },
+      "DeleteInventory": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes a custom inventory type or the data associated with a custom inventory type.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DeleteInventory.html"
         }
       },
       "DeleteMaintenanceWindow": {
@@ -74561,6 +76934,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/"
         }
       },
+      "DescribeInventoryDeletions": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes a specific delete inventory operation.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribeInventoryDeletions.html"
+        }
+      },
       "DescribeMaintenanceWindowExecutionTaskInvocations": {
         "aws_action_groups": [
           "ListOnly",
@@ -74606,6 +76993,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/PI_DescribeMaintenanceWindowExecutions.html"
         }
       },
+      "DescribeMaintenanceWindowSchedule": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Describe the upcoming executions of one or more of your maintenance windows.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribeMaintenanceWindowSchedule.html"
+        }
+      },
       "DescribeMaintenanceWindowTargets": {
         "aws_action_groups": [
           "ListOnly",
@@ -74649,6 +77051,35 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribeMaintenanceWindows.html"
+        }
+      },
+      "DescribeMaintenanceWindowsForTarget": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Describe the maintenance windows to which your target belongs.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribeMaintenanceWindowsForTarget.html"
+        }
+      },
+      "DescribeOpsItems": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Returns a list of OpsItem based on different search criteria",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribeOpsItems.html"
         }
       },
       "DescribeParameters": {
@@ -74921,6 +77352,34 @@
           "doc_page_rel": ""
         }
       },
+      "GetOpsItem": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Returns details of an OpsItem",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_GetOpsItem.html"
+        }
+      },
+      "GetOpsSummary": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "View a summary of OpsItems based on specified filters and aggregators. Filter is used to scope down the returned OpsItems. Aggregator is used to return counts of OpsItems.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_GetOpsSummary.html"
+        }
+      },
       "GetParameter": {
         "aws_action_groups": [
           "ReadOnly",
@@ -75003,6 +77462,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_GetPatchBaselineForPatchGroup.html"
+        }
+      },
+      "LabelParameterVersion": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Attaches labels to a specific version of an existing parameter.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_LabelParameterVersion.html"
         }
       },
       "ListAssociationVersions": {
@@ -75561,6 +78033,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_UpdateManagedInstanceRole.html"
+        }
+      },
+      "UpdateOpsItem": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Edit or change an OpsItem",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_UpdateOpsItem.html"
         }
       },
       "UpdatePatchBaseline": {
@@ -76203,6 +78688,34 @@
   },
   "Trusted Advisor": {
     "actions": {
+      "DescribeAccount": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "View support plan and various TA preferences.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": ""
+        }
+      },
+      "DescribeAccountAccess": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Resolve whether Account has disabled Trusted Advisor",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": ""
+        }
+      },
       "DescribeCheckItems": {
         "aws_action_groups": [
           "ListOnly",
@@ -76242,6 +78755,20 @@
         "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Describes the check's summaries",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": ""
+        }
+      },
+      "DescribeChecks": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "List valid Trusted Advisor checks and details.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -76296,6 +78823,19 @@
         "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Enqueue a refresh for the specified check",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": ""
+        }
+      },
+      "SetAccountAccess": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Toggle whether TrustedAdvisor is enabled/disabled for the account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -77117,6 +79657,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/waf/latest/APIReference/API_ListSubscribedRuleGroups.html"
         }
       },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Lists the Tags for a given resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/waf/latest/APIReference/API_ListTagsForResource.html"
+        }
+      },
       "ListWebACLs": {
         "aws_action_groups": [
           "ListOnly",
@@ -77171,6 +79725,39 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/waf/latest/APIReference/API_PutPermissionPolicy.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Adds a Tag to a given resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/waf/latest/APIReference/API_TagResource.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "Removes a Tag from a given resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/waf/latest/APIReference/API_UntagResource.html"
         }
       },
       "UpdateByteMatchSet": {
@@ -78186,6 +80773,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_ListSubscribedRuleGroups.html"
         }
       },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Lists the Tags for a given resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/waf/latest/APIReference/API_ListTagsForResource.html"
+        }
+      },
       "ListWebACLs": {
         "aws_action_groups": [
           "ListOnly",
@@ -78240,6 +80841,39 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_PutPermissionPolicy.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Adds a Tag to a given resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/waf/latest/APIReference/API_TagResource.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "Removes a Tag from a given resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/waf/latest/APIReference/API_UntagResource.html"
         }
       },
       "UpdateByteMatchSet": {
@@ -78458,6 +81092,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/wellarchitected/latest/userguide/define-workload.html"
         }
       },
+      "DeleteWorkload": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes an existing workload.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/wellarchitected/latest/userguide/workloads-delete.html"
+        }
+      },
       "GetWorkload": {
         "aws_action_groups": [
           "ReadOnly",
@@ -78570,6 +81217,32 @@
           "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/"
         }
       },
+      "CreateComment": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to add a new comment to the specified document version.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/API_CreateComment.html"
+        }
+      },
+      "CreateCustomMetadata": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to add one or more custom properties to the specified resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/API_CreateCustomMetadata.html"
+        }
+      },
       "CreateFolder": {
         "aws_action_groups": [
           "ReadWrite"
@@ -78594,6 +81267,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/"
+        }
+      },
+      "CreateLabels": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to add labels to the given resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/API_CreateLabels.html"
         }
       },
       "CreateNotificationSubscription": {
@@ -78633,6 +81319,32 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/API_DeactivateUser.html"
+        }
+      },
+      "DeleteComment": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete the specified comment from the document version.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/API_DeleteComment.html"
+        }
+      },
+      "DeleteCustomMetadata": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete custom metadata from the specified resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/API_DeleteCustomMetadata.html"
         }
       },
       "DeleteDocument": {
@@ -78687,6 +81399,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/"
         }
       },
+      "DeleteLabels": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete one or more labels from a resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/API_DeleteLabels.html"
+        }
+      },
       "DeleteNotificationSubscription": {
         "aws_action_groups": [
           "ReadWrite"
@@ -78726,6 +81451,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/"
         }
       },
+      "DescribeActivities": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to fetch user activities in a specified time period.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/API_DescribeActivities.html"
+        }
+      },
       "DescribeAvailableDirectories": {
         "aws_action_groups": [
           "ListOnly",
@@ -78739,6 +81479,21 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/"
+        }
+      },
+      "DescribeComments": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list all the comments for the specified document version.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/API_DescribeComments.html"
         }
       },
       "DescribeDocumentVersions": {
@@ -78769,6 +81524,21 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/API_DescribeFolderContents.html"
+        }
+      },
+      "DescribeGroups": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to describe the user groups.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/API_DescribeGroups.html"
         }
       },
       "DescribeInstances": {
@@ -78816,6 +81586,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/API_DescribeResourcePermissions.html"
         }
       },
+      "DescribeRootFolders": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to describe the root folders.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/API_DescribeRootFolders.html"
+        }
+      },
       "DescribeUsers": {
         "aws_action_groups": [
           "ListOnly",
@@ -78829,6 +81614,34 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/API_DescribeUsers.html"
+        }
+      },
+      "DownloadDocumentVersion": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to download a specified document version.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/API_GetDocumentVersion.html"
+        }
+      },
+      "GetCurrentUser": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve the details of the current user.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/API_GetCurrentUser.html"
         }
       },
       "GetDocument": {
@@ -78899,6 +81712,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/API_GetFolderPath.html"
+        }
+      },
+      "GetResources": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to get a collection of resources.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/API_GetResources.html"
         }
       },
       "InitiateDocumentVersionUpload": {
@@ -79048,6 +81875,32 @@
   },
   "WorkLink": {
     "actions": {
+      "AssociateDomain": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to associate a domain with an Amazon WorkLink fleet",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_AssociateDomain.html"
+        }
+      },
+      "AssociateWebsiteAuthorizationProvider": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to associate a website authorization provider with an Amazon WorkLink fleet",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_AssociateWebsiteAuthorizationProvider.html"
+        }
+      },
       "AssociateWebsiteCertificateAuthority": {
         "aws_action_groups": [
           "ReadWrite"
@@ -79085,6 +81938,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_DeleteFleet.html"
+        }
+      },
+      "DescribeAuditStreamConfiguration": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to describe the audit stream configuration for an Amazon WorkLink fleet",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_DescribeAuditStreamConfiguration.html"
         }
       },
       "DescribeCompanyNetworkConfiguration": {
@@ -79129,6 +81996,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_DescribeDevicePolicyConfiguration.html"
         }
       },
+      "DescribeDomain": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to describe details about a domain associated with an Amazon WorkLink fleet",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_DescribeDomain.html"
+        }
+      },
       "DescribeFleetMetadata": {
         "aws_action_groups": [
           "ReadOnly",
@@ -79171,6 +82052,32 @@
           "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_DescribeWebsiteCertificateAuthority.html"
         }
       },
+      "DisassociateDomain": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to disassociate a domain from an Amazon WorkLink fleet",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_DisassociateDomain.html"
+        }
+      },
+      "DisassociateWebsiteAuthorizationProvider": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to disassociate a website authorization provider from an Amazon WorkLink fleet",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_DisassociateWebsiteAuthorizationProvider.html"
+        }
+      },
       "DisassociateWebsiteCertificateAuthority": {
         "aws_action_groups": [
           "ReadWrite"
@@ -79199,6 +82106,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_ListDevices.html"
         }
       },
+      "ListDomains": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list the associated domains for an Amazon WorkLink fleet",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_ListDomains.html"
+        }
+      },
       "ListFleets": {
         "aws_action_groups": [
           "ListOnly",
@@ -79212,6 +82134,21 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_ListFleets.html"
+        }
+      },
+      "ListWebsiteAuthorizationProviders": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list the website authorization providers for an Amazon WorkLink fleet",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_ListWebsiteAuthorizationProviders.html"
         }
       },
       "ListWebsiteCertificateAuthorities": {
@@ -79229,6 +82166,32 @@
           "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_ListWebsiteCertificateAuthorities.html"
         }
       },
+      "RestoreDomainAccess": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to restore access to a domain associated with an Amazon WorkLink fleet",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_RestoreDomainAccess.html"
+        }
+      },
+      "RevokeDomainAccess": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to revoke access to a domain associated with an Amazon WorkLink fleet",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_RevokeDomainAccess.html"
+        }
+      },
       "SignOutUser": {
         "aws_action_groups": [
           "ReadWrite"
@@ -79240,6 +82203,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_SignOutUser.html"
+        }
+      },
+      "UpdateAuditStreamConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to update the audit stream configuration for an Amazon WorkLink fleet",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_UpdateAuditStreamConfiguration.html"
         }
       },
       "UpdateCompanyNetworkConfiguration": {
@@ -79266,6 +82242,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_UpdateDevicePolicyConfiguration.html"
+        }
+      },
+      "UpdateDomainMetadata": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to update the metadata for a domain associated with an Amazon WorkLink fleet",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/worklink/latest/api/API_UpdateDomainMetadata.html"
         }
       },
       "UpdateFleetMetadata": {
@@ -79322,6 +82311,45 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": ""
+        }
+      },
+      "AssociateDelegateToResource": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Adds a member (user or group) to the resource's set of delegates.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_AssociateDelegateToResource.html"
+        }
+      },
+      "AssociateMemberToGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Adds a member (user or group) to the group's set.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_AssociateMemberToGroup.html"
+        }
+      },
+      "CreateAlias": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Adds an alias to the set of a given member (user or group) of WorkMail.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_CreateAlias.html"
         }
       },
       "CreateGroup": {
@@ -79389,6 +82417,45 @@
           "doc_page_rel": ""
         }
       },
+      "CreateUser": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Creates a user who can be used in WorkMail by calling the RegisterToWorkMail operation.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_CreateUser.html"
+        }
+      },
+      "DeleteAlias": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Remove one or more specified aliases from a set of aliases for a given user.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_DeleteAlias.html"
+        }
+      },
+      "DeleteGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes a group from WorkMail.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_DeleteGroup.html"
+        }
+      },
       "DeleteMailDomain": {
         "aws_action_groups": [
           "ReadWrite"
@@ -79400,6 +82467,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": ""
+        }
+      },
+      "DeleteMailboxPermissions": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes permissions granted to a member (user or group).",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_DeleteMailboxPermissions.html"
         }
       },
       "DeleteMobileDevice": {
@@ -79428,6 +82508,45 @@
           "doc_page_rel": ""
         }
       },
+      "DeleteResource": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes the specified resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_DeleteResource.html"
+        }
+      },
+      "DeleteUser": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes a user from WorkMail and all subsequent systems. The action cannot be undone.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_DeleteUser.html"
+        }
+      },
+      "DeregisterFromWorkMail": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Mark a user, group, or resource as no longer used in WorkMail.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_DeregisterFromWorkMail.html"
+        }
+      },
       "DescribeDirectories": {
         "aws_action_groups": [
           "ListOnly",
@@ -79441,6 +82560,21 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": ""
+        }
+      },
+      "DescribeGroup": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Returns the data available for the group.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_DescribeGroup.html"
         }
       },
       "DescribeKmsKeys": {
@@ -79503,6 +82637,21 @@
           "doc_page_rel": ""
         }
       },
+      "DescribeOrganization": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Provides more information regarding a given organization based on its identifier.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_DescribeOrganization.html"
+        }
+      },
       "DescribeOrganizations": {
         "aws_action_groups": [
           "ListOnly",
@@ -79516,6 +82665,36 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": ""
+        }
+      },
+      "DescribeResource": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Returns the data available for the resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_DescribeResource.html"
+        }
+      },
+      "DescribeUser": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Provides information regarding the user.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_DescribeUser.html"
         }
       },
       "DisableMailGroups": {
@@ -79542,6 +82721,32 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": ""
+        }
+      },
+      "DisassociateDelegateFromResource": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Removes a member from the resource's set of delegates.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_DisassociateDelegateFromResource.html"
+        }
+      },
+      "DisassociateMemberFromGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Removes a member from a group.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_DisassociateMemberFromGroup.html"
         }
       },
       "EnableMailDomain": {
@@ -79625,6 +82830,20 @@
           "doc_page_rel": ""
         }
       },
+      "GetMailboxDetails": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Returns the details of the user's mailbox.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_GetMailboxDetails.html"
+        }
+      },
       "GetMobileDeviceDetails": {
         "aws_action_groups": [
           "ReadOnly",
@@ -79667,6 +82886,66 @@
           "doc_page_rel": ""
         }
       },
+      "ListAliases": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Creates a paginated call to list the aliases associated with a given entity.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_ListAliases.html"
+        }
+      },
+      "ListGroupMembers": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Returns an overview of the members of a group. Users and groups can be members of a group.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_ListGroupMembers.html"
+        }
+      },
+      "ListGroups": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Returns summaries of the organization's groups.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_ListGroups.html"
+        }
+      },
+      "ListMailboxPermissions": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists the mailbox permissions associated with a user, group, or resource mailbox.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_ListMailboxPermissions.html"
+        }
+      },
       "ListMembersInMailGroup": {
         "aws_action_groups": [
           "ReadOnly",
@@ -79681,6 +82960,92 @@
           "doc_page_rel": ""
         }
       },
+      "ListOrganizations": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Returns summaries of the customer's non-deleted organizations.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_ListOrganizations.html"
+        }
+      },
+      "ListResourceDelegates": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists the delegates associated with a resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_ListResourceDelegates.html"
+        }
+      },
+      "ListResources": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Returns summaries of the organization's resources.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_ListResources.html"
+        }
+      },
+      "ListUsers": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Returns summaries of the organization's users.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_ListUsers.html"
+        }
+      },
+      "PutMailboxPermissions": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Sets permissions for a user, group, or resource. This replaces any pre-existing permissions.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_PutMailboxPermissions.html"
+        }
+      },
+      "RegisterToWorkMail": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Registers an existing and disabled user, group, or resource for use by associating a mailbox and calendaring capabilities.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_RegisterToWorkMail.html"
+        }
+      },
       "RemoveMembersFromGroup": {
         "aws_action_groups": [
           "ReadWrite"
@@ -79692,6 +83057,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": ""
+        }
+      },
+      "ResetPassword": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Allows the administrator to reset the password for a user.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_ResetPassword.html"
         }
       },
       "ResetUserPassword": {
@@ -79784,6 +83162,45 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": ""
+        }
+      },
+      "UpdateMailboxQuota": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates the maximum size (in MB) of the user's mailbox.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_UpdateMailboxQuota.html"
+        }
+      },
+      "UpdatePrimaryEmailAddress": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates the primary email for a user, group, or resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_UpdatePrimaryEmailAddress.html"
+        }
+      },
+      "UpdateResource": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates data for the resource. To retrieve the latest information, it must be preceded by a DescribeResource call.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${APIReferenceDocPage}API_UpdateResource.html"
         }
       },
       "WipeMobileDevice": {
