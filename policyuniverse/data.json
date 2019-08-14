@@ -28495,10 +28495,9 @@
       },
       "RunInstances": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "ec2:ImageType",
           "ec2:IsLaunchTemplateResource",
