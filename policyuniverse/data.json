@@ -11177,286 +11177,6 @@
     },
     "prefix": "cloudwatch"
   },
-  "CloudWatch Events": {
-    "actions": {
-      "DeleteRule": {
-        "aws_action_groups": [
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Deletes a rule. You must remove all targets from a rule using RemoveTargets before you can delete the rule.",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_DeleteRule.html"
-        }
-      },
-      "DescribeEventBus": {
-        "aws_action_groups": [
-          "ReadOnly",
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Read",
-        "condition_keys": [],
-        "description": "Displays the external AWS accounts that are permitted to write events to your account using your account's event bus, and the associated policy.",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_DescribeEventBus.html"
-        }
-      },
-      "DescribeRule": {
-        "aws_action_groups": [
-          "ReadOnly",
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Read",
-        "condition_keys": [],
-        "description": "Describes the details of the specified rule",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_DescribeRule.html"
-        }
-      },
-      "DisableRule": {
-        "aws_action_groups": [
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Disables a rule. A disabled rule won't match any events, and won't self-trigger if it has a schedule expression.",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_DisableRule.html"
-        }
-      },
-      "EnableRule": {
-        "aws_action_groups": [
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Enables a rule. If the rule does not exist, the operation fails",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_EnableRule.html"
-        }
-      },
-      "ListRuleNamesByTarget": {
-        "aws_action_groups": [
-          "ListOnly",
-          "ReadOnly",
-          "ReadWrite"
-        ],
-        "calculated_action_group": "List",
-        "condition_keys": [],
-        "description": "Lists the names of the rules that the given target is put to",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_ListRuleNamesByTarget.html"
-        }
-      },
-      "ListRules": {
-        "aws_action_groups": [
-          "ListOnly",
-          "ReadOnly",
-          "ReadWrite"
-        ],
-        "calculated_action_group": "List",
-        "condition_keys": [],
-        "description": "Lists the Amazon CloudWatch Events rules in your account",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_ListRules.html"
-        }
-      },
-      "ListTagsForResource": {
-        "aws_action_groups": [
-          "ListOnly",
-          "ReadOnly",
-          "ReadWrite"
-        ],
-        "calculated_action_group": "List",
-        "condition_keys": [],
-        "description": "This action lists tags for an Amazon CloudWatch Events resource.",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_ListTagsForResource.html"
-        }
-      },
-      "ListTargetsByRule": {
-        "aws_action_groups": [
-          "ListOnly",
-          "ReadOnly",
-          "ReadWrite"
-        ],
-        "calculated_action_group": "List",
-        "condition_keys": [],
-        "description": "Lists of targets assigned to the rule",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_ListTargetsByRule.html"
-        }
-      },
-      "PutEvents": {
-        "aws_action_groups": [
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Sends custom events to Amazon CloudWatch Events so that they can be matched to rules",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_PutEvents.html"
-        }
-      },
-      "PutPermission": {
-        "aws_action_groups": [
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Running PutPermission permits the specified AWS account to put events to your account's default event bus.",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_PutPermission.html"
-        }
-      },
-      "PutRule": {
-        "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
-        ],
-        "calculated_action_group": "Tagging",
-        "condition_keys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:TagKeys",
-          "events:detail-type",
-          "events:detail.eventTypeCode",
-          "events:detail.service",
-          "events:detail.userIdentity.principalId",
-          "events:source"
-        ],
-        "description": "Creates or updates a rule. Rules are enabled by default, or based on value of the State parameter",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_PutRule.html"
-        }
-      },
-      "PutTargets": {
-        "aws_action_groups": [
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Write",
-        "condition_keys": [
-          "events:TargetArn"
-        ],
-        "description": "Adds target(s) to a rule. Targets are the resources that can be invoked when a rule is triggered",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_PutTargets.html"
-        }
-      },
-      "RemovePermission": {
-        "aws_action_groups": [
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Revokes the permission of another AWS account to be able to put events to your default event bus.",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_RemovePermission.html"
-        }
-      },
-      "RemoveTargets": {
-        "aws_action_groups": [
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Removes target(s) from a rule so that when the rule is triggered, those targets will no longer be invoked",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_RemoveTargets.html"
-        }
-      },
-      "TagResource": {
-        "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
-        ],
-        "calculated_action_group": "Tagging",
-        "condition_keys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:TagKeys"
-        ],
-        "description": "This action tags an Amazon CloudWatch Events resource.",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_TagResource.html"
-        }
-      },
-      "TestEventPattern": {
-        "aws_action_groups": [
-          "ReadOnly",
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Read",
-        "condition_keys": [],
-        "description": "Tests whether an event pattern matches the provided event",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_TestEventPattern.html"
-        }
-      },
-      "UntagResource": {
-        "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
-        ],
-        "calculated_action_group": "Tagging",
-        "condition_keys": [
-          "aws:TagKeys"
-        ],
-        "description": "This action removes a tag from an Amazon CloudWatch Events resource.",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_UntagResource.html"
-        }
-      }
-    },
-    "arn_format": "arn:aws:<serviceName>:<region>:<account>:<resourceType>/<resourceName>",
-    "arn_regex": "^arn:aws:events:.+",
-    "description": "Amazon CloudWatch Events",
-    "docs": {
-      "actions_doc_root": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/",
-      "api_detail_root": "",
-      "api_doc_root": "",
-      "api_reference_doc_page": "https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/",
-      "authz_doc_page": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/auth-and-access-control-cwe.html",
-      "concepts_doc_root": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/",
-      "context_keys_doc_root": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/"
-    },
-    "prefix": "events"
-  },
   "CloudWatch Logs": {
     "actions": {
       "AssociateKmsKey": {
@@ -34147,6 +33867,465 @@
     },
     "prefix": "es"
   },
+  "EventBridge": {
+    "actions": {
+      "ActivateEventSource": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Activates a partner event source that has been deactivated. Once activated, your matching event bus will start receiving events from the event source.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ActivateEventSource.html"
+        }
+      },
+      "CreateEventBus": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Creates a new event bus within your account. This can be a custom event bus which you can use to receive events from your own custom applications and services, or it can be a partner event bus which can be matched to a partner event source.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateEventBus.html"
+        }
+      },
+      "CreatePartnerEventSource": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Called by an AWS partner to create a partner event source.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreatePartnerEventSource.html"
+        }
+      },
+      "DeactivateEventSource": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Called by an AWS partner to create a partner event source.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DeactivateEventSource.html"
+        }
+      },
+      "DeleteEventBus": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes the specified custom event bus or partner event bus. All rules associated with this event bus are also deleted. You can't delete your account's default event bus.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DeletePartnerEventSource"
+        }
+      },
+      "DeletePartnerEventSource": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Called by an AWS partner to delete a partner event source.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DeletePartnerEventSource"
+        }
+      },
+      "DeleteRule": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes a rule. You must remove all targets from a rule using RemoveTargets before you can delete the rule.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DeleteRule.html"
+        }
+      },
+      "DescribeEventBus": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Displays the external AWS accounts that are permitted to write events to your account using your account's event bus, and the associated policy.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DescribeEventBus.html"
+        }
+      },
+      "DescribeEventSource": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes the details of the specified partner event source that is shared with your account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DescribeEventSource.html"
+        }
+      },
+      "DescribePartnerEventSource": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Called by an AWS partner describe the details of the specified partner event source that they have created.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DescribePartnerEventSource.html"
+        }
+      },
+      "DescribeRule": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes the details of the specified rule.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DescribeRule.html"
+        }
+      },
+      "DisableRule": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Disables a rule. A disabled rule won't match any events, and won't self-trigger if it has a schedule expression.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DisableRule.html"
+        }
+      },
+      "EnableRule": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Enables a rule. If the rule does not exist, the operation fails.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_EnableRule.html"
+        }
+      },
+      "ListEventBuses": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists all the event buses in your account, including the default event bus, custom event buses, and partner event buses.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ListEventBuses.html"
+        }
+      },
+      "ListEventSources": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists the event sources shared with this account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ListEventSources.html"
+        }
+      },
+      "ListPartnerEventSourceAccounts": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Called by an AWS partner to display the AWS account ID that the specified partner event source is associated with.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ListPartnerEventSourceAccounts.html"
+        }
+      },
+      "ListPartnerEventSources": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Called by an AWS partner to list all the partner event sources that they have created.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ListPartnerEventSources.html"
+        }
+      },
+      "ListRuleNamesByTarget": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists the names of the rules that the given target is put to.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ListRuleNamesByTarget.html"
+        }
+      },
+      "ListRules": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists the Amazon EventBridge rules in your account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ListRules.html"
+        }
+      },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "This action lists tags for an Amazon EventBridge resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ListTagsForResource.html"
+        }
+      },
+      "ListTargetsByRule": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists of targets assigned to the rule.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ListTargetsByRule.html"
+        }
+      },
+      "PutEvents": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Sends custom events to Amazon EventBridge so that they can be matched to rules.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html"
+        }
+      },
+      "PutPartnerEvents": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Sends custom events to Amazon EventBridge so that they can be matched to rules.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html"
+        }
+      },
+      "PutPermission": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Running PutPermission permits the specified AWS account to put events to your account's default event bus.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutPermission.html"
+        }
+      },
+      "PutRule": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "events:detail-type",
+          "events:detail.eventTypeCode",
+          "events:detail.service",
+          "events:detail.userIdentity.principalId",
+          "events:source"
+        ],
+        "description": "Creates or updates a rule. Rules are enabled by default, or based on value of the State parameter.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutRule.html"
+        }
+      },
+      "PutTargets": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "events:TargetArn"
+        ],
+        "description": "Adds target(s) to a rule. Targets are the resources that can be invoked when a rule is triggered.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutTargets.html"
+        }
+      },
+      "RemovePermission": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Revokes the permission of another AWS account to be able to put events to your default event bus.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_RemovePermission.html"
+        }
+      },
+      "RemoveTargets": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Removes target(s) from a rule so that when the rule is triggered, those targets will no longer be invoked.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_RemoveTargets.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "This action tags an Amazon EventBridge resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_TagResource.html"
+        }
+      },
+      "TestEventPattern": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Tests whether an event pattern matches the provided event.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_TestEventPattern.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "This action removes a tag from an Amazon EventBridge resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_UntagResource.html"
+        }
+      }
+    },
+    "arn_format": "arn:aws:<serviceName>:<region>:<account>:<resourceType>/<resourceName>",
+    "arn_regex": "^arn:aws:events:.+",
+    "description": "Amazon EventBridge",
+    "docs": {
+      "actions_doc_root": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/",
+      "api_detail_root": "",
+      "api_doc_root": "",
+      "api_reference_doc_page": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/",
+      "authz_doc_page": "https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html",
+      "concepts_doc_root": "https://docs.aws.amazon.com/eventbridge/latest/userguide/",
+      "context_keys_doc_root": "https://docs.aws.amazon.com/eventbridge/latest/userguide/"
+    },
+    "prefix": "events"
+  },
   "ExecuteAPI": {
     "actions": {
       "InvalidateCache": {
@@ -37765,7 +37944,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to create  a connector definition.",
+        "description": "Grants permission to create a connector definition.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -39114,7 +39293,7 @@
     },
     "arn_format": "arn:aws:greengrass:<region>:<account_ID>:/greengrass/<type>/<Id>",
     "arn_regex": "^arn:aws:greengrass:.+:[0-9]+:.+",
-    "description": "AWS Greengrass",
+    "description": "AWS IoT Greengrass",
     "docs": {
       "actions_doc_root": "https://docs.aws.amazon.com/greengrass/latest/apireference/",
       "api_detail_root": "",
