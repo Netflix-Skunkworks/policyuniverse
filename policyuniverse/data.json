@@ -506,7 +506,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/a4b/latest/APIReference/API_DisassociateContactFromAddressBook"
+          "doc_page_rel": "https://docs.aws.amazon.com/a4b/latest/APIReference/API_DisassociateContactFromAddressBook.html"
         }
       },
       "DisassociateDeviceFromRoom": {
@@ -1103,7 +1103,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the configuration of the report delivery schedule with the specified schedule ARN. ",
+        "description": "Updates the configuration of the report delivery schedule with the specified schedule ARN.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -2128,7 +2128,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to create a Directory Config object in AppStream 2.0. This object includes the information required to join streaming instances to an Active Directory domain",
+        "description": "Grants permission to create a Directory Config object in AppStream 2.0. This object includes the configuration information required to join fleets and image builders to Microsoft Active Directory domains",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -2245,7 +2245,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to delete the specified Directory Config object from AppStream 2.0. This object includes the information required to join streaming instances to an Active Directory domain",
+        "description": "Grants permission to delete the specified Directory Config object from AppStream 2.0. This object includes the configuration information required to join fleets and image builders to Microsoft Active Directory domains",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -2360,7 +2360,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve a list that describes one or more specified Directory Config objects for AppStream 2.0, if the names for these objects are provided. Otherwise, all Directory Config objects in the account are described. This object includes the information required to join streaming instances to an Active Directory domain",
+        "description": "Grants permission to retrieve a list that describes one or more specified Directory Config objects for AppStream 2.0, if the names for these objects are provided. Otherwise, all Directory Config objects in the account are described. This object includes the configuration information required to join fleets and image builders to Microsoft Active Directory domains",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -2704,7 +2704,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to update the specified Directory Config object in AppStream 2.0. This object includes the information required to join streaming instances to an Active Directory domain",
+        "description": "Grants permission to update the specified Directory Config object in AppStream 2.0. This object includes the configuration information required to join fleets and image builders to Microsoft Active Directory domains",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -3044,7 +3044,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}using-your-api.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/appsync/latest/APIReference/using-your-api.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/appsync/latest/devguide/using-your-api.html"
         }
       },
       "ListApiKeys": {
@@ -3322,7 +3322,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_DeleteScalingPolicy.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/autoscaling/application/APIReference/API_DeleteScalingPolicy.html"
         }
       },
       "DeleteScheduledAction": {
@@ -3335,7 +3335,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_DeleteScheduledAction.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/autoscaling/application/APIReference/API_DeleteScheduledAction.html"
         }
       },
       "DeregisterScalableTarget": {
@@ -3348,7 +3348,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_DeregisterScalableTarget.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/autoscaling/application/APIReference/API_DeregisterScalableTarget.html"
         }
       },
       "DescribeScalableTargets": {
@@ -3362,7 +3362,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_DescribeScalableTargets.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/autoscaling/application/APIReference/API_DescribeScalableTargets.html"
         }
       },
       "DescribeScalingActivities": {
@@ -3376,7 +3376,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_DescribeScalingActivities.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/autoscaling/application/APIReference/API_DescribeScalingActivities.html"
         }
       },
       "DescribeScalingPolicies": {
@@ -3390,7 +3390,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_DescribeScalingPolicies.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/autoscaling/application/APIReference/API_DescribeScalingPolicies.html"
         }
       },
       "DescribeScheduledActions": {
@@ -3404,7 +3404,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_DescribeScheduledActions.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/autoscaling/application/APIReference/API_DescribeScheduledActions.html"
         }
       },
       "PutScalingPolicy": {
@@ -3417,7 +3417,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScalingPolicy.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/autoscaling/application/APIReference/API_PutScalingPolicy.html"
         }
       },
       "PutScheduledAction": {
@@ -3430,7 +3430,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/autoscaling/application/APIReference/API_PutScheduledAction.html"
         }
       },
       "RegisterScalableTarget": {
@@ -3443,7 +3443,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html"
         }
       }
     },
@@ -5936,7 +5936,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "ActivateUsers": {
@@ -5949,7 +5949,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}manage-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/manage-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/manage-access.html"
         }
       },
       "AddDomain": {
@@ -5962,7 +5962,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}claim-domain.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/claim-domain.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/claim-domain.html"
         }
       },
       "AddOrUpdateGroups": {
@@ -5975,7 +5975,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}manage-chime-account.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/manage-chime-account.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/manage-chime-account.html"
         }
       },
       "AssociatePhoneNumberWithUser": {
@@ -6014,7 +6014,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "BatchDeletePhoneNumber": {
@@ -6092,7 +6092,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}active_directory.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/active_directory.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/active_directory.html"
         }
       },
       "CreateAccount": {
@@ -6118,7 +6118,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}okta_sso.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/okta_sso.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/okta_sso.html"
         }
       },
       "CreateBot": {
@@ -6157,7 +6157,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}manage-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/manage-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/manage-access.html"
         }
       },
       "CreatePhoneNumberOrder": {
@@ -6209,7 +6209,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}okta_sso.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/okta_sso.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/okta_sso.html"
         }
       },
       "DeleteApiKey": {
@@ -6222,7 +6222,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}okta_sso.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/okta_sso.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/okta_sso.html"
         }
       },
       "DeleteCDRBucket": {
@@ -6235,7 +6235,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "DeleteDelegate": {
@@ -6248,7 +6248,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "DeleteDomain": {
@@ -6261,7 +6261,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}claim-domain.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/claim-domain.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/claim-domain.html"
         }
       },
       "DeleteEventsConfiguration": {
@@ -6287,7 +6287,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "DeletePhoneNumber": {
@@ -6391,7 +6391,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "GetAccount": {
@@ -6419,7 +6419,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "GetAccountSettings": {
@@ -6447,7 +6447,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}okta_sso.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/okta_sso.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/okta_sso.html"
         }
       },
       "GetBot": {
@@ -6475,7 +6475,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "GetDomain": {
@@ -6489,7 +6489,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}claim-domain.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/claim-domain.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/claim-domain.html"
         }
       },
       "GetEventsConfiguration": {
@@ -6531,7 +6531,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "GetPhoneNumber": {
@@ -6573,7 +6573,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}phone-numbers.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/phone-numbers.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/phone-numbers.html"
         }
       },
       "GetUser": {
@@ -6601,7 +6601,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}user-details.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/user-details.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/user-details.html"
         }
       },
       "GetUserByEmail": {
@@ -6615,7 +6615,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}user-details.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/user-details.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/user-details.html"
         }
       },
       "GetUserSettings": {
@@ -6698,7 +6698,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "InviteUsers": {
@@ -6726,7 +6726,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}view-reports.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/view-reports.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/view-reports.html"
         }
       },
       "ListAccounts": {
@@ -6756,7 +6756,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}okta_sso.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/okta_sso.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/okta_sso.html"
         }
       },
       "ListBots": {
@@ -6785,7 +6785,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "ListCallingRegions": {
@@ -6799,7 +6799,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}phone-numbers.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/phone-numbers.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/phone-numbers.html"
         }
       },
       "ListDelegates": {
@@ -6814,7 +6814,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "ListDirectories": {
@@ -6829,7 +6829,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "ListDomains": {
@@ -6844,7 +6844,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}claim-domain.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/claim-domain.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/claim-domain.html"
         }
       },
       "ListGroups": {
@@ -6859,7 +6859,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "ListMeetingEvents": {
@@ -6874,7 +6874,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}view-reports.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/view-reports.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/view-reports.html"
         }
       },
       "ListMeetingsReportData": {
@@ -6889,7 +6889,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}view-reports.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/view-reports.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/view-reports.html"
         }
       },
       "ListPhoneNumberOrders": {
@@ -7051,7 +7051,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}rename-account.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/rename-account.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/rename-account.html"
         }
       },
       "RenewDelegate": {
@@ -7064,7 +7064,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "ResetAccountResource": {
@@ -7077,7 +7077,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "ResetPersonalPIN": {
@@ -7118,7 +7118,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}request-attachments.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/request-attachments.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/request-attachments.html"
         }
       },
       "SearchAvailablePhoneNumbers": {
@@ -7145,7 +7145,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}request-attachments.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/request-attachments.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/request-attachments.html"
         }
       },
       "SubmitSupportRequest": {
@@ -7158,7 +7158,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}chime-getting-admin-support.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/chime-getting-admin-support.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/chime-getting-admin-support.html"
         }
       },
       "SuspendUsers": {
@@ -7171,7 +7171,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}manage-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/manage-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/manage-access.html"
         }
       },
       "UnauthorizeDirectory": {
@@ -7184,7 +7184,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "UpdateAccount": {
@@ -7210,7 +7210,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}okta_sso.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/okta_sso.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/okta_sso.html"
         }
       },
       "UpdateAccountResource": {
@@ -7223,7 +7223,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "UpdateAccountSettings": {
@@ -7262,7 +7262,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       },
       "UpdateGlobalSettings": {
@@ -7301,7 +7301,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}manage-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/manage-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/manage-access.html"
         }
       },
       "UpdateUser": {
@@ -7327,7 +7327,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}manage-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/manage-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/manage-access.html"
         }
       },
       "UpdateUserSettings": {
@@ -7367,7 +7367,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}control-access.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/control-access.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/ag/control-access.html"
         }
       }
     },
@@ -7419,7 +7419,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Attaches an existing object to another existing object. ",
+        "description": "Attaches an existing object to another existing object.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -7524,7 +7524,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates an index object. ",
+        "description": "Creates an index object.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -8181,7 +8181,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates a given typed link\ufffd\ufffd\ufffds attributes. Attributes to be updated must not contribute to the typed link\ufffd\ufffd\ufffds identity, as defined by its IdentityAttributeOrder.",
+        "description": "Updates a given typed link\u00e2\u0080\u0099s attributes. Attributes to be updated must not contribute to the typed link\u00e2\u0080\u0099s identity, as defined by its IdentityAttributeOrder.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -8254,7 +8254,7 @@
         "docs": {
           "api_doc": "API_CreateHttpNamespace.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_CreateHttpNamespace.html"
         }
       },
       "CreatePrivateDnsNamespace": {
@@ -8267,7 +8267,7 @@
         "docs": {
           "api_doc": "API_CreatePrivateDnsNamespace.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_CreatePrivateDnsNamespace.html"
         }
       },
       "CreatePublicDnsNamespace": {
@@ -8280,7 +8280,7 @@
         "docs": {
           "api_doc": "API_CreatePublicDnsNamespace.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_CreatePublicDnsNamespace.html"
         }
       },
       "CreateService": {
@@ -8295,7 +8295,7 @@
         "docs": {
           "api_doc": "API_CreateService.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_CreateService.html"
         }
       },
       "DeleteNamespace": {
@@ -8308,7 +8308,7 @@
         "docs": {
           "api_doc": "API_DeleteNamespace.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_DeleteNamespace.html"
         }
       },
       "DeleteService": {
@@ -8321,7 +8321,7 @@
         "docs": {
           "api_doc": "API_DeleteService.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_DeleteService.html"
         }
       },
       "DeregisterInstance": {
@@ -8336,7 +8336,7 @@
         "docs": {
           "api_doc": "API_DeregisterInstance.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_DeregisterInstance.html"
         }
       },
       "DiscoverInstances": {
@@ -8353,7 +8353,7 @@
         "docs": {
           "api_doc": "API_DiscoverInstances.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_DiscoverInstances.html"
         }
       },
       "GetInstance": {
@@ -8369,7 +8369,7 @@
         "docs": {
           "api_doc": "API_GetInstance.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_GetInstance.html"
         }
       },
       "GetInstancesHealthStatus": {
@@ -8385,7 +8385,7 @@
         "docs": {
           "api_doc": "API_GetInstancesHealthStatus.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_GetInstancesHealthStatus.html"
         }
       },
       "GetNamespace": {
@@ -8399,7 +8399,7 @@
         "docs": {
           "api_doc": "API_GetNamespace.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_GetNamespace.html"
         }
       },
       "GetOperation": {
@@ -8413,7 +8413,7 @@
         "docs": {
           "api_doc": "API_GetOperation.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_GetOperation.html"
         }
       },
       "GetService": {
@@ -8427,7 +8427,7 @@
         "docs": {
           "api_doc": "API_GetService.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_GetService.html"
         }
       },
       "ListInstances": {
@@ -8444,7 +8444,7 @@
         "docs": {
           "api_doc": "API_ListInstances.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_ListInstances.html"
         }
       },
       "ListNamespaces": {
@@ -8459,7 +8459,7 @@
         "docs": {
           "api_doc": "API_ListNamespaces.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_ListNamespaces.html"
         }
       },
       "ListOperations": {
@@ -8474,7 +8474,7 @@
         "docs": {
           "api_doc": "API_ListOperations.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_ListOperations.html"
         }
       },
       "ListServices": {
@@ -8489,7 +8489,7 @@
         "docs": {
           "api_doc": "API_ListServices.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_ListServices.html"
         }
       },
       "RegisterInstance": {
@@ -8504,7 +8504,7 @@
         "docs": {
           "api_doc": "API_RegisterInstance.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_RegisterInstance.html"
         }
       },
       "UpdateInstanceCustomHealthStatus": {
@@ -8519,7 +8519,7 @@
         "docs": {
           "api_doc": "API_UpdateInstanceCustomHealthStatus.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_UpdateInstanceCustomHealthStatus.html"
         }
       },
       "UpdateService": {
@@ -8532,7 +8532,7 @@
         "docs": {
           "api_doc": "API_UpdateService.html",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com//cloud-map/latest/api/API_UpdateService.html"
         }
       }
     },
@@ -8563,11 +8563,11 @@
           "cloud9:SubnetId",
           "cloud9:UserArn"
         ],
-        "description": "Creates an AWS Cloud9 development environment, launches an Amazon Elastic Compute Cloud (Amazon EC2) instance, and then hosts the environment on the instance.",
+        "description": "Grants permission to create an AWS Cloud9 development environment, launches an Amazon Elastic Compute Cloud (Amazon EC2) instance, and then hosts the environment on the instance.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com///cloud9/latest/APIReferenceAPI_CreateEnvironmentEC2.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloud9/latest/APIReference/API_CreateEnvironmentEC2.html"
         }
       },
       "CreateEnvironmentMembership": {
@@ -8580,11 +8580,11 @@
           "cloud9:Permissions",
           "cloud9:UserArn"
         ],
-        "description": "Adds an environment member to an AWS Cloud9 development environment.",
+        "description": "Grants permission to add an environment member to an AWS Cloud9 development environment.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com///cloud9/latest/APIReferenceAPI_CreateEnvironmentMembership.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloud9/latest/APIReference/API_CreateEnvironmentMembership.html"
         }
       },
       "CreateEnvironmentSSH": {
@@ -8595,7 +8595,7 @@
         "condition_keys": [
           "cloud9:EnvironmentName"
         ],
-        "description": "Creates an AWS Cloud9 development environment, which is connected to a remote SSH server.",
+        "description": "Grants permission to create an AWS Cloud9 development environment, which is connected to a remote SSH server.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -8608,11 +8608,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes an AWS Cloud9 development environment. If the environment is hosted on an Amazon Elastic Compute Cloud (Amazon EC2) instance, also terminates the instance.",
+        "description": "Grants permission to delete an AWS Cloud9 development environment. If the environment is hosted on an Amazon Elastic Compute Cloud (Amazon EC2) instance, also terminates the instance.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com///cloud9/latest/APIReferenceAPI_DeleteEnvironment.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloud9/latest/APIReference/API_DeleteEnvironment.html"
         }
       },
       "DeleteEnvironmentMembership": {
@@ -8621,11 +8621,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes an environment member from an AWS Cloud9 development environment.",
+        "description": "Grants permission to delete an environment member from an AWS Cloud9 development environment.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com///cloud9/latest/APIReferenceAPI_DeleteEnvironmentMembership.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloud9/latest/APIReference/API_DeleteEnvironmentMembership.html"
         }
       },
       "DescribeEnvironmentMemberships": {
@@ -8638,11 +8638,11 @@
           "cloud9:EnvironmentId",
           "cloud9:UserArn"
         ],
-        "description": "Gets information about environment members for an AWS Cloud9 development environment.",
+        "description": "Grants permission to get information about environment members for an AWS Cloud9 development environment.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com///cloud9/latest/APIReferenceAPI_DescribeEnvironmentMemberships.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloud9/latest/APIReference/API_DescribeEnvironmentMemberships.html"
         }
       },
       "DescribeEnvironmentStatus": {
@@ -8652,11 +8652,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets status information for an AWS Cloud9 development environment.",
+        "description": "Grants permission to get status information for an AWS Cloud9 development environment.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com///cloud9/latest/APIReferenceAPI_DescribeEnvironmentStatus.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloud9/latest/APIReference/API_DescribeEnvironmentStatus.html"
         }
       },
       "DescribeEnvironments": {
@@ -8666,11 +8666,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets information about AWS Cloud9 development environments.",
+        "description": "Grants permission to get information about AWS Cloud9 development environments.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com///cloud9/latest/APIReferenceAPI_DescribeEnvironments.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloud9/latest/APIReference/API_DescribeEnvironments.html"
         }
       },
       "GetUserPublicKey": {
@@ -8680,7 +8680,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets the public key of the logged in user. Only used in the AWS Cloud9 console.",
+        "description": "Grants permission to get the public key of the logged in user. Only used in the AWS Cloud9 console.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -8694,11 +8694,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets a list of AWS Cloud9 development environment identifiers.",
+        "description": "Grants permission to get a list of AWS Cloud9 development environment identifiers.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com///cloud9/latest/APIReferenceAPI_ListEnvironments.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloud9/latest/APIReference/API_ListEnvironments.html"
         }
       },
       "UpdateEnvironment": {
@@ -8707,11 +8707,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Changes the settings of an existing AWS Cloud9 development environment.",
+        "description": "Grants permission to change the settings of an existing AWS Cloud9 development environment.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com///cloud9/latest/APIReferenceAPI_UpdateEnvironment.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloud9/latest/APIReference/API_UpdateEnvironment.html"
         }
       },
       "UpdateEnvironmentMembership": {
@@ -8724,11 +8724,11 @@
           "cloud9:Permissions",
           "cloud9:UserArn"
         ],
-        "description": "Changes the settings of an existing environment member for an AWS Cloud9 development environment.",
+        "description": "Grants permission to change the settings of an existing environment member for an AWS Cloud9 development environment.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com///cloud9/latest/APIReferenceAPI_UpdateEnvironmentMembership.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloud9/latest/APIReference/API_UpdateEnvironmentMembership.html"
         }
       },
       "ValidateEnvironmentName": {
@@ -8737,7 +8737,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Checks checks whether the passed in environment is valid. Only used in the AWS Cloud9 console.",
+        "description": "Grants permission to check whether the passed in environment is valid. Only used in the AWS Cloud9 console.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -8871,7 +8871,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/"
+          "doc_page_rel": ""
         }
       },
       "DeleteChangeSet": {
@@ -10618,7 +10618,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Allows access to the document service operations. ",
+        "description": "Allows access to the document service operations.",
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}configuring-access.html#cloudsearch-actions",
@@ -11508,7 +11508,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/"
+          "doc_page_rel": ""
         }
       },
       "CreateLogGroup": {
@@ -11560,7 +11560,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/"
+          "doc_page_rel": ""
         }
       },
       "DeleteLogGroup": {
@@ -11799,7 +11799,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/"
+          "doc_page_rel": ""
         }
       },
       "GetLogEvents": {
@@ -11870,7 +11870,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/"
+          "doc_page_rel": ""
         }
       },
       "ListTagsLogGroup": {
@@ -12057,7 +12057,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/"
+          "doc_page_rel": ""
         }
       }
     },
@@ -12154,7 +12154,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}auth-and-access-control-iam-identity-based-access-control.html#console-policies",
-          "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/auth-and-access-control-iam-identity-based-access-control.html#console-policies"
+          "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-identity-based-access-control.html#console-policies"
         }
       },
       "DeleteProject": {
@@ -12264,7 +12264,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}auth-and-access-control-iam-identity-based-access-control.html#console-policies",
-          "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/auth-and-access-control-iam-identity-based-access-control.html#console-policies"
+          "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-identity-based-access-control.html#console-policies"
         }
       },
       "ListCuratedEnvironmentImages": {
@@ -12309,7 +12309,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}auth-and-access-control-iam-identity-based-access-control.html#console-policies",
-          "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/auth-and-access-control-iam-identity-based-access-control.html#console-policies"
+          "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-identity-based-access-control.html#console-policies"
         }
       },
       "ListSourceCredentials": {
@@ -12337,7 +12337,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}auth-and-access-control-iam-identity-based-access-control.html#console-policies",
-          "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/auth-and-access-control-iam-identity-based-access-control.html#console-policies"
+          "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-identity-based-access-control.html#console-policies"
         }
       },
       "StartBuild": {
@@ -12434,7 +12434,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}auth-and-access-control-permissions-reference.html#aa-pr",
-          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/auth-and-access-control-permissions-reference.html#aa-pr"
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control-permissions-reference.html#aa-pr"
         }
       },
       "BatchGetRepositories": {
@@ -12462,7 +12462,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}auth-and-access-control-permissions-reference.html#aa-acp",
-          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/auth-and-access-control-permissions-reference.html#aa-acp"
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control-permissions-reference.html#aa-acp"
         }
       },
       "CreateBranch": {
@@ -12718,7 +12718,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}auth-and-access-control-permissions-reference.html#aa-code",
-          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/auth-and-access-control-permissions-reference.html#aa-code"
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control-permissions-reference.html#aa-code"
         }
       },
       "GetCommitsFromMergeBase": {
@@ -12732,7 +12732,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}auth-and-access-control-permissions-reference.html#aa-pr",
-          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/auth-and-access-control-permissions-reference.html#aa-pr"
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control-permissions-reference.html#aa-pr"
         }
       },
       "GetDifferences": {
@@ -12832,7 +12832,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}auth-and-access-control-permissions-reference.html#aa-code",
-          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/auth-and-access-control-permissions-reference.html#aa-code"
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control-permissions-reference.html#aa-code"
         }
       },
       "GetPullRequest": {
@@ -12860,7 +12860,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}auth-and-access-control-permissions-reference.html#aa-code",
-          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/auth-and-access-control-permissions-reference.html#aa-code"
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control-permissions-reference.html#aa-code"
         }
       },
       "GetRepository": {
@@ -12902,7 +12902,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}auth-and-access-control-permissions-reference.html#aa-code",
-          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/auth-and-access-control-permissions-reference.html#aa-code"
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control-permissions-reference.html#aa-code"
         }
       },
       "GetUploadArchiveStatus": {
@@ -12916,7 +12916,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}auth-and-access-control-permissions-reference.html#aa-acp",
-          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/auth-and-access-control-permissions-reference.html#aa-acp"
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control-permissions-reference.html#aa-acp"
         }
       },
       "GitPull": {
@@ -12930,7 +12930,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}auth-and-access-control-permissions-reference.html#aa-git",
-          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/auth-and-access-control-permissions-reference.html#aa-git"
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control-permissions-reference.html#aa-git"
         }
       },
       "GitPush": {
@@ -12945,7 +12945,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}auth-and-access-control-permissions-reference.html#aa-git",
-          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/auth-and-access-control-permissions-reference.html#aa-git"
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control-permissions-reference.html#aa-git"
         }
       },
       "ListBranches": {
@@ -13311,7 +13311,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}auth-and-access-control-permissions-reference.html#aa-acp",
-          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/APIReference/auth-and-access-control-permissions-reference.html#aa-acp"
+          "doc_page_rel": "https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control-permissions-reference.html#aa-acp"
         }
       }
     },
@@ -18304,7 +18304,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permissions to modify configuration settings for an existing Amazon Connect instance. The associated required actions grant permission modify the settings for the instance. ",
+        "description": "Grants permissions to modify configuration settings for an existing Amazon Connect instance. The associated required actions grant permission modify the settings for the instance.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -18838,7 +18838,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Lists categories for all event source types, or, if specified, for a specified source type. ",
+        "description": "Lists categories for all event source types, or, if specified, for a specified source type.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -18852,7 +18852,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Lists all the event subscriptions for a customer account. ",
+        "description": "Lists all the event subscriptions for a customer account.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -18866,7 +18866,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Lists events for a given source identifier and source type. ",
+        "description": "Lists events for a given source identifier and source type.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -19669,7 +19669,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_CancelTaskExecution.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_CancelTaskExecution.html"
         }
       },
       "CreateAgent": {
@@ -19685,7 +19685,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_CreateAgent.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateAgent.html"
         }
       },
       "CreateLocationEfs": {
@@ -19701,7 +19701,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_CreateLocationEfs.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationEfs.html"
         }
       },
       "CreateLocationNfs": {
@@ -19717,7 +19717,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_CreateLocationNfs.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationNfs.html"
         }
       },
       "CreateLocationS3": {
@@ -19733,7 +19733,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_CreateLocationS3.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationS3.html"
         }
       },
       "CreateTask": {
@@ -19749,7 +19749,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_CreateTask.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateTask.html"
         }
       },
       "DeleteAgent": {
@@ -19764,7 +19764,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_DeleteAgent.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_DeleteAgent.html"
         }
       },
       "DeleteLocation": {
@@ -19779,7 +19779,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_DeleteLocation.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_DeleteLocation.html"
         }
       },
       "DeleteTask": {
@@ -19792,7 +19792,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_DeleteTask.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_DeleteTask.html"
         }
       },
       "DescribeAgent": {
@@ -19808,7 +19808,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_DescribeAgent.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_DescribeAgent.html"
         }
       },
       "DescribeLocationEfs": {
@@ -19824,7 +19824,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_DescribeLocationEfs.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_DescribeLocationEfs.html"
         }
       },
       "DescribeLocationNfs": {
@@ -19840,7 +19840,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_DescribeLocationNfs.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_DescribeLocationNfs.html"
         }
       },
       "DescribeLocationS3": {
@@ -19856,7 +19856,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_DescribeLocationS3.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_DescribeLocationS3.html"
         }
       },
       "DescribeTask": {
@@ -19872,7 +19872,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_DescribeTask.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_DescribeTask.html"
         }
       },
       "DescribeTaskExecution": {
@@ -19886,7 +19886,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_DescribeTaskExecution.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_DescribeTaskExecution.html"
         }
       },
       "ListAgents": {
@@ -19901,7 +19901,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_ListAgents.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_ListAgents.html"
         }
       },
       "ListLocations": {
@@ -19916,7 +19916,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_ListLocations.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_ListLocations.html"
         }
       },
       "ListTagsForResource": {
@@ -19932,7 +19932,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_ListTagsForResource.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_ListTagsForResource.html"
         }
       },
       "ListTaskExecutions": {
@@ -19947,7 +19947,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_ListTaskExecutions.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_ListTaskExecutions.html"
         }
       },
       "ListTasks": {
@@ -19962,7 +19962,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_ListTasks.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_ListTasks.html"
         }
       },
       "StartTaskExecution": {
@@ -19977,7 +19977,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_StartTaskExecution.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html"
         }
       },
       "TagResource": {
@@ -19993,7 +19993,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_TagResource.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_TagResource.html"
         }
       },
       "UntagResource": {
@@ -20009,7 +20009,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_UntagResource.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_UntagResource.html"
         }
       },
       "UpdateAgent": {
@@ -20024,7 +20024,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_UpdateAgent.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_UpdateAgent.html"
         }
       },
       "UpdateTask": {
@@ -20039,7 +20039,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/APIReference/API_UpdateTask.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_UpdateTask.html"
         }
       }
     },
@@ -22004,7 +22004,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/directoryservice/latest/devguide/"
+          "doc_page_rel": ""
         }
       },
       "CreateLogSubscription": {
@@ -27907,7 +27907,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "You can modify several parameters of an existing EBS volume, including volume size, volume type, and IOPS capacity. ",
+        "description": "You can modify several parameters of an existing EBS volume, including volume size, volume type, and IOPS capacity.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -28436,7 +28436,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Restores an Elastic IP address that was previously moved to the EC2-VPC platform back to the EC2-Classic platform. ",
+        "description": "Restores an Elastic IP address that was previously moved to the EC2-VPC platform back to the EC2-Classic platform.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -29226,7 +29226,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Describes one or more scaling activities for the specified Auto Scaling group. ",
+        "description": "Describes one or more scaling activities for the specified Auto Scaling group.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -29961,7 +29961,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "working-with-ei.html#ei-role-policy"
+          "doc_page_rel": ""
         }
       }
     },
@@ -30259,7 +30259,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the Elastic Load Balancing resource limits for the AWS account. ",
+        "description": "Describes the Elastic Load Balancing resource limits for the AWS account.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -30273,7 +30273,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the certificates for the specified secure listener. ",
+        "description": "Describes the certificates for the specified secure listener.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -30287,7 +30287,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the specified listeners or the listeners for the specified Application Load Balancer. ",
+        "description": "Describes the specified listeners or the listeners for the specified Application Load Balancer.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -30329,7 +30329,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the specified rules or the rules for the specified listener. ",
+        "description": "Describes the specified rules or the rules for the specified listener.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -30385,7 +30385,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the specified target groups or all of your target groups. ",
+        "description": "Describes the specified target groups or all of your target groups.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -30543,7 +30543,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Associates the specified security groups with the specified load balancer. ",
+        "description": "Associates the specified security groups with the specified load balancer.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -30556,7 +30556,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Enables the Availability Zone for the specified subnets for the specified load balancer. ",
+        "description": "Enables the Availability Zone for the specified subnets for the specified load balancer.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -30573,7 +30573,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/"
+          "doc_page_rel": ""
         }
       }
     },
@@ -30678,7 +30678,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}emr-managed-notebooks-create.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/emr/latest/APIReference/emr-managed-notebooks-create.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-notebooks-create.html"
         }
       },
       "CreateSecurityConfiguration": {
@@ -30704,7 +30704,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}emr-managed-notebooks.html#emr-managed-notebooks-deleting",
-          "doc_page_rel": "https://docs.aws.amazon.com/emr/latest/APIReference/emr-managed-notebooks.html#emr-managed-notebooks-deleting"
+          "doc_page_rel": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-notebooks.html#emr-managed-notebooks-deleting"
         }
       },
       "DeleteSecurityConfiguration": {
@@ -30927,11 +30927,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to launch the Jupyter notebook editor for an EMR notebook from within the console. ",
+        "description": "Grants permission to launch the Jupyter notebook editor for an EMR notebook from within the console.",
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}emr-managed-notebooks.html#emr-managed-notebooks-editor",
-          "doc_page_rel": "https://docs.aws.amazon.com/emr/latest/APIReference/emr-managed-notebooks.html#emr-managed-notebooks-editor"
+          "doc_page_rel": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-notebooks.html#emr-managed-notebooks-editor"
         }
       },
       "PutAutoScalingPolicy": {
@@ -31017,7 +31017,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}emr-managed-notebooks-working-with.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/emr/latest/APIReference/emr-managed-notebooks-working-with.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-notebooks-working-with.html"
         }
       },
       "StopEditor": {
@@ -31026,11 +31026,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to shut down an EMR notebook. ",
+        "description": "Grants permission to shut down an EMR notebook.",
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}emr-managed-notebooks.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/emr/latest/APIReference/emr-managed-notebooks.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-notebooks.html"
         }
       },
       "TerminateJobFlows": {
@@ -31150,7 +31150,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "The CreateCacheSecurityGroup action creates a new cache security group. ",
+        "description": "The CreateCacheSecurityGroup action creates a new cache security group.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -32417,7 +32417,7 @@
           "aws:ResourceTag/${TagKey}",
           "ecr:ResourceTag/${TagKey}"
         ],
-        "description": "Deletes a list of specified images within a specified repository. ",
+        "description": "Deletes a list of specified images within a specified repository.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -32498,7 +32498,7 @@
           "aws:ResourceTag/${TagKey}",
           "ecr:ResourceTag/${TagKey}"
         ],
-        "description": "Deletes an existing image repository. ",
+        "description": "Deletes an existing image repository.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -32580,7 +32580,7 @@
           "aws:ResourceTag/${TagKey}",
           "ecr:ResourceTag/${TagKey}"
         ],
-        "description": "Retrieves the pre-signed Amazon S3 download URL corresponding to an image layer. ",
+        "description": "Retrieves the pre-signed Amazon S3 download URL corresponding to an image layer.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -33226,7 +33226,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}instance_IAM_role.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/instance_IAM_role.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/instance_IAM_role.html"
         }
       },
       "PutAccountSetting": {
@@ -34447,7 +34447,7 @@
         "condition_keys": [
           "aws:ResourceTag/${TagKey}"
         ],
-        "description": "Lists the tags for the specified delivery stream. ",
+        "description": "Lists the tags for the specified delivery stream.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -34801,7 +34801,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/freertos/latest/userguide/"
+          "doc_page_rel": ""
         }
       },
       "DeleteSoftwareConfiguration": {
@@ -34816,7 +34816,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/freertos/latest/userguide/"
+          "doc_page_rel": ""
         }
       },
       "DescribeHardwarePlatform": {
@@ -34830,7 +34830,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/freertos/latest/userguide/"
+          "doc_page_rel": ""
         }
       },
       "DescribeSoftwareConfiguration": {
@@ -34846,7 +34846,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/freertos/latest/userguide/"
+          "doc_page_rel": ""
         }
       },
       "GetSoftwareURL": {
@@ -34860,7 +34860,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/freertos/latest/userguide/"
+          "doc_page_rel": ""
         }
       },
       "GetSoftwareURLForConfiguration": {
@@ -34874,7 +34874,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/freertos/latest/userguide/"
+          "doc_page_rel": ""
         }
       },
       "ListFreeRTOSVersions": {
@@ -34889,7 +34889,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/freertos/latest/userguide/"
+          "doc_page_rel": ""
         }
       },
       "ListHardwarePlatforms": {
@@ -34904,7 +34904,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/freertos/latest/userguide/"
+          "doc_page_rel": ""
         }
       },
       "ListHardwareVendors": {
@@ -34919,7 +34919,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/freertos/latest/userguide/"
+          "doc_page_rel": ""
         }
       },
       "ListSoftwareConfigurations": {
@@ -34934,7 +34934,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/freertos/latest/userguide/"
+          "doc_page_rel": ""
         }
       },
       "UpdateSoftwareConfiguration": {
@@ -34949,7 +34949,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/freertos/latest/userguide/"
+          "doc_page_rel": ""
         }
       }
     },
@@ -39929,7 +39929,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission for an IAM user to create their own access key and secret access key",
+        "description": "Grants permission to create access key and secret access key for the specified IAM user",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -41319,7 +41319,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}id_roles_use_passrole.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/IAM/latest/APIReference/id_roles_use_passrole.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html"
         }
       },
       "PutGroupPolicy": {
@@ -42557,7 +42557,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}policy-actions.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/policy-actions.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/developerguide/policy-actions.html"
         }
       },
       "CreateAuthorizer": {
@@ -43083,7 +43083,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}policy-actions.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/policy-actions.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/developerguide/policy-actions.html"
         }
       },
       "DeleteThingType": {
@@ -43676,7 +43676,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}policy-actions.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/policy-actions.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/developerguide/policy-actions.html"
         }
       },
       "GetTopicRule": {
@@ -44327,7 +44327,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}policy-actions.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/policy-actions.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/developerguide/policy-actions.html"
         }
       },
       "Receive": {
@@ -44340,7 +44340,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}policy-actions.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/policy-actions.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/developerguide/policy-actions.html"
         }
       },
       "RegisterCACertificate": {
@@ -44579,7 +44579,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}policy-actions.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/policy-actions.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/developerguide/policy-actions.html"
         }
       },
       "TagResource": {
@@ -44903,7 +44903,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}policy-actions.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/policy-actions.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/developerguide/policy-actions.html"
         }
       },
       "ValidateSecurityProfileBehaviors": {
@@ -44961,7 +44961,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${DocHomeURL}iot-1-click/1.0/devices-apireference/claims-claimcode.html",
-          "doc_page_rel": "${DocHomeURL}iot-1-click/1.0/devices-apireference/claims-claimcode.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-1-click/1.0/devices-apireference/claims-claimcode.html"
         }
       },
       "CreatePlacement": {
@@ -45030,7 +45030,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${DocHomeURL}iot-1-click/1.0/devices-apireference/devices-deviceid.html",
-          "doc_page_rel": "${DocHomeURL}iot-1-click/1.0/devices-apireference/devices-deviceid.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-1-click/1.0/devices-apireference/devices-deviceid.html"
         }
       },
       "DescribePlacement": {
@@ -45088,7 +45088,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${DocHomeURL}iot-1-click/1.0/devices-apireference/devices-deviceid-finalize-claim.html",
-          "doc_page_rel": "${DocHomeURL}iot-1-click/1.0/devices-apireference/devices-deviceid-finalize-claim.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-1-click/1.0/devices-apireference/devices-deviceid-finalize-claim.html"
         }
       },
       "GetDeviceMethods": {
@@ -45102,7 +45102,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${DocHomeURL}iot-1-click/1.0/devices-apireference/devices-deviceid-methods.html",
-          "doc_page_rel": "${DocHomeURL}iot-1-click/1.0/devices-apireference/devices-deviceid-methods.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-1-click/1.0/devices-apireference/devices-deviceid-methods.html"
         }
       },
       "GetDevicesInPlacement": {
@@ -45130,7 +45130,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${DocHomeURL}iot-1-click/1.0/devices-apireference/devices-deviceid-initiate-claim.html",
-          "doc_page_rel": "${DocHomeURL}iot-1-click/1.0/devices-apireference/devices-deviceid-initiate-claim.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-1-click/1.0/devices-apireference/devices-deviceid-initiate-claim.html"
         }
       },
       "InvokeDeviceMethod": {
@@ -45143,7 +45143,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${DocHomeURL}iot-1-click/1.0/devices-apireference/devices-deviceid-methods.html",
-          "doc_page_rel": "${DocHomeURL}iot-1-click/1.0/devices-apireference/devices-deviceid-methods.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-1-click/1.0/devices-apireference/devices-deviceid-methods.html"
         }
       },
       "ListDeviceEvents": {
@@ -45157,7 +45157,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${DocHomeURL}iot-1-click/1.0/devices-apireference/devices-deviceid-events.html",
-          "doc_page_rel": "${DocHomeURL}iot-1-click/1.0/devices-apireference/devices-deviceid-events.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-1-click/1.0/devices-apireference/devices-deviceid-events.html"
         }
       },
       "ListDevices": {
@@ -45172,7 +45172,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${DocHomeURL}iot-1-click/1.0/devices-apireference/devices.html",
-          "doc_page_rel": "${DocHomeURL}iot-1-click/1.0/devices-apireference/devices.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-1-click/1.0/devices-apireference/devices.html"
         }
       },
       "ListPlacements": {
@@ -45246,7 +45246,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${DocHomeURL}iot-1-click/1.0/devices-apireference/devices-deviceid-unclaim.html",
-          "doc_page_rel": "${DocHomeURL}iot-1-click/1.0/devices-apireference/devices-deviceid-unclaim.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-1-click/1.0/devices-apireference/devices-deviceid-unclaim.html"
         }
       },
       "UntagResource": {
@@ -45274,7 +45274,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${DocHomeURL}iot-1-click/1.0/devices-apireference/devices-deviceid-state.html",
-          "doc_page_rel": "${DocHomeURL}iot-1-click/1.0/devices-apireference/devices-deviceid-state.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-1-click/1.0/devices-apireference/devices-deviceid-state.html"
         }
       },
       "UpdatePlacement": {
@@ -45855,7 +45855,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents/latest/APIReference/API_BatchPutMessage.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchPutMessage.html"
         }
       },
       "BatchUpdateDetector": {
@@ -45884,7 +45884,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents/latest/APIReference/API_CreateDetectorModel.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_CreateDetectorModel.html"
         }
       },
       "CreateInput": {
@@ -45900,7 +45900,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents/latest/APIReference/API_CreateInput.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_CreateInput.html"
         }
       },
       "DeleteDetectorModel": {
@@ -45913,7 +45913,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents/latest/APIReference/API_DeleteDetectorModel.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_DeleteDetectorModel.html"
         }
       },
       "DeleteInput": {
@@ -45926,7 +45926,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents/latest/APIReference/API_DeleteInput.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_DeleteInput.html"
         }
       },
       "DescribeDetector": {
@@ -45940,7 +45940,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents/latest/APIReference/API_DescribeDetector.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_DescribeDetector.html"
         }
       },
       "DescribeDetectorModel": {
@@ -45954,7 +45954,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents/latest/APIReference/API_DescribeDetectorModel.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_DescribeDetectorModel.html"
         }
       },
       "DescribeInput": {
@@ -45968,7 +45968,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents/latest/APIReference/API_DescribeInput.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_DescribeInput.html"
         }
       },
       "DescribeLoggingOptions": {
@@ -45982,7 +45982,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents/latest/APIReference/API_DescribeLoggingOptions.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_DescribeLoggingOptions.html"
         }
       },
       "ListDetectorModelVersions": {
@@ -45997,7 +45997,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents/latest/APIReference/API_ListDetectorModelVersions.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_ListDetectorModelVersions.html"
         }
       },
       "ListDetectorModels": {
@@ -46012,7 +46012,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents/latest/APIReference/API_ListDetectorModels.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_ListDetectorModels.html"
         }
       },
       "ListDetectors": {
@@ -46029,7 +46029,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents/latest/APIReference/API_ListDetectors.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_ListDetectors.html"
         }
       },
       "ListInputs": {
@@ -46044,7 +46044,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_ListInputs.html"
         }
       },
       "ListTagsForResource": {
@@ -46071,7 +46071,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents/latest/APIReference/API_PutLoggingOptions.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_PutLoggingOptions.html"
         }
       },
       "TagResource": {
@@ -46117,7 +46117,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents/latest/APIReference/API_UpdateDetectorModel.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_UpdateDetectorModel.html"
         }
       },
       "UpdateInput": {
@@ -46130,7 +46130,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents/latest/APIReference/API_UpdateInput.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_UpdateInput.html"
         }
       },
       "UpdateInputRouting": {
@@ -46173,7 +46173,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_AssociateGatewaySink.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_AssociateGatewaySink.html"
         }
       },
       "AssociateGatewaySource": {
@@ -46186,7 +46186,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_AssociateGatewaySource.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_AssociateGatewaySource.html"
         }
       },
       "AssociateViewEntities": {
@@ -46199,7 +46199,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_AssociateViewEntities.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_AssociateViewEntities.html"
         }
       },
       "CreateAsset": {
@@ -46212,7 +46212,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_CreateAsset.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAsset.html"
         }
       },
       "CreateAssetTemplate": {
@@ -46225,7 +46225,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_CreateAssetTemplate.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAssetTemplate.html"
         }
       },
       "CreateGateway": {
@@ -46238,7 +46238,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_CreateGateway.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateGateway.html"
         }
       },
       "CreateGroup": {
@@ -46251,7 +46251,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_CreateGroup.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateGroup.html"
         }
       },
       "CreateMeasurementDataStore": {
@@ -46264,7 +46264,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_CreateMeasurementDataStore.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateMeasurementDataStore.html"
         }
       },
       "CreateMetricType": {
@@ -46277,7 +46277,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_CreateMetricType.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateMetricType.html"
         }
       },
       "CreateView": {
@@ -46290,7 +46290,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_CreateView.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateView.html"
         }
       },
       "DeleteAsset": {
@@ -46303,7 +46303,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_DeleteAsset.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DeleteAsset.html"
         }
       },
       "DeleteAssetTemplate": {
@@ -46316,7 +46316,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_DeleteAssetTemplate.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DeleteAssetTemplate.html"
         }
       },
       "DeleteGateway": {
@@ -46329,7 +46329,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_DeleteGateway.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DeleteGateway.html"
         }
       },
       "DeleteGroup": {
@@ -46342,7 +46342,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_DeleteGroup.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DeleteGroup.html"
         }
       },
       "DeleteMeasurementDataStore": {
@@ -46355,7 +46355,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_DeleteMeasurementDataStore.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DeleteMeasurementDataStore.html"
         }
       },
       "DeleteMetricType": {
@@ -46368,7 +46368,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_DeleteMetricType.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DeleteMetricType.html"
         }
       },
       "DeleteView": {
@@ -46381,7 +46381,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_DeleteView.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DeleteView.html"
         }
       },
       "DeregisterViewEntities": {
@@ -46394,7 +46394,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_DeregisterViewEntities.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DeregisterViewEntities.html"
         }
       },
       "DescribeAssetTemplates": {
@@ -46408,7 +46408,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_DescribeAssetTemplates.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeAssetTemplates.html"
         }
       },
       "DescribeAssets": {
@@ -46422,7 +46422,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_DescribeAssets.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeAssets.html"
         }
       },
       "DescribeGateways": {
@@ -46436,7 +46436,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_DescribeGateways.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeGateways.html"
         }
       },
       "DescribeGroups": {
@@ -46450,7 +46450,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_DescribeGroups.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeGroups.html"
         }
       },
       "DescribeMeasurementDataStores": {
@@ -46464,7 +46464,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_DescribeMeasurementDataStores.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeMeasurementDataStores.html"
         }
       },
       "DescribeMetricTypes": {
@@ -46478,7 +46478,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_DescribeMetricTypes.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeMetricTypes.html"
         }
       },
       "DescribeViews": {
@@ -46492,7 +46492,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_DescribeViews.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeViews.html"
         }
       },
       "DisassociateGatewaySink": {
@@ -46505,7 +46505,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_DisassociateGatewaySink.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DisassociateGatewaySink.html"
         }
       },
       "DisassociateGatewaySource": {
@@ -46518,7 +46518,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_DisassociateGatewaySource.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DisassociateGatewaySource.html"
         }
       },
       "DisassociateViewEntities": {
@@ -46531,7 +46531,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_DisassociateViewEntities.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DisassociateViewEntities.html"
         }
       },
       "GetMeasurementData": {
@@ -46545,7 +46545,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_GetMeasurementData.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_GetMeasurementData.html"
         }
       },
       "GetMetricData": {
@@ -46559,7 +46559,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_GetMetricData.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_GetMetricData.html"
         }
       },
       "ListAssetTemplates": {
@@ -46574,7 +46574,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_ListAssetTemplates.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_ListAssetTemplates.html"
         }
       },
       "ListAssets": {
@@ -46589,7 +46589,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_ListAssets.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_ListAssets.html"
         }
       },
       "ListGateways": {
@@ -46604,7 +46604,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_ListGateways.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_ListGateways.html"
         }
       },
       "ListGroups": {
@@ -46619,7 +46619,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_ListGroups.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_ListGroups.html"
         }
       },
       "ListMeasurementDataStores": {
@@ -46634,7 +46634,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_ListMeasurementDataStores.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_ListMeasurementDataStores.html"
         }
       },
       "ListMeasurementDataStreams": {
@@ -46649,7 +46649,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_ListMeasurementDataStreams.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_ListMeasurementDataStreams.html"
         }
       },
       "ListMetricTypes": {
@@ -46664,7 +46664,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_ListMetricTypes.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_ListMetricTypes.html"
         }
       },
       "ListViewEntities": {
@@ -46679,7 +46679,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_ListViewEntities.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_ListViewEntities.html"
         }
       },
       "ListViews": {
@@ -46694,7 +46694,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_ListViews.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_ListViews.html"
         }
       },
       "RegisterViewEntities": {
@@ -46707,7 +46707,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_RegisterViewEntities.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_RegisterViewEntities.html"
         }
       },
       "UpdateAsset": {
@@ -46720,7 +46720,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_UpdateAsset.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_UpdateAsset.html"
         }
       },
       "UpdateAssetTemplate": {
@@ -46733,7 +46733,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_UpdateAssetTemplate.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_UpdateAssetTemplate.html"
         }
       },
       "UpdateGateway": {
@@ -46746,7 +46746,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_UpdateGateway.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_UpdateGateway.html"
         }
       },
       "UpdateGroup": {
@@ -46759,7 +46759,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_UpdateGroup.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_UpdateGroup.html"
         }
       },
       "UpdateMeasurementDataStore": {
@@ -46772,7 +46772,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_UpdateMeasurementDataStore.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_UpdateMeasurementDataStore.html"
         }
       },
       "UpdateView": {
@@ -46785,7 +46785,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/iotsitewise/latest/APIReference/API_UpdateView.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_UpdateView.html"
         }
       }
     },
@@ -48841,7 +48841,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/lambda/latest/dg/API_ListTagsForResource.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/lambda/latest/dg/API_ListTags.html"
         }
       },
       "ListVersionsByFunction": {
@@ -55527,7 +55527,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/neptune/latest/userguide/https://docs.aws.amazon.com/neptune/latest/userguide/get-started.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/neptune/latest/userguide/get-started.html"
         }
       }
     },
@@ -59261,7 +59261,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Return a QuickSight group\ufffd\ufffd\ufffds description and ARN.",
+        "description": "Return a QuickSight group\u00e2\u0080\u0099s description and ARN.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -60647,7 +60647,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}RESTReference.html#RESTReference.DownloadCompleteDBLogFile",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/RESTReference.html#RESTReference.DownloadCompleteDBLogFile"
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/RESTReference.html#RESTReference.DownloadCompleteDBLogFile"
         }
       },
       "DownloadDBLogFilePortion": {
@@ -61397,7 +61397,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}mgmt/redshift-policy-resources.resource-permissions.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/redshift/latest/APIReference/mgmt/redshift-policy-resources.resource-permissions.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-policy-resources.resource-permissions.html"
         }
       },
       "CancelResize": {
@@ -62634,7 +62634,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}mgmt/redshift-policy-resources.resource-permissions.html",
-          "doc_page_rel": "https://docs.aws.amazon.com/redshift/latest/APIReference/mgmt/redshift-policy-resources.resource-permissions.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-policy-resources.resource-permissions.html"
         }
       }
     },
@@ -63278,7 +63278,7 @@
         "condition_keys": [
           "ram:ShareOwnerAccountId"
         ],
-        "description": "Get resource share invitations by the specified invitation arn or those for the resource share ",
+        "description": "Get resource share invitations by the specified invitation arn or those for the resource share",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -63741,7 +63741,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "End a simulation job",
+        "description": "Cancel a simulation job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -63773,7 +63773,7 @@
           "aws:TagKeys",
           "aws:RequestTag/${TagKey}"
         ],
-        "description": "Create a fleet that represents a logical group of robots running the same robot application",
+        "description": "Create a deployment fleet that represents a logical group of robots running the same robot application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -63834,7 +63834,7 @@
           "aws:TagKeys",
           "aws:RequestTag/${TagKey}"
         ],
-        "description": "Create a robot application",
+        "description": "Create a simulation application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -63847,7 +63847,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Create a snapshot of a robot application",
+        "description": "Create a snapshot of a simulation application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -63915,7 +63915,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Delete a robot application",
+        "description": "Delete a simulation application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -63956,7 +63956,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describe a fleet",
+        "description": "Describe a deployment fleet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -63998,7 +63998,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describe a robot application",
+        "description": "Describe a simulation application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -64087,7 +64087,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "List robot applications",
+        "description": "List simulation applications",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -64213,7 +64213,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Update a robot application",
+        "description": "Update a simulation application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -64830,7 +64830,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to list the reusable delegation sets that are associated with the current AWS account. ",
+        "description": "Grants permission to list the reusable delegation sets that are associated with the current AWS account.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -65042,7 +65042,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_AssociateResolverEndpointIpAddress"
+          "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_AssociateResolverEndpointIpAddress.html"
         }
       },
       "AssociateResolverRule": {
@@ -68298,7 +68298,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Verifies an email address.  This action causes a confirmation email message to be sent to the specified address. This action is throttled at one request per second",
+        "description": "Verifies an email address. This action causes a confirmation email message to be sent to the specified address. This action is throttled at one request per second",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -70199,7 +70199,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists groups for a user from the directory that AWS SSO provides by default ",
+        "description": "Lists groups for a user from the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -72254,7 +72254,7 @@
           "aws:TagKeys",
           "sagemaker:ResourceTag/${TagKey}"
         ],
-        "description": "Stops a transform job.  When Amazon SageMaker receives a StopTransformJob request, the status of the job changes to Stopping.  After Amazon SageMaker stops the job, the status is set to Stopped",
+        "description": "Stops a transform job. When Amazon SageMaker receives a StopTransformJob request, the status of the job changes to Stopping. After Amazon SageMaker stops the job, the status is set to Stopped",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -72725,7 +72725,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/accept-invitation.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_AcceptInvitation.html"
         }
       },
       "BatchDisableStandards": {
@@ -72738,7 +72738,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/batch-disable-standards.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchDisableStandards.html"
         }
       },
       "BatchEnableStandards": {
@@ -72751,7 +72751,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/batch-enable-standards.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchEnableStandards.html"
         }
       },
       "BatchImportFindings": {
@@ -72766,7 +72766,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/batch-import-findings.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchImportFindings.html"
         }
       },
       "CreateActionTarget": {
@@ -72792,7 +72792,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/create-insight.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_CreateInsight.html"
         }
       },
       "CreateMembers": {
@@ -72805,7 +72805,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/create-members.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_CreateMembers.html"
         }
       },
       "DeclineInvitations": {
@@ -72818,7 +72818,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/decline-invitations.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DeclineInvitations.html"
         }
       },
       "DeleteActionTarget": {
@@ -72844,7 +72844,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/delete-insights.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DeleteInsight.html"
         }
       },
       "DeleteInvitations": {
@@ -72857,7 +72857,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/delete-invitations.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DeleteInvitations.html"
         }
       },
       "DeleteMembers": {
@@ -72870,7 +72870,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/delete-members.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DeleteMembers.html"
         }
       },
       "DescribeActionTargets": {
@@ -72925,7 +72925,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/disable-import-findings-for-product.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DisableImportFindingsForProduct.html"
         }
       },
       "DisableSecurityHub": {
@@ -72938,7 +72938,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/disable-security-hub.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DisableSecurityHub.html"
         }
       },
       "DisassociateFromMasterAccount": {
@@ -72951,7 +72951,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/disassociate-from-master-account.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DisassociateFromMasterAccount.html"
         }
       },
       "DisassociateMembers": {
@@ -72964,7 +72964,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/disassociate-members.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DisassociateMembers.html"
         }
       },
       "EnableImportFindingsForProduct": {
@@ -72977,7 +72977,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/enable-import-findings-for-product.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_EnableImportFindingsForProduct.html"
         }
       },
       "EnableSecurityHub": {
@@ -72993,7 +72993,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/enable-security-hub.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_EnableSecurityHub.html"
         }
       },
       "GetEnabledStandards": {
@@ -73008,7 +73008,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/get-enabled-standards.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetEnabledStandards.html"
         }
       },
       "GetFindings": {
@@ -73022,7 +73022,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/get-findings.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetFindings.html"
         }
       },
       "GetInsightResults": {
@@ -73036,7 +73036,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/get-insight-results.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetInsightResults.html"
         }
       },
       "GetInsights": {
@@ -73051,7 +73051,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/get-insights.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetInsights.html"
         }
       },
       "GetInvitationsCount": {
@@ -73065,7 +73065,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/get-invitations-count.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetInvitationsCount.html"
         }
       },
       "GetMasterAccount": {
@@ -73079,7 +73079,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/get-master-account.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetMasterAccount.html"
         }
       },
       "GetMembers": {
@@ -73093,7 +73093,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/get-members.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetMembers.html"
         }
       },
       "InviteMembers": {
@@ -73106,7 +73106,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/invite-members.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_InviteMembers.html"
         }
       },
       "ListEnabledProductsForImport": {
@@ -73121,7 +73121,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/list-enabled-products-for-import.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_ListEnabledProductsForImport.html"
         }
       },
       "ListInvitations": {
@@ -73136,7 +73136,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/list-invitations.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_ListInvitations.html"
         }
       },
       "ListMembers": {
@@ -73151,7 +73151,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/list-members.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_ListMembers.html"
         }
       },
       "ListTagsForResource": {
@@ -73205,7 +73205,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/update-findings.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_UpdateFindings.html"
         }
       },
       "UpdateInsight": {
@@ -73218,7 +73218,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/latest/ug/update-insights.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_UpdateInsight.html"
         }
       }
     },
@@ -74408,7 +74408,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Disassociates an IAM principal from a portfolio",
+        "description": "Disassociates an IAM principal from a portfolio.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -76684,7 +76684,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Returns a description of specified virtual tapes in the virtual tape shelf (VTS). ",
+        "description": "Returns a description of specified virtual tapes in the virtual tape shelf (VTS).",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -77255,7 +77255,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}sumerian-permissions.html",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/sumerian/latest/userguide/sumerian-permissions.html"
         }
       },
       "ViewRelease": {
@@ -77269,7 +77269,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}sumerian-permissions.html",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/sumerian/latest/userguide/sumerian-permissions.html"
         }
       }
     },
@@ -77769,7 +77769,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Removes the server or virtual machine from the list of registered servers.",
+        "description": "Enables the user to remove on-premises managed instances from the list of managed instances.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -77938,7 +77938,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/"
+          "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up-messageAPIs.html"
         }
       },
       "DescribeDocumentPermission": {
@@ -78060,11 +78060,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes one or more your instances.",
+        "description": "Enables user's Amazon EC2 console to render managed instances' nodes",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/"
+          "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up-messageAPIs.html"
         }
       },
       "DescribeInventoryDeletions": {
@@ -79116,11 +79116,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the status of the SSM document associated with the specified instance.",
+        "description": "Enables user's SSM Agents to call the Systems Manager service in the cloud to provide heartbeat information.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up-messageAPIs.html"
         }
       },
       "UpdateMaintenanceWindow": {
@@ -79984,7 +79984,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Update notification preferences ",
+        "description": "Update notification preferences",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82245,7 +82245,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a new workload",
+        "description": "Creates a new workload.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82317,7 +82317,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Aborts the upload of the specified document version that was previously initiated by InitiateDocumentVersionUpload.",
+        "description": "Grants permission to abort the upload of the specified document version that was previously initiated by InitiateDocumentVersionUpload.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82330,7 +82330,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Activates the specified user. Only active users can access Amazon WorkDocs.",
+        "description": "Grants permission to activate the specified user. Only active users can access Amazon WorkDocs.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82343,7 +82343,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a set of permissions for the specified folder or document.",
+        "description": "Grants permission to create a set of permissions for the specified folder or document.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82356,11 +82356,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "",
+        "description": "Grants permission to add a user to a group.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/"
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/adminguide/manage_set_admin.html"
         }
       },
       "CheckAlias": {
@@ -82370,11 +82370,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "",
+        "description": "Grants permission to check an alias.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/"
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/adminguide/cloud_quick_start.html"
         }
       },
       "CreateComment": {
@@ -82409,7 +82409,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a folder with the specified name and parent folder.",
+        "description": "Grants permission to create a folder with the specified name and parent folder.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82422,11 +82422,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "",
+        "description": "Grants permission to create an instance.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/"
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/adminguide/getting_started.html"
         }
       },
       "CreateLabels": {
@@ -82448,7 +82448,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Configure WorkDocs to use Amazon SNS notifications.",
+        "description": "Grants permission to configure WorkDocs to use Amazon SNS notifications.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82461,7 +82461,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a user in a Simple AD or Microsoft AD directory.",
+        "description": "Grants permission to create a user in a Simple AD or Microsoft AD directory.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82474,7 +82474,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deactivates the specified user, which revokes the user's access to Amazon WorkDocs.",
+        "description": "Grants permission to deactivate the specified user, which revokes the user's access to Amazon WorkDocs.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82513,7 +82513,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Permanently deletes the specified document and its associated metadata.",
+        "description": "Grants permission to permanently delete the specified document and its associated metadata.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82526,7 +82526,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Permanently deletes the specified folder and its contents.",
+        "description": "Grants permission to permanently delete the specified folder and its contents.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82539,7 +82539,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes the contents of the specified folder.",
+        "description": "Grants permission to delete the contents of the specified folder.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82552,11 +82552,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "",
+        "description": "Grants permission to delete an instance.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/"
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/adminguide/manage-sites.html#delete_site"
         }
       },
       "DeleteLabels": {
@@ -82578,7 +82578,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes the specified subscription from the specified organization.",
+        "description": "Grants permission to delete the specified subscription from the specified organization.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82591,7 +82591,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes the specified user from a Simple AD or Microsoft AD directory.",
+        "description": "Grants permission to delete the specified user from a Simple AD or Microsoft AD directory.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82604,11 +82604,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "",
+        "description": "Grants permission to deregister a directory.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/"
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/adminguide/manage-sites.html#delete_site"
         }
       },
       "DescribeActivities": {
@@ -82634,11 +82634,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "",
+        "description": "Grants permission to describe available directories.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/"
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/adminguide/getting_started.html"
         }
       },
       "DescribeComments": {
@@ -82664,7 +82664,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Retrieves the document versions for the specified document.",
+        "description": "Grants permission to retrieve the document versions for the specified document.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82679,7 +82679,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Describes the contents of the specified folder, including its documents and sub-folders.",
+        "description": "Grants permission to describe the contents of the specified folder, including its documents and sub-folders.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82709,11 +82709,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "",
+        "description": "Grants permission to describe instances.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/"
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/adminguide/getting_started.html"
         }
       },
       "DescribeNotificationSubscriptions": {
@@ -82724,7 +82724,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the specified notification subscriptions.",
+        "description": "Grants permission to list the specified notification subscriptions.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82739,7 +82739,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Describes the permissions of a specified resource.",
+        "description": "Grants permission to view a description of a specified resource's permissions.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82769,7 +82769,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Describes the specified users. You can describe all users or filter the results (for example, by status or organization).",
+        "description": "Grants permission to view a description of the specified users. You can describe all users or filter the results (for example, by status or organization).",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82811,7 +82811,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Retrieves the specified document object.",
+        "description": "Grants permission to retrieve the specified document object.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82825,7 +82825,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Retrieves the path information (the hierarchy from the root folder) for the requested document.",
+        "description": "Grants permission to retrieve the path information (the hierarchy from the root folder) for the requested document.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82839,7 +82839,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Retrieves version metadata for the specified document.",
+        "description": "Grants permission to retrieve version metadata for the specified document.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82853,7 +82853,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Retrieves the metadata of the specified folder.",
+        "description": "Grants permission to retrieve the metadata of the specified folder.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82867,7 +82867,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Retrieves the path information (the hierarchy from the root folder) for the specified folder.",
+        "description": "Grants permission to retrieve the path information (the hierarchy from the root folder) for the specified folder.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82894,7 +82894,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a new document object and version object.",
+        "description": "Grants permission to create a new document object and version object.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82907,11 +82907,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "",
+        "description": "Grants permission to register a directory.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/"
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/adminguide/existing-dir-setup.html"
         }
       },
       "RemoveAllResourcePermissions": {
@@ -82920,7 +82920,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Removes all the permissions from the specified resource.",
+        "description": "Grants permission to remove all the permissions from the specified resource.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82933,7 +82933,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Removes the permission for the specified principal from the specified resource.",
+        "description": "Grants permission to remove the permission for the specified principal from the specified resource.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82959,7 +82959,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the specified attributes of the specified document.",
+        "description": "Grants permission to update the specified attributes of the specified document.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82972,7 +82972,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Changes the status of the document version to ACTIVE.",
+        "description": "Grants permission to change the status of the document version to ACTIVE.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82985,7 +82985,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the specified attributes of the specified folder.",
+        "description": "Grants permission to update the specified attributes of the specified folder.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82998,11 +82998,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "",
+        "description": "Grants permission to update an instance alias.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/APIReference/"
+          "doc_page_rel": "https://docs.aws.amazon.com/workdocs/latest/adminguide/getting_started.html"
         }
       },
       "UpdateUser": {
@@ -83011,7 +83011,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the specified attributes of the specified user, and grants or revokes administrative privileges to the Amazon WorkDocs site.",
+        "description": "Grants permission to update the specified attributes of the specified user, and grants or revokes administrative privileges to the Amazon WorkDocs site.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83067,7 +83067,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Associates cert with a specified fleet.",
+        "description": "Grants permission to associate a website certificate authority with an Amazon WorkLink fleet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83080,7 +83080,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a worklink fleet.",
+        "description": "Grants permission to create an Amazon WorkLink fleet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83093,7 +83093,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes the worklink fleet.",
+        "description": "Grants permission to delete an Amazon WorkLink fleet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83121,7 +83121,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes company network configuration for a specified fleet.",
+        "description": "Grants permission to describe the company network configuration for an Amazon WorkLink fleet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83135,7 +83135,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes a specific device associated with the fleet.",
+        "description": "Grants permission to describe details of a device associated with an Amazon WorkLink fleet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83149,7 +83149,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes device policy configuration for a specified fleet.",
+        "description": "Grants permission to describe the device policy configuration for an Amazon WorkLink fleet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83177,7 +83177,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes metadata of a specified fleet.",
+        "description": "Grants permission to describe metadata of an Amazon WorkLink fleet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83191,7 +83191,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes identity provider configuration for a specified fleet.",
+        "description": "Grants permission to describe the identity provider configuration for an Amazon WorkLink fleet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83205,7 +83205,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the cert of a specified fleet.",
+        "description": "Grants permission to describe a website certificate authority associated with an Amazon WorkLink fleet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83244,7 +83244,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Disassociates cert with a specified fleet.",
+        "description": "Grants permission to disassociate a website certificate authority from an Amazon WorkLink fleet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83259,7 +83259,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists all the devices associated with the fleet.",
+        "description": "Grants permission to list the devices associated with an Amazon WorkLink fleet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83289,7 +83289,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists all the fleets associated with the account.",
+        "description": "Grants permission to list the Amazon WorkLink fleets associated with the account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83319,7 +83319,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists all the certs associated  with the specified fleet.",
+        "description": "Grants permission to list the website certificate authorities associated with an Amazon WorkLink fleet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83358,7 +83358,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Signs out the specified user in a fleet.",
+        "description": "Grants permission to sign out a user from an Amazon WorkLink fleet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83384,7 +83384,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates company network configuration for a specified fleet.",
+        "description": "Grants permission to update\u00c2 the company network configuration for an Amazon WorkLink fleet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83397,7 +83397,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates device policy configuration for a specified fleet.",
+        "description": "Grants permission to update the device policy configuration for an Amazon WorkLink fleet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83423,7 +83423,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates metadata of a specified fleet.",
+        "description": "Grants permission to update the metadata of an Amazon WorkLink fleet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83436,7 +83436,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates identity provider configuration for a specified fleet.",
+        "description": "Grants permission to update the identity provider configuration for an Amazon WorkLink fleet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83470,7 +83470,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/groups_overview.html"
         }
       },
       "AssociateDelegateToResource": {
@@ -83518,11 +83518,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a new group in the directory (but doesn't enable it for mail).",
+        "description": "Creates a group that can be used in WorkMail by calling the RegisterToWorkMail operation.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "${APIReferenceDocPage}API_CreateGroup.html"
         }
       },
       "CreateMailDomain": {
@@ -83535,7 +83535,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/add_domain.html"
         }
       },
       "CreateMailUser": {
@@ -83548,7 +83548,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/manage-users.html"
         }
       },
       "CreateOrganization": {
@@ -83561,7 +83561,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/add_new_organization.html"
         }
       },
       "CreateResource": {
@@ -83570,11 +83570,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a new resource",
+        "description": "Creates a new WorkMail resource.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "${APIReferenceDocPage}API_CreateResource.html"
         }
       },
       "CreateUser": {
@@ -83622,11 +83622,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Description for DeleteMailDomain",
+        "description": "Removes an unused mail domain from an organization",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/remove_domain.html"
         }
       },
       "DeleteMailboxPermissions": {
@@ -83648,11 +83648,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Description for DeleteMobileDevice",
+        "description": "Removes a mobile device from a user",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/manage-devices.html#remove_mobile_device"
         }
       },
       "DeleteOrganization": {
@@ -83661,11 +83661,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Description for DeleteOrganization",
+        "description": "Removes an organization from an account, either removing the directory from directory services or leaving it available for re-use",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/remove_organization.html"
         }
       },
       "DeleteResource": {
@@ -83715,11 +83715,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Description for DescribeDirectories",
+        "description": "Shows a list of directories available for use in creating an organization",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/add_new_organization.html"
         }
       },
       "DescribeGroup": {
@@ -83745,11 +83745,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Description for DescribeKmsKeys",
+        "description": "Shows a list of KMS Keys available for use in creating an organization",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/add_new_organization.html"
         }
       },
       "DescribeMailDomains": {
@@ -83760,11 +83760,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Description for DescribeMailDomains",
+        "description": "Shows the details of all mail domains associated with the organization",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/domains_overview.html"
         }
       },
       "DescribeMailGroups": {
@@ -83775,11 +83775,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Description for DescribeMailGroups",
+        "description": "Shows the details of all groups associated with the organization",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/groups_overview.html"
         }
       },
       "DescribeMailUsers": {
@@ -83790,11 +83790,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Description for DescribeMailUsers",
+        "description": "Shows the details of all users associated with the orgaization",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/users_overview.html"
         }
       },
       "DescribeOrganization": {
@@ -83820,11 +83820,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Description for DescribeOrganizations",
+        "description": "Shows a summary of all organizations associated with the account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/organizations_overview.html"
         }
       },
       "DescribeResource": {
@@ -83863,11 +83863,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Description for DisableMailGroups",
+        "description": "Disable a mail group when it is not being used and, to allow it to be deleted",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/remove_group.html"
         }
       },
       "DisableMailUsers": {
@@ -83876,11 +83876,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Description for DisableMailUsers",
+        "description": "Disable a user mailbox when it is no longer being used, and to allow it to be deleted",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/manage-mailboxes.html#delete_user_mailbox"
         }
       },
       "DisassociateDelegateFromResource": {
@@ -83915,11 +83915,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Description for EnableMailDomain",
+        "description": "Enable a mail domain in the organization",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/add_domain.html"
         }
       },
       "EnableMailGroups": {
@@ -83928,11 +83928,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Description for EnableMailGroups",
+        "description": "Enable a mail group after it has been created to allow it to receive mail",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/enable_existing_group.html"
         }
       },
       "EnableMailUsers": {
@@ -83941,11 +83941,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Description for EnableMailUsers",
+        "description": "Enable a user's mailbox after it has been created to allow it to receive mail",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/manage-users.html#enable_existing_user"
         }
       },
       "GetMailDomainDetails": {
@@ -83955,11 +83955,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Description for GetMailDomainDetails",
+        "description": "Get the details of the mail domain",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/domains_overview.html"
         }
       },
       "GetMailGroupDetails": {
@@ -83969,11 +83969,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Description for GetMailGroupDetails",
+        "description": "Get the details of the mail group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/groups_overview.html"
         }
       },
       "GetMailUserDetails": {
@@ -83983,11 +83983,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Description for GetMailUserDetails",
+        "description": "Get the details of the user's mailbox and account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/users_overview.html"
         }
       },
       "GetMailboxDetails": {
@@ -84011,11 +84011,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Description for GetMobileDeviceDetails",
+        "description": "Get the details of the mobile device",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/manage-devices.html"
         }
       },
       "GetMobileDevicesForUser": {
@@ -84025,11 +84025,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Description for GetMobileDevicesForUser",
+        "description": "Get a list of the mobile devices associated with the user",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/manage-devices.html"
         }
       },
       "GetMobilePolicyDetails": {
@@ -84039,11 +84039,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Description for GetMobilePolicyDetails",
+        "description": "Get the details of the mobile device policy associated with the organization",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/edit_organization_mobile_policy.html"
         }
       },
       "ListAliases": {
@@ -84113,11 +84113,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Description for ListMembersInMailGroup",
+        "description": "Get a list of all the members in a mail group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/groups_overview.html"
         }
       },
       "ListOrganizations": {
@@ -84212,11 +84212,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Description for RemoveMembersFromGroup",
+        "description": "Remove members from a mail group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/groups_overview.html"
         }
       },
       "ResetPassword": {
@@ -84238,11 +84238,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Description for ResetUserPassword",
+        "description": "Reset the password for a user's account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/manage-users.html#reset_user_password"
         }
       },
       "SearchMembers": {
@@ -84252,11 +84252,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Description for SearchMembers",
+        "description": "Prefix search to find a specific user in a mail group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/groups_overview.html"
         }
       },
       "SetAdmin": {
@@ -84265,11 +84265,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Description for SetAdmin",
+        "description": "Mark a user as being an administrator",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/users_overview.html"
         }
       },
       "SetDefaultMailDomain": {
@@ -84278,11 +84278,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Description for SetDefaultMailDomain",
+        "description": "Set the default mail domain for the organization",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/default_domain.html"
         }
       },
       "SetMailGroupDetails": {
@@ -84291,11 +84291,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Description for SetMailGroupDetails",
+        "description": "Set the details of the mail group which has just been created",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/add_new_group.html"
         }
       },
       "SetMailUserDetails": {
@@ -84304,11 +84304,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Description for SetMailUserDetails",
+        "description": "Set the details for the user account which has just been created",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/manage-users.html"
         }
       },
       "SetMobilePolicyDetails": {
@@ -84317,11 +84317,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Description for SetMobilePolicyDetails",
+        "description": "Set the details of a mobile policy associated with the organization",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/edit_organization_mobile_policy.html"
         }
       },
       "UpdateMailboxQuota": {
@@ -84369,11 +84369,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Description for WipeMobileDevice",
+        "description": "Remotely wipe the mobile device associated with a user's account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/manage-devices.html#remote_wipe_device"
         }
       }
     },
