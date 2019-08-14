@@ -21219,10 +21219,9 @@
       },
       "ConfirmConnection": {
         "aws_action_groups": [
-          "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Confirm the creation of a hosted connection on an interconnect.",
         "docs": {
@@ -21233,10 +21232,9 @@
       },
       "ConfirmPrivateVirtualInterface": {
         "aws_action_groups": [
-          "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Accept ownership of a private virtual interface created by another customer.",
         "docs": {
@@ -21247,10 +21245,9 @@
       },
       "ConfirmPublicVirtualInterface": {
         "aws_action_groups": [
-          "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Accept ownership of a public virtual interface created by another customer",
         "docs": {
@@ -21694,10 +21691,11 @@
       },
       "DescribeLocations": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Returns the list of AWS Direct Connect locations in the current AWS region.",
         "docs": {
@@ -21750,10 +21748,9 @@
       },
       "DisassociateConnectionFromLag": {
         "aws_action_groups": [
-          "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Disassociates a connection from a link aggregation group (LAG).",
         "docs": {
@@ -21810,10 +21807,9 @@
       },
       "UpdateLag": {
         "aws_action_groups": [
-          "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Updates the attributes of the specified link aggregation group (LAG).",
         "docs": {
@@ -21824,10 +21820,9 @@
       },
       "UpdateVirtualInterfaceAttributes": {
         "aws_action_groups": [
-          "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Updates the specified attributes of the specified virtual private interface.",
         "docs": {
@@ -73948,10 +73943,9 @@
       },
       "CopyProduct": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Copies the specified source product to the specified target product or a new product.",
         "docs": {
@@ -73975,10 +73969,9 @@
       },
       "CreatePortfolio": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Creates a portfolio",
         "docs": {
@@ -74002,10 +73995,9 @@
       },
       "CreateProduct": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Creates a product and that product's first provisioning artifact",
         "docs": {
@@ -74016,10 +74008,9 @@
       },
       "CreateProvisionedProductPlan": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Adds a new provisioned product plan",
         "docs": {
@@ -74478,10 +74469,9 @@
       },
       "ExecuteProvisionedProductPlan": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Executes a provisioned product plan",
         "docs": {
@@ -74492,10 +74482,9 @@
       },
       "ExecuteProvisionedProductServiceAction": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Executes a provisioned product plan",
         "docs": {
@@ -74794,10 +74783,9 @@
       },
       "ProvisionProduct": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Provisions a product with a specified provisioning artifact and launch parameters",
         "docs": {
@@ -74919,10 +74907,9 @@
       },
       "UpdatePortfolio": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Updates the metadata fields and/or tags of an existing portfolio",
         "docs": {
@@ -74933,10 +74920,9 @@
       },
       "UpdateProduct": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Updates the metadata fields and/or tags of an existing product",
         "docs": {
@@ -79872,11 +79858,10 @@
       },
       "DescribeCheckItems": {
         "aws_action_groups": [
-          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "List",
+        "calculated_action_group": "Read",
         "condition_keys": [],
         "description": "View details for the check items",
         "docs": {
@@ -79887,11 +79872,10 @@
       },
       "DescribeCheckRefreshStatuses": {
         "aws_action_groups": [
-          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "List",
+        "calculated_action_group": "Read",
         "condition_keys": [],
         "description": "Describe check refresh statuses",
         "docs": {
@@ -79902,11 +79886,10 @@
       },
       "DescribeCheckSummaries": {
         "aws_action_groups": [
-          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "List",
+        "calculated_action_group": "Read",
         "condition_keys": [],
         "description": "Describes the check's summaries",
         "docs": {
@@ -79931,11 +79914,10 @@
       },
       "DescribeNotificationPreferences": {
         "aws_action_groups": [
-          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "List",
+        "calculated_action_group": "Read",
         "condition_keys": [],
         "description": "Describes the notification preferences for the account",
         "docs": {
