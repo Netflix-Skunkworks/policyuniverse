@@ -6,7 +6,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Used to delete resources",
         "docs": {
           "api_doc": "",
@@ -33,7 +36,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Used to update resources",
         "docs": {
           "api_doc": "",
@@ -46,7 +52,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Used to create child resources",
         "docs": {
           "api_doc": "",
@@ -59,7 +68,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Used to update resources (and, although not recommended, can be used to create child resources)",
         "docs": {
           "api_doc": "",
@@ -1198,7 +1210,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a new Amplify App.",
         "docs": {
           "api_doc": "",
@@ -1211,7 +1226,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a new Branch for an Amplify App.",
         "docs": {
           "api_doc": "",
@@ -1237,7 +1255,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Create a new DomainAssociation on an App",
         "docs": {
           "api_doc": "",
@@ -2796,7 +2817,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a GraphqlApi object, which is the top level AppSync resource.",
         "docs": {
           "api_doc": "",
@@ -2874,7 +2898,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes a GraphqlApi object. This will also clean up every AppSync resource below that API.",
         "docs": {
           "api_doc": "",
@@ -2942,7 +2968,9 @@
           "ReadOnly"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Retrieves a GraphqlApi object.",
         "docs": {
           "api_doc": "",
@@ -3231,7 +3259,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Updates a GraphqlApi object.",
         "docs": {
           "api_doc": "",
@@ -5754,7 +5784,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "acm-pca:TemplateArn"
+        ],
         "description": "Issues an ACM Private CA certificate.",
         "docs": {
           "api_doc": "",
@@ -8767,7 +8799,9 @@
           "cloudformation:ResourceTypes",
           "cloudformation:RoleArn",
           "cloudformation:StackPolicyUrl",
-          "cloudformation:TemplateUrl"
+          "cloudformation:TemplateUrl",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
         ],
         "description": "Creates a list of changes for a stack.",
         "docs": {
@@ -8785,7 +8819,9 @@
           "cloudformation:ResourceTypes",
           "cloudformation:RoleArn",
           "cloudformation:StackPolicyUrl",
-          "cloudformation:TemplateUrl"
+          "cloudformation:TemplateUrl",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
         ],
         "description": "Creates a stack as specified in the template.",
         "docs": {
@@ -8814,7 +8850,9 @@
         "calculated_action_group": "Write",
         "condition_keys": [
           "cloudformation:RoleArn",
-          "cloudformation:TemplateUrl"
+          "cloudformation:TemplateUrl",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
         ],
         "description": "Creates a stackset as specified in the template.",
         "docs": {
@@ -9333,7 +9371,9 @@
           "cloudformation:ResourceTypes",
           "cloudformation:RoleArn",
           "cloudformation:StackPolicyUrl",
-          "cloudformation:TemplateUrl"
+          "cloudformation:TemplateUrl",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
         ],
         "description": "Updates a stack as specified in the template.",
         "docs": {
@@ -9362,7 +9402,9 @@
         "calculated_action_group": "Write",
         "condition_keys": [
           "cloudformation:RoleArn",
-          "cloudformation:TemplateUrl"
+          "cloudformation:TemplateUrl",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
         ],
         "description": "Updates a stackset as specified in the template.",
         "docs": {
@@ -12471,7 +12513,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create an AWS CodeCommit repository",
         "docs": {
           "api_doc": "",
@@ -13851,7 +13896,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Create a custom action you can use in the pipelines associated with your AWS account.",
         "docs": {
           "api_doc": "",
@@ -13864,7 +13912,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Create a uniquely named pipeline.",
         "docs": {
           "api_doc": "",
@@ -14216,7 +14267,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Create or update a webhook",
         "docs": {
           "api_doc": "",
@@ -18519,7 +18573,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "dms:req-tag/${TagKey}"
+        ],
         "description": "Adds metadata tags to a DMS resource, including replication instance, endpoint, security group, and migration task",
         "docs": {
           "api_doc": "",
@@ -18545,7 +18603,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "dms:req-tag/${TagKey}"
+        ],
         "description": "Creates an endpoint using the provided settings",
         "docs": {
           "api_doc": "",
@@ -18575,7 +18637,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "dms:req-tag/${TagKey}"
+        ],
         "description": "Creates the replication instance using the specified parameters",
         "docs": {
           "api_doc": "",
@@ -18588,7 +18654,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "dms:req-tag/${TagKey}"
+        ],
         "description": "Creates a replication subnet group given a list of the subnet IDs in a VPC",
         "docs": {
           "api_doc": "",
@@ -18601,7 +18671,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "dms:req-tag/${TagKey}"
+        ],
         "description": "Creates a replication task using the specified parameters",
         "docs": {
           "api_doc": "",
@@ -19069,7 +19143,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
         "description": "Removes metadata tags from a DMS resource",
         "docs": {
           "api_doc": "",
@@ -21043,7 +21119,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a new hosted connection between a AWS Direct Connect partner's network and a specific AWS Direct Connect location.",
         "docs": {
           "api_doc": "",
@@ -21056,7 +21135,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Provisions a private virtual interface to be owned by a different customer.",
         "docs": {
           "api_doc": "",
@@ -21069,7 +21151,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Provisions a public virtual interface to be owned by a different customer.",
         "docs": {
           "api_doc": "",
@@ -21205,7 +21290,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a new connection between the customer network and a specific AWS Direct Connect location.",
         "docs": {
           "api_doc": "",
@@ -21257,7 +21345,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a new interconnect between a AWS Direct Connect partner's network and a specific AWS Direct Connect location.",
         "docs": {
           "api_doc": "",
@@ -21270,7 +21361,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a link aggregation group (LAG) with the specified number of bundled physical connections between the customer network and a specific AWS Direct Connect location.",
         "docs": {
           "api_doc": "",
@@ -21283,7 +21377,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a new private virtual interface.",
         "docs": {
           "api_doc": "",
@@ -21296,7 +21393,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a new public virtual interface.",
         "docs": {
           "api_doc": "",
@@ -21668,7 +21768,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Adds the specified tags to the specified AWS Direct Connect resource. Each resource can have a maximum of 50 tags.",
         "docs": {
           "api_doc": "",
@@ -21682,7 +21785,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
         "description": "Removes one or more tags from the specified AWS Direct Connect resource.",
         "docs": {
           "api_doc": "",
@@ -23588,7 +23693,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Accepts a request to attach a VPC to a transit gateway",
         "docs": {
           "api_doc": "",
@@ -23614,7 +23722,13 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Tenancy",
+          "ec2:AccepterVpc",
+          "ec2:RequesterVpc"
+        ],
         "description": "Accept a VPC peering connection request.",
         "docs": {
           "api_doc": "",
@@ -23666,7 +23780,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Applies a security group to the association between the target network and the Client VPN endpoint.",
         "docs": {
           "api_doc": "",
@@ -23718,7 +23835,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Associates a target network with a Client VPN endpoint.",
         "docs": {
           "api_doc": "",
@@ -23744,7 +23864,17 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:AvailabilityZone",
+          "ec2:EbsOptimized",
+          "ec2:InstanceProfile",
+          "ec2:InstanceType",
+          "ec2:PlacementGroup",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:RootDeviceType",
+          "ec2:Tenancy"
+        ],
         "description": "Associates an IAM instance profile with a running or stopped instance.",
         "docs": {
           "api_doc": "",
@@ -23783,7 +23913,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Associates the specified attachment with the specified transit gateway route table",
         "docs": {
           "api_doc": "",
@@ -23809,7 +23942,18 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:AvailabilityZone",
+          "ec2:EbsOptimized",
+          "ec2:InstanceProfile",
+          "ec2:InstanceType",
+          "ec2:PlacementGroup",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:RootDeviceType",
+          "ec2:Tenancy",
+          "ec2:Vpc"
+        ],
         "description": "Links an EC2-Classic instance to a ClassicLink-enabled VPC through one or more of the VPC's security groups.",
         "docs": {
           "api_doc": "",
@@ -23848,7 +23992,22 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:AvailabilityZone",
+          "ec2:EbsOptimized",
+          "ec2:InstanceProfile",
+          "ec2:InstanceType",
+          "ec2:PlacementGroup",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:RootDeviceType",
+          "ec2:Tenancy",
+          "ec2:Encrypted",
+          "ec2:ParentSnapshot",
+          "ec2:VolumeIops",
+          "ec2:VolumeSize",
+          "ec2:VolumeType"
+        ],
         "description": "Attaches an EBS volume to a running or stopped instance and exposes it to the instance with the specified device name.",
         "docs": {
           "api_doc": "",
@@ -23874,7 +24033,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Adds an ingress authorization rule to a Client VPN endpoint.",
         "docs": {
           "api_doc": "",
@@ -23887,7 +24049,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Vpc"
+        ],
         "description": "[EC2-VPC only] Adds one or more egress rules to a security group for use with a VPC.",
         "docs": {
           "api_doc": "",
@@ -23900,7 +24066,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Vpc"
+        ],
         "description": "Adds one or more ingress rules to a security group.",
         "docs": {
           "api_doc": "",
@@ -23939,7 +24109,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Cancels the specified Capacity Reservation, releases the reserved capacity, and changes the Capacity Reservation's state to cancelled.",
         "docs": {
           "api_doc": "",
@@ -24095,7 +24268,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "ec2:Region"
+        ],
         "description": "Creates a Client VPN endpoint.",
         "docs": {
           "api_doc": "",
@@ -24108,7 +24285,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Adds a route to a network to a Client VPN endpoint.",
         "docs": {
           "api_doc": "",
@@ -24290,7 +24470,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Creates a new version for the specified launch template.",
         "docs": {
           "api_doc": "",
@@ -24355,7 +24538,16 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:AuthorizedUser",
+          "ec2:AvailabilityZone",
+          "ec2:Permission",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Subnet",
+          "ec2:Vpc",
+          "ec2:AuthorizedService"
+        ],
         "description": "Creates a permission for a network interface that grants certain operations to another authorized user.",
         "docs": {
           "api_doc": "",
@@ -24394,7 +24586,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Vpc"
+        ],
         "description": "Creates a route in a route table within a VPC.",
         "docs": {
           "api_doc": "",
@@ -24433,7 +24629,17 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:TagKeys",
+          "aws:RequestTag/${TagKey}",
+          "ec2:ParentVolume",
+          "ec2:Region",
+          "ec2:Encrypted",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:VolumeIops",
+          "ec2:VolumeSize",
+          "ec2:VolumeType"
+        ],
         "description": "Creates a snapshot of an EBS volume and stores it in Amazon S3.",
         "docs": {
           "api_doc": "",
@@ -24507,7 +24713,31 @@
         ],
         "calculated_action_group": "Tagging",
         "condition_keys": [
-          "ec2:CreateAction"
+          "ec2:CreateAction",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Owner",
+          "ec2:Public",
+          "ec2:ImageType",
+          "ec2:RootDeviceType",
+          "ec2:AvailabilityZone",
+          "ec2:EbsOptimized",
+          "ec2:InstanceProfile",
+          "ec2:InstanceType",
+          "ec2:PlacementGroup",
+          "ec2:Tenancy",
+          "ec2:Vpc",
+          "ec2:Subnet",
+          "ec2:ReservedInstancesOfferingType",
+          "ec2:ParentVolume",
+          "ec2:SnapshotTime",
+          "ec2:VolumeSize",
+          "ec2:Encrypted",
+          "ec2:ParentSnapshot",
+          "ec2:VolumeIops",
+          "ec2:VolumeType"
         ],
         "description": "Adds or overwrites one or more tags for the specified Amazon EC2 resource or resources.",
         "docs": {
@@ -24521,7 +24751,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "ec2:Region"
+        ],
         "description": "Creates a transit gateway.",
         "docs": {
           "api_doc": "",
@@ -24534,7 +24768,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Creates a static route for the specified transit gateway route table.",
         "docs": {
           "api_doc": "",
@@ -24547,7 +24784,12 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a route table for the specified transit gateway.",
         "docs": {
           "api_doc": "",
@@ -24560,7 +24802,12 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Attaches the specified VPC to the specified transit gateway.",
         "docs": {
           "api_doc": "",
@@ -24573,7 +24820,17 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "ec2:AvailabilityZone",
+          "ec2:Encrypted",
+          "ec2:ParentSnapshot",
+          "ec2:Region",
+          "ec2:VolumeIops",
+          "ec2:VolumeSize",
+          "ec2:VolumeType"
+        ],
         "description": "Creates an EBS volume that can be attached to an instance in the same Availability Zone.",
         "docs": {
           "api_doc": "",
@@ -24638,7 +24895,13 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Tenancy",
+          "ec2:AccepterVpc",
+          "ec2:RequesterVpc"
+        ],
         "description": "Requests a VPC peering connection between two VPCs: a requester VPC that you own and a peer VPC with which to create the connection.",
         "docs": {
           "api_doc": "",
@@ -24690,7 +24953,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified Client VPN endpoint.",
         "docs": {
           "api_doc": "",
@@ -24703,7 +24969,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes a route from a Client VPN endpoint.",
         "docs": {
           "api_doc": "",
@@ -24716,7 +24985,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified customer gateway.",
         "docs": {
           "api_doc": "",
@@ -24729,7 +25001,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified set of DHCP options.",
         "docs": {
           "api_doc": "",
@@ -24794,7 +25069,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified Internet gateway.",
         "docs": {
           "api_doc": "",
@@ -24820,7 +25098,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified launch template and all associated versions.",
         "docs": {
           "api_doc": "",
@@ -24833,7 +25114,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified versions for the specified launch template.",
         "docs": {
           "api_doc": "",
@@ -24859,7 +25143,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Vpc"
+        ],
         "description": "Deletes the specified network ACL.",
         "docs": {
           "api_doc": "",
@@ -24872,7 +25160,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Vpc"
+        ],
         "description": "Deletes the specified ingress or egress entry (rule) from the specified network ACL.",
         "docs": {
           "api_doc": "",
@@ -24924,7 +25216,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Vpc"
+        ],
         "description": "Deletes the specified route from the specified route table.",
         "docs": {
           "api_doc": "",
@@ -24937,7 +25233,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Vpc"
+        ],
         "description": "Deletes the specified route table.",
         "docs": {
           "api_doc": "",
@@ -24950,7 +25250,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Vpc"
+        ],
         "description": "Deletes a security group.",
         "docs": {
           "api_doc": "",
@@ -24963,7 +25267,14 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Owner",
+          "ec2:ParentVolume",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:SnapshotTime",
+          "ec2:VolumeSize"
+        ],
         "description": "Deletes the specified snapshot.",
         "docs": {
           "api_doc": "",
@@ -25003,7 +25314,12 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified set of tags from the specified set of resources.",
         "docs": {
           "api_doc": "",
@@ -25016,7 +25332,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified transit gateway.",
         "docs": {
           "api_doc": "",
@@ -25029,7 +25348,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified route from the specified transit gateway route table.",
         "docs": {
           "api_doc": "",
@@ -25042,7 +25364,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified transit gateway route table.",
         "docs": {
           "api_doc": "",
@@ -25055,7 +25380,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified VPC attachment.",
         "docs": {
           "api_doc": "",
@@ -25068,7 +25396,16 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:AvailabilityZone",
+          "ec2:Encrypted",
+          "ec2:ParentSnapshot",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:VolumeIops",
+          "ec2:VolumeSize",
+          "ec2:VolumeType"
+        ],
         "description": "Deletes the specified EBS volume.",
         "docs": {
           "api_doc": "",
@@ -25133,7 +25470,12 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:AccepterVpc",
+          "ec2:Region",
+          "ec2:RequesterVpc",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Description for DeleteVpcPeeringConnection",
         "docs": {
           "api_doc": "",
@@ -26630,7 +26972,17 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:AvailabilityZone",
+          "ec2:EbsOptimized",
+          "ec2:InstanceProfile",
+          "ec2:InstanceType",
+          "ec2:PlacementGroup",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:RootDeviceType",
+          "ec2:Tenancy"
+        ],
         "description": "Unlinks (detaches) a linked EC2-Classic instance from a VPC.",
         "docs": {
           "api_doc": "",
@@ -26669,7 +27021,22 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:AvailabilityZone",
+          "ec2:EbsOptimized",
+          "ec2:InstanceProfile",
+          "ec2:InstanceType",
+          "ec2:PlacementGroup",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:RootDeviceType",
+          "ec2:Tenancy",
+          "ec2:Encrypted",
+          "ec2:ParentSnapshot",
+          "ec2:VolumeIops",
+          "ec2:VolumeSize",
+          "ec2:VolumeType"
+        ],
         "description": "Detaches an EBS volume from an instance.",
         "docs": {
           "api_doc": "",
@@ -26708,7 +27075,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Disables the specified resource attachment from propagating routes to the specified propagation route table.",
         "docs": {
           "api_doc": "",
@@ -26734,7 +27104,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Tenancy"
+        ],
         "description": "Disables ClassicLink for a VPC.",
         "docs": {
           "api_doc": "",
@@ -26773,7 +27147,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Disassociates a target network from the specified Client VPN endpoint.",
         "docs": {
           "api_doc": "",
@@ -26786,7 +27163,17 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:AvailabilityZone",
+          "ec2:EbsOptimized",
+          "ec2:InstanceProfile",
+          "ec2:InstanceType",
+          "ec2:PlacementGroup",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:RootDeviceType",
+          "ec2:Tenancy"
+        ],
         "description": "Disassociates an IAM instance profile from a running or stopped instance.",
         "docs": {
           "api_doc": "",
@@ -26825,7 +27212,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Disassociates a resource attachment from a transit gateway route table.",
         "docs": {
           "api_doc": "",
@@ -26864,7 +27254,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Enables the specified attachment to propagate routes to the specified propagation route table.",
         "docs": {
           "api_doc": "",
@@ -26903,7 +27296,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Tenancy"
+        ],
         "description": "Enables a VPC for ClassicLink.",
         "docs": {
           "api_doc": "",
@@ -26987,7 +27384,17 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:AvailabilityZone",
+          "ec2:EbsOptimized",
+          "ec2:InstanceProfile",
+          "ec2:InstanceType",
+          "ec2:PlacementGroup",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:RootDeviceType",
+          "ec2:Tenancy"
+        ],
         "description": "Retrieve a JPG-format screenshot of a running instance to help with troubleshooting.",
         "docs": {
           "api_doc": "",
@@ -27129,7 +27536,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Uploads a client certificate revocation list to the specified Client VPN endpoint.",
         "docs": {
           "api_doc": "",
@@ -27207,7 +27617,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Modifies a Capacity Reservation's capacity and the conditions under which it is to be released.",
         "docs": {
           "api_doc": "",
@@ -27220,7 +27633,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Modifies the specified Client VPN endpoint.",
         "docs": {
           "api_doc": "",
@@ -27363,7 +27779,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region"
+        ],
         "description": "Modifies the start time for a scheduled EC2 instance event.",
         "docs": {
           "api_doc": "",
@@ -27389,7 +27807,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Modifies the specified launch template.",
         "docs": {
           "api_doc": "",
@@ -27428,7 +27849,14 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Owner",
+          "ec2:ParentVolume",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:SnapshotTime",
+          "ec2:VolumeSize"
+        ],
         "description": "Adds or removes permission settings for the specified snapshot.",
         "docs": {
           "api_doc": "",
@@ -27467,7 +27895,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Modifies the specified VPC attachment.",
         "docs": {
           "api_doc": "",
@@ -27688,7 +28119,17 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:AvailabilityZone",
+          "ec2:EbsOptimized",
+          "ec2:InstanceProfile",
+          "ec2:InstanceType",
+          "ec2:PlacementGroup",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:RootDeviceType",
+          "ec2:Tenancy"
+        ],
         "description": "Requests a reboot of one or more instances.",
         "docs": {
           "api_doc": "",
@@ -27714,7 +28155,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Rejects a request to attach a VPC to a transit gateway.",
         "docs": {
           "api_doc": "",
@@ -27740,7 +28184,12 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:AccepterVpc",
+          "ec2:Region",
+          "ec2:RequesterVpc",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Rejects a VPC peering connection request.",
         "docs": {
           "api_doc": "",
@@ -27779,7 +28228,17 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:AvailabilityZone",
+          "ec2:EbsOptimized",
+          "ec2:InstanceProfile",
+          "ec2:InstanceType",
+          "ec2:PlacementGroup",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:RootDeviceType",
+          "ec2:Tenancy"
+        ],
         "description": "Replaces an IAM instance profile for the specified instance.",
         "docs": {
           "api_doc": "",
@@ -27818,7 +28277,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Vpc"
+        ],
         "description": "Replaces an existing route within a route table in a VPC.",
         "docs": {
           "api_doc": "",
@@ -27844,7 +28307,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Replaces the specified route in the specified transit gateway route table.",
         "docs": {
           "api_doc": "",
@@ -27987,7 +28453,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Removes an ingress authorization rule from a Client VPN endpoint.",
         "docs": {
           "api_doc": "",
@@ -28000,7 +28469,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Vpc"
+        ],
         "description": "[EC2-VPC only] Removes one or more egress rules from a security group for EC2-VPC. This action doesn't apply to security groups for use in EC2-Classic.",
         "docs": {
           "api_doc": "",
@@ -28013,7 +28486,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Vpc"
+        ],
         "description": "Removes one or more ingress rules from a security group.",
         "docs": {
           "api_doc": "",
@@ -28027,7 +28504,35 @@
           "Tagging"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:ImageType",
+          "ec2:IsLaunchTemplateResource",
+          "ec2:LaunchTemplate",
+          "ec2:Owner",
+          "ec2:Public",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:RootDeviceType",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "ec2:AvailabilityZone",
+          "ec2:EbsOptimized",
+          "ec2:InstanceProfile",
+          "ec2:InstanceType",
+          "ec2:PlacementGroup",
+          "ec2:Tenancy",
+          "ec2:ResourceTag/",
+          "ec2:Subnet",
+          "ec2:Vpc",
+          "ec2:Encrypted",
+          "ec2:ParentSnapshot",
+          "ec2:VolumeIops",
+          "ec2:VolumeSize",
+          "ec2:VolumeType",
+          "ec2:PlacementGroupStrategy",
+          "ec2:ParentVolume",
+          "ec2:SnapshotTime"
+        ],
         "description": "Launches the specified number of instances using an AMI for which you have permissions.",
         "docs": {
           "api_doc": "",
@@ -28068,7 +28573,17 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:AvailabilityZone",
+          "ec2:EbsOptimized",
+          "ec2:InstanceProfile",
+          "ec2:InstanceType",
+          "ec2:PlacementGroup",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:RootDeviceType",
+          "ec2:Tenancy"
+        ],
         "description": "Starts an Amazon EBS-backed AMI that you've previously stopped.",
         "docs": {
           "api_doc": "",
@@ -28081,7 +28596,17 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:AvailabilityZone",
+          "ec2:EbsOptimized",
+          "ec2:InstanceProfile",
+          "ec2:InstanceType",
+          "ec2:PlacementGroup",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:RootDeviceType",
+          "ec2:Tenancy"
+        ],
         "description": "Stops an Amazon EBS-backed instance.",
         "docs": {
           "api_doc": "",
@@ -28094,7 +28619,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ],
         "description": "Terminates active Client VPN endpoint connections.",
         "docs": {
           "api_doc": "",
@@ -28107,7 +28635,17 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:AvailabilityZone",
+          "ec2:EbsOptimized",
+          "ec2:InstanceProfile",
+          "ec2:InstanceType",
+          "ec2:PlacementGroup",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:RootDeviceType",
+          "ec2:Tenancy"
+        ],
         "description": "Shuts down one or more instances.",
         "docs": {
           "api_doc": "",
@@ -28159,7 +28697,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Vpc"
+        ],
         "description": "[EC2-VPC only] Update descriptions for one or more egress rules of a security group. This action doesn't apply to security groups for use in EC2-Classic.",
         "docs": {
           "api_doc": "",
@@ -28172,7 +28714,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}",
+          "ec2:Vpc"
+        ],
         "description": "Update descriptions for one or more ingress rules of a security group.",
         "docs": {
           "api_doc": "",
@@ -28215,7 +28761,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Attaches one or more EC2 instances to the specified Auto Scaling group.",
         "docs": {
           "api_doc": "",
@@ -28229,7 +28778,9 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "autoscaling:TargetGroupARNs"
+          "autoscaling:TargetGroupARNs",
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
         ],
         "description": "Attaches one or more target groups to the specified Auto Scaling group.",
         "docs": {
@@ -28244,7 +28795,9 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "autoscaling:LoadBalancerNames"
+          "autoscaling:LoadBalancerNames",
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
         ],
         "description": "Attaches one or more load balancers to the specified Auto Scaling group.",
         "docs": {
@@ -28258,7 +28811,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified scheduled actions.",
         "docs": {
           "api_doc": "",
@@ -28271,7 +28827,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Creates or updates multiple scheduled scaling actions for an Auto Scaling group.",
         "docs": {
           "api_doc": "",
@@ -28284,7 +28843,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Completes the lifecycle action for the specified token or instance with the specified result.",
         "docs": {
           "api_doc": "",
@@ -28307,7 +28869,9 @@
           "autoscaling:TargetGroupARNs",
           "autoscaling:VPCZoneIdentifiers",
           "aws:RequestTag/${TagKey}",
-          "aws:TagKeys"
+          "aws:TagKeys",
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
         ],
         "description": "Creates an Auto Scaling group with the specified name and attributes.",
         "docs": {
@@ -28341,7 +28905,9 @@
         "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
-          "aws:TagKeys"
+          "aws:TagKeys",
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
         ],
         "description": "Creates or updates tags for the specified Auto Scaling group.",
         "docs": {
@@ -28355,7 +28921,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified Auto Scaling group.",
         "docs": {
           "api_doc": "",
@@ -28381,7 +28950,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified lifecycle hook.",
         "docs": {
           "api_doc": "",
@@ -28394,7 +28966,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified notification.",
         "docs": {
           "api_doc": "",
@@ -28407,7 +28982,10 @@
           "Permissions"
         ],
         "calculated_action_group": "Permissions",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified Auto Scaling policy.",
         "docs": {
           "api_doc": "",
@@ -28420,7 +28998,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified scheduled action.",
         "docs": {
           "api_doc": "",
@@ -28436,7 +29017,9 @@
         "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
-          "aws:TagKeys"
+          "aws:TagKeys",
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
         ],
         "description": "Deletes the specified tags.",
         "docs": {
@@ -28719,7 +29302,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Removes one or more instances from the specified Auto Scaling group.",
         "docs": {
           "api_doc": "",
@@ -28733,7 +29319,9 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "autoscaling:TargetGroupARNs"
+          "autoscaling:TargetGroupARNs",
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
         ],
         "description": "Detaches one or more target groups from the specified Auto Scaling group.",
         "docs": {
@@ -28748,7 +29336,9 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "autoscaling:LoadBalancerNames"
+          "autoscaling:LoadBalancerNames",
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
         ],
         "description": "Removes one or more load balancers from the specified Auto Scaling group.",
         "docs": {
@@ -28762,7 +29352,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Disables monitoring of the specified metrics for the specified Auto Scaling group.",
         "docs": {
           "api_doc": "",
@@ -28775,7 +29368,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Enables monitoring of the specified metrics for the specified Auto Scaling group.",
         "docs": {
           "api_doc": "",
@@ -28788,7 +29384,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Moves the specified instances into Standby mode.",
         "docs": {
           "api_doc": "",
@@ -28801,7 +29400,10 @@
           "Permissions"
         ],
         "calculated_action_group": "Permissions",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Executes the specified policy.",
         "docs": {
           "api_doc": "",
@@ -28814,7 +29416,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Moves the specified instances out of Standby mode.",
         "docs": {
           "api_doc": "",
@@ -28827,7 +29432,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Creates or updates a lifecycle hook for the specified Auto Scaling Group.",
         "docs": {
           "api_doc": "",
@@ -28840,7 +29448,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Configures an Auto Scaling group to send notifications when specified events take place.",
         "docs": {
           "api_doc": "",
@@ -28853,7 +29464,10 @@
           "Permissions"
         ],
         "calculated_action_group": "Permissions",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Creates or updates a policy for an Auto Scaling group.",
         "docs": {
           "api_doc": "",
@@ -28868,7 +29482,9 @@
         "calculated_action_group": "Write",
         "condition_keys": [
           "autoscaling:MaxSize",
-          "autoscaling:MinSize"
+          "autoscaling:MinSize",
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
         ],
         "description": "Creates or updates a scheduled scaling action for an Auto Scaling group.",
         "docs": {
@@ -28882,7 +29498,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Records a heartbeat for the lifecycle action associated with the specified token or instance.",
         "docs": {
           "api_doc": "",
@@ -28895,7 +29514,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Resumes the specified suspended Auto Scaling processes, or all suspended process, for the specified Auto Scaling group.",
         "docs": {
           "api_doc": "",
@@ -28908,7 +29530,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Sets the size of the specified Auto Scaling group.",
         "docs": {
           "api_doc": "",
@@ -28921,7 +29546,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Sets the health status of the specified instance.",
         "docs": {
           "api_doc": "",
@@ -28934,7 +29562,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Updates the instance protection settings of the specified instances.",
         "docs": {
           "api_doc": "",
@@ -28947,7 +29578,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Suspends the specified Auto Scaling processes, or all processes, for the specified Auto Scaling group.",
         "docs": {
           "api_doc": "",
@@ -28960,7 +29594,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Terminates the specified instance and optionally adjusts the desired group size.",
         "docs": {
           "api_doc": "",
@@ -28978,7 +29615,9 @@
           "autoscaling:LaunchConfigurationName",
           "autoscaling:MaxSize",
           "autoscaling:MinSize",
-          "autoscaling:VPCZoneIdentifiers"
+          "autoscaling:VPCZoneIdentifiers",
+          "autoscaling:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
         ],
         "description": "Updates the configuration for the specified Auto Scaling group.",
         "docs": {
@@ -30005,7 +30644,9 @@
         ],
         "calculated_action_group": "Tagging",
         "condition_keys": [
-          "elasticmapreduce:RequestTag/${TagKey}"
+          "elasticmapreduce:RequestTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
         ],
         "description": "Grants permission to add tags to an Amazon EMR resource.",
         "docs": {
@@ -30034,7 +30675,9 @@
         ],
         "calculated_action_group": "Tagging",
         "condition_keys": [
-          "elasticmapreduce:RequestTag/${TagKey}"
+          "elasticmapreduce:RequestTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
         ],
         "description": "Grants permission to create an EMR notebook.",
         "docs": {
@@ -30328,7 +30971,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to remove tags from an Amazon EMR resource.",
         "docs": {
           "api_doc": "",
@@ -30343,7 +30988,9 @@
         ],
         "calculated_action_group": "Tagging",
         "condition_keys": [
-          "elasticmapreduce:RequestTag/${TagKey}"
+          "elasticmapreduce:RequestTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
         ],
         "description": "Grants permission to create and launch a cluster (job flow).",
         "docs": {
@@ -31033,7 +31680,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to cancel in-progress environment configuration update or application version deployment.",
         "docs": {
           "api_doc": "",
@@ -31047,7 +31696,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to add tags to an Elastic Beanstalk resource and to update tag values.",
         "docs": {
           "api_doc": "",
@@ -31060,7 +31712,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to apply a scheduled managed action immediately.",
         "docs": {
           "api_doc": "",
@@ -31087,7 +31741,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to create or update a group of environments, each running a separate component of a single application.",
         "docs": {
           "api_doc": "",
@@ -31100,7 +31756,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create a new application.",
         "docs": {
           "api_doc": "",
@@ -31113,7 +31772,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create an application version for an application.",
         "docs": {
           "api_doc": "",
@@ -31132,7 +31795,10 @@
           "elasticbeanstalk:FromConfigurationTemplate",
           "elasticbeanstalk:FromEnvironment",
           "elasticbeanstalk:FromPlatform",
-          "elasticbeanstalk:FromSolutionStack"
+          "elasticbeanstalk:FromSolutionStack",
+          "elasticbeanstalk:InApplication",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
         ],
         "description": "Grants permission to create a configuration template.",
         "docs": {
@@ -31150,7 +31816,10 @@
           "elasticbeanstalk:FromApplicationVersion",
           "elasticbeanstalk:FromConfigurationTemplate",
           "elasticbeanstalk:FromPlatform",
-          "elasticbeanstalk:FromSolutionStack"
+          "elasticbeanstalk:FromSolutionStack",
+          "elasticbeanstalk:InApplication",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
         ],
         "description": "Grants permission to launch an environment for an application.",
         "docs": {
@@ -31164,7 +31833,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create a new version of a custom platform.",
         "docs": {
           "api_doc": "",
@@ -31203,7 +31875,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to delete an application version from an application.",
         "docs": {
           "api_doc": "",
@@ -31216,7 +31890,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to delete a configuration template.",
         "docs": {
           "api_doc": "",
@@ -31229,7 +31905,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to delete the draft configuration associated with the running environment.",
         "docs": {
           "api_doc": "",
@@ -31271,7 +31949,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to retrieve a list of application versions stored in an AWS Elastic Beanstalk storage bucket.",
         "docs": {
           "api_doc": "",
@@ -31300,7 +31980,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to retrieve descriptions of environment configuration options.",
         "docs": {
           "api_doc": "",
@@ -31314,7 +31996,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to retrieve a description of the settings for a configuration set.",
         "docs": {
           "api_doc": "",
@@ -31342,7 +32026,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to retrieve a list of an environment's completed and failed managed actions.",
         "docs": {
           "api_doc": "",
@@ -31356,7 +32042,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to retrieve a list of an environment's upcoming and in-progress managed actions.",
         "docs": {
           "api_doc": "",
@@ -31370,7 +32058,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to retrieve a list of AWS resources for an environment.",
         "docs": {
           "api_doc": "",
@@ -31385,7 +32075,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to retrieve descriptions for existing environments.",
         "docs": {
           "api_doc": "",
@@ -31399,7 +32091,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to retrieve a list of event descriptions matching a set of criteria.",
         "docs": {
           "api_doc": "",
@@ -31484,7 +32178,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to delete and recreate all of the AWS resources for an environment and to force a restart.",
         "docs": {
           "api_doc": "",
@@ -31498,7 +32194,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to remove tags from an Elastic Beanstalk resource.",
         "docs": {
           "api_doc": "",
@@ -31512,7 +32210,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to initiate a request to compile information of the deployed environment.",
         "docs": {
           "api_doc": "",
@@ -31525,7 +32225,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to request an environment to restart the application container server running on each Amazon EC2 instance.",
         "docs": {
           "api_doc": "",
@@ -31539,7 +32241,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to retrieve the compiled information from a RequestEnvironmentInfo request.",
         "docs": {
           "api_doc": "",
@@ -31553,7 +32257,8 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "elasticbeanstalk:FromEnvironment"
+          "elasticbeanstalk:FromEnvironment",
+          "elasticbeanstalk:InApplication"
         ],
         "description": "Grants permission to swap the CNAMEs of two environments.",
         "docs": {
@@ -31567,7 +32272,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to terminate an environment.",
         "docs": {
           "api_doc": "",
@@ -31606,7 +32313,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to update an application version with specified properties.",
         "docs": {
           "api_doc": "",
@@ -31625,7 +32334,8 @@
           "elasticbeanstalk:FromConfigurationTemplate",
           "elasticbeanstalk:FromEnvironment",
           "elasticbeanstalk:FromPlatform",
-          "elasticbeanstalk:FromSolutionStack"
+          "elasticbeanstalk:FromSolutionStack",
+          "elasticbeanstalk:InApplication"
         ],
         "description": "Grants permission to update a configuration template with specified properties or configuration option values.",
         "docs": {
@@ -31643,7 +32353,8 @@
           "elasticbeanstalk:FromApplicationVersion",
           "elasticbeanstalk:FromConfigurationTemplate",
           "elasticbeanstalk:FromPlatform",
-          "elasticbeanstalk:FromSolutionStack"
+          "elasticbeanstalk:FromSolutionStack",
+          "elasticbeanstalk:InApplication"
         ],
         "description": "Grants permission to update an environment.",
         "docs": {
@@ -31658,7 +32369,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticbeanstalk:InApplication"
+        ],
         "description": "Grants permission to check the validity of a set of configuration settings for a configuration template or an environment.",
         "docs": {
           "api_doc": "",
@@ -32133,7 +32846,12 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ecs:cluster",
+          "ecs:task-definition",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Runs and maintains a desired number of tasks from a specified task definition.",
         "docs": {
           "api_doc": "",
@@ -32146,7 +32864,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ecs:cluster",
+          "ecs:service",
+          "ecs:task-definition"
+        ],
         "description": "Creates a new Amazon ECS task set.",
         "docs": {
           "api_doc": "",
@@ -32200,7 +32922,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ecs:cluster"
+        ],
         "description": "Deletes a specified service within a cluster.",
         "docs": {
           "api_doc": "",
@@ -32213,7 +32937,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ecs:cluster",
+          "ecs:service"
+        ],
         "description": "Deletes the specified task set.",
         "docs": {
           "api_doc": "",
@@ -32283,7 +33010,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "ecs:cluster"
+        ],
         "description": "Describes the specified services running in your cluster.",
         "docs": {
           "api_doc": "",
@@ -32311,7 +33040,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "ecs:cluster",
+          "ecs:service"
+        ],
         "description": "Describes Amazon ECS task sets.",
         "docs": {
           "api_doc": "",
@@ -32415,7 +33147,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "ecs:cluster"
+        ],
         "description": "Lists the services that are running in a specified cluster.",
         "docs": {
           "api_doc": "",
@@ -32732,7 +33466,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ecs:cluster",
+          "ecs:task-definition"
+        ],
         "description": "Modifies the desired count, deployment configuration, or task definition used in a service.",
         "docs": {
           "api_doc": "",
@@ -32745,7 +33482,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ecs:cluster"
+        ],
         "description": "Modifies the primary task set used in a service.",
         "docs": {
           "api_doc": "",
@@ -32758,7 +33497,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ecs:cluster",
+          "ecs:service"
+        ],
         "description": "Updates the specified task set.",
         "docs": {
           "api_doc": "",
@@ -45139,7 +45881,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a detector model.",
         "docs": {
           "api_doc": "",
@@ -45152,7 +45897,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates an input.",
         "docs": {
           "api_doc": "",
@@ -47198,7 +47946,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates an application.",
         "docs": {
           "api_doc": "",
@@ -50774,7 +51525,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create a cluster.",
         "docs": {
           "api_doc": "",
@@ -58415,7 +59169,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "quicksight:UserName"
+        ],
         "description": "Add a QuickSight user to a QuickSight group.",
         "docs": {
           "api_doc": "",
@@ -58467,7 +59223,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "quicksight:UserName"
+        ],
         "description": "Remove a user from a group so that he/she is no longer a member of the group.",
         "docs": {
           "api_doc": "",
@@ -58622,7 +59380,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "quicksight:IamArn",
+          "quicksight:SessionName"
+        ],
         "description": "Create a QuickSight user, whose identity is associated with the IAM identity/role specified in the request.",
         "docs": {
           "api_doc": "",
@@ -58730,7 +59491,12 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:DatabaseEngine",
+          "rds:DatabaseName",
+          "rds:Vpc",
+          "rds:cluster-tag"
+        ],
         "description": "Associates an Identity and Access Management (IAM) role from an Aurora DB cluster.",
         "docs": {
           "api_doc": "",
@@ -58756,7 +59522,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:es-tag"
+        ],
         "description": "Adds a source identifier to an existing RDS event notification subscription.",
         "docs": {
           "api_doc": "",
@@ -58770,7 +59538,17 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:db-tag",
+          "rds:req-tag",
+          "rds:es-tag",
+          "rds:og-tag",
+          "rds:pg-tag",
+          "rds:ri-tag",
+          "rds:secgrp-tag",
+          "rds:snapshot-tag",
+          "rds:subgrp-tag"
+        ],
         "description": "Adds metadata tags to an Amazon RDS resource.",
         "docs": {
           "api_doc": "",
@@ -58783,7 +59561,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:db-tag"
+        ],
         "description": "Applies a pending maintenance action to a resource.",
         "docs": {
           "api_doc": "",
@@ -58796,7 +59576,9 @@
           "Permissions"
         ],
         "calculated_action_group": "Permissions",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:secgrp-tag"
+        ],
         "description": "Enables ingress to a DBSecurityGroup using one of two forms of authorization.",
         "docs": {
           "api_doc": "",
@@ -58835,7 +59617,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-snapshot-tag"
+        ],
         "description": "Creates a snapshot of a DB cluster.",
         "docs": {
           "api_doc": "",
@@ -58848,7 +59632,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:pg-tag"
+        ],
         "description": "Copies the specified DB parameter group.",
         "docs": {
           "api_doc": "",
@@ -58861,7 +59647,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:snapshot-tag"
+        ],
         "description": "Copies the specified DB snapshot.",
         "docs": {
           "api_doc": "",
@@ -58874,7 +59662,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:og-tag"
+        ],
         "description": "Copies the specified option group.",
         "docs": {
           "api_doc": "",
@@ -58888,7 +59678,15 @@
           "Tagging"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:DatabaseEngine",
+          "rds:DatabaseName",
+          "rds:Vpc",
+          "rds:req-tag",
+          "rds:cluster-pg-tag",
+          "rds:og-tag",
+          "rds:subgrp-tag"
+        ],
         "description": "Creates a new Amazon Aurora DB cluster.",
         "docs": {
           "api_doc": "",
@@ -58901,7 +59699,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-tag",
+          "rds:EndpointType"
+        ],
         "description": "Creates a new custom endpoint and associates it with an Amazon Aurora DB cluster.",
         "docs": {
           "api_doc": "",
@@ -58915,7 +59716,9 @@
           "Tagging"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:req-tag"
+        ],
         "description": "Create a new DB cluster parameter group.",
         "docs": {
           "api_doc": "",
@@ -58929,7 +59732,10 @@
           "Tagging"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-tag",
+          "rds:req-tag"
+        ],
         "description": "Creates a snapshot of a DB cluster.",
         "docs": {
           "api_doc": "",
@@ -58943,7 +59749,21 @@
           "Tagging"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:DatabaseClass",
+          "rds:DatabaseEngine",
+          "rds:DatabaseName",
+          "rds:MultiAz",
+          "rds:Piops",
+          "rds:StorageSize",
+          "rds:StorageEncrypted",
+          "rds:Vpc",
+          "rds:req-tag",
+          "rds:og-tag",
+          "rds:pg-tag",
+          "rds:secgrp-tag",
+          "rds:subgrp-tag"
+        ],
         "description": "Creates a new DB instance.",
         "docs": {
           "api_doc": "",
@@ -58957,7 +59777,13 @@
           "Tagging"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:Piops",
+          "rds:DatabaseClass",
+          "rds:req-tag",
+          "rds:og-tag",
+          "rds:subgrp-tag"
+        ],
         "description": "Creates a DB instance that acts as a Read Replica of a source DB instance.",
         "docs": {
           "api_doc": "",
@@ -58971,7 +59797,9 @@
           "Tagging"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:req-tag"
+        ],
         "description": "Creates a new DB parameter group.",
         "docs": {
           "api_doc": "",
@@ -58985,7 +59813,9 @@
           "Tagging"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:req-tag"
+        ],
         "description": "Creates a new DB security group. DB security groups control access to a DB instance.",
         "docs": {
           "api_doc": "",
@@ -58999,7 +59829,10 @@
           "Tagging"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:db-tag",
+          "rds:req-tag"
+        ],
         "description": "Creates a DBSnapshot.",
         "docs": {
           "api_doc": "",
@@ -59013,7 +59846,9 @@
           "Tagging"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:req-tag"
+        ],
         "description": "Creates a new DB subnet group.",
         "docs": {
           "api_doc": "",
@@ -59027,7 +59862,9 @@
           "Tagging"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:req-tag"
+        ],
         "description": "Creates an RDS event notification subscription.",
         "docs": {
           "api_doc": "",
@@ -59040,7 +59877,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-tag"
+        ],
         "description": "Creates an Aurora global database spread across multiple regions.",
         "docs": {
           "api_doc": "",
@@ -59054,7 +59893,9 @@
           "Tagging"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:req-tag"
+        ],
         "description": "Creates a new option group.",
         "docs": {
           "api_doc": "",
@@ -59067,7 +59908,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-tag",
+          "rds:cluster-snapshot-tag"
+        ],
         "description": "The DeleteDBCluster action deletes a previously provisioned DB cluster.",
         "docs": {
           "api_doc": "",
@@ -59080,7 +59924,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:EndpointType"
+        ],
         "description": "Deletes a custom endpoint and removes it from an Amazon Aurora DB cluster.",
         "docs": {
           "api_doc": "",
@@ -59093,7 +59939,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-pg-tag"
+        ],
         "description": "Deletes a specified DB cluster parameter group.",
         "docs": {
           "api_doc": "",
@@ -59106,7 +59954,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-snapshot-tag"
+        ],
         "description": "Deletes a DB cluster snapshot.",
         "docs": {
           "api_doc": "",
@@ -59119,7 +59969,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:db-tag"
+        ],
         "description": "The DeleteDBInstance action deletes a previously provisioned DB instance.",
         "docs": {
           "api_doc": "",
@@ -59145,7 +59997,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:pg-tag"
+        ],
         "description": "Deletes a specified DBParameterGroup.",
         "docs": {
           "api_doc": "",
@@ -59158,7 +60012,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:secgrp-tag"
+        ],
         "description": "Deletes a DB security group.",
         "docs": {
           "api_doc": "",
@@ -59171,7 +60027,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:snapshot-tag"
+        ],
         "description": "Deletes a DBSnapshot.",
         "docs": {
           "api_doc": "",
@@ -59184,7 +60042,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:subgrp-tag"
+        ],
         "description": "Deletes a DB subnet group.",
         "docs": {
           "api_doc": "",
@@ -59197,7 +60057,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:es-tag"
+        ],
         "description": "Deletes an RDS event notification subscription.",
         "docs": {
           "api_doc": "",
@@ -59223,7 +60085,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:og-tag"
+        ],
         "description": "Deletes an existing option group.",
         "docs": {
           "api_doc": "",
@@ -59268,7 +60132,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-tag"
+        ],
         "description": "Returns information about backtracks for a DB cluster.",
         "docs": {
           "api_doc": "",
@@ -59298,7 +60164,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-pg-tag"
+        ],
         "description": "Returns a list of DBClusterParameterGroup descriptions.",
         "docs": {
           "api_doc": "",
@@ -59313,7 +60181,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-pg-tag"
+        ],
         "description": "Returns the detailed parameter list for a particular DB cluster parameter group.",
         "docs": {
           "api_doc": "",
@@ -59328,7 +60198,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-snapshot-tag"
+        ],
         "description": "Returns a list of DB cluster snapshot attribute names and values for a manual DB cluster snapshot.",
         "docs": {
           "api_doc": "",
@@ -59357,7 +60229,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-tag"
+        ],
         "description": "Returns information about provisioned Aurora DB clusters.",
         "docs": {
           "api_doc": "",
@@ -59372,7 +60246,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:pg-tag"
+        ],
         "description": "Returns a list of the available DB engines.",
         "docs": {
           "api_doc": "",
@@ -59417,7 +60293,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:db-tag"
+        ],
         "description": "Returns a list of DB log files for the DB instance.",
         "docs": {
           "api_doc": "",
@@ -59432,7 +60310,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:pg-tag"
+        ],
         "description": "Returns a list of DBParameterGroup descriptions.",
         "docs": {
           "api_doc": "",
@@ -59447,7 +60327,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:pg-tag"
+        ],
         "description": "Returns the detailed parameter list for a particular DB parameter group.",
         "docs": {
           "api_doc": "",
@@ -59462,7 +60344,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:secgrp-tag"
+        ],
         "description": "Returns a list of DBSecurityGroup descriptions.",
         "docs": {
           "api_doc": "",
@@ -59477,7 +60361,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:snapshot-tag"
+        ],
         "description": "Returns a list of DB snapshot attribute names and values for a manual DB snapshot.",
         "docs": {
           "api_doc": "",
@@ -59492,7 +60378,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:db-tag",
+          "rds:snapshot-tag"
+        ],
         "description": "Returns information about DB snapshots.",
         "docs": {
           "api_doc": "",
@@ -59507,7 +60396,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:subgrp-tag"
+        ],
         "description": "Returns a list of DBSubnetGroup descriptions.",
         "docs": {
           "api_doc": "",
@@ -59567,7 +60458,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:es-tag"
+        ],
         "description": "Lists all the subscription descriptions for a customer account.",
         "docs": {
           "api_doc": "",
@@ -59582,7 +60475,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:es-tag"
+        ],
         "description": "Returns events related to DB instances, DB security groups, DB snapshots, and DB parameter groups for the past 14 days.",
         "docs": {
           "api_doc": "",
@@ -59612,7 +60507,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:og-tag"
+        ],
         "description": "Describes all available options.",
         "docs": {
           "api_doc": "",
@@ -59627,7 +60524,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:og-tag"
+        ],
         "description": "Describes the available option groups.",
         "docs": {
           "api_doc": "",
@@ -59657,7 +60556,16 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:DatabaseClass",
+          "rds:DatabaseEngine",
+          "rds:DatabaseName",
+          "rds:MultiAz",
+          "rds:Piops",
+          "rds:StorageSize",
+          "rds:Vpc",
+          "rds:db-tag"
+        ],
         "description": "Returns a list of resources (for example, DB instances) that have at least one pending maintenance action.",
         "docs": {
           "api_doc": "",
@@ -59672,7 +60580,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:DatabaseClass",
+          "rds:MultiAz",
+          "rds:ri-tag"
+        ],
         "description": "Returns information about reserved DB instances for this account, or about a specified reserved DB instance.",
         "docs": {
           "api_doc": "",
@@ -59687,7 +60599,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:db-tag"
+        ],
         "description": "Lists available reserved DB instance offerings.",
         "docs": {
           "api_doc": "",
@@ -59717,7 +60631,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:db-tag"
+        ],
         "description": "Lists available modifications you can make to your DB instance",
         "docs": {
           "api_doc": "",
@@ -59745,7 +60661,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:db-tag"
+        ],
         "description": "Downloads all or a portion of the specified log file, up to 1 MB in size.",
         "docs": {
           "api_doc": "",
@@ -59758,7 +60676,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-tag"
+        ],
         "description": "Forces a failover for a DB cluster.",
         "docs": {
           "api_doc": "",
@@ -59772,7 +60692,16 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:db-tag",
+          "rds:es-tag",
+          "rds:og-tag",
+          "rds:pg-tag",
+          "rds:ri-tag",
+          "rds:secgrp-tag",
+          "rds:snapshot-tag",
+          "rds:subgrp-tag"
+        ],
         "description": "Lists all tags on an Amazon RDS resource.",
         "docs": {
           "api_doc": "",
@@ -59785,7 +60714,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-tag"
+        ],
         "description": "Modify current cluster capacity for an Amazon Aurora Severless DB cluster.",
         "docs": {
           "api_doc": "",
@@ -59798,7 +60729,12 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:Vpc",
+          "rds:cluster-tag",
+          "rds:cluster-pg-tag",
+          "rds:og-tag"
+        ],
         "description": "Modify a setting for an Amazon Aurora DB cluster.",
         "docs": {
           "api_doc": "",
@@ -59811,7 +60747,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:EndpointType"
+        ],
         "description": "Modifies the properties of an endpoint in an Amazon Aurora DB cluster.",
         "docs": {
           "api_doc": "",
@@ -59824,7 +60762,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-pg-tag"
+        ],
         "description": "Modifies the parameters of a DB cluster parameter group.",
         "docs": {
           "api_doc": "",
@@ -59837,7 +60777,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-snapshot-tag"
+        ],
         "description": "Adds an attribute and values to, or removes an attribute and values from, a manual DB cluster snapshot.",
         "docs": {
           "api_doc": "",
@@ -59850,7 +60792,17 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:DatabaseClass",
+          "rds:MultiAz",
+          "rds:Piops",
+          "rds:StorageSize",
+          "rds:Vpc",
+          "rds:db-tag",
+          "rds:og-tag",
+          "rds:pg-tag",
+          "rds:secgrp-tag"
+        ],
         "description": "Modify settings for a DB instance.",
         "docs": {
           "api_doc": "",
@@ -59863,7 +60815,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:pg-tag"
+        ],
         "description": "Modifies the parameters of a DB parameter group.",
         "docs": {
           "api_doc": "",
@@ -59876,7 +60830,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:snapshot-tag"
+        ],
         "description": "Updates a manual DB snapshot, which can be encrypted or not encrypted, with a new engine version.",
         "docs": {
           "api_doc": "",
@@ -59889,7 +60845,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:snapshot-tag"
+        ],
         "description": "Adds an attribute and values to, or removes an attribute and values from, a manual DB snapshot.",
         "docs": {
           "api_doc": "",
@@ -59902,7 +60860,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:subgrp-tag"
+        ],
         "description": "Modifies an existing DB subnet group.",
         "docs": {
           "api_doc": "",
@@ -59915,7 +60875,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:es-tag"
+        ],
         "description": "Modifies an existing RDS event notification subscription.",
         "docs": {
           "api_doc": "",
@@ -59941,7 +60903,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:og-tag"
+        ],
         "description": "Modifies an existing option group.",
         "docs": {
           "api_doc": "",
@@ -59954,7 +60918,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:db-tag"
+        ],
         "description": "Promotes a Read Replica DB instance to a standalone DB instance.",
         "docs": {
           "api_doc": "",
@@ -59967,7 +60933,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-tag"
+        ],
         "description": "Promotes a Read Replica DB cluster to a standalone DB cluster.",
         "docs": {
           "api_doc": "",
@@ -59993,7 +60961,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:db-tag"
+        ],
         "description": "Rebooting a DB instance restarts the database engine service.",
         "docs": {
           "api_doc": "",
@@ -60006,7 +60976,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-tag"
+        ],
         "description": "Detaches an Aurora secondary cluster from an Aurora global database cluster.",
         "docs": {
           "api_doc": "",
@@ -60019,7 +60991,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-tag"
+        ],
         "description": "Disassociates an AWS Identity and Access Management (IAM) role from an Amazon Aurora DB cluster.",
         "docs": {
           "api_doc": "",
@@ -60045,7 +61019,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:es-tag"
+        ],
         "description": "Removes a source identifier from an existing RDS event notification subscription.",
         "docs": {
           "api_doc": "",
@@ -60059,7 +61035,17 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:db-tag",
+          "rds:req-tag",
+          "rds:es-tag",
+          "rds:og-tag",
+          "rds:pg-tag",
+          "rds:ri-tag",
+          "rds:secgrp-tag",
+          "rds:snapshot-tag",
+          "rds:subgrp-tag"
+        ],
         "description": "Removes metadata tags from an Amazon RDS resource.",
         "docs": {
           "api_doc": "",
@@ -60072,7 +61058,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-pg-tag"
+        ],
         "description": "Modifies the parameters of a DB cluster parameter group to the default value.",
         "docs": {
           "api_doc": "",
@@ -60085,7 +61073,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:pg-tag"
+        ],
         "description": "Modifies the parameters of a DB parameter group to the engine/system default value.",
         "docs": {
           "api_doc": "",
@@ -60098,7 +61088,12 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:DatabaseEngine",
+          "rds:DatabaseName",
+          "rds:Vpc",
+          "rds:req-tag"
+        ],
         "description": "Creates an Amazon Aurora DB cluster from data stored in an Amazon S3 bucket.",
         "docs": {
           "api_doc": "",
@@ -60111,7 +61106,14 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:DatabaseEngine",
+          "rds:DatabaseName",
+          "rds:Vpc",
+          "rds:req-tag",
+          "rds:cluster-snapshot-tag",
+          "rds:og-tag"
+        ],
         "description": "Creates a new DB cluster from a DB cluster snapshot.",
         "docs": {
           "api_doc": "",
@@ -60124,7 +61126,12 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:Vpc",
+          "rds:req-tag",
+          "rds:og-tag",
+          "rds:subgrp-tag"
+        ],
         "description": "Restores a DB cluster to an arbitrary point in time.",
         "docs": {
           "api_doc": "",
@@ -60137,7 +61144,18 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:DatabaseClass",
+          "rds:DatabaseEngine",
+          "rds:DatabaseName",
+          "rds:MultiAz",
+          "rds:Piops",
+          "rds:Vpc",
+          "rds:req-tag",
+          "rds:og-tag",
+          "rds:snapshot-tag",
+          "rds:subgrp-tag"
+        ],
         "description": "Creates a new DB instance from a DB snapshot.",
         "docs": {
           "api_doc": "",
@@ -60150,7 +61168,15 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:DatabaseClass",
+          "rds:DatabaseEngine",
+          "rds:DatabaseName",
+          "rds:MultiAz",
+          "rds:Piops",
+          "rds:Vpc",
+          "rds:req-tag"
+        ],
         "description": "Creates a new DB instance from an Amazon S3 bucket.",
         "docs": {
           "api_doc": "",
@@ -60163,7 +61189,18 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:DatabaseClass",
+          "rds:DatabaseEngine",
+          "rds:DatabaseName",
+          "rds:MultiAz",
+          "rds:Piops",
+          "rds:Vpc",
+          "rds:req-tag",
+          "rds:og-tag",
+          "rds:snapshot-tag",
+          "rds:subgrp-tag"
+        ],
         "description": "Restores a DB instance to an arbitrary point in time.",
         "docs": {
           "api_doc": "",
@@ -60176,7 +61213,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:secgrp-tag"
+        ],
         "description": "Revokes ingress from a DBSecurityGroup for previously authorized IP ranges or EC2 or VPC Security Groups.",
         "docs": {
           "api_doc": "",
@@ -60189,7 +61228,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-tag"
+        ],
         "description": "Starts the DB cluster.",
         "docs": {
           "api_doc": "",
@@ -60202,7 +61243,16 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:DatabaseClass",
+          "rds:DatabaseEngine",
+          "rds:DatabaseName",
+          "rds:MultiAz",
+          "rds:Piops",
+          "rds:StorageSize",
+          "rds:Vpc",
+          "rds:db-tag"
+        ],
         "description": "Starts the DB instance.",
         "docs": {
           "api_doc": "",
@@ -60215,7 +61265,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:cluster-tag"
+        ],
         "description": "Stops the DB cluster.",
         "docs": {
           "api_doc": "",
@@ -60228,7 +61280,16 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "rds:DatabaseClass",
+          "rds:DatabaseEngine",
+          "rds:DatabaseName",
+          "rds:MultiAz",
+          "rds:Piops",
+          "rds:StorageSize",
+          "rds:Vpc",
+          "rds:db-tag"
+        ],
         "description": "Stops the DB instance.",
         "docs": {
           "api_doc": "",
@@ -62083,7 +63144,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ram:ShareOwnerAccountId"
+        ],
         "description": "Accept the specified resource share invitation",
         "docs": {
           "api_doc": "",
@@ -62096,7 +63159,13 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ram:AllowsExternalPrincipals",
+          "ram:Principal",
+          "ram:RequestedResourceType",
+          "ram:ResourceArn",
+          "ram:ResourceShareName"
+        ],
         "description": "Associates resource(s) and/or principal(s) to a resource share",
         "docs": {
           "api_doc": "",
@@ -62111,7 +63180,11 @@
         "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
-          "aws:TagKeys"
+          "aws:TagKeys",
+          "ram:Principal",
+          "ram:RequestedResourceType",
+          "ram:ResourceArn",
+          "ram:AllowsExternalPrincipals"
         ],
         "description": "Create resource share with provided resource(s) and/or principal(s)",
         "docs": {
@@ -62125,7 +63198,13 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ram:AllowsExternalPrincipals",
+          "ram:Principal",
+          "ram:RequestedResourceType",
+          "ram:ResourceArn",
+          "ram:ResourceShareName"
+        ],
         "description": "Delete resource share",
         "docs": {
           "api_doc": "",
@@ -62138,7 +63217,13 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ram:AllowsExternalPrincipals",
+          "ram:Principal",
+          "ram:RequestedResourceType",
+          "ram:ResourceArn",
+          "ram:ResourceShareName"
+        ],
         "description": "Disassociates resource(s) and/or principal(s) from a resource share",
         "docs": {
           "api_doc": "",
@@ -62179,7 +63264,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "ram:ResourceShareName"
+        ],
         "description": "Get a set of resource share associations from a provided list or with a specified status of the specified type",
         "docs": {
           "api_doc": "",
@@ -62193,7 +63280,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "ram:ShareOwnerAccountId"
+        ],
         "description": "Get resource share invitations by the specified invitation arn or those for the resource share ",
         "docs": {
           "api_doc": "",
@@ -62207,7 +63296,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "ram:ResourceShareName"
+        ],
         "description": "Get a set of resource shares from a provided list or with a specified status",
         "docs": {
           "api_doc": "",
@@ -62236,7 +63327,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "ram:Principal"
+        ],
         "description": "Retrieve list of principals for a specified resource",
         "docs": {
           "api_doc": "",
@@ -62251,7 +63344,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "ram:ResourceArn"
+        ],
         "description": "Retrieve list of resources for a specified principal",
         "docs": {
           "api_doc": "",
@@ -62264,7 +63359,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ram:ShareOwnerAccountId"
+        ],
         "description": "Reject the specified resource share invitation",
         "docs": {
           "api_doc": "",
@@ -62308,7 +63405,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ram:AllowsExternalPrincipals",
+          "ram:ResourceShareName"
+        ],
         "description": "Update attributes of the resource share",
         "docs": {
           "api_doc": "",
@@ -62426,7 +63526,10 @@
           "Tagging"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a group with a specified name, description, and resource query.",
         "docs": {
           "api_doc": "",
@@ -62540,7 +63643,10 @@
           "Tagging"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Tags a specified resource group",
         "docs": {
           "api_doc": "",
@@ -62554,7 +63660,9 @@
           "Tagging"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
         "description": "Removes tags associated with a specified resource group",
         "docs": {
           "api_doc": "",
@@ -62650,7 +63758,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:TagKeys",
+          "aws:RequestTag/${TagKey}"
+        ],
         "description": "Create a deployment job",
         "docs": {
           "api_doc": "",
@@ -62663,7 +63774,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:TagKeys",
+          "aws:RequestTag/${TagKey}"
+        ],
         "description": "Create a fleet that represents a logical group of robots running the same robot application",
         "docs": {
           "api_doc": "",
@@ -62676,7 +63790,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:TagKeys",
+          "aws:RequestTag/${TagKey}"
+        ],
         "description": "Create a robot that can be registered to a fleet",
         "docs": {
           "api_doc": "",
@@ -62689,7 +63806,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:TagKeys",
+          "aws:RequestTag/${TagKey}"
+        ],
         "description": "Create a robot application",
         "docs": {
           "api_doc": "",
@@ -62715,7 +63835,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:TagKeys",
+          "aws:RequestTag/${TagKey}"
+        ],
         "description": "Create a robot application",
         "docs": {
           "api_doc": "",
@@ -62741,7 +63864,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:TagKeys",
+          "aws:RequestTag/${TagKey}"
+        ],
         "description": "Create a simulation job",
         "docs": {
           "api_doc": "",
@@ -65910,7 +67036,11 @@
           "s3:x-amz-server-side-encryption",
           "s3:x-amz-server-side-encryption-aws-kms-key-id",
           "s3:x-amz-storage-class",
-          "s3:x-amz-website-redirect-location"
+          "s3:x-amz-website-redirect-location",
+          "s3:object-lock-mode",
+          "s3:object-lock-retain-until-date",
+          "s3:object-lock-remaining-retention-days",
+          "s3:object-lock-legal-hold"
         ],
         "description": "Adds an object to a bucket.",
         "docs": {
@@ -69248,7 +70378,17 @@
           "<web-identity-provider>:aud",
           "<web-identity-provider>:oaud",
           "<web-identity-provider>:sub",
-          "aws:FederatedProvider"
+          "aws:FederatedProvider",
+          "cognito-identity.amazonaws.com:amr",
+          "cognito-identity.amazonaws.com:aud",
+          "cognito-identity.amazonaws.com:sub",
+          "www.amazon.com:app_id",
+          "www.amazon.com:user_id",
+          "graph.facebook.com:app_id",
+          "graph.facebook.com:id",
+          "accounts.google.com:aud",
+          "accounts.google.com:oaud",
+          "accounts.google.com:sub"
         ],
         "description": "Returns a set of temporary security credentials for users who have been authenticated in a mobile or web application with a web identity provider",
         "docs": {
@@ -69547,7 +70687,8 @@
         "calculated_action_group": "Read",
         "condition_keys": [
           " swf:workflowType.name",
-          "swf:workflowType.version"
+          "swf:workflowType.version",
+          "swf:workflowType.name"
         ],
         "description": "Returns information about the specified workflow type.",
         "docs": {
@@ -71849,7 +72990,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Enables the AWS Security Hub service.",
         "docs": {
           "api_doc": "",
@@ -76453,7 +77597,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates an SSM document.",
         "docs": {
           "api_doc": "",
@@ -77727,7 +78874,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Add a parameter to the system.",
         "docs": {
           "api_doc": "",
@@ -77832,7 +78982,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ssm:resourceTag/tag-key"
+        ],
         "description": "Executes commands on one or more remote instances.",
         "docs": {
           "api_doc": "",
@@ -77871,7 +79023,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "ssm:SessionDocumentAccessCheck"
+        ],
         "description": "Start a connection to an instance using SSM Session Manager.",
         "docs": {
           "api_doc": "",
@@ -78916,7 +80070,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a RateBasedRule, which contains a RateLimit specifying the maximum number of requests that AWS WAF allows from a specified IP address in a five-minute period.",
         "docs": {
           "api_doc": "",
@@ -78955,7 +80112,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a Rule, which contains the IPSet objects, ByteMatchSet objects, and other predicates that identify the requests that you want to block.",
         "docs": {
           "api_doc": "",
@@ -78968,7 +80128,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a RuleGroup. A rule group is a collection of predefined rules that you add to a WebACL.",
         "docs": {
           "api_doc": "",
@@ -79007,7 +80170,10 @@
           "Permissions"
         ],
         "calculated_action_group": "Permissions",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a WebACL, which contains the Rules that identify the CloudFront web requests that you want to allow, block, or count.",
         "docs": {
           "api_doc": "",
@@ -79990,7 +81156,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a RateBasedRule, which contains a RateLimit specifying the maximum number of requests that AWS WAF allows from a specified IP address n a five-minute period.",
         "docs": {
           "api_doc": "",
@@ -80029,7 +81198,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a Rule, which contains the IPSet objects, ByteMatchSet objects, and other predicates that identify the requests that you want to lock.",
         "docs": {
           "api_doc": "",
@@ -80042,7 +81214,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a RuleGroup. A rule group is a collection of predefined rules that you add to a WebACL.",
         "docs": {
           "api_doc": "",
@@ -80081,7 +81256,10 @@
           "Permissions"
         ],
         "calculated_action_group": "Permissions",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a WebACL, which contains the Rules that identify the CloudFront web requests that you want to allow, block, or count.",
         "docs": {
           "api_doc": "",
