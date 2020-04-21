@@ -138,7 +138,7 @@ class PolicyTestCase(unittest.TestCase):
         self.assertEqual(
             summary,
             {
-                "ec2": {"List", "Write", "Read", "Tagging"},
+                "ec2": {"List", "Write", "Read", "Tagging", "Permissions"},
                 "s3": {"Write", "Read", "List", "Permissions", "Tagging"},
             },
         )
