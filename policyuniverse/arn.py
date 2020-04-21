@@ -24,6 +24,7 @@ import re
 
 
 class ARN(object):
+    arn = None
     tech = None
     region = None
     account_number = None
@@ -34,6 +35,7 @@ class ARN(object):
     service = False
 
     def __init__(self, input):
+        self.arn = input
         arn_match = re.search(
             r"^arn:([^:]*):([^:]*):([^:]*):(|\*|[\d]{12}|cloudfront|aws):(.+)$", input
         )
