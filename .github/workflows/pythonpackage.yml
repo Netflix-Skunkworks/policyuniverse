@@ -1,0 +1,49 @@
+name: Python package
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 5
+      matrix:
+        python-version: [2.7, 3.5, 3.6, 3.7, 3.8]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -e .
+    - name: Lint with flake8
+      run: |
+        pip install flake8
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Check syntax with Python Black on py37
+      if: matrix.python-version == '3.7'
+      run: |
+        pip install black
+        black --check policyuniverse
+    - name: Test with pytest/coverage
+      run: |
+        pip install pytest coveralls
+        coverage run -a -m py.test policyuniverse/tests/test_expander_minimizer.py
+        coverage run -a -m py.test policyuniverse/tests/test_arn.py
+        coverage run -a -m py.test policyuniverse/tests/test_statement.py
+        coverage run -a -m py.test policyuniverse/tests/test_policy.py
+
+    - name: Upload coverage data under py37
+      env:
+        COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+      if: success() && matrix.python-version == '3.7'
+      run: |
+        coveralls
