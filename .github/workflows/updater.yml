@@ -10,21 +10,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Set up Python 3.8
         uses: actions/setup-python@v1
         with:
           python-version: 3.8
+      - name: Download phantomjs
+        run: |
+          pwd &&\
+          wget -O phantomjs-2.1.1-linux-x86_64.tar.bz2 https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 &&\
+          tar -xf phantomjs-2.1.1-linux-x86_64.tar.bz2 &&\
+          ls -al
       - name: Install policyuniverse & updater python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -e .
-          pip install updater/requirements.txt
-      - name: Download phantomjs
-        run: |
-          wget -O phantomjs-2.1.1-linux-x86_64.tar.bz2 https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 &&\
-          tar -xf phantomjs-2.1.1-linux-x86_64.tar.bz2 &&\
-          ln -s phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/bin/phantomjs && \
+          pip install -r updater/requirements.txt
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -35,8 +36,40 @@ jobs:
         env:
           AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
           AWS_ROLE_NAME: ${{ secrets.AWS_ROLE_NAME }}
+        id: runupdater
         run: |
           cd updater
-          python updater.py
-          ls -al  # looking for output_formatted.json
+          python updater.py > output_summary.txt
+          output_summary=`cat output_summary.txt`
+          output_summary="${output_summary//'%'/'%25'}"
+          output_summary="${output_summary//$'\n'/'%0A'}"
+          output_summary="${output_summary//$'\r'/'%0D'}"
+          echo "::set-output name=updatersummary::$output_summary"
+          rm output_summary.txt
+          mv output_formatted.json ../policyuniverse/data.json
+          cd ..
+          sed -ri "s/(version=\"[0-9]+.[0-9]+.[0-9]+.)([0-9]+)\"/\1`date +"%Y%m%d"`\"/g" setup.py
+          rm -rf phantomjs-2.1.1-linux-x86_64/
+          rm phantomjs-2.1.1-linux-x86_64.tar.bz2
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Updating PolicyUniverse SDFs
+          committer: GitHub <noreply@github.com>
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          title: 'Updating PolicyUniverse Data.json'
+          body: ${{ steps.runupdater.outputs.updatersummary }}
+          labels: data-update, automated pr
+          assignees: scriptsrc
+          reviewers: scriptsrc
+          team-reviewers: owners, maintainers
+          draft: false
+          branch: auto_data_update
+          request-to-parent: false
+      - name: Check outputs
+        run: |
+          echo "Pull Request Number - ${{ env.PULL_REQUEST_NUMBER }}"
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
           

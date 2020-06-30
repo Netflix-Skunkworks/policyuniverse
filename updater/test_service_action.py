@@ -11,7 +11,7 @@ logging.basicConfig(
 
 class ServiceActionTest(ServiceTest):
     def setUp(self):
-        super().setUp()
+        super(ServiceActionTest, self).setUp()
         self.body = dict(
             description="Remove all entries from Queue",
             actionGroups=["ReadWrite"],
@@ -20,7 +20,11 @@ class ServiceActionTest(ServiceTest):
             docPage="",
             id="PurgeQueue",
             contextKeys=list(
-                dict(name="s3:signatureversion"), dict(name="s3:signatureage")
+                [{'description': 'Filters actions based on the Amazon Id in the request',
+                    'docPage': '',
+                    'docPageRel': 'https://docs.aws.amazon.com/a4b/latest/APIReference/API_RegisterAVSDevice.html',
+                    'name': 'a4b:amazonId',
+                    'type': 'String'}]
             ),
         )
 
@@ -43,11 +47,11 @@ class ServiceActionTest(ServiceTest):
                 PurgeQueue=dict(
                     description="Remove all entries from Queue",
                     aws_action_groups=["ReadWrite"],
-                    calculated_action_group="DataPlaneMutating",
+                    calculated_action_group="Write",
+                    condition_keys=["a4b:amazonId"],
                     docs=dict(api_doc="", doc_page_rel="", doc_page=""),
                 )
             ),
-            condition_keys=["s3:signatureage", "s3:signatureversion"],
         )
         expected = json.dumps(expected, sort_keys=True, indent=2)
 

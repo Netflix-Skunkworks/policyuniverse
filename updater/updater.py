@@ -67,15 +67,16 @@ def call_phantom(token, output_file):
     console_js = os.path.join(path, "awsconsole.js")
 
     try:
-        print("Calling Phantom!")
+        # print("Calling Phantom!")
         p = subprocess.Popen(
-            ["/usr/bin/phantomjs", console_js, token, output_file],
+            ["/home/runner/work/policyuniverse/policyuniverse/phantomjs-2.1.1-linux-x86_64/bin/phantomjs", console_js, token, output_file],
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
         )
         output, errs = p.communicate(timeout=120)
-        print("Output: ", output)
-        print("Errors: ", errs)
+        # print("Output: ", output)
+        if errs:
+            print("Errors: ", errs)
     except subprocess.TimeoutExpired:
         print("PhantomJS timed out")
         return 1  # return code 1 for timeout
@@ -83,7 +84,7 @@ def call_phantom(token, output_file):
         print("PhantomJS exited: {}".format(p.returncode))
         return p.returncode
     else:
-        print("PhantomJS exited: 0")
+        # print("PhantomJS exited: 0")
         return 0
 
 
@@ -131,9 +132,10 @@ def process_data(service_data):
 def _print_updated_actions(service, actions, verb):
     """Prints any added/removed actions."""
     if actions:
-        print('Service "{service}" {verb}:'.format(service=service, verb=verb))
-        for action in actions:
-            print("\t{action}".format(action=action))
+        print('**Service "{service}" {verb}:**'.format(service=service, verb=verb))
+        for action in sorted(list(actions)):
+            print("- {action}".format(action=action))
+        print("")
 
 
 def updates_available(service_data):
@@ -151,9 +153,9 @@ def updates_available(service_data):
     services_removed = set(deployed_data.keys()) - set(service_data.keys())
 
     if services_added:
-        print("Services Added:   ", services_added)
+        print("**Services Added:**   ", sorted(list(services_added)))
     if services_removed:
-        print("Services Removed: ", services_removed)
+        print("**Services Removed:** ", sorted(list(services_removed)))
 
     services_in_both = set(service_data.keys()).intersection(set(deployed_data.keys()))
 
@@ -197,19 +199,6 @@ def updates_available(service_data):
     return True
 
 
-def create_pull_request(service_data):
-    """
-    Create a pull request to https://github.com/Netflix-Skunkworks/policyuniverse
-    """
-    print("I've been instructed to create a pull request.")
-    # TODO: Implement me somehow
-    # Easiest: Just shell out to a bash file that does this with some
-    # account credentials
-    # Better way: Use a bot/github app and run this on Github Actions
-    # When they support cron jobs
-    pass
-
-
 def main():
     """Gather Data, Parse Data, Format Data, Save to disk."""
     service_data = gather_data_from_console()
@@ -219,13 +208,12 @@ def main():
     # with open('output_formatted.json') as infile:
     #     service_data = json.load(infile)
 
-    if updates_available(service_data):
-        create_pull_request(service_data)
+    updates_available(service_data)
 
     with open("output_formatted.json", "w") as outfile:
         json.dump(service_data, outfile, indent=2, sort_keys=True)
 
-    print(json.dumps(service_data, indent=2, sort_keys=True))
+    # print(json.dumps(service_data, indent=2, sort_keys=True))
 
 
 if __name__ == "__main__":

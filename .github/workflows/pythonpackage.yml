@@ -40,6 +40,8 @@ jobs:
         coverage run -a -m py.test policyuniverse/tests/test_arn.py
         coverage run -a -m py.test policyuniverse/tests/test_statement.py
         coverage run -a -m py.test policyuniverse/tests/test_policy.py
+        coverage run -a -m py.test updater/test_service.py
+        coverage run -a -m py.test updater/test_service_action.py
 
     - name: Upload coverage data under py37
       env:
