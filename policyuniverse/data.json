@@ -2091,6 +2091,22 @@
   },
   "App Mesh": {
     "actions": {
+      "CreateGatewayRoute": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Creates a gateway route that is associated with a virtual gateway.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateGatewayRoute.html"
+        }
+      },
       "CreateMesh": {
         "aws_action_groups": [
           "ReadWrite"
@@ -2121,6 +2137,22 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html"
+        }
+      },
+      "CreateVirtualGateway": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Creates a virtual gateway within a service mesh.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateVirtualGateway.html"
         }
       },
       "CreateVirtualNode": {
@@ -2171,6 +2203,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateVirtualService.html"
         }
       },
+      "DeleteGatewayRoute": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes an existing gateway route.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_DeleteGatewayRoute.html"
+        }
+      },
       "DeleteMesh": {
         "aws_action_groups": [
           "ReadWrite"
@@ -2195,6 +2240,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_DeleteRoute.html"
+        }
+      },
+      "DeleteVirtualGateway": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes an existing virtual gateway.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_DeleteVirtualGateway.html"
         }
       },
       "DeleteVirtualNode": {
@@ -2236,6 +2294,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_DeleteVirtualService.html"
         }
       },
+      "DescribeGatewayRoute": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes an existing gateway route.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_DescribeGatewayRoute.html"
+        }
+      },
       "DescribeMesh": {
         "aws_action_groups": [
           "ReadOnly",
@@ -2262,6 +2334,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_DescribeRoute.html"
+        }
+      },
+      "DescribeVirtualGateway": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes an existing virtual gateway.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_DescribeVirtualGateway.html"
         }
       },
       "DescribeVirtualNode": {
@@ -2304,6 +2390,21 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_DescribeVirtualService.html"
+        }
+      },
+      "ListGatewayRoutes": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly",
+          "ListOnly"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Returns a list of existing gateway routes in a service mesh.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_ListGatewayRoutes.html"
         }
       },
       "ListMeshes": {
@@ -2349,6 +2450,21 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_ListTagsForResource.html"
+        }
+      },
+      "ListVirtualGateways": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly",
+          "ListOnly"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Returns a list of existing virtual gateways in a service mesh.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_ListVirtualGateways.html"
         }
       },
       "ListVirtualNodes": {
@@ -2403,7 +2519,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Allows an Envoy Proxy to receive streamed resources for a VirtualNode.",
+        "description": "Allows an Envoy Proxy to receive streamed resources for an App Mesh endpoint (VirtualNode or VirtualGateway).",
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}envoy.html",
@@ -2441,6 +2557,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_UntagResource.html"
         }
       },
+      "UpdateGatewayRoute": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates an existing gateway route for a specified service mesh and virtual gateway.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_UpdateGatewayRoute.html"
+        }
+      },
       "UpdateMesh": {
         "aws_action_groups": [
           "ReadWrite"
@@ -2465,6 +2594,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_UpdateRoute.html"
+        }
+      },
+      "UpdateVirtualGateway": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates an existing virtual gateway in a specified service mesh.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_UpdateVirtualGateway.html"
         }
       },
       "UpdateVirtualNode": {
@@ -2523,6 +2665,19 @@
   },
   "App Mesh Preview": {
     "actions": {
+      "CreateGatewayRoute": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Creates a gateway route that is associated with a virtual gateway.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateGatewayRoute.html"
+        }
+      },
       "CreateMesh": {
         "aws_action_groups": [
           "ReadWrite"
@@ -2547,6 +2702,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html"
+        }
+      },
+      "CreateVirtualGateway": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Creates a virtual gateway within a service mesh.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateVirtualGateway.html"
         }
       },
       "CreateVirtualNode": {
@@ -2588,6 +2756,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateVirtualService.html"
         }
       },
+      "DeleteGatewayRoute": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes an existing gateway route.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_DeleteGatewayRoute.html"
+        }
+      },
       "DeleteMesh": {
         "aws_action_groups": [
           "ReadWrite"
@@ -2612,6 +2793,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_DeleteRoute.html"
+        }
+      },
+      "DeleteVirtualGateway": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes an existing virtual gateway.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_DeleteVirtualGateway.html"
         }
       },
       "DeleteVirtualNode": {
@@ -2653,6 +2847,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_DeleteVirtualService.html"
         }
       },
+      "DescribeGatewayRoute": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes an existing gateway route.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_DescribeGatewayRoute.html"
+        }
+      },
       "DescribeMesh": {
         "aws_action_groups": [
           "ReadOnly",
@@ -2679,6 +2887,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_DescribeRoute.html"
+        }
+      },
+      "DescribeVirtualGateway": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes an existing virtual gateway.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_DescribeVirtualGateway.html"
         }
       },
       "DescribeVirtualNode": {
@@ -2723,6 +2945,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_DescribeVirtualService.html"
         }
       },
+      "ListGatewayRoutes": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly",
+          "ListOnly"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Returns a list of existing gateway routes in a service mesh.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_ListGatewayRoutes.html"
+        }
+      },
       "ListMeshes": {
         "aws_action_groups": [
           "ListOnly",
@@ -2751,6 +2988,21 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_ListRoutes.html"
+        }
+      },
+      "ListVirtualGateways": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly",
+          "ListOnly"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Returns a list of existing virtual gateways in a service mesh.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_ListVirtualGateways.html"
         }
       },
       "ListVirtualNodes": {
@@ -2805,11 +3057,24 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Allows an Envoy Proxy to receive streamed resources for a VirtualNode.",
+        "description": "Allows an Envoy Proxy to receive streamed resources for an App Mesh endpoint (VirtualNode/VirtualGateway).",
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}envoy.html",
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/envoy.html"
+        }
+      },
+      "UpdateGatewayRoute": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates an existing gateway route for a specified service mesh and virtual gateway.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_UpdateGatewayRoute.html"
         }
       },
       "UpdateMesh": {
@@ -2836,6 +3101,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_UpdateRoute.html"
+        }
+      },
+      "UpdateVirtualGateway": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates an existing virtual gateway in a specified service mesh.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_UpdateVirtualGateway.html"
         }
       },
       "UpdateVirtualNode": {
@@ -8443,6 +8721,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/API_DeleteVoiceConnector.html"
         }
       },
+      "DeleteVoiceConnectorEmergencyCallingConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete emergency calling configuration for the specified Amazon Chime Voice Connector",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/API_DeleteVoiceConnectorEmergencyCallingConfiguration.html"
+        }
+      },
       "DeleteVoiceConnectorGroup": {
         "aws_action_groups": [
           "ReadWrite"
@@ -8920,6 +9211,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/API_GetVoiceConnector.html"
+        }
+      },
+      "GetVoiceConnectorEmergencyCallingConfiguration": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to get details of the emergency calling configuration for the specified Amazon Chime Voice Connector",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/API_GetVoiceConnectorEmergencyCallingConfiguration.html"
         }
       },
       "GetVoiceConnectorGroup": {
@@ -9479,6 +9784,19 @@
           "api_doc": "",
           "doc_page": "API_PutRetentionSettings.html",
           "doc_page_rel": "API_PutRetentionSettings.html"
+        }
+      },
+      "PutVoiceConnectorEmergencyCallingConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to add emergency calling configuration for the specified Amazon Chime Voice Connector",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/API_PutVoiceConnectorEmergencyCallingConfiguration.html"
         }
       },
       "PutVoiceConnectorLoggingConfiguration": {
@@ -18763,6 +19081,34 @@
   },
   "CodeGuru Profiler": {
     "actions": {
+      "AddNotificationChannels": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to add up to 2 topic ARNs of existing AWS SNS topics to publish notifications",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_AddNotificationChannels.html"
+        }
+      },
+      "BatchGetFrameMetricData": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to get the frame metric data for a Profiling Group",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_BatchGetFrameMetricData.html"
+        }
+      },
       "ConfigureAgent": {
         "aws_action_groups": [
           "ReadWrite"
@@ -18816,20 +19162,6 @@
           "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_DescribeProfilingGroup.html"
         }
       },
-      "GetFindingsReport": {
-        "aws_action_groups": [
-          "ReadOnly",
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Read",
-        "condition_keys": [],
-        "description": "Grants permission to get a recommendations report",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_GetFindingsReport.html"
-        }
-      },
       "GetFindingsReportAccountSummary": {
         "aws_action_groups": [
           "ReadOnly",
@@ -18842,6 +19174,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_GetFindingsReportAccountSummary.html"
+        }
+      },
+      "GetNotificationConfiguration": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to get the notification configuration",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_GetNotificationConfiguration.html"
         }
       },
       "GetPolicy": {
@@ -18894,7 +19240,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permissions to list the available recommendations reports for a specific profiling group",
+        "description": "Grants permission to list the available recommendations reports for a specific profiling group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -18909,7 +19255,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permissions to list the start times of the available aggregated profiles for a specific profiling group",
+        "description": "Grants permission to list the start times of the available aggregated profiles for a specific profiling group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -18924,7 +19270,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permissions to list profiling groups in the account",
+        "description": "Grants permission to list profiling groups in the account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -18937,7 +19283,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permissions to submit a profile collected by an agent belonging to a specific profiling group for aggregation",
+        "description": "Grants permission to submit a profile collected by an agent belonging to a specific profiling group for aggregation",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -18950,11 +19296,24 @@
         ],
         "calculated_action_group": "Permissions",
         "condition_keys": [],
-        "description": "Grants permissions to update the list of principals allowed for an action group in the resource policy associated with the specified Profiling Group.",
+        "description": "Grants permission to update the list of principals allowed for an action group in the resource policy associated with the specified Profiling Group.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_PutPermission.html"
+        }
+      },
+      "RemoveNotificationChannel": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete an already configured SNStopic arn from the notification configuration",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_RemoveNotificationChannel.html"
         }
       },
       "RemovePermission": {
@@ -18970,13 +19329,26 @@
           "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_RemovePermission.html"
         }
       },
+      "SubmitFeedback": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to submit user feedback for useful or non useful anomaly",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_SubmitFeedback.html"
+        }
+      },
       "UpdateProfilingGroup": {
         "aws_action_groups": [
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permissions to update a specific profiling group",
+        "description": "Grants permission to update a specific profiling group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24224,34 +24596,6 @@
           "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_GetResourceConfigHistory.html"
         }
       },
-      "GetResources": {
-        "aws_action_groups": [
-          "ReadOnly",
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Read",
-        "condition_keys": [],
-        "description": "",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": ""
-        }
-      },
-      "GetTagKeys": {
-        "aws_action_groups": [
-          "ReadOnly",
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Read",
-        "condition_keys": [],
-        "description": "",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": ""
-        }
-      },
       "ListAggregateDiscoveredResources": {
         "aws_action_groups": [
           "ListOnly",
@@ -27614,7 +27958,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a multi-track midi composition.",
         "docs": {
           "api_doc": "",
@@ -27627,7 +27974,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Starts creating/training a generative-model that is able to perform inference against the user-provided piano-melody to create a multi-track midi composition.",
         "docs": {
           "api_doc": "",
@@ -27667,7 +28017,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Returns information about the composition.",
         "docs": {
           "api_doc": "",
@@ -27681,7 +28033,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Returns information about the model.",
         "docs": {
           "api_doc": "",
@@ -27748,6 +28102,23 @@
           "doc_page_rel": "https://docs.aws.amazon.com/latest/devguide/get-started.htmlget-started-compose-with-trained-model.html"
         }
       },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Grants permission to lists tag for a resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": ""
+        }
+      },
       "ListTrainingTopics": {
         "aws_action_groups": [
           "ListOnly",
@@ -27761,6 +28132,42 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/latest/devguide/get-started.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to tag a resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": ""
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to untag a resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": ""
         }
       },
       "UpdateComposition": {
@@ -40495,7 +40902,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Adds the specified certificates to the specified secure listener.",
+        "description": "Adds the specified certificates to the specified secure listener",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40508,8 +40915,12 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
-        "description": "Adds the specified tags to the specified load balancer. Each load balancer can have a maximum of 10 tags.",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticloadbalancing:ResourceTag/${TagKey}"
+        ],
+        "description": "Adds the specified tags to the specified load balancer. Each load balancer can have a maximum of 10 tags",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40521,8 +40932,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Creates a listener for the specified Application Load Balancer.",
+        "condition_keys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}"
+        ],
+        "description": "Creates a listener for the specified Application Load Balancer",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40534,8 +40947,12 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Creates a load balancer.",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticloadbalancing:ResourceTag/${TagKey}"
+        ],
+        "description": "Creates a load balancer",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40548,7 +40965,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a rule for the specified listener.",
+        "description": "Creates a rule for the specified listener",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40574,7 +40991,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes the specified listener.",
+        "description": "Deletes the specified listener",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40586,8 +41003,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Deletes the specified load balancer.",
+        "condition_keys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}"
+        ],
+        "description": "Deletes the specified load balancer",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40600,7 +41019,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes the specified rule.",
+        "description": "Deletes the specified rule",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40613,7 +41032,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes the specified target group.",
+        "description": "Deletes the specified target group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40626,7 +41045,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deregisters the specified targets from the specified target group.",
+        "description": "Deregisters the specified targets from the specified target group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40640,7 +41059,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the Elastic Load Balancing resource limits for the AWS account. ",
+        "description": "Describes the Elastic Load Balancing resource limits for the AWS account ",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40654,7 +41073,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the certificates for the specified secure listener. ",
+        "description": "Describes the certificates for the specified secure listener ",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40668,7 +41087,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the specified listeners or the listeners for the specified Application Load Balancer. ",
+        "description": "Describes the specified listeners or the listeners for the specified Application Load Balancer ",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40682,7 +41101,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the attributes for the specified load balancer.",
+        "description": "Describes the attributes for the specified load balancer",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40696,7 +41115,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the specified the load balancers. If no load balancers are specified, the call describes all of your load balancers.",
+        "description": "Describes the specified the load balancers. If no load balancers are specified, the call describes all of your load balancers",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40710,7 +41129,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the specified rules or the rules for the specified listener. ",
+        "description": "Describes the specified rules or the rules for the specified listener ",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40724,7 +41143,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the specified policies or all policies used for SSL negotiation.",
+        "description": "Describes the specified policies or all policies used for SSL negotiation",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40738,7 +41157,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the tags associated with the specified load balancers.",
+        "description": "Describes the tags associated with the specified load balancers",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40752,7 +41171,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the attributes for the specified target group.",
+        "description": "Describes the attributes for the specified target group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40766,7 +41185,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the specified target groups or all of your target groups. ",
+        "description": "Describes the specified target groups or all of your target groups ",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40780,7 +41199,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the health of the specified targets or all of your targets.",
+        "description": "Describes the health of the specified targets or all of your targets",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40793,7 +41212,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Modifies the specified properties of the specified listener.",
+        "description": "Modifies the specified properties of the specified listener",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40805,8 +41224,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Modifies the attributes of the specified load balancer.",
+        "condition_keys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}"
+        ],
+        "description": "Modifies the attributes of the specified load balancer",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40819,7 +41240,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Modifies the specified rule.",
+        "description": "Modifies the specified rule",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40832,7 +41253,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Modifies the health checks used when evaluating the health state of the targets in the specified target group.",
+        "description": "Modifies the health checks used when evaluating the health state of the targets in the specified target group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40845,7 +41266,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Modifies the specified attributes of the specified target group.",
+        "description": "Modifies the specified attributes of the specified target group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40858,7 +41279,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Registers the specified targets with the specified target group.",
+        "description": "Registers the specified targets with the specified target group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40871,7 +41292,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Removes the specified certificates of the specified secure listener.",
+        "description": "Removes the specified certificates of the specified secure listener",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40884,8 +41305,12 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
-        "description": "Removes one or more tags from the specified load balancer.",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticloadbalancing:ResourceTag/${TagKey}"
+        ],
+        "description": "Removes one or more tags from the specified load balancer",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40897,7 +41322,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}"
+        ],
         "description": "Not found",
         "docs": {
           "api_doc": "",
@@ -40911,7 +41338,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Sets the priorities of the specified rules.",
+        "description": "Sets the priorities of the specified rules",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40923,8 +41350,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Associates the specified security groups with the specified load balancer. ",
+        "condition_keys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}"
+        ],
+        "description": "Associates the specified security groups with the specified load balancer ",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -40936,8 +41365,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Enables the Availability Zone for the specified subnets for the specified load balancer. ",
+        "condition_keys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}"
+        ],
+        "description": "Enables the Availability Zone for the specified subnets for the specified load balancer ",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61044,7 +61475,7 @@
         "condition_keys": [
           "iotsitewise:childAssetId"
         ],
-        "description": "Associate child assets to the parent via specified model hiearchy.",
+        "description": "Grants permission to associate a child asset to a parent asset by a hierarchy",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61057,7 +61488,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to associate assets to a specified project.",
+        "description": "Grants permission to associate assets to a project",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61070,7 +61501,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to disassociate assets from a specified project.",
+        "description": "Grants permission to disassociate assets from a project",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61086,7 +61517,7 @@
           "iotsitewise:assetHierarchyPath",
           "iotsitewise:propertyId"
         ],
-        "description": "Puts batch of property values for the specified properties.",
+        "description": "Grants permission to put property values for asset properties",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61100,9 +61531,11 @@
         "calculated_action_group": "Permissions",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
-          "aws:TagKeys"
+          "aws:TagKeys",
+          "iotsitewise:portal",
+          "iotsitewise:project"
         ],
-        "description": "Grants permission to create access policy for a specified portal or a project.",
+        "description": "Grants permission to create an access policy for a portal or a project",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61118,7 +61551,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Creates an asset.",
+        "description": "Grants permission to create an asset from an asset model",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61134,7 +61567,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Creates an asset model.",
+        "description": "Grants permission to create an asset model",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61150,7 +61583,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to create a dashboard within a specified project.",
+        "description": "Grants permission to create a dashboard in a project",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61166,7 +61599,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Creates a gateway.",
+        "description": "Grants permission to create a gateway",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61182,7 +61615,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to create a portal.",
+        "description": "Grants permission to create a portal",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61198,7 +61631,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to create a project within a specified portal.",
+        "description": "Grants permission to create a project in a portal",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61214,7 +61647,7 @@
           "iotsitewise:portal",
           "iotsitewise:project"
         ],
-        "description": "Grants permission to delete a specified access policy.",
+        "description": "Grants permission to delete an access policy",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61227,7 +61660,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes the specified asset.",
+        "description": "Grants permission to delete an asset",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61240,7 +61673,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes the specified asset model.",
+        "description": "Grants permission to delete an asset model",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61255,7 +61688,7 @@
         "condition_keys": [
           "iotsitewise:project"
         ],
-        "description": "Grants permission to delete a specified dashboard.",
+        "description": "Grants permission to delete a dashboard",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61268,7 +61701,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes the specified gateway.",
+        "description": "Grants permission to delete a gateway",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61281,7 +61714,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to delete a specified portal.",
+        "description": "Grants permission to delete a portal",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61294,7 +61727,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to delete a specified project.",
+        "description": "Grants permission to delete a project",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61310,7 +61743,7 @@
           "iotsitewise:portal",
           "iotsitewise:project"
         ],
-        "description": "Grants permission to describe a specified access policy.",
+        "description": "Grants permission to describe an access policy",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61326,7 +61759,7 @@
         "condition_keys": [
           "iotsitewise:assetHierarchyPath"
         ],
-        "description": "Describes the specified asset.",
+        "description": "Grants permission to describe an asset",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61340,7 +61773,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the specified asset model.",
+        "description": "Grants permission to describe an asset model",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61356,7 +61789,7 @@
         "condition_keys": [
           "iotsitewise:assetHierarchyPath"
         ],
-        "description": "Describes the specified asset property.",
+        "description": "Grants permission to describe an asset property",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61372,7 +61805,7 @@
         "condition_keys": [
           "iotsitewise:project"
         ],
-        "description": "Grants permission to describe a specified dashboard.",
+        "description": "Grants permission to describe a dashboard",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61386,7 +61819,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the gateway for the account.",
+        "description": "Grants permission to describe a gateway",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61400,7 +61833,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the specified gateway capability configuration.",
+        "description": "Grants permission to describe a capability configuration for a gateway",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61414,7 +61847,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the logging options for the account.",
+        "description": "Grants permission to describe logging options for the AWS account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61428,7 +61861,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to describe a specified portal.",
+        "description": "Grants permission to describe a portal",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61442,7 +61875,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to describe a specified project.",
+        "description": "Grants permission to describe a project",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61455,7 +61888,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Disassociate child assets from the parent for specified model hiearchy.",
+        "description": "Grants permission to disassociate a child asset from a parent asset by a hierarchy",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61472,7 +61905,7 @@
           "iotsitewise:assetHierarchyPath",
           "iotsitewise:propertyId"
         ],
-        "description": "Fetches the aggregated property values for the specified property.",
+        "description": "Grants permission to retrieve computed aggregates for an asset property",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61489,7 +61922,7 @@
           "iotsitewise:assetHierarchyPath",
           "iotsitewise:propertyId"
         ],
-        "description": "Fetches the latest property value for the specified property.",
+        "description": "Grants permission to retrieve the latest value for an asset property",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61506,7 +61939,7 @@
           "iotsitewise:assetHierarchyPath",
           "iotsitewise:propertyId"
         ],
-        "description": "Fetches the property value history for the specified property.",
+        "description": "Grants permission to retrieve the value history for an asset property",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61524,7 +61957,7 @@
           "iotsitewise:project",
           "iotsitewise:user"
         ],
-        "description": "Grants permission to list access policies for a specified portal or a project.",
+        "description": "Grants permission to list all access policies for an identity or a resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61539,7 +61972,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the asset models for the account.",
+        "description": "Grants permission to list all asset models",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61554,7 +61987,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the assets for the account.",
+        "description": "Grants permission to list all assets",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61571,7 +62004,7 @@
         "condition_keys": [
           "iotsitewise:assetHierarchyPath"
         ],
-        "description": "Lists the assets associated to the parent via specified model hiearchy.",
+        "description": "Grants permission to list all assets associated to an asset by a hierarchy",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61586,7 +62019,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to list dashboards within a specified project.",
+        "description": "Grants permission to list all dashboards in a project",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61601,7 +62034,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the gateways for the account.",
+        "description": "Grants permission to list all gateways",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61616,7 +62049,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to list portals in the account.",
+        "description": "Grants permission to list all portals",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61631,7 +62064,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to list assets associated with a specified project.",
+        "description": "Grants permission to list all assets associated with a project",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61646,7 +62079,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to list projects within a specified portal.",
+        "description": "Grants permission to list all projects in a portal",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61662,7 +62095,7 @@
         "condition_keys": [
           "aws:ResourceTag/${TagKey}"
         ],
-        "description": "Grants permission to lists tag for a resource.",
+        "description": "Grants permission to list all tags for a resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61675,7 +62108,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Sets the logging options.",
+        "description": "Grants permission to set logging options for the AWS account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61692,7 +62125,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to tag a resource.",
+        "description": "Grants permission to tag a resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61708,7 +62141,7 @@
         "condition_keys": [
           "aws:TagKeys"
         ],
-        "description": "Grants permission to untag a resource.",
+        "description": "Grants permission to untag a resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61724,7 +62157,7 @@
           "iotsitewise:portal",
           "iotsitewise:project"
         ],
-        "description": "Grants permission to update a specified access policy.",
+        "description": "Grants permission to update an access policy",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61737,7 +62170,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the specified asset.",
+        "description": "Grants permission to update an asset",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61750,7 +62183,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the specified asset model.",
+        "description": "Grants permission to update an asset model",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61763,7 +62196,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the specified asset property.",
+        "description": "Grants permission to update an asset property",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61778,7 +62211,7 @@
         "condition_keys": [
           "iotsitewise:project"
         ],
-        "description": "Grants permission to update a specified dashboard.",
+        "description": "Grants permission to update a dashboard",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61791,7 +62224,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the specified gateway.",
+        "description": "Grants permission to update a gateway",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61804,7 +62237,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the specified gateway capability configuration.",
+        "description": "Grants permission to update a capability configuration for a gateway",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61817,7 +62250,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to update a specified portal.",
+        "description": "Grants permission to update a portal",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61830,7 +62263,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to update a specified project.",
+        "description": "Grants permission to update a project",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61838,17 +62271,17 @@
         }
       }
     },
-    "arn_format": "arn:aws:iotsitewise:<region>:<account_ID>:<type>/<name>",
+    "arn_format": "arn:aws:iotsitewise:<region>:<account-id>:<type>/<id>",
     "arn_regex": "^arn:${Partition}:iotsitewise:.+-\\d+:\\d{12}:.+",
     "description": "AWS IoT SiteWise",
     "docs": {
       "actions_doc_root": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/",
       "api_detail_root": "",
       "api_doc_root": "",
-      "api_reference_doc_page": "",
-      "authz_doc_page": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/",
+      "api_reference_doc_page": "${DocHomeURL}iot-sitewise/latest/APIReference/",
+      "authz_doc_page": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security-iam.html",
       "concepts_doc_root": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/",
-      "context_keys_doc_root": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/"
+      "context_keys_doc_root": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#"
     },
     "prefix": "iotsitewise"
   },
@@ -82199,7 +82632,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create a cluster",
         "docs": {
           "api_doc": "",
@@ -82212,7 +82648,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create an Amazon Redshift parameter group",
         "docs": {
           "api_doc": "",
@@ -82225,7 +82664,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create an Amazon Redshift security group",
         "docs": {
           "api_doc": "",
@@ -82238,7 +82680,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create a manual snapshot of the specified cluster",
         "docs": {
           "api_doc": "",
@@ -82251,7 +82696,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create an Amazon Redshift subnet group",
         "docs": {
           "api_doc": "",
@@ -82279,7 +82727,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create an Amazon Redshift event notification subscription",
         "docs": {
           "api_doc": "",
@@ -82292,7 +82743,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create an HSM client certificate that a cluster uses to connect to an HSM",
         "docs": {
           "api_doc": "",
@@ -82305,7 +82759,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create an HSM configuration that contains information required by a cluster to store and use database encryption keys in a hardware security module (HSM)",
         "docs": {
           "api_doc": "",
@@ -82344,7 +82801,10 @@
           "Permissions"
         ],
         "calculated_action_group": "Permissions",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create a snapshot copy grant and encrypt copied snapshots in a destination AWS Region",
         "docs": {
           "api_doc": "",
@@ -82357,7 +82817,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create a snapshot schedule",
         "docs": {
           "api_doc": "",
@@ -82371,7 +82834,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to add one or more tags to a specified resource",
         "docs": {
           "api_doc": "",
@@ -82541,7 +83007,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to delete a tag or tags from a resource",
         "docs": {
           "api_doc": "",
@@ -86917,12 +87385,12 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Aborts a multipart upload.",
+        "description": "Grants permission to abort a multipart upload",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -86940,12 +87408,12 @@
           "s3:DataAccessPointArn",
           "s3:RequestObjectTag/<key>",
           "s3:RequestObjectTagKeys",
-          "s3:authtype",
+          "s3:authType",
           "s3:object-lock-legal-hold",
           "s3:object-lock-mode",
           "s3:object-lock-remaining-retention-days",
           "s3:object-lock-retain-until-date",
-          "s3:signatureage",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-acl",
           "s3:x-amz-content-sha256",
@@ -86961,11 +87429,11 @@
           "s3:x-amz-storage-class",
           "s3:x-amz-website-redirect-location"
         ],
-        "description": "Allows circumvention of governance-mode object retention settings",
+        "description": "Grants permission to allow circumvention of governance-mode object retention settings",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page": "${ConceptsDocRoot}object-lock-managing.html#object-lock-managing-bypass",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/object-lock-managing.html#object-lock-managing-bypass"
         }
       },
       "CreateAccessPoint": {
@@ -86977,14 +87445,14 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
+          "s3:authType",
           "s3:locationconstraint",
-          "s3:signatureage",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-acl",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Creates a new access point.",
+        "description": "Grants permission to create a new access point",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -86997,9 +87465,9 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
+          "s3:authType",
           "s3:locationconstraint",
-          "s3:signatureage",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-acl",
           "s3:x-amz-content-sha256",
@@ -87009,7 +87477,7 @@
           "s3:x-amz-grant-write",
           "s3:x-amz-grant-write-acp"
         ],
-        "description": "Creates a new bucket.",
+        "description": "Grants permission to create a new bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87022,14 +87490,17 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys",
           "s3:RequestJobOperation",
           "s3:RequestJobPriority",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Creates a new Amazon S3 Batch Operations job.",
+        "description": "Grants permission to create a new Amazon S3 Batch Operations job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87045,12 +87516,12 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Deletes the access point named in the URI",
+        "description": "Grants permission to delete the access point named in the URI",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87066,12 +87537,12 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Delete the policy on a specified access point",
+        "description": "Grants permission to delete the policy on a specified access point",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87084,12 +87555,12 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Deletes the bucket named in the URI",
+        "description": "Grants permission to delete the bucket named in the URI",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87102,12 +87573,12 @@
         ],
         "calculated_action_group": "Permissions",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Delete the policy on a specified bucket",
+        "description": "Grants permission to delete the policy on a specified bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87120,16 +87591,38 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Removes the website configuration for a bucket.",
+        "description": "Grants permission to remove the website configuration for a bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteBucketWebsite.html"
+        }
+      },
+      "DeleteJobTagging": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:ExistingJobOperation",
+          "s3:ExistingJobPriority",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to remove tags from an existing Amazon S3 Batch Operations job",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteJobTagging.html"
         }
       },
       "DeleteObject": {
@@ -87141,12 +87634,12 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Removes the null version (if there is one) of an object and inserts a delete marker, which becomes the current version of the object.",
+        "description": "Grants permission to remove the null version of an object and insert a delete marker, which becomes the current version of the object",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87164,12 +87657,12 @@
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
           "s3:ExistingObjectTag/<key>",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "This implementation of the DELETE operation uses the tagging subresource to remove the entire tag set from the specified object.",
+        "description": "Grants permission to use the tagging subresource to remove the entire tag set from the specified object",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87185,13 +87678,13 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:versionid",
           "s3:x-amz-content-sha256"
         ],
-        "description": "To remove a specific version of a object, you must be the bucket owner and you must use the versionId subresource.",
+        "description": "Grants permission to remove a specific version of an object",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87209,13 +87702,13 @@
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
           "s3:ExistingObjectTag/<key>",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:versionid",
           "s3:x-amz-content-sha256"
         ],
-        "description": "DELETE Object tagging (for a Specific Version of the Object)",
+        "description": "Grants permission to remove the entire tag set for a specific version of the object",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87229,12 +87722,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Retrieves the configuration parameters and status for an Amazon S3 batch operations job.",
+        "description": "Grants permission to retrieve the configuration parameters and status for a batch operations job.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87248,12 +87741,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "This implementation of the GET operation uses the accelerate subresource to return the Transfer Acceleration state of a bucket, which is either Enabled or Suspended.",
+        "description": "Grants permission to uses the accelerate subresource to return the Transfer Acceleration state of a bucket, which is either Enabled or Suspended",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87270,12 +87763,12 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Retrieve access point metadata",
+        "description": "Grants permission to return configuration information about the specified access point",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87292,12 +87785,12 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Return the policy of a specified access point.",
+        "description": "Grants permission to returns the access point policy associated with the specified access point",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87314,12 +87807,12 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Retrieve the policy status for an specific access point's policy",
+        "description": "Grants permission to return the policy status for a specific access point policy",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87333,12 +87826,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Retrieve the PublicAccessBlock configuration for an AWS account",
+        "description": "Grants permission to retrieve the PublicAccessBlock configuration for an AWS account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87352,12 +87845,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "This implementation of the GET operation returns an analytics configuration (identified by the analytics configuration ID) from the bucket.",
+        "description": "Grants permission to get an analytics configuration from an Amazon S3 bucket, identified by the analytics configuration ID",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87371,12 +87864,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Return the access control list (ACL) of a bucket.",
+        "description": "Grants permission to use the acl subresource to return the access control list (ACL) of an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87390,12 +87883,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Returns the CORS configuration information set for the bucket.",
+        "description": "Grants permission to return the CORS configuration information set for an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87409,7 +87902,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Return a bucket's region.",
+        "description": "Grants permission to return the Region that an Amazon S3 bucket resides in",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87423,12 +87916,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Return the logging status of a bucket and the permissions users have to view and modify that status.",
+        "description": "Grants permission to return the logging status of an Amazon S3 bucket and the permissions users have to view or modify that status",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87442,12 +87935,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Return the notification configuration of a bucket.",
+        "description": "Grants permission to get the notification configuration of an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87461,11 +87954,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion"
         ],
-        "description": "GET Object Lock configuration for a specific bucket",
+        "description": "Grants permission to get the Object Lock configuration of an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87479,12 +87972,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Return the policy of a specified bucket.",
+        "description": "Grants permission to return the policy of the specified bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87498,12 +87991,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Retrieve the policy status for an specific S3 bucket, indicating whether the bucket is public.",
+        "description": "Grants permission to retrieve the policy status for a specific Amazon S3 bucket, which indicates whether the bucket is public",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87517,12 +88010,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Retrieve the PublicAccessBlock configuration for a specific S3 bucket.",
+        "description": "Grants permission to retrieve the PublicAccessBlock configuration for an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87536,12 +88029,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Return the request payment configuration of a bucket.",
+        "description": "Grants permission to return the request payment configuration for an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87555,12 +88048,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Return the tag set associated with the bucket.",
+        "description": "Grants permission to return the tag set associated with an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87574,12 +88067,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Return the versioning state of a bucket.",
+        "description": "Grants permission to return the versioning state of an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87593,12 +88086,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Returns the website configuration associated with a bucket.",
+        "description": "Grants permission to return the website configuration for an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87612,12 +88105,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Returns the encryption configuration information set on the bucket.",
+        "description": "Grants permission to return the default encryption configuration an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87631,16 +88124,35 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "This implementation of the GET operation returns an inventory configuration (identified by the inventory configuration ID) from the bucket.",
+        "description": "Grants permission to return an inventory configuration from an Amazon S3 bucket, identified by the inventory configuration ID",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketInventoryConfiguration.html"
+        }
+      },
+      "GetJobTagging": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to return the tag set of an existing Amazon S3 Batch Operations job",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetJobTagging.html"
         }
       },
       "GetLifecycleConfiguration": {
@@ -87650,12 +88162,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Returns the lifecycle configuration information set on the bucket.",
+        "description": "Grants permission to return the lifecycle configuration information set on an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87669,12 +88181,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Gets a metrics configuration for the CloudWatch request metrics (specified by the metrics configuration ID) from the bucket. Note that this doesn't include the daily storage metrics.",
+        "description": "Grants permission to get a metrics configuration from an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87692,12 +88204,12 @@
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
           "s3:ExistingObjectTag/<key>",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Retrieves objects from Amazon S3.",
+        "description": "Grants permission to retrieve objects from Amazon S3",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87715,12 +88227,12 @@
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
           "s3:ExistingObjectTag/<key>",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Return the access control list (ACL) of an object.",
+        "description": "Grants permission to return the access control list (ACL) of an object",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87737,12 +88249,12 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "GET Object Legal Hold for a specific object",
+        "description": "Grants permission to get an object's current Legal Hold status",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87759,12 +88271,12 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "GET Object Legal Hold for a specific object",
+        "description": "Grants permission to retrieve the retention settings for an object",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87782,12 +88294,12 @@
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
           "s3:ExistingObjectTag/<key>",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "This implementation of the GET operation returns the tags associated with an object. You send the GET request against the tagging subresource associated with the object.",
+        "description": "Grants permission to return the tag set of an object",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87801,12 +88313,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "return torrent files from a bucket.",
+        "description": "Grants permission to return torrent files from an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87824,13 +88336,13 @@
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
           "s3:ExistingObjectTag/<key>",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:versionid",
           "s3:x-amz-content-sha256"
         ],
-        "description": "To return a different version, use the versionId subresource.",
+        "description": "Grants permission to retrieve a specific version of an object",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87848,13 +88360,13 @@
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
           "s3:ExistingObjectTag/<key>",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:versionid",
           "s3:x-amz-content-sha256"
         ],
-        "description": "To return ACL information about a different version, use the versionId subresource.",
+        "description": "Grants permission to return the access control list (ACL) of a specific object version",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87868,16 +88380,16 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Permission exercised by S3 replication",
+        "description": "Grants permission to replicate both unencrypted objects and objects encrypted with SSE-S3 or SSE-KMS",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/"
+          "doc_page": "{ConceptsDocRoot}replication-config-for-kms-objects.html",
+          "doc_page_rel": "{ConceptsDocRoot}replication-config-for-kms-objects.html"
         }
       },
       "GetObjectVersionTagging": {
@@ -87891,17 +88403,17 @@
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
           "s3:ExistingObjectTag/<key>",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:versionid",
           "s3:x-amz-content-sha256"
         ],
-        "description": "GET Object tagging (for a Specific Version of the Object)",
+        "description": "Grants permission to return the tag set for a specific version of the object",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObjectTagging.html"
+          "doc_page": "{ConceptsDocRoot}setting-repl-config-perm-overview.html",
+          "doc_page_rel": "{ConceptsDocRoot}setting-repl-config-perm-overview.html"
         }
       },
       "GetObjectVersionTorrent": {
@@ -87911,13 +88423,13 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:versionid",
           "s3:x-amz-content-sha256"
         ],
-        "description": "To return Torrent files about a different version, use the versionId subresource.",
+        "description": "Grants permission to get Torrent files about a different version using the versionId subresource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87931,12 +88443,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Returns the replication configuration information set on the bucket.",
+        "description": "Grants permission to get the replication configuration information set on an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87951,11 +88463,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "",
+        "description": "Grants permission to determine if a bucket exists and if a user has permission to access it",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_HeadBucket.html"
         }
       },
       "ListAccessPoints": {
@@ -87965,12 +88477,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Lists access points.",
+        "description": "Grants permission to list access points",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -87985,12 +88497,12 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Returns a list of all buckets owned by the authenticated sender of the request.",
+        "description": "Grants permission to list all buckets owned by the authenticated sender of the request",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88008,19 +88520,19 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
+          "s3:authType",
           "s3:delimiter",
           "s3:max-keys",
           "s3:prefix",
-          "s3:signatureage",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Returns some or all (up to 1000) of the objects in a bucket.",
+        "description": "Grants permission to list some or all of the objects in an Amazon S3 bucket (up to 1000)",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListBuckets.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjectsV2.html"
         }
       },
       "ListBucketMultipartUploads": {
@@ -88033,12 +88545,12 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Lists in-progress multipart uploads.",
+        "description": "Grants permission to list in-progress multipart uploads",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88055,19 +88567,19 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
+          "s3:authType",
           "s3:delimiter",
           "s3:max-keys",
           "s3:prefix",
-          "s3:signatureage",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Use the versions subresource to list metadata about all of the versions of objects in a bucket.",
+        "description": "Grants permission to list metadata about all the versions of objects in an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListBuckets.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjectVersions.html"
         }
       },
       "ListJobs": {
@@ -88077,12 +88589,12 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Lists current jobs and jobs that have ended recently.",
+        "description": "Grants permission to list current jobs and jobs that have ended recently",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88099,12 +88611,12 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Lists the parts that have been uploaded for a specific multipart upload.",
+        "description": "Grants permission to list the parts that have been uploaded for a specific multipart upload",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88117,16 +88629,16 @@
         ],
         "calculated_action_group": "Permissions",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Permission exercised by S3 replication",
+        "description": "Grants permission to change replica ownership",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/"
+          "doc_page": "${ConceptsDocRoot}replication-change-owner.html#repl-ownership-add-role-permission",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/replication-change-owner.html#repl-ownership-add-role-permission"
         }
       },
       "PutAccelerateConfiguration": {
@@ -88135,12 +88647,12 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "This implementation of the PUT operation uses the accelerate subresource to set the Transfer Acceleration state of an existing bucket.",
+        "description": "Grants permission to use the accelerate subresource to set the Transfer Acceleration state of an existing S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88156,12 +88668,12 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Add to or replace a data policy on a access point.",
+        "description": "Grants permission to associate an access policy with a specified access point",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88174,12 +88686,12 @@
         ],
         "calculated_action_group": "Permissions",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Create or modify the PublicAccessBlock configuration for an AWS account.",
+        "description": "Grants permission to create or modify the PublicAccessBlock configuration for an AWS account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88192,12 +88704,12 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "This implementation of the PUT operation adds an analytics configuration (identified by the analytics ID) to the bucket. You can have up to 1,000 analytics configurations per bucket.",
+        "description": "Grants permission to set an analytics configuration for the bucket, specified by the analytics configuration ID",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88210,8 +88722,8 @@
         ],
         "calculated_action_group": "Permissions",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-acl",
           "s3:x-amz-content-sha256",
@@ -88221,7 +88733,7 @@
           "s3:x-amz-grant-write",
           "s3:x-amz-grant-write-acp"
         ],
-        "description": "Set the permissions on an existing bucket using access control lists (ACL).",
+        "description": "Grants permission to set the permissions on an existing bucket using access control lists (ACLs)",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88234,12 +88746,12 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Sets the CORS configuration for your bucket.",
+        "description": "Grants permission to set the CORS configuration for an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88252,12 +88764,12 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Set the logging parameters for a bucket.",
+        "description": "Grants permission to set the logging parameters for an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88270,12 +88782,12 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Enables you to receive notifications when certain events happen in your bucket.",
+        "description": "Grants permission to receive notifications when certain events happen in an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88288,11 +88800,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion"
         ],
-        "description": "PUT Object Lock configuration on a specific bucket",
+        "description": "Grants permission to put Object Lock configuration on a specific bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88305,12 +88817,12 @@
         ],
         "calculated_action_group": "Permissions",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Add to or replace a policy on a bucket.",
+        "description": "Grants permission to add or replace a bucket policy on a bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88323,12 +88835,12 @@
         ],
         "calculated_action_group": "Permissions",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Create or modify the PublicAccessBlock configuration for an specific S3 bucket.",
+        "description": "Grants permission to create or modify the PublicAccessBlock configuration for a specific Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88341,12 +88853,12 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Set the request payment configuration of a bucket.",
+        "description": "Grants permission to set the request payment configuration of a bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88360,12 +88872,12 @@
         ],
         "calculated_action_group": "Tagging",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Add a set of tags to an existing bucket.",
+        "description": "Grants permission to add a set of tags to an existing Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88378,12 +88890,12 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Set the versioning state of an existing bucket.",
+        "description": "Grants permission to set the versioning state of an existing Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88396,12 +88908,12 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Sets the configuration of the website that is specified in the website subresource.",
+        "description": "Grants permission to set the configuration of the website that is specified in the website subresource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88414,12 +88926,12 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Sets the encryption configuration for the bucket.",
+        "description": "Grants permission to set the encryption configuration for an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88432,16 +88944,40 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "This implementation of the PUT operation adds an inventory configuration (identified by the inventory ID) to the bucket. You can have up to 1,000 inventory configurations per bucket.",
+        "description": "Grants permission to add an inventory configuration to the bucket, identified by the inventory ID",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketInventoryConfiguration.html"
+        }
+      },
+      "PutJobTagging": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys",
+          "s3:ExistingJobOperation",
+          "s3:ExistingJobPriority",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to replace tags on an existing Amazon S3 Batch Operations job",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutJobTagging.html"
         }
       },
       "PutLifecycleConfiguration": {
@@ -88450,12 +88986,12 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Creates a new lifecycle configuration for the bucket or replaces an existing lifecycle configuration.",
+        "description": "Grants permission to create a new lifecycle configuration for the bucket or replace an existing lifecycle configuration",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88468,12 +89004,12 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Sets or updates a metrics configuration for the CloudWatch request metrics (specified by the metrics configuration ID) from the bucket.",
+        "description": "Grants permission to set or update a metrics configuration for the CloudWatch request metrics from an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88491,12 +89027,12 @@
           "s3:DataAccessPointArn",
           "s3:RequestObjectTag/<key>",
           "s3:RequestObjectTagKeys",
-          "s3:authtype",
+          "s3:authType",
           "s3:object-lock-legal-hold",
           "s3:object-lock-mode",
           "s3:object-lock-remaining-retention-days",
           "s3:object-lock-retain-until-date",
-          "s3:signatureage",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-acl",
           "s3:x-amz-content-sha256",
@@ -88512,7 +89048,7 @@
           "s3:x-amz-storage-class",
           "s3:x-amz-website-redirect-location"
         ],
-        "description": "Adds an object to a bucket.",
+        "description": "Grants permission to add an object to a bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88529,8 +89065,8 @@
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
           "s3:ExistingObjectTag/<key>",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-acl",
           "s3:x-amz-content-sha256",
@@ -88541,7 +89077,7 @@
           "s3:x-amz-grant-write-acp",
           "s3:x-amz-storage-class"
         ],
-        "description": "Set the access control list (ACL) permissions for an object that already exists in a bucket.",
+        "description": "Grants permission to set the access control list (ACL) permissions for an object that already exists in a bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88557,13 +89093,13 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
+          "s3:authType",
           "s3:object-lock-legal-hold",
-          "s3:signatureage",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "PUT Object Legal Hold on a specific object",
+        "description": "Grants permission to apply a Legal Hold configuration to the specified object",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88579,15 +89115,15 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
+          "s3:authType",
           "s3:object-lock-mode",
           "s3:object-lock-remaining-retention-days",
           "s3:object-lock-retain-until-date",
-          "s3:signatureage",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "PUT Object Retention on a specific object",
+        "description": "Grants permission to place an Object Retention configuration on an object",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88607,12 +89143,12 @@
           "s3:ExistingObjectTag/<key>",
           "s3:RequestObjectTag/<key>",
           "s3:RequestObjectTagKeys",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "This implementation of the PUT operation uses the tagging subresource to add a set of tags to an existing object.",
+        "description": "Grants permission to set the supplied tag-set to an object that already exists in a bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88629,8 +89165,8 @@
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
           "s3:ExistingObjectTag/<key>",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:versionid",
           "s3:x-amz-acl",
@@ -88642,7 +89178,7 @@
           "s3:x-amz-grant-write-acp",
           "s3:x-amz-storage-class"
         ],
-        "description": "The ACL of an object is set at the object version level.",
+        "description": "Grants permission to use the acl subresource to set the access control list (ACL) permissions for an object that already exists in a bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88662,13 +89198,13 @@
           "s3:ExistingObjectTag/<key>",
           "s3:RequestObjectTag/<key>",
           "s3:RequestObjectTagKeys",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:versionid",
           "s3:x-amz-content-sha256"
         ],
-        "description": "PUT Object tagging (for a Specific Version of the Object)",
+        "description": "Grants permission to set the supplied tag-set for a specific version of an object",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88681,12 +89217,12 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "In a versioning-enabled bucket, this operation creates a new replication configuration (or replaces an existing one, if present).",
+        "description": "Grants permission to create a new replication configuration or replace an existing one",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88699,16 +89235,16 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Permission exercised by S3 replication",
+        "description": "Grants permission to replicate delete markers to the destination bucket",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/"
+          "doc_page": "${ConceptsDocRoot}setting-repl-config-perm-overview.html",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/setting-repl-config-perm-overview.html"
         }
       },
       "ReplicateObject": {
@@ -88717,18 +89253,18 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256",
           "s3:x-amz-server-side-encryption",
           "s3:x-amz-server-side-encryption-aws-kms-key-id"
         ],
-        "description": "Permission exercised by S3 replication",
+        "description": "Grants permission to replicate objects and object tags to the destination bucket",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/"
+          "doc_page": "${ConceptsDocRoot}setting-repl-config-perm-overview.html",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/setting-repl-config-perm-overview.html"
         }
       },
       "ReplicateTags": {
@@ -88738,16 +89274,16 @@
         ],
         "calculated_action_group": "Tagging",
         "condition_keys": [
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Permission exercised by S3 replication",
+        "description": "Grants permission to replicate object tags to the destination bucket",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/"
+          "doc_page": "${ConceptsDocRoot}setting-repl-config-perm-overview.html",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/setting-repl-config-perm-overview.html"
         }
       },
       "RestoreObject": {
@@ -88759,12 +89295,12 @@
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
           "s3:DataAccessPointArn",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Restores a temporary copy of an archived object.",
+        "description": "Grants permission to restore an archived copy of an object back into Amazon S3",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88777,15 +89313,16 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
           "s3:ExistingJobOperation",
           "s3:ExistingJobPriority",
           "s3:RequestJobPriority",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Updates an existing job's priority.",
+        "description": "Grants permission to update the priority of an existing job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88798,15 +89335,16 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
           "s3:ExistingJobOperation",
           "s3:ExistingJobPriority",
           "s3:JobSuspendedCause",
-          "s3:authtype",
-          "s3:signatureage",
+          "s3:authType",
+          "s3:signatureAge",
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Updates the status for the specified job.",
+        "description": "Grants permission to update the status for the specified job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
