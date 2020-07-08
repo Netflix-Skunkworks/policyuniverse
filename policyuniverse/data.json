@@ -79892,6 +79892,35 @@
           "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateTemplateAlias.html"
         }
       },
+      "CreateTheme": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Creates a QuickSight theme",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateTheme.html"
+        }
+      },
+      "CreateThemeAlias": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Creates a theme alias for a theme",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateThemeAlias.html"
+        }
+      },
       "CreateUser": {
         "aws_action_groups": [
           "ReadWrite"
@@ -79981,6 +80010,32 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DeleteTemplateAlias.html"
+        }
+      },
+      "DeleteTheme": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes a theme",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DeleteTheme.html"
+        }
+      },
+      "DeleteThemeAlias": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes the item that the specified theme alias points to",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DeleteThemeAlias.html"
         }
       },
       "DeleteUser": {
@@ -80105,6 +80160,48 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeTemplatePermissions.html"
+        }
+      },
+      "DescribeTheme": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes a theme's metadata",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeTheme.html"
+        }
+      },
+      "DescribeThemeAlias": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes the theme alias for a theme",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeThemeAlias.html"
+        }
+      },
+      "DescribeThemePermissions": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes read and write permissions on a theme",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeThemePermissions.html"
         }
       },
       "DescribeUser": {
@@ -80311,6 +80408,51 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListTemplates.html"
+        }
+      },
+      "ListThemeAliases": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists all the aliases of a theme",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListThemeAliases.html"
+        }
+      },
+      "ListThemeVersions": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists all the versions of a theme",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListThemeVersions.html"
+        }
+      },
+      "ListThemes": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists all the themes in the current Amazon QuickSight account",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListThemes.html"
         }
       },
       "ListUserGroups": {
@@ -80543,6 +80685,45 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateTemplatePermissions.html"
+        }
+      },
+      "UpdateTheme": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates a theme",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateTheme.html"
+        }
+      },
+      "UpdateThemeAlias": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates the theme alias of a theme",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateThemeAlias.html"
+        }
+      },
+      "UpdateThemePermissions": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates the resource permissions for a theme",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateThemePermissions.html"
         }
       },
       "UpdateUser": {
@@ -103265,7 +103446,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a new custom vocabulary that you can use to change the way Amazon Transcribe Medical handles transcription of an audio file.",
+        "description": "Grants permission to create a new custom vocabulary that you can use to change the way Amazon Transcribe Medical handles transcription of an audio file.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103278,7 +103459,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a new custom vocabulary that you can use to change the way Amazon Transcribe handles transcription of an audio file.",
+        "description": "Grants permission to create a new custom vocabulary that you can use to change the way Amazon Transcribe handles transcription of an audio file.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103291,7 +103472,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a new vocabulary filter that you can use to filter out words from the transcription of an audio file generated by Amazon Transcribe",
+        "description": "Grants permission to create a new vocabulary filter that you can use to filter out words from the transcription of an audio file generated by Amazon Transcribe",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103304,7 +103485,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a previously submitted medical transcription job.",
+        "description": "Grants permission to delete a previously submitted medical transcription job.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103317,7 +103498,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes medical a vocabulary from Amazon Transcribe.",
+        "description": "Grants permission to delete a medical vocabulary from Amazon Transcribe.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103330,7 +103511,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a previously submitted transcription job along with any other generated results such as the transcription, models, and so on.",
+        "description": "Grants permission to delete a previously submitted transcription job along with any other generated results such as the transcription, models, and so on.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103343,7 +103524,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a vocabulary from Amazon Transcribe.",
+        "description": "Grants permission to delete a vocabulary from Amazon Transcribe.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103356,7 +103537,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a vocabulary filter from Amazon Transcribe.",
+        "description": "Grants permission to delete a vocabulary filter from Amazon Transcribe.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103370,7 +103551,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Returns information about a medical transcription job.",
+        "description": "Grants permission to return information about a medical transcription job.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103384,7 +103565,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets information about a medical vocabulary.",
+        "description": "Grants permission to get information about a medical vocabulary.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103398,7 +103579,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Returns information about a transcription job.",
+        "description": "Grants permission to return information about a transcription job.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103412,7 +103593,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets information about a vocabulary.",
+        "description": "Grants permission to to get information about a vocabulary.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103426,7 +103607,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets information about a vocabulary filter.",
+        "description": "Grants permission to get information about a vocabulary filter.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103441,7 +103622,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists medical transcription jobs with the specified status.",
+        "description": "Grants permission to list medical transcription jobs with the specified status.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103456,7 +103637,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns a list of medical vocabularies that match the specified criteria. If no criteria are specified, returns the entire list of vocabularies.",
+        "description": "Grants permission to return a list of medical vocabularies that match the specified criteria. If no criteria are specified, returns the entire list of vocabularies.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103471,7 +103652,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists transcription jobs with the specified status.",
+        "description": "Grants permission to list transcription jobs with the specified status.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103486,7 +103667,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns a list of vocabularies that match the specified criteria. If no criteria are specified, returns the entire list of vocabularies.",
+        "description": "Grants permission to return a list of vocabularies that match the specified criteria. If no criteria are specified, returns the entire list of vocabularies.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103501,7 +103682,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns a list of vocabulary filters that match the specified criteria. If no criteria are specified, returns the at most 5 vocabulary filters.",
+        "description": "Grants permission to return a list of vocabulary filters that match the specified criteria. If no criteria are specified, returns the at most 5 vocabulary filters.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103514,7 +103695,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Starts a protocol where audio is streamed to Transcribe Medical and the transcription results are streamed to your application.",
+        "description": "Grants permission to start a protocol where audio is streamed to Transcribe Medical and the transcription results are streamed to your application.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103527,7 +103708,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Starts a WebSocket where audio is streamed to Transcribe Medical and the transcription results are streamed to your application.",
+        "description": "Grants permission to start a WebSocket where audio is streamed to Transcribe Medical and the transcription results are streamed to your application.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103540,7 +103721,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Starts an asynchronous job to transcribe medical speech to text.",
+        "description": "Grants permission to start an asynchronous job to transcribe medical speech to text.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103553,7 +103734,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Starts a bidirectional HTTP2 stream to transcribe speech to text in real time.",
+        "description": "Grants permission to start a bidirectional HTTP2 stream to transcribe speech to text in real time.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103566,7 +103747,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Starts a websocket stream to transcribe speech to text in real time.",
+        "description": "Grants permission to start a websocket stream to transcribe speech to text in real time.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103579,7 +103760,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Starts an asynchronous job to transcribe speech to text.",
+        "description": "Grants permission to start an asynchronous job to transcribe speech to text.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103592,7 +103773,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates an existing medical vocabulary with new values. The UpdateMedicalVocabulary operation overwrites all of the existing information with the values that you provide in the request.",
+        "description": "Grants permission to update an existing medical vocabulary with new values. The UpdateMedicalVocabulary operation overwrites all of the existing information with the values that you provide in the request.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103605,7 +103786,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates an existing vocabulary with new values. The UpdateVocabulary operation overwrites all of the existing information with the values that you provide in the request.",
+        "description": "Grants permission to update an existing vocabulary with new values. The UpdateVocabulary operation overwrites all of the existing information with the values that you provide in the request.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -103618,7 +103799,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates an existing vocabulary filter with new values. The UpdateVocabularyFilter operation overwrites all of the existing information with the values that you provide in the request.",
+        "description": "Grants permission to update an existing vocabulary filter with new values. The UpdateVocabularyFilter operation overwrites all of the existing information with the values that you provide in the request.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
