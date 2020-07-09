@@ -46913,7 +46913,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a dataset",
         "docs": {
           "api_doc": "",
@@ -46926,7 +46929,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a dataset group",
         "docs": {
           "api_doc": "",
@@ -46939,7 +46945,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a dataset import job",
         "docs": {
           "api_doc": "",
@@ -46952,7 +46961,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a forecast",
         "docs": {
           "api_doc": "",
@@ -46965,7 +46977,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a forecast export job",
         "docs": {
           "api_doc": "",
@@ -46978,7 +46993,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a predictor",
         "docs": {
           "api_doc": "",
@@ -47252,6 +47270,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/forecast/latest/dg/API_Operations.htmlAPI_ListPredictors.html"
         }
       },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists the tags for an Amazon Forecast resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/forecast/latest/dg/API_Operations.htmlAPI_ListTagsForResource.html"
+        }
+      },
       "QueryForecast": {
         "aws_action_groups": [
           "ReadOnly",
@@ -47264,6 +47297,39 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/forecast/latest/dg/API_Operations.htmlAPI_forecastquery_QueryForecast.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Associates the specified tags to a resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/forecast/latest/dg/API_Operations.htmlAPI_TagResource.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "Deletes the specified tags for a resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/forecast/latest/dg/API_Operations.htmlAPI_UntagResource.html"
         }
       },
       "UpdateDatasetGroup": {
