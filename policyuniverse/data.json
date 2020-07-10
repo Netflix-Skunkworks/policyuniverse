@@ -42573,6 +42573,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/api/API_ApplyEnvironmentManagedAction.html"
         }
       },
+      "AssociateEnvironmentOperationsRole": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to associate an operations role with an environment.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/api/API_AssociateEnvironmentOperationsRole.html"
+        }
+      },
       "CheckDNSAvailability": {
         "aws_action_groups": [
           "ReadOnly",
@@ -42951,6 +42964,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/api/API_DescribePlatformVersion.html"
+        }
+      },
+      "DisassociateEnvironmentOperationsRole": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to disassociate an operations role with an environment.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/api/API_DisassociateEnvironmentOperationsRole.html"
         }
       },
       "ListAvailableSolutionStacks": {
@@ -64214,6 +64240,22 @@
           "doc_page_rel": "https://docs.aws.amazon.com/keyspaces/latest/devguide/${ConceptsDocRoot}"
         }
       },
+      "Restore": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to restore table from a backup",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/keyspaces/latest/devguide/${ConceptsDocRoot}"
+        }
+      },
       "Select": {
         "aws_action_groups": [
           "ReadOnly",
@@ -69482,7 +69524,7 @@
     },
     "arn_format": "arn:aws:kafka:<region>:<account>:<resourceType>/<resourceName>/<UUID>",
     "arn_regex": "^arn:aws:kafka:.+",
-    "description": "Amazon Managed Streaming for Kafka",
+    "description": "Amazon Managed Streaming for Apache Kafka",
     "docs": {
       "actions_doc_root": "https://docs.aws.amazon.com/msk/1.0/apireference/",
       "api_detail_root": "",
@@ -85402,10 +85444,9 @@
     "actions": {
       "CreateGroup": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
