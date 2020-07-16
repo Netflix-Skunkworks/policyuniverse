@@ -7399,7 +7399,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Modify budgets and budget details",
+        "description": "Grants permissions to modify budgets and budget details",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -7413,7 +7413,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "View budgets and budget details",
+        "description": "Grants permissions to view budgets and budget details",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55763,6 +55763,343 @@
       "context_keys_doc_root": ""
     },
     "prefix": "inspector"
+  },
+  "Interactive Video Service": {
+    "actions": {
+      "BatchGetChannel": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to get multiple channels simultaneously by channel ARN.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_BatchGetChannel.html"
+        }
+      },
+      "BatchGetStreamKey": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to get multiple stream keys simultaneously by stream key ARN.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_BatchGetStreamKey.html"
+        }
+      },
+      "CreateChannel": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to create a new channel and an associated stream key.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_CreateChannel.html"
+        }
+      },
+      "CreateStreamKey": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to create a stream key.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_CreateStreamKey.html"
+        }
+      },
+      "DeleteChannel": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to delete a channel and channel's stream keys.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_DeleteChannel.html"
+        }
+      },
+      "DeleteStreamKey": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to delete the stream key for a specified ARN",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_DeleteStreamKey.html"
+        }
+      },
+      "GetChannel": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to get the channel configuration for a specified channel ARN",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_GetChannel.html"
+        }
+      },
+      "GetStream": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to get information about the active (live) stream on a specified channel",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_GetStream.html"
+        }
+      },
+      "GetStreamKey": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to get stream-key information for a specified ARN",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_GetStreamKey.html"
+        }
+      },
+      "ListChannels": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to get summary information about channels",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_ListChannels.html"
+        }
+      },
+      "ListStreamKeys": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to get summary information about stream keys",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_ListStreamKeys.html"
+        }
+      },
+      "ListStreams": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to get summary information about live streams",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_ListStreams.html"
+        }
+      },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to get information about the tags for a specified ARN",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_ListTagsForResource.html"
+        }
+      },
+      "PutMetadata": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to insert metadata into an RTMP stream for a specified channel",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_PutMetadata.html"
+        }
+      },
+      "StopStream": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to disconnect a streamer on a specified channel",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_StopStream.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to add or update tags for a resource with a specified ARN",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_TagResource.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to remove tags for a resource with a specified ARN",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_UntagResource.html"
+        }
+      },
+      "UpdateChannel": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to update a channel's configuration",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_UpdateChannel.html"
+        }
+      }
+    },
+    "arn_format": "arn:aws:ivs:<region>:<account-id>:<resource-type>/<resource_name>",
+    "arn_regex": "^arn:aws:ivs:.+:.+:.+",
+    "description": "Amazon Interactive Video Service",
+    "docs": {
+      "actions_doc_root": "${ResourcesDocRoot}/",
+      "api_detail_root": "",
+      "api_doc_root": "",
+      "api_reference_doc_page": "${ResourcesDocRoot}Welcome.html",
+      "authz_doc_page": "https://docs.aws.amazon.com/ivs/latest/userguide/ivs-security-identity-access.html",
+      "concepts_doc_root": "https://docs.aws.amazon.com/ivs/latest/userguide/",
+      "context_keys_doc_root": "https://docs.aws.amazon.com/ivs/latest/userguide/"
+    },
+    "prefix": "ivs"
   },
   "IoT": {
     "actions": {
