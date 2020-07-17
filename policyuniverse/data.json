@@ -25284,6 +25284,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/amazon-connect-instances.html"
         }
       },
+      "ResumeContactRecording": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permissions to resume recording for the specified contact.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_ResumeContactRecording.html"
+        }
+      },
       "StartChatContact": {
         "aws_action_groups": [
           "ReadWrite"
@@ -25295,6 +25308,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html"
+        }
+      },
+      "StartContactRecording": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permissions to start recording for the specified contact.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_StartContactRecording.html"
         }
       },
       "StartOutboundVoiceContact": {
@@ -25321,6 +25347,32 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_StopContact.html"
+        }
+      },
+      "StopContactRecording": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permissions to stop recording for the specified contact.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_StopContactRecording.html"
+        }
+      },
+      "SuspendContactRecording": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permissions to suspend recording for the specified contact.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_SuspendContactRecording.html"
         }
       },
       "TagResource": {
