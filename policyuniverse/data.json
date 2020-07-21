@@ -47445,7 +47445,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a batch of variables.",
         "docs": {
           "api_doc": "",
@@ -47473,7 +47476,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a detector version. The detector version starts in a DRAFT status.",
         "docs": {
           "api_doc": "",
@@ -47481,13 +47487,32 @@
           "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_CreateDetectorVersion"
         }
       },
+      "CreateModel": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Creates a model using the specified model type.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_CreateModel"
+        }
+      },
       "CreateModelVersion": {
         "aws_action_groups": [
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Creates a version of the model using the specified model type.",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Creates a version of the model using the specified model type and model id.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -47499,7 +47524,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a rule for use with the specified detector.",
         "docs": {
           "api_doc": "",
@@ -47512,7 +47540,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a variable.",
         "docs": {
           "api_doc": "",
@@ -47559,17 +47590,17 @@
           "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_DeleteEvent"
         }
       },
-      "DeleteRuleVersion": {
+      "DeleteRule": {
         "aws_action_groups": [
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes the rule version. You cannot delete a rule version if it is used by an ACTIVE or INACTIVE detector version.",
+        "description": "Deletes the rule. You cannot delete a rule if it is used by an ACTIVE or INACTIVE detector version.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_DeleteRuleVersion"
+          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_DeleteRule"
         }
       },
       "DescribeDetector": {
@@ -47623,11 +47654,55 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Gets all of detectors. This is a paginated API. If you provide a null maxSizePerPage, this actions retrieves a maximum of 10 records per page. If you provide a maxSizePerPage, the value must be between 5 and 10. To get the next page results, provide the pagination token from the GetEventTypesResponse as part of your request. A null pagination token fetches the records from the beginning.",
+        "description": "Gets all detectors or a single detector if a detectorId is specified. This is a paginated API. If you provide a null maxResults, this action retrieves a maximum of 10 records per page. If you provide a maxResults, the value must be between 5 and 10. To get the next page results, provide the pagination token from the GetDetectorsResponse as part of your request. A null pagination token fetches the records from the beginning.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_GetDetectors"
+        }
+      },
+      "GetEntityTypes": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite",
+          "ListOnly"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Gets all entity types or a specific entity type if a name is specified. This is a paginated API. If you provide a null maxResults, this action retrieves a maximum of 10 records per page. If you provide a maxResults, the value must be between 5 and 10. To get the next page results, provide the pagination token from the GetEntityTypesResponse as part of your request. A null pagination token fetches the records from the beginning.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_GetEntityTypes"
+        }
+      },
+      "GetEventPrediction": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Evaluates an event against a detector version. If a version ID is not provided, the detector\ufffd\ufffd\ufffds (ACTIVE) version is used.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_GetEventPrediction"
+        }
+      },
+      "GetEventTypes": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite",
+          "ListOnly"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Gets all event types or a specific event type if name is provided. This is a paginated API. If you provide a null maxResults, this action retrieves a maximum of 10 records per page. If you provide a maxResults, the value must be between 5 and 10. To get the next page results, provide the pagination token from the GetEventTypesResponse as part of your request. A null pagination token fetches the records from the beginning.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_GetEventTypes"
         }
       },
       "GetExternalModels": {
@@ -47638,11 +47713,40 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Gets the details for one or more Amazon SageMaker models that have been imported into the service. This is a paginated API. If you provide a null maxSizePerPage, this actions retrieves a maximum of 10 records per page. If you provide a maxSizePerPage, the value must be between 5 and 10. To get the next page results, provide the pagination token from the GetExternalModelsResult as part of your request. A null pagination token fetches the records from the beginning.",
+        "description": "Gets the details for one or more Amazon SageMaker models that have been imported into the service. This is a paginated API. If you provide a null maxResults, this actions retrieves a maximum of 10 records per page. If you provide a maxResults, the value must be between 5 and 10. To get the next page results, provide the pagination token from the GetExternalModelsResult as part of your request. A null pagination token fetches the records from the beginning.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_GetExternalModels"
+        }
+      },
+      "GetKMSEncryptionKey": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Gets the encryption key if a Key Management Service (KMS) customer master key (CMK) has been specified to be used to encrypt content in Amazon Fraud Detector.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_GetKMSEncryptionKey"
+        }
+      },
+      "GetLabels": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite",
+          "ListOnly"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Gets all labels or a specific label if name is provided. This is a paginated API. If you provide a null maxResults, this action retrieves a maximum of 50 records per page. If you provide a maxResults, the value must be between 10 and 50. To get the next page results, provide the pagination token from the GetGetLabelsResponse as part of your request. A null pagination token fetches the records from the beginning.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_GetLabels"
         }
       },
       "GetModelVersion": {
@@ -47653,7 +47757,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Gets a model version.",
+        "description": "Gets the details of the specified model version.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -47668,7 +47772,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Gets all of the models for the AWS account, or the specified model type, or gets a single model for the specified model type, model ID combination.",
+        "description": "Gets one or more models. Gets all models for the AWS account if no model type and no model id provided. Gets all models for the AWS account and model type, if the model type is specified but model id is not provided. Gets a specific model if (model type, model id) tuple is specified.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -47683,7 +47787,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Gets one or more outcomes. This is a paginated API. If you provide a null maxSizePerPage, this actions retrieves a maximum of 10 records per page. If you provide a maxSizePerPage, the value must be between 50 and 100. To get the next page results, provide the pagination token from the GetOutcomesResult as part of your request. A null pagination token fetches the records from the beginning.",
+        "description": "Gets one or more outcomes. This is a paginated API. If you provide a null maxResults, this actions retrieves a maximum of 100 records per page. If you provide a maxResults, the value must be between 50 and 100. To get the next page results, provide the pagination token from the GetOutcomesResult as part of your request. A null pagination token fetches the records from the beginning.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -47712,7 +47816,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Gets all rules available for the specified detector.",
+        "description": "Get all rules for a detector (paginated) if ruleId and ruleVersion are not specified. Gets all rules for the detector and the ruleId if present (paginated). Gets a specific rule if both the ruleId and the ruleVersion are specified.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -47734,12 +47838,30 @@
           "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_GetVariables"
         }
       },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite",
+          "ListOnly"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists all tags associated with the resource. This is a paginated API. To get the next page results, provide the pagination token from the response as part of your request. A null pagination token fetches the records from the beginning.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_ListTagsForResource.html"
+        }
+      },
       "PutDetector": {
         "aws_action_groups": [
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates or updates a detector.",
         "docs": {
           "api_doc": "",
@@ -47747,12 +47869,47 @@
           "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_PutDetector.html"
         }
       },
+      "PutEntityType": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Creates or updates an entity type. An entity represents who is performing the event. As part of a fraud prediction, you pass the entity ID to indicate the specific entity who performed the event. An entity type classifies the entity. Example classifications include customer, merchant, or account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_PutEntityType.html"
+        }
+      },
+      "PutEventType": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Creates or updates an event type. An event is a business activity that is evaluated for fraud risk. With Amazon Fraud Detector, you generate fraud predictions for events. An event type defines the structure for an event sent to Amazon Fraud Detector. This includes the variables sent as part of the event, the entity performing the event (such as a customer), and the labels that classify the event. Example event types include online payment transactions, account registrations, and authentications.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_PutEventType.html"
+        }
+      },
       "PutExternalModel": {
         "aws_action_groups": [
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates or updates an Amazon SageMaker model endpoint. You can also use this action to update the configuration of the model endpoint, including the IAM role and/or the mapped variables.",
         "docs": {
           "api_doc": "",
@@ -47760,17 +47917,33 @@
           "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_PutExternalModel.html"
         }
       },
-      "PutModel": {
+      "PutKMSEncryptionKey": {
         "aws_action_groups": [
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates or updates a model.",
+        "description": "Specifies the Key Management Service (KMS) customer master key (CMK) to be used to encrypt content in Amazon Fraud Detector.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_PutModel"
+          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_PutKMSEncryptionKey.html"
+        }
+      },
+      "PutLabel": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Creates or updates label. A label classifies an event as fraudulent or legitimate. Labels are associated with event types and used to train supervised machine learning models in Amazon Fraud Detector.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_PutLabel.html"
         }
       },
       "PutOutcome": {
@@ -47778,12 +47951,49 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates or updates an outcome.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_PutOutcome.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Assigns tags to a resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_TagResource.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Removes tags from a resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_UntagResource.html"
         }
       },
       "UpdateDetectorVersion": {
@@ -47792,7 +48002,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates a detector version. The detector version attributes that you can update include models, external model endpoints, rules, and description. You can only update a DRAFT detector version.",
+        "description": "Updates a detector version. The detector version attributes that you can update include models, external model endpoints, rules, rule execution mode, and description. You can only update a DRAFT detector version.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -47825,17 +48035,46 @@
           "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_UpdateDetectorVersionStatus"
         }
       },
-      "UpdateModelVersion": {
+      "UpdateModel": {
         "aws_action_groups": [
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates a model version. You can update the description and status attributes using this action.",
+        "description": "Updates a model. You can update the description attribute using this action.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_UpdateModel"
+        }
+      },
+      "UpdateModelVersion": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Updates a model version. Updating a model version retrains an existing model version using updated training data and produces a new minor version of the model. You can update the training data set location and data access role attributes using this action. This action creates and trains a new minor version of the model, for example version 1.01, 1.02, 1.03.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_UpdateModelVersion"
+        }
+      },
+      "UpdateModelVersionStatus": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates the status of a model version.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_UpdateModelVersionStatus"
         }
       },
       "UpdateRuleMetadata": {
@@ -47844,7 +48083,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates a rule's metadata.",
+        "description": "Updates a rule's metadata. The description attribute can be updated.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -47856,8 +48095,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Updates a rule version resulting in a new rule version.",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Updates a rule version resulting in a new rule version. Updates a rule version resulting in a new rule version (version 1, 2, 3 ...).",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -47879,15 +48121,15 @@
       }
     },
     "arn_format": "arn:aws:frauddetector:<region>:<account-id>:<resource-type>/<resource_name>",
-    "arn_regex": "^arn:aws:frauddetector:.+:.+:.+",
+    "arn_regex": "^arn:.+:frauddetector:.+:.+:.+",
     "description": "Amazon Fraud Detector",
     "docs": {
       "actions_doc_root": "https://docs.aws.amazon.com/frauddetector/latest/api/",
       "api_detail_root": "",
       "api_doc_root": "",
       "api_reference_doc_page": "${DocHomeURL}frauddetector/latest/api/",
-      "authz_doc_page": "https://docs.aws.amazon.com/IAM/xxx/UserGuide/assets.html",
-      "concepts_doc_root": "https://docs.aws.amazon.com/IAM/xxx/UserGuide/",
+      "authz_doc_page": "https://docs.aws.amazon.com/frauddetector/latest/ug/assets.html",
+      "concepts_doc_root": "https://docs.aws.amazon.com/frauddetector/latest/ug/",
       "context_keys_doc_root": "https://docs.aws.amazon.com/frauddetector/latest/ug/"
     },
     "prefix": "frauddetector"
@@ -97244,7 +97486,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Create an application configuration to migrate on-premise application onto AWS..",
+        "description": "Grants permission to create an application configuration to migrate on-premise application onto AWS",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97257,7 +97499,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Create a job to migrate on-premise server onto AWS.",
+        "description": "Grants permission to create a job to migrate on-premise server onto AWS",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97270,7 +97512,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Delete an existing application configuration.",
+        "description": "Grants permission to delete an existing application configuration",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97283,7 +97525,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Delete launch configuration for an existing application.",
+        "description": "Grants permission to delete launch configuration for an existing application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97296,11 +97538,24 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Delete replication configuration for an existing application..",
+        "description": "Grants permission to delete replication configuration for an existing application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/server-migration-service/latest/APIReference/API_DeleteAppReplicationConfiguration.html"
+        }
+      },
+      "DeleteAppValidationConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete validation configuration for an existing application",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/server-migration-service/latest/APIReference/API_DeleteAppValidationConfiguration.html"
         }
       },
       "DeleteReplicationJob": {
@@ -97309,7 +97564,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Delete an existing job to migrate on-premise server onto AWS.",
+        "description": "Grants permission to delete an existing job to migrate on-premise server onto AWS",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97322,7 +97577,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Delete the complete list of on-premise servers gathered into AWS.",
+        "description": "Grants permission to delete the complete list of on-premise servers gathered into AWS",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97335,7 +97590,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Disassociate a connector that has been associated.",
+        "description": "Grants permission to disassociate a connector that has been associated",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97348,7 +97603,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Generate a changeSet for the CloudFormation stack of an application.",
+        "description": "Grants permission to generate a changeSet for the CloudFormation stack of an application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97361,7 +97616,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Generate a CloudFormation template for an existing application.",
+        "description": "Grants permission to generate a CloudFormation template for an existing application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97375,7 +97630,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get the configuration and statuses for an existing application.",
+        "description": "Grants permission to get the configuration and statuses for an existing application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97389,7 +97644,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get launch configuration for an existing application.",
+        "description": "Grants permission to get launch configuration for an existing application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97403,11 +97658,39 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get replication configuration for an existing application.",
+        "description": "Grants permission to get replication configuration for an existing application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/server-migration-service/latest/APIReference/API_GetAppReplicationConfiguration.html"
+        }
+      },
+      "GetAppValidationConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to get validation configuration for an existing application",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/server-migration-service/latest/APIReference/API_GetAppValidationConfiguration.html"
+        }
+      },
+      "GetAppValidationOutput": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to get notification sent from application validation script.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/server-migration-service/latest/APIReference/API_GetAppValidationOutput.html"
         }
       },
       "GetConnectors": {
@@ -97417,7 +97700,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get all connectors that have been associated.",
+        "description": "Grants permission to get all connectors that have been associated",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97431,7 +97714,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets messages from AWS Server Migration Service to Server Migration Connector.",
+        "description": "Grants permission to gets messages from AWS Server Migration Service to Server Migration Connector",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97445,7 +97728,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get all existing jobs to migrate on-premise servers onto AWS.",
+        "description": "Grants permission to get all existing jobs to migrate on-premise servers onto AWS",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97459,7 +97742,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get all runs for an existing job.",
+        "description": "Grants permission to get all runs for an existing job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97473,7 +97756,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get all servers that have been imported.",
+        "description": "Grants permission to get all servers that have been imported",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97486,7 +97769,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Gathers a complete list of on-premise servers.",
+        "description": "Grants permission to gather a complete list of on-premise servers",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97499,7 +97782,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Create and launch a CloudFormation stack for an existing application.",
+        "description": "Grants permission to create and launch a CloudFormation stack for an existing application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97514,11 +97797,24 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Get a list of summaries for existing applications.",
+        "description": "Grants permission to get a list of summaries for existing applications",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/server-migration-service/latest/APIReference/API_ListAppss.html"
+        }
+      },
+      "NotifyAppValidationOutput": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to send notification for application validation script",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/server-migration-service/latest/APIReference/API_NotifyAppValidationOutput.html"
         }
       },
       "PutAppLaunchConfiguration": {
@@ -97527,7 +97823,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Create or update launch configuration for an existing application.",
+        "description": "Grants permission to create or update launch configuration for an existing application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97540,11 +97836,24 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Create or update replication configuration for an existing application.",
+        "description": "Grants permission to create or update replication configuration for an existing application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/server-migration-service/latest/APIReference/API_PutAppReplicationConfiguration.html"
+        }
+      },
+      "PutAppValidationConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to put validation configuration for an existing application",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/server-migration-service/latest/APIReference/API_PutAppValidationConfiguration.html"
         }
       },
       "SendMessage": {
@@ -97553,7 +97862,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Send message from Server Migration Connector to AWS Server Migration Service.",
+        "description": "Grants permission to send message from Server Migration Connector to AWS Server Migration Service",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97566,11 +97875,24 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Create and start replication jobs for an existing application.",
+        "description": "Grants permission to create and start replication jobs for an existing application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/server-migration-service/latest/APIReference/API_StartAppReplication.html"
+        }
+      },
+      "StartOnDemandAppReplication": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to start a replication run for an existing application",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/server-migration-service/latest/APIReference/API_StartOnDemandAppReplication.html"
         }
       },
       "StartOnDemandReplicationRun": {
@@ -97579,7 +97901,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Start a replication run for an existing replication job.",
+        "description": "Grants permission to start a replication run for an existing replication job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97592,7 +97914,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Stop and delete replication jobs for an existing application.",
+        "description": "Grants permission to stop and delete replication jobs for an existing application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97605,7 +97927,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Terminate the CloudFormation stack for an existing application.",
+        "description": "Grants permission to terminate the CloudFormation stack for an existing application",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97618,7 +97940,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Update an existing application configuration",
+        "description": "Grants permission to update an existing application configuration",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97631,7 +97953,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Update an existing job to migrate on-premise server onto AWS.",
+        "description": "Grants permission to update an existing job to migrate on-premise server onto AWS",
         "docs": {
           "api_doc": "",
           "doc_page": "",
