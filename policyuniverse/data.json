@@ -43851,7 +43851,7 @@
   },
   "Elastic Container Service": {
     "actions": {
-      "CreateCluster": {
+      "CreateCapacityProvider": {
         "aws_action_groups": [
           "ReadWrite"
         ],
@@ -43859,6 +43859,23 @@
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
+        ],
+        "description": "Creates a new capacity provider. Capacity providers are associated with an Amazon ECS cluster and are used in capacity provider strategies to facilitate cluster auto scaling.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateCapacityProvider.html"
+        }
+      },
+      "CreateCluster": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "ecs:capacity-provider"
         ],
         "description": "Creates a new Amazon ECS cluster.",
         "docs": {
@@ -43875,6 +43892,7 @@
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
+          "ecs:capacity-provider",
           "ecs:cluster",
           "ecs:task-definition"
         ],
@@ -43928,6 +43946,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeleteAttributes.html"
+        }
+      },
+      "DeleteCapacityProvider": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes the specified capacity provider.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeleteCapacityProvider.html"
         }
       },
       "DeleteCluster": {
@@ -43998,6 +44029,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeregisterTaskDefinition.html"
+        }
+      },
+      "DescribeCapacityProviders": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes one or more Amazon ECS capacity providers.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeCapacityProviders.html"
         }
       },
       "DescribeClusters": {
@@ -44301,6 +44346,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAttributes.html"
         }
       },
+      "PutClusterCapacityProviders": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "ecs:capacity-provider"
+        ],
+        "description": "Modifies the available capacity providers and the default capacity provider strategy for a cluster.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutClusterCapacityProviders.html"
+        }
+      },
       "RegisterContainerInstance": {
         "aws_action_groups": [
           "ReadWrite"
@@ -44341,6 +44401,7 @@
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
+          "ecs:capacity-provider",
           "ecs:cluster"
         ],
         "description": "Start a task using random placement and the default Amazon ECS scheduler.",
@@ -44470,6 +44531,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_UntagResource.html"
         }
       },
+      "UpdateClusterSettings": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Modifies the settings to use for a cluster.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_UpdateClusterSettings.html"
+        }
+      },
       "UpdateContainerAgent": {
         "aws_action_groups": [
           "ReadWrite"
@@ -44506,10 +44580,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
+          "ecs:capacity-provider",
           "ecs:cluster",
           "ecs:task-definition"
         ],
-        "description": "Modifies the desired count, deployment configuration, or task definition used in a service.",
+        "description": "Modifies the parameters of a service.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -105059,11 +105134,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "View support plan and various TA preferences.",
+        "description": "Grants permission to view the AWS Support plan and various AWS Trusted Advisor preferences",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
+          "doc_page_rel": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations"
         }
       },
       "DescribeAccountAccess": {
@@ -105073,11 +105148,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Resolve whether Account has disabled Trusted Advisor",
+        "description": "Grants permission to view if the AWS account has enabled or disabled AWS Trusted Advisor",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
+          "doc_page_rel": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations"
         }
       },
       "DescribeCheckItems": {
@@ -105087,11 +105162,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "View details for the check items",
+        "description": "Grants permission to view details for the check items",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
+          "doc_page_rel": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations"
         }
       },
       "DescribeCheckRefreshStatuses": {
@@ -105101,11 +105176,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describe check refresh statuses",
+        "description": "Grants permission to view the refresh statuses for AWS Trusted Advisor checks",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
+          "doc_page_rel": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations"
         }
       },
       "DescribeCheckSummaries": {
@@ -105115,11 +105190,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the check's summaries",
+        "description": "Grants permission to view AWS Trusted Advisor check summaries",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
+          "doc_page_rel": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations"
         }
       },
       "DescribeChecks": {
@@ -105129,11 +105204,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "List valid Trusted Advisor checks and details.",
+        "description": "Grants permission to view details for AWS Trusted Advisor checks",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
+          "doc_page_rel": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations"
         }
       },
       "DescribeNotificationPreferences": {
@@ -105143,11 +105218,67 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the notification preferences for the account",
+        "description": "Grants permission to view the notification preferences for the AWS account",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
+          "doc_page_rel": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations"
+        }
+      },
+      "DescribeOrganization": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to view if the AWS account meets the requirements to enable the organizational view feature",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
+          "doc_page_rel": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations"
+        }
+      },
+      "DescribeOrganizationAccounts": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to view the linked AWS accounts that are in the organization",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
+          "doc_page_rel": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations"
+        }
+      },
+      "DescribeReports": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to view details for organizational view reports, such as the report name, runtime, date created, status, and format",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
+          "doc_page_rel": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations"
+        }
+      },
+      "DescribeServiceMetadata": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to view information about organizational view reports, such as the AWS Regions, check categories, check names, and resource statuses",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
+          "doc_page_rel": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations"
         }
       },
       "ExcludeCheckItems": {
@@ -105156,11 +105287,24 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Exclude recommendations for checks for a given customer",
+        "description": "Grants permission to exclude recommendations for AWS Trusted Advisor checks",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
+          "doc_page_rel": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations"
+        }
+      },
+      "GenerateReport": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create a report for AWS Trusted Advisor checks in your organization",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
+          "doc_page_rel": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations"
         }
       },
       "IncludeCheckItems": {
@@ -105169,11 +105313,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Include recommendations for checks for a given customer",
+        "description": "Grants permission to include recommendations for AWS Trusted Advisor checks",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
+          "doc_page_rel": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations"
         }
       },
       "RefreshCheck": {
@@ -105182,11 +105326,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Enqueue a refresh for the specified check",
+        "description": "Grants permission to refresh an AWS Trusted Advisor check",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
+          "doc_page_rel": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations"
         }
       },
       "SetAccountAccess": {
@@ -105195,11 +105339,24 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Toggle whether TrustedAdvisor is enabled/disabled for the account",
+        "description": "Grants permission to enable or disable AWS Trusted Advisor for the account",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
+          "doc_page_rel": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations"
+        }
+      },
+      "SetOrganizationAccess": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to enable the organizational view feature for AWS Trusted Advisor",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
+          "doc_page_rel": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations"
         }
       },
       "UpdateNotificationPreferences": {
@@ -105208,11 +105365,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Update notification preferences ",
+        "description": "Grants permission to update notification preferences for AWS Trusted Advisor",
         "docs": {
           "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
+          "doc_page_rel": "${DocHomeURL}awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations"
         }
       }
     },
@@ -105223,10 +105380,10 @@
       "actions_doc_root": "https://docs.aws.amazon.com/awssupport/latest/APIReference/",
       "api_detail_root": "",
       "api_doc_root": "",
-      "api_reference_doc_page": "",
-      "authz_doc_page": "https://docs.aws.amazon.com/awssupport/latest/user/getting-started.html#trusted-advisoraccess_permissions.html",
-      "concepts_doc_root": "https://docs.aws.amazon.com/awssupport/latest/user/getting-started.html#trusted-advisor",
-      "context_keys_doc_root": ""
+      "api_reference_doc_page": "${DocHomeURL}awssupport/latest/APIReference/",
+      "authz_doc_page": "https://docs.aws.amazon.com/awssupport/latest/user/security.html",
+      "concepts_doc_root": "https://docs.aws.amazon.com/awssupport/latest/user/",
+      "context_keys_doc_root": "https://docs.aws.amazon.com/awssupport/latest/user/"
     },
     "prefix": "trustedadvisor"
   },
