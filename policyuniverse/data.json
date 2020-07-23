@@ -6539,6 +6539,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/aws-backup/latest/devguide/API_DescribeRecoveryPoint.html"
         }
       },
+      "DescribeRegionSettings": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes region settings",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/aws-backup/latest/devguide/API_DescribeRegionSettings.html"
+        }
+      },
       "DescribeRestoreJob": {
         "aws_action_groups": [
           "ReadOnly",
@@ -6997,6 +7011,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/aws-backup/latest/devguide/API_UpdateRecoveryPointLifecycle.html"
+        }
+      },
+      "UpdateRegionSettings": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Describes region settings",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/aws-backup/latest/devguide/API_UpdateRegionSettings.html"
         }
       }
     },
@@ -45416,6 +45443,129 @@
     },
     "prefix": "es"
   },
+  "Elemental Appliances and Software": {
+    "actions": {
+      "CreateQuote": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Create a quote",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}/elemental-appliances-software",
+          "doc_page_rel": "${DocHomeURL}/elemental-appliances-software"
+        }
+      },
+      "GetQuote": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describe a quote",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}/elemental-appliances-software",
+          "doc_page_rel": "${DocHomeURL}/elemental-appliances-software"
+        }
+      },
+      "ListQuotes": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "List the quotes in the user account",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}/elemental-appliances-software",
+          "doc_page_rel": "${DocHomeURL}/elemental-appliances-software"
+        }
+      },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "This action lists tags for an AWS Elemental Appliances and Software resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}/elemental-appliances-software",
+          "doc_page_rel": "${DocHomeURL}/elemental-appliances-software"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "This action tags an AWS Elemental Appliances and Software resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}/elemental-appliances-software",
+          "doc_page_rel": "${DocHomeURL}/elemental-appliances-software"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "This action removes a tag from an AWS Elemental Appliances and Software resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}/elemental-appliances-software",
+          "doc_page_rel": "${DocHomeURL}/elemental-appliances-software"
+        }
+      },
+      "UpdateQuote": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Modify a quote",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}/elemental-appliances-software",
+          "doc_page_rel": "${DocHomeURL}/elemental-appliances-software"
+        }
+      }
+    },
+    "arn_format": "arn:aws:elemental-appliances-software:<region>:<account-id>:<resource-type>/<resource_name>",
+    "arn_regex": "^arn:aws:elemental-appliances-software:.+:.+:.+",
+    "description": "AWS Elemental Appliances and Software",
+    "docs": {
+      "actions_doc_root": "https://docs.aws.amazon.com/elemental-appliances-software/",
+      "api_detail_root": "",
+      "api_doc_root": "",
+      "api_reference_doc_page": "https://docs.aws.amazon.com/elemental-appliances-software/",
+      "authz_doc_page": "https://docs.aws.amazon.com//elemental-appliances-software/",
+      "concepts_doc_root": "https://docs.aws.amazon.com//elemental-appliances-software/",
+      "context_keys_doc_root": "https://docs.aws.amazon.com//elemental-appliances-software/"
+    },
+    "prefix": "elemental-appliances-software"
+  },
   "EventBridge": {
     "actions": {
       "ActivateEventSource": {
@@ -55574,6 +55724,81 @@
       "context_keys_doc_root": ""
     },
     "prefix": "iq-permission"
+  },
+  "Identity Store": {
+    "actions": {
+      "DescribeGroup": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Retrieves information about group from the directory that AWS Identity Store provides by default",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_DescribeGroup.html"
+        }
+      },
+      "DescribeUser": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Retrieves information about user from the directory that AWS Identity Store provides by default",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_DescribeUser.html"
+        }
+      },
+      "ListGroups": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Search for groups within the associated directory",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_ListGroups.html"
+        }
+      },
+      "ListUsers": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Search for users within the associated directory",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_ListUsers.html"
+        }
+      }
+    },
+    "arn_format": "arn:${Partition}:identitystore:${Region}:${Account}:<relative-id>",
+    "arn_regex": "^arn:${Partition}:identitystore:${Region}:.+",
+    "description": "AWS Identity Store",
+    "docs": {
+      "actions_doc_root": "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/",
+      "api_detail_root": "",
+      "api_doc_root": "",
+      "api_reference_doc_page": "${ConceptsDocRoot}",
+      "authz_doc_page": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access.html",
+      "concepts_doc_root": "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/Welcome.html",
+      "context_keys_doc_root": ""
+    },
+    "prefix": "identitystore"
   },
   "Import/Export": {
     "actions": {
