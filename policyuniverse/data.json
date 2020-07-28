@@ -45536,8 +45536,8 @@
         "description": "Create a quote",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}/elemental-appliances-software",
-          "doc_page_rel": "${DocHomeURL}/elemental-appliances-software"
+          "doc_page": "${DocHomeURL}elemental-appliances-software",
+          "doc_page_rel": "${DocHomeURL}elemental-appliances-software"
         }
       },
       "GetQuote": {
@@ -45550,8 +45550,8 @@
         "description": "Describe a quote",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}/elemental-appliances-software",
-          "doc_page_rel": "${DocHomeURL}/elemental-appliances-software"
+          "doc_page": "${DocHomeURL}elemental-appliances-software",
+          "doc_page_rel": "${DocHomeURL}elemental-appliances-software"
         }
       },
       "ListQuotes": {
@@ -45565,8 +45565,8 @@
         "description": "List the quotes in the user account",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}/elemental-appliances-software",
-          "doc_page_rel": "${DocHomeURL}/elemental-appliances-software"
+          "doc_page": "${DocHomeURL}elemental-appliances-software",
+          "doc_page_rel": "${DocHomeURL}elemental-appliances-software"
         }
       },
       "ListTagsForResource": {
@@ -45579,8 +45579,8 @@
         "description": "This action lists tags for an AWS Elemental Appliances and Software resource",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}/elemental-appliances-software",
-          "doc_page_rel": "${DocHomeURL}/elemental-appliances-software"
+          "doc_page": "${DocHomeURL}elemental-appliances-software",
+          "doc_page_rel": "${DocHomeURL}elemental-appliances-software"
         }
       },
       "TagResource": {
@@ -45596,8 +45596,8 @@
         "description": "This action tags an AWS Elemental Appliances and Software resource",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}/elemental-appliances-software",
-          "doc_page_rel": "${DocHomeURL}/elemental-appliances-software"
+          "doc_page": "${DocHomeURL}elemental-appliances-software",
+          "doc_page_rel": "${DocHomeURL}elemental-appliances-software"
         }
       },
       "UntagResource": {
@@ -45612,8 +45612,8 @@
         "description": "This action removes a tag from an AWS Elemental Appliances and Software resource",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}/elemental-appliances-software",
-          "doc_page_rel": "${DocHomeURL}/elemental-appliances-software"
+          "doc_page": "${DocHomeURL}elemental-appliances-software",
+          "doc_page_rel": "${DocHomeURL}elemental-appliances-software"
         }
       },
       "UpdateQuote": {
@@ -45625,8 +45625,8 @@
         "description": "Modify a quote",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}/elemental-appliances-software",
-          "doc_page_rel": "${DocHomeURL}/elemental-appliances-software"
+          "doc_page": "${DocHomeURL}elemental-appliances-software",
+          "doc_page_rel": "${DocHomeURL}elemental-appliances-software"
         }
       }
     },
@@ -45634,13 +45634,13 @@
     "arn_regex": "^arn:aws:elemental-appliances-software:.+:.+:.+",
     "description": "AWS Elemental Appliances and Software",
     "docs": {
-      "actions_doc_root": "https://docs.aws.amazon.com/elemental-appliances-software/",
+      "actions_doc_root": "https://docs.aws.amazon.com/elemental-appliances-software/latest/ug/",
       "api_detail_root": "",
       "api_doc_root": "",
-      "api_reference_doc_page": "https://docs.aws.amazon.com/elemental-appliances-software/",
-      "authz_doc_page": "https://docs.aws.amazon.com//elemental-appliances-software/",
-      "concepts_doc_root": "https://docs.aws.amazon.com//elemental-appliances-software/",
-      "context_keys_doc_root": "https://docs.aws.amazon.com//elemental-appliances-software/"
+      "api_reference_doc_page": "https://docs.aws.amazon.com/elemental-appliances-software/latest/ug/",
+      "authz_doc_page": "https://docs.aws.amazon.com/elemental-appliances-software/latest/ug/",
+      "concepts_doc_root": "https://docs.aws.amazon.com/elemental-appliances-software/latest/ug/",
+      "context_keys_doc_root": "https://docs.aws.amazon.com/elemental-appliances-software/latest/ug/"
     },
     "prefix": "elemental-appliances-software"
   },
@@ -48095,20 +48095,6 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_GetOutcomes"
-        }
-      },
-      "GetPrediction": {
-        "aws_action_groups": [
-          "ReadOnly",
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Read",
-        "condition_keys": [],
-        "description": "Evaluates an event against a detector version. If a version ID is not provided, the detector\ufffd\ufffd\ufffds (ACTIVE) version is used.",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/frauddetector/latest/api/API_GetPrediction"
         }
       },
       "GetRules": {
@@ -95225,6 +95211,22 @@
           "doc_page_rel": "https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateUserProfile.html"
         }
       },
+      "CreateWorkforce": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Create a workforce.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateWorkforce.html"
+        }
+      },
       "CreateWorkteam": {
         "aws_action_groups": [
           "ReadWrite"
@@ -95476,6 +95478,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/sagemaker/latest/dg/API_DeleteUserProfile.html"
+        }
+      },
+      "DeleteWorkforce": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes a workforce.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/sagemaker/latest/dg/API_DeleteWorkforce.html"
         }
       },
       "DeleteWorkteam": {
@@ -96389,6 +96404,21 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/sagemaker/latest/dg/API_ListUserProfiles.html"
+        }
+      },
+      "ListWorkforces": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists workforces.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/sagemaker/latest/dg/API_ListWorkforces.html"
         }
       },
       "ListWorkteams": {
