@@ -7079,7 +7079,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Cancels jobs in an AWS Batch job queue.",
+        "description": "Cancels a job in an AWS Batch job queue.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -38830,6 +38830,9 @@
         "condition_keys": [
           "autoscaling:ImageId",
           "autoscaling:InstanceType",
+          "autoscaling:MetadataHttpEndpoint",
+          "autoscaling:MetadataHttpPutResponseHopLimit",
+          "autoscaling:MetadataHttpTokens",
           "autoscaling:SpotPrice"
         ],
         "description": "Creates a launch configuration.",
@@ -81887,7 +81890,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Associates an Identity and Access Management (IAM) role from an Aurora DB cluster.",
+        "description": "Grants permission to associate an Identity and Access Management (IAM) role from an Aurora DB cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -81900,7 +81903,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Associates an AWS Identity and Access Management (IAM) role with a DB instance.",
+        "description": "Grants permission to associate an AWS Identity and Access Management (IAM) role with a DB instance",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -81913,7 +81916,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Adds a source identifier to an existing RDS event notification subscription.",
+        "description": "Grants permission to add a source identifier to an existing RDS event notification subscription",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -81931,7 +81934,7 @@
           "aws:TagKeys",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Adds metadata tags to an Amazon RDS resource.",
+        "description": "Grants permission to add metadata tags to an Amazon RDS resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -81944,7 +81947,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Applies a pending maintenance action to a resource.",
+        "description": "Grants permission to apply a pending maintenance action to a resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -81957,7 +81960,7 @@
         ],
         "calculated_action_group": "Permissions",
         "condition_keys": [],
-        "description": "Enables ingress to a DBSecurityGroup using one of two forms of authorization.",
+        "description": "Grants permission to enable ingress to a DBSecurityGroup using one of two forms of authorization",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -81970,7 +81973,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Backtracks a DB cluster to a specific time, without creating a new DB cluster.",
+        "description": "Grants permission to backtrack a DB cluster to a specific time, without creating a new DB cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -81983,7 +81986,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Cancels an export task in progress.",
+        "description": "Grants permission to cancel an export task in progress",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -81996,7 +81999,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Copies the specified DB cluster parameter group.",
+        "description": "Grants permission to copy the specified DB cluster parameter group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82009,7 +82012,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a snapshot of a DB cluster.",
+        "description": "Grants permission to create a snapshot of a DB cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82022,7 +82025,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Copies the specified DB parameter group.",
+        "description": "Grants permission to copy the specified DB parameter group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82035,7 +82038,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Copies the specified DB snapshot.",
+        "description": "Grants permission to copy the specified DB snapshot",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82048,7 +82051,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Copies the specified option group.",
+        "description": "Grants permission to copy the specified option group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82057,10 +82060,9 @@
       },
       "CreateDBCluster": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
@@ -82069,7 +82071,7 @@
           "rds:StorageEncrypted",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Creates a new Amazon Aurora DB cluster.",
+        "description": "Grants permission to create a new Amazon Aurora DB cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82086,7 +82088,7 @@
           "aws:TagKeys",
           "rds:EndpointType"
         ],
-        "description": "Creates a new custom endpoint and associates it with an Amazon Aurora DB cluster.",
+        "description": "Grants permission to create a new custom endpoint and associates it with an Amazon Aurora DB cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82095,16 +82097,15 @@
       },
       "CreateDBClusterParameterGroup": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Create a new DB cluster parameter group.",
+        "description": "Grants permission to create a new DB cluster parameter group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82113,16 +82114,15 @@
       },
       "CreateDBClusterSnapshot": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Creates a snapshot of a DB cluster.",
+        "description": "Grants permission to create a snapshot of a DB cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82131,16 +82131,15 @@
       },
       "CreateDBInstance": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Creates a new DB instance.",
+        "description": "Grants permission to create a new DB instance",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82149,16 +82148,15 @@
       },
       "CreateDBInstanceReadReplica": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Creates a DB instance that acts as a Read Replica of a source DB instance.",
+        "description": "Grants permission to create a DB instance that acts as a Read Replica of a source DB instance",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82167,16 +82165,15 @@
       },
       "CreateDBParameterGroup": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Creates a new DB parameter group.",
+        "description": "Grants permission to create a new DB parameter group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82201,16 +82198,15 @@
       },
       "CreateDBSecurityGroup": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Creates a new DB security group. DB security groups control access to a DB instance.",
+        "description": "Grants permission to create a new DB security group. DB security groups control access to a DB instance",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82219,16 +82215,15 @@
       },
       "CreateDBSnapshot": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Creates a DBSnapshot.",
+        "description": "Grants permission to create a DBSnapshot",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82237,16 +82232,15 @@
       },
       "CreateDBSubnetGroup": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Creates a new DB subnet group.",
+        "description": "Grants permission to create a new DB subnet group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82255,16 +82249,15 @@
       },
       "CreateEventSubscription": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Creates an RDS event notification subscription.",
+        "description": "Grants permission to create an RDS event notification subscription",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82277,7 +82270,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates an Aurora global database spread across multiple regions.",
+        "description": "Grants permission to create an Aurora global database spread across multiple regions",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82286,16 +82279,15 @@
       },
       "CreateOptionGroup": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Creates a new option group.",
+        "description": "Grants permission to create a new option group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82308,7 +82300,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "The DeleteDBCluster action deletes a previously provisioned DB cluster.",
+        "description": "Grants permission to delete a previously provisioned DB cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82321,7 +82313,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a custom endpoint and removes it from an Amazon Aurora DB cluster.",
+        "description": "Grants permission to delete a custom endpoint and removes it from an Amazon Aurora DB cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82334,7 +82326,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a specified DB cluster parameter group.",
+        "description": "Grants permission to delete a specified DB cluster parameter group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82347,7 +82339,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a DB cluster snapshot.",
+        "description": "Grants permission to delete a DB cluster snapshot",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82360,7 +82352,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "The DeleteDBInstance action deletes a previously provisioned DB instance.",
+        "description": "Grants permission to delete a previously provisioned DB instance",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82373,7 +82365,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes automated backups based on the source instance's DbiResourceId value or the restorable instance's resource ID.",
+        "description": "Grants permission to deletes automated backups based on the source instance's DbiResourceId value or the restorable instance's resource ID",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82386,7 +82378,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a specified DBParameterGroup.",
+        "description": "Grants permission to delete a specified DBParameterGroup",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82412,7 +82404,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a DB security group.",
+        "description": "Grants permission to delete a DB security group.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82425,7 +82417,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a DBSnapshot.",
+        "description": "Grants permission to delete a DBSnapshot",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82438,7 +82430,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a DB subnet group.",
+        "description": "Grants permission to delete a DB subnet group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82451,7 +82443,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes an RDS event notification subscription.",
+        "description": "Grants permission to delete an RDS event notification subscription",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82464,7 +82456,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a global database cluster.",
+        "description": "Grants permission to delete a global database cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82477,7 +82469,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes an existing option group.",
+        "description": "Grants permission to delete an existing option group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82505,7 +82497,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists all of the attributes for a customer account.",
+        "description": "Grants permission to list all of the attributes for a customer account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82520,7 +82512,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the set of CA certificates provided by Amazon RDS for this AWS account.",
+        "description": "Lists the set of CA certificates provided by Amazon RDS for this AWS account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82535,7 +82527,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns information about backtracks for a DB cluster.",
+        "description": "Grants permission to return information about backtracks for a DB cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82550,7 +82542,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns information about endpoints for an Amazon Aurora DB cluster.",
+        "description": "Grants permission to return information about endpoints for an Amazon Aurora DB cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82565,7 +82557,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns a list of DBClusterParameterGroup descriptions.",
+        "description": "Grants permission to return a list of DBClusterParameterGroup descriptions",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82580,7 +82572,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns the detailed parameter list for a particular DB cluster parameter group.",
+        "description": "Grants permission to return the detailed parameter list for a particular DB cluster parameter group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82595,7 +82587,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns a list of DB cluster snapshot attribute names and values for a manual DB cluster snapshot.",
+        "description": "Grants permission to return a list of DB cluster snapshot attribute names and values for a manual DB cluster snapshot",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82604,12 +82596,13 @@
       },
       "DescribeDBClusterSnapshots": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns information about DB cluster snapshots.",
+        "description": "Grants permission to return information about DB cluster snapshots",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82624,7 +82617,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns information about provisioned Aurora DB clusters.",
+        "description": "Grants permission to return information about provisioned Aurora DB clusters",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82639,7 +82632,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns a list of the available DB engines.",
+        "description": "Grants permission to return a list of the available DB engines",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82654,7 +82647,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns a list of automated backups for both current and deleted instances.",
+        "description": "Grants permission to return a list of automated backups for both current and deleted instances",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82669,7 +82662,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns information about provisioned RDS instances.",
+        "description": "Grants permission to return information about provisioned RDS instances",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82684,7 +82677,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns a list of DB log files for the DB instance.",
+        "description": "Grants permission to return a list of DB log files for the DB instance",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82699,7 +82692,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns a list of DBParameterGroup descriptions.",
+        "description": "Grants permission to return a list of DBParameterGroup descriptions",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82714,7 +82707,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns the detailed parameter list for a particular DB parameter group.",
+        "description": "Grants permission to return the detailed parameter list for a particular DB parameter group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82774,7 +82767,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns a list of DBSecurityGroup descriptions.",
+        "description": "Grants permission to return a list of DBSecurityGroup descriptions",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82789,7 +82782,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns a list of DB snapshot attribute names and values for a manual DB snapshot.",
+        "description": "Grants permission to return a list of DB snapshot attribute names and values for a manual DB snapshot",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82804,7 +82797,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns information about DB snapshots.",
+        "description": "Grants permission to return information about DB snapshots",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82819,7 +82812,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns a list of DBSubnetGroup descriptions.",
+        "description": "Grants permission to return a list of DBSubnetGroup descriptions",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82834,7 +82827,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns the default engine and system parameter information for the cluster database engine.",
+        "description": "Grants permission to return the default engine and system parameter information for the cluster database engine",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82849,7 +82842,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns the default engine and system parameter information for the specified database engine.",
+        "description": "Grants permission to return the default engine and system parameter information for the specified database engine",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82864,7 +82857,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Displays a list of categories for all event source types, or, if specified, for a specified source type.",
+        "description": "Grants permission to display a list of categories for all event source types, or, if specified, for a specified source type",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82879,7 +82872,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists all the subscription descriptions for a customer account.",
+        "description": "Grants permission to list all the subscription descriptions for a customer account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82894,7 +82887,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns events related to DB instances, DB security groups, DB snapshots, and DB parameter groups for the past 14 days.",
+        "description": "Grants permission to return events related to DB instances, DB security groups, DB snapshots, and DB parameter groups for the past 14 days",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82909,7 +82902,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns information about the export tasks.",
+        "description": "Grants permission to return information about the export tasks",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82924,7 +82917,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns information about Aurora global database clusters.",
+        "description": "Grants permission to return information about Aurora global database clusters",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82939,7 +82932,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Describes all available options.",
+        "description": "Grants permission to describe all available options",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82954,7 +82947,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Describes the available option groups.",
+        "description": "Grants permission to describe the available option groups",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82969,7 +82962,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns a list of orderable DB instance options for the specified engine.",
+        "description": "Grants permission to return a list of orderable DB instance options for the specified engine",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82984,7 +82977,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns a list of resources (for example, DB instances) that have at least one pending maintenance action.",
+        "description": "Grants permission to return a list of resources (for example, DB instances) that have at least one pending maintenance action",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -82999,7 +82992,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns information about reserved DB instances for this account, or about a specified reserved DB instance.",
+        "description": "Grants permission to return information about reserved DB instances for this account, or about a specified reserved DB instance",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83014,7 +83007,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists available reserved DB instance offerings.",
+        "description": "Grants permission to list available reserved DB instance offerings",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83029,7 +83022,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns a list of the source AWS Regions where the current AWS Region can create a Read Replica or copy a DB snapshot from.",
+        "description": "Grants permission to return a list of the source AWS Regions where the current AWS Region can create a Read Replica or copy a DB snapshot from",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83044,25 +83037,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists available modifications you can make to your DB instance",
+        "description": "Grants permission to list available modifications you can make to your DB instance",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeValidDBInstanceModifications.html"
-        }
-      },
-      "DownloadCompleteDBLogFile": {
-        "aws_action_groups": [
-          "ReadOnly",
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Read",
-        "condition_keys": [],
-        "description": "Downloads the contents of the specified database log file.",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "${ConceptsDocRoot}RESTReference.html#RESTReference.DownloadCompleteDBLogFile",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/RESTReference.html#RESTReference.DownloadCompleteDBLogFile"
         }
       },
       "DownloadDBLogFilePortion": {
@@ -83072,7 +83051,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Downloads all or a portion of the specified log file, up to 1 MB in size.",
+        "description": "Grants permission to download all or a portion of the specified log file, up to 1 MB in size",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83085,7 +83064,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Forces a failover for a DB cluster.",
+        "description": "Grants permission to force a failover for a DB cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83099,7 +83078,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Lists all tags on an Amazon RDS resource.",
+        "description": "Grants permission to list all tags on an Amazon RDS resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83112,7 +83091,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Modify current cluster capacity for an Amazon Aurora Severless DB cluster.",
+        "description": "Grants permission to modify current cluster capacity for an Amazon Aurora Severless DB cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83125,7 +83104,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Modify a setting for an Amazon Aurora DB cluster.",
+        "description": "Grants permission to modify a setting for an Amazon Aurora DB cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83138,7 +83117,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Modifies the properties of an endpoint in an Amazon Aurora DB cluster.",
+        "description": "Grants permission to modify the properties of an endpoint in an Amazon Aurora DB cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83151,7 +83130,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Modifies the parameters of a DB cluster parameter group.",
+        "description": "Grants permission to modify the parameters of a DB cluster parameter group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83164,7 +83143,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Adds an attribute and values to, or removes an attribute and values from, a manual DB cluster snapshot.",
+        "description": "Grants permission to add an attribute and values to, or removes an attribute and values from, a manual DB cluster snapshot",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83177,7 +83156,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Modify settings for a DB instance.",
+        "description": "Grants permission to modify settings for a DB instance",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83190,7 +83169,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Modifies the parameters of a DB parameter group.",
+        "description": "Grants permission to modify the parameters of a DB parameter group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83229,7 +83208,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates a manual DB snapshot, which can be encrypted or not encrypted, with a new engine version.",
+        "description": "Grants permission to update a manual DB snapshot, which can be encrypted or not encrypted, with a new engine version",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83242,7 +83221,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Adds an attribute and values to, or removes an attribute and values from, a manual DB snapshot.",
+        "description": "Grants permission to add an attribute and values to, or removes an attribute and values from, a manual DB snapshot",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83255,7 +83234,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Modifies an existing DB subnet group.",
+        "description": "Grants permission to modify an existing DB subnet group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83268,7 +83247,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Modifies an existing RDS event notification subscription.",
+        "description": "Grants permission to modify an existing RDS event notification subscription",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83281,7 +83260,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Modify a setting for an Amazon Aurora global cluster.",
+        "description": "Grants permission to modify a setting for an Amazon Aurora global cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83294,7 +83273,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Modifies an existing option group.",
+        "description": "Grants permission to modify an existing option group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83307,7 +83286,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Promotes a Read Replica DB instance to a standalone DB instance.",
+        "description": "Grants permission to promote a Read Replica DB instance to a standalone DB instance",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83320,7 +83299,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Promotes a Read Replica DB cluster to a standalone DB cluster.",
+        "description": "Grants permission to promote a Read Replica DB cluster to a standalone DB cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83336,7 +83315,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Purchases a reserved DB instance offering.",
+        "description": "Grants permission to purchase a reserved DB instance offering",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83349,7 +83328,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Rebooting a DB instance restarts the database engine service.",
+        "description": "Grants permission to restart the database engine service",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83375,7 +83354,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Detaches an Aurora secondary cluster from an Aurora global database cluster.",
+        "description": "Grants permission to detach an Aurora secondary cluster from an Aurora global database cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83388,7 +83367,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Disassociates an AWS Identity and Access Management (IAM) role from an Amazon Aurora DB cluster.",
+        "description": "Grants permission to disassociate an AWS Identity and Access Management (IAM) role from an Amazon Aurora DB cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83401,7 +83380,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Disassociates an AWS Identity and Access Management (IAM) role from a DB instance.",
+        "description": "Grants permission to disassociate an AWS Identity and Access Management (IAM) role from a DB instance",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83414,7 +83393,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Removes a source identifier from an existing RDS event notification subscription.",
+        "description": "Grants permission to remove a source identifier from an existing RDS event notification subscription",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83432,7 +83411,7 @@
           "aws:TagKeys",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Removes metadata tags from an Amazon RDS resource.",
+        "description": "Grants permission to remove metadata tags from an Amazon RDS resource.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83445,7 +83424,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Modifies the parameters of a DB cluster parameter group to the default value.",
+        "description": "Grants permission to modify the parameters of a DB cluster parameter group to the default value",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83458,7 +83437,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Modifies the parameters of a DB parameter group to the engine/system default value.",
+        "description": "Grants permission to modify the parameters of a DB parameter group to the engine/system default value",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83478,7 +83457,7 @@
           "rds:StorageEncrypted",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Creates an Amazon Aurora DB cluster from data stored in an Amazon S3 bucket.",
+        "description": "Grants permission to create an Amazon Aurora DB cluster from data stored in an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83495,7 +83474,7 @@
           "aws:TagKeys",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Creates a new DB cluster from a DB cluster snapshot.",
+        "description": "Grants permission to create a new DB cluster from a DB cluster snapshot",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83512,7 +83491,7 @@
           "aws:TagKeys",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Restores a DB cluster to an arbitrary point in time.",
+        "description": "Grants permission to restore a DB cluster to an arbitrary point in time",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83529,7 +83508,7 @@
           "aws:TagKeys",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Creates a new DB instance from a DB snapshot.",
+        "description": "Grants permission to create a new DB instance from a DB snapshot",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83546,7 +83525,7 @@
           "aws:TagKeys",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Creates a new DB instance from an Amazon S3 bucket.",
+        "description": "Grants permission to create a new DB instance from an Amazon S3 bucket",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83563,7 +83542,7 @@
           "aws:TagKeys",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Restores a DB instance to an arbitrary point in time.",
+        "description": "Grants permission to restore a DB instance to an arbitrary point in time",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83576,7 +83555,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Revokes ingress from a DBSecurityGroup for previously authorized IP ranges or EC2 or VPC Security Groups.",
+        "description": "Grants permission to revoke ingress from a DBSecurityGroup for previously authorized IP ranges or EC2 or VPC Security Groups",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83589,7 +83568,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Enables the user to start Activity Stream.",
+        "description": "Grants permission to start Activity Stream",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83602,7 +83581,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Starts the DB cluster.",
+        "description": "Starts the DB cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83615,7 +83594,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Starts the DB instance.",
+        "description": "Grants permission to start the DB instance",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83628,7 +83607,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Starts a new Export task for a DB snapshot.",
+        "description": "Grants permission to start a new Export task for a DB snapshot",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83641,7 +83620,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Enables the user to stop Activity Stream.",
+        "description": "Grants permission to stop Activity Stream",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83654,7 +83633,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Stops the DB cluster.",
+        "description": "Grants permission to stop the DB cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -83667,7 +83646,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Stops the DB instance.",
+        "description": "Grants permission to stop the DB instance",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -105007,7 +104986,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "transcribe:OutputBucketName",
+          "transcribe:OutputEncryptionKMSKeyId"
+        ],
         "description": "Grants permission to start an asynchronous job to transcribe speech to text.",
         "docs": {
           "api_doc": "",
@@ -105065,7 +105047,7 @@
       "api_reference_doc_page": "",
       "authz_doc_page": "https://docs.aws.amazon.com/transcribe/latest/dg/auth-and-access-control.html",
       "concepts_doc_root": "https://docs.aws.amazon.com/transcribe/latest/dg/",
-      "context_keys_doc_root": ""
+      "context_keys_doc_root": "https://docs.aws.amazon.com/transcribe/latest/dg/"
     },
     "prefix": "transcribe"
   },
