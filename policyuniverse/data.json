@@ -16554,6 +16554,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/API_BatchDeleteBuilds.html"
         }
       },
+      "BatchGetBuildBatches": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Gets information about one or more build batches.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/API_BatchGetBuildBatches.html"
+        }
+      },
       "BatchGetBuilds": {
         "aws_action_groups": [
           "ReadOnly",
@@ -16608,6 +16622,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/API_BatchGetReports.html"
+        }
+      },
+      "BatchPutCodeCoverages": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Adds or updates information about a report.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${ConceptsDocRoot}auth-and-access-control-iam-identity-based-access-control.html#console-policies",
+          "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/auth-and-access-control-iam-identity-based-access-control.html#console-policies"
         }
       },
       "BatchPutTestCases": {
@@ -16679,6 +16706,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/API_CreateWebhook.html"
+        }
+      },
+      "DeleteBuildBatch": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes a build batch.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/API_DeleteBuildBatch.html"
         }
       },
       "DeleteOAuthToken": {
@@ -16772,6 +16812,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/API_DeleteWebhook.html"
         }
       },
+      "DescribeCodeCoverages": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Returns an array of CodeCoverage objects.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/API_DescribeCodeCoverages.html"
+        }
+      },
       "DescribeTestCases": {
         "aws_action_groups": [
           "ReadOnly",
@@ -16824,6 +16878,36 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/API_InvalidateProjectCache.html"
+        }
+      },
+      "ListBuildBatches": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Gets a list of build batch IDs, with each build batch ID representing a single build batch.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/API_ListBuildBatches.html"
+        }
+      },
+      "ListBuildBatchesForProject": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Gets a list of build batch IDs for the specified build project, with each build batch ID representing a single build batch.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/API_ListBuildBatchesForProject.html"
         }
       },
       "ListBuilds": {
@@ -17032,6 +17116,32 @@
           "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/API_PutResourcePolicy.html"
         }
       },
+      "RetryBuild": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Retries a build.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/API_RetryBuild.html"
+        }
+      },
+      "RetryBuildBatch": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Retries a build batch.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/API_RetryBuildBatch.html"
+        }
+      },
       "StartBuild": {
         "aws_action_groups": [
           "ReadWrite"
@@ -17045,6 +17155,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/API_StartBuild.html"
         }
       },
+      "StartBuildBatch": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Starts running a build batch.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/API_StartBuildBatch.html"
+        }
+      },
       "StopBuild": {
         "aws_action_groups": [
           "ReadWrite"
@@ -17056,6 +17179,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/API_StopBuild.html"
+        }
+      },
+      "StopBuildBatch": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Attempts to stop running a build batch.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codebuild/latest/APIReference/API_StopBuildBatch.html"
         }
       },
       "UpdateProject": {
@@ -47042,6 +47178,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_AssociateAdminAccount.html"
         }
       },
+      "DeleteAppsList": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to permanently deletes an AWS Firewall Manager applications list.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_DeleteAppsList.html"
+        }
+      },
       "DeleteNotificationChannel": {
         "aws_action_groups": [
           "ReadWrite"
@@ -47070,6 +47219,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_DeletePolicy.html"
         }
       },
+      "DeleteProtocolsList": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to permanently deletes an AWS Firewall Manager protocols list.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_DeleteProtocolsList.html"
+        }
+      },
       "DisassociateAdminAccount": {
         "aws_action_groups": [
           "ReadWrite"
@@ -47095,6 +47257,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_GetAdminAccount.html"
+        }
+      },
+      "GetAppsList": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to return information about the specified AWS Firewall Manager applications list.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_GetAppsList.html"
         }
       },
       "GetComplianceDetail": {
@@ -47153,6 +47329,35 @@
           "doc_page_rel": "https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_GetProtectionStatus.html"
         }
       },
+      "GetProtocolsList": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to return information about the specified AWS Firewall Manager protocols list.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_GetProtocolsList.html"
+        }
+      },
+      "ListAppsLists": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to return an array of AppsListDataSummary objects.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_ListAppsLists.html"
+        }
+      },
       "ListComplianceStatus": {
         "aws_action_groups": [
           "ListOnly",
@@ -47198,6 +47403,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_ListPolicies.html"
         }
       },
+      "ListProtocolsLists": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to return an array of ProtocolsListDataSummary objects.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_ListProtocolsLists.html"
+        }
+      },
       "ListTagsForResource": {
         "aws_action_groups": [
           "ReadOnly",
@@ -47210,6 +47430,23 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_ListTagsForResource.html"
+        }
+      },
+      "PutAppsList": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to create an AWS Firewall Manager applications list.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_PutAppsList.html"
         }
       },
       "PutNotificationChannel": {
@@ -47240,6 +47477,23 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_PutPolicy.html"
+        }
+      },
+      "PutProtocolsList": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to creates an AWS Firewall Manager protocols list.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_PutProtocolsList.html"
         }
       },
       "TagResource": {
