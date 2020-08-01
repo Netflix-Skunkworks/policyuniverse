@@ -98113,6 +98113,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_UpdateInsight.html"
         }
       },
+      "UpdateSecurityHubConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to update Security Hub configuration",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_UpdateSecurityHubConfiguration.html"
+        }
+      },
       "UpdateStandardsControl": {
         "aws_action_groups": [
           "ReadWrite"
