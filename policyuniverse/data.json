@@ -27806,6 +27806,22 @@
           "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationEfs.html"
         }
       },
+      "CreateLocationFsxWindows": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Creates an endpoint for an Amazon FSx Windows File Server file system.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationFsxWindows.html"
+        }
+      },
       "CreateLocationNfs": {
         "aws_action_groups": [
           "ReadWrite"
@@ -27943,6 +27959,22 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_DescribeLocationEfs.html"
+        }
+      },
+      "DescribeLocationFsxWindows": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Returns metadata, such as the path information about an Amazon FSx Windows sync location.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_DescribeLocationFsxWindows.html"
         }
       },
       "DescribeLocationNfs": {
@@ -56612,11 +56644,7 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "condition_keys": [],
         "description": "Grants permission to get multiple channels simultaneously by channel ARN.",
         "docs": {
           "api_doc": "",
@@ -56630,11 +56658,7 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "condition_keys": [],
         "description": "Grants permission to get multiple stream keys simultaneously by stream key ARN.",
         "docs": {
           "api_doc": "",
@@ -56649,7 +56673,6 @@
         "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
         ],
         "description": "Grants permission to create a new channel and an associated stream key.",
@@ -56666,7 +56689,6 @@
         "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
         ],
         "description": "Grants permission to create a stream key.",
@@ -56681,11 +56703,7 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "condition_keys": [],
         "description": "Grants permission to delete a channel and channel's stream keys.",
         "docs": {
           "api_doc": "",
@@ -56698,11 +56716,7 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "condition_keys": [],
         "description": "Grants permission to delete the stream key for a specified ARN",
         "docs": {
           "api_doc": "",
@@ -56716,11 +56730,7 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "condition_keys": [],
         "description": "Grants permission to get the channel configuration for a specified channel ARN",
         "docs": {
           "api_doc": "",
@@ -56734,11 +56744,7 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "condition_keys": [],
         "description": "Grants permission to get information about the active (live) stream on a specified channel",
         "docs": {
           "api_doc": "",
@@ -56752,11 +56758,7 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "condition_keys": [],
         "description": "Grants permission to get stream-key information for a specified ARN",
         "docs": {
           "api_doc": "",
@@ -56771,11 +56773,7 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "condition_keys": [],
         "description": "Grants permission to get summary information about channels",
         "docs": {
           "api_doc": "",
@@ -56790,11 +56788,7 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "condition_keys": [],
         "description": "Grants permission to get summary information about stream keys",
         "docs": {
           "api_doc": "",
@@ -56809,11 +56803,7 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "condition_keys": [],
         "description": "Grants permission to get summary information about live streams",
         "docs": {
           "api_doc": "",
@@ -56829,7 +56819,6 @@
         "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
         ],
         "description": "Grants permission to get information about the tags for a specified ARN",
@@ -56844,11 +56833,7 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "condition_keys": [],
         "description": "Grants permission to insert metadata into an RTMP stream for a specified channel",
         "docs": {
           "api_doc": "",
@@ -56861,11 +56846,7 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "condition_keys": [],
         "description": "Grants permission to disconnect a streamer on a specified channel",
         "docs": {
           "api_doc": "",
@@ -56881,7 +56862,6 @@
         "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
         ],
         "description": "Grants permission to add or update tags for a resource with a specified ARN",
@@ -56898,8 +56878,6 @@
         ],
         "calculated_action_group": "Tagging",
         "condition_keys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
         ],
         "description": "Grants permission to remove tags for a resource with a specified ARN",
@@ -56914,11 +56892,7 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [
-          "aws:RequestTag/${TagKey}",
-          "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
-        ],
+        "condition_keys": [],
         "description": "Grants permission to update a channel's configuration",
         "docs": {
           "api_doc": "",
@@ -104965,6 +104939,19 @@
   },
   "Transcribe": {
     "actions": {
+      "CreateLanguageModel": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create a new custom language model.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/transcribe/latest/dg/API_CreateLanguageModel.html"
+        }
+      },
       "CreateMedicalVocabulary": {
         "aws_action_groups": [
           "ReadWrite"
@@ -105002,6 +104989,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/transcribe/latest/dg/API_CreateVocabularyFilter.html"
+        }
+      },
+      "DeleteLanguageModel": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete a previously created custom language model.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/transcribe/latest/dg/API_DeleteLanguageModel.html"
         }
       },
       "DeleteMedicalTranscriptionJob": {
@@ -105067,6 +105067,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/transcribe/latest/dg/API_DeleteVocabularyFilter.html"
+        }
+      },
+      "DescribeLanguageModel": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to return information about a custom language model.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/transcribe/latest/dg/API_DescribeLanguageModel.html"
         }
       },
       "GetMedicalTranscriptionJob": {
@@ -105137,6 +105151,21 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/transcribe/latest/dg/API_GetVocabularyFilter.html"
+        }
+      },
+      "ListLanguageModels": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly",
+          "ListOnly"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list custom language models.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/transcribe/latest/dg/API_ListLanguageModels.html"
         }
       },
       "ListMedicalTranscriptionJobs": {
