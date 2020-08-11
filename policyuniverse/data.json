@@ -41943,6 +41943,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/emr/latest/APIReference/API_GetBlockPublicAccessConfiguration.html"
         }
       },
+      "GetManagedScalingPolicy": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve the managed scaling policy associated with a cluster.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/emr/latest/APIReference/API_GetManagedScalingPolicy.html"
+        }
+      },
       "ListBootstrapActions": {
         "aws_action_groups": [
           "ReadOnly",
@@ -42136,6 +42150,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/emr/latest/APIReference/API_PutBlockPublicAccessConfiguration.html"
         }
       },
+      "PutManagedScalingPolicy": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create or update the managed scaling policy associated with a cluster.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/emr/latest/APIReference/API_PutManagedScalingPolicy.html"
+        }
+      },
       "RemoveAutoScalingPolicy": {
         "aws_action_groups": [
           "ReadWrite"
@@ -42147,6 +42174,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/emr/latest/APIReference/API_RemoveAutoScalingPolicy.html"
+        }
+      },
+      "RemoveManagedScalingPolicy": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to remove the managed scaling policy associated with a cluster.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/emr/latest/APIReference/API_RemoveManagedScalingPolicy.html"
         }
       },
       "RemoveTags": {
@@ -66930,7 +66970,10 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "lambda:Layer"
+          "lambda:Layer",
+          "lambda:SecurityGroupIds",
+          "lambda:SubnetIds",
+          "lambda:VpcIds"
         ],
         "description": "Grants permission to create an AWS Lambda function",
         "docs": {
@@ -67554,7 +67597,10 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "lambda:Layer"
+          "lambda:Layer",
+          "lambda:SecurityGroupIds",
+          "lambda:SubnetIds",
+          "lambda:VpcIds"
         ],
         "description": "Grants permission to modify the version-specific settings of an AWS Lambda function",
         "docs": {
