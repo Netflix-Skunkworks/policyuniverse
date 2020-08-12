@@ -34196,6 +34196,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLocalGatewayRouteTableVpcAssociation.html"
         }
       },
+      "CreateManagedPrefixList": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create a managed prefix list",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateManagedPrefixList.html"
+        }
+      },
       "CreateNatGateway": {
         "aws_action_groups": [
           "ReadWrite"
@@ -34821,6 +34834,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteLocalGatewayRouteTableVpcAssociation.html"
+        }
+      },
+      "DeleteManagedPrefixList": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete a managed prefix list",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteManagedPrefixList.html"
         }
       },
       "DeleteNatGateway": {
@@ -36126,6 +36152,21 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLocalGateways.html"
+        }
+      },
+      "DescribeManagedPrefixLists": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to describe your managed prefix lists and any AWS-managed prefix lists",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeManagedPrefixLists.html"
         }
       },
       "DescribeMovingAddresses": {
@@ -37498,6 +37539,34 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetLaunchTemplateData.html"
         }
       },
+      "GetManagedPrefixListAssociations": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to get information about the resources that are associated with the specified managed prefix list",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetManagedPrefixListAssociations.html"
+        }
+      },
+      "GetManagedPrefixListEntries": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to get information about the entries for a specified managed prefix list",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetManagedPrefixListEntries.html"
+        }
+      },
       "GetPasswordData": {
         "aws_action_groups": [
           "ReadOnly",
@@ -37883,6 +37952,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyLaunchTemplate.html"
+        }
+      },
+      "ModifyManagedPrefixList": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to modify a managed prefix list",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyManagedPrefixList.html"
         }
       },
       "ModifyNetworkInterfaceAttribute": {
@@ -38585,6 +38667,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RestoreAddressToClassic.html"
+        }
+      },
+      "RestoreManagedPrefixListVersion": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to restore the entries from a previous version of a managed prefix list to a new version of the prefix list",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RestoreManagedPrefixListVersion.html"
         }
       },
       "RevokeClientVpnIngress": {
@@ -45731,6 +45826,114 @@
       "context_keys_doc_root": ""
     },
     "prefix": "es"
+  },
+  "Elemental Activations": {
+    "actions": {
+      "DownloadSoftware": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Download the Software files for AWS Elemental Appliances and Software Purchases",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${ConceptsDocRoot}",
+          "doc_page_rel": "https://docs.aws.amazon.com/elemental-appliances-software/"
+        }
+      },
+      "GenerateLicenses": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Generate Software Licenses for AWS Elemental Appliances and Software Purchases",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${ConceptsDocRoot}",
+          "doc_page_rel": "https://docs.aws.amazon.com/elemental-appliances-software/"
+        }
+      },
+      "GetActivation": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describe an activation",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${ConceptsDocRoot}",
+          "doc_page_rel": "https://docs.aws.amazon.com/elemental-appliances-software/"
+        }
+      },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "This action lists tags for an AWS Elemental Activations resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${ConceptsDocRoot}",
+          "doc_page_rel": "https://docs.aws.amazon.com/elemental-appliances-software/"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "This action adds a tag for an AWS Elemental Activations resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${ConceptsDocRoot}",
+          "doc_page_rel": "https://docs.aws.amazon.com/elemental-appliances-software/"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "This action removes a tag from an AWS Elemental Activations resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${ConceptsDocRoot}",
+          "doc_page_rel": "https://docs.aws.amazon.com/elemental-appliances-software/"
+        }
+      }
+    },
+    "arn_format": "arn:aws:elemental-activations:<region>:<account-id>:<resource-type>/<resource_name>",
+    "arn_regex": "^arn:aws:elemental-activations:.+:.+:.+",
+    "description": "Elemental Activations",
+    "docs": {
+      "actions_doc_root": "https://docs.aws.amazon.com/elemental-appliances-software/",
+      "api_detail_root": "",
+      "api_doc_root": "",
+      "api_reference_doc_page": "${ConceptsDocRoot}",
+      "authz_doc_page": "https://docs.aws.amazon.com/elemental-appliances-software/",
+      "concepts_doc_root": "https://docs.aws.amazon.com/elemental-appliances-software/",
+      "context_keys_doc_root": "https://docs.aws.amazon.com/elemental-appliances-software/"
+    },
+    "prefix": "elemental-activations"
   },
   "Elemental Appliances and Software": {
     "actions": {
@@ -67208,25 +67411,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to view details about a version of an AWS Lambda layer",
+        "description": "Grants permission to view details about a version of an AWS Lambda layer. Note this action also supports GetLayerVersionByArn API",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/lambda/latest/dg/API_GetLayerVersion.html"
-        }
-      },
-      "GetLayerVersionByArn": {
-        "aws_action_groups": [
-          "ReadOnly",
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Read",
-        "condition_keys": [],
-        "description": "Grants permission to view details about a version of an AWS Lambda layer",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/lambda/latest/dg/API_GetLayerVersionByArn.html"
         }
       },
       "GetLayerVersionPolicy": {
@@ -101232,10 +101421,9 @@
     "actions": {
       "CreateActivity": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -101249,10 +101437,9 @@
       },
       "CreateStateMachine": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -101556,7 +101743,7 @@
       "api_reference_doc_page": "https://docs.aws.amazon.com/step-functions/latest/apireference/",
       "authz_doc_page": "https://docs.aws.amazon.com/step-functions/latest/dg/procedure-create-iam-role.html",
       "concepts_doc_root": "https://docs.aws.amazon.com/step-functions/latest/dg/",
-      "context_keys_doc_root": ""
+      "context_keys_doc_root": "https://docs.aws.amazon.com/step-functions/latest/dg/reference_policies_iam-condition-keys.html/"
     },
     "prefix": "states"
   },
