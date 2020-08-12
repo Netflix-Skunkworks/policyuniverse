@@ -94,7 +94,7 @@ var advisor = function() {
                     function(service_url) {
                         var service_data = results['services']['_embedded'][service_url];
                         var actions_url = service_data['_links']['actions']['href'];
-                        var service_name = service_data['serviceName'];
+                        var service_name = service_data['serviceDisplayName']; // Some services may have same service name so using display name
                         progress[actions_url] = "NOT_STARTED";
                         results['actions'] = {};
                         collectServiceActions(actions_url, service_name);
@@ -118,7 +118,12 @@ var advisor = function() {
             dataType: 'json',
             beforeSend: function(xhr) {if (XSRF_TOKEN != 'NOT_DEFINED') {xhr.setRequestHeader('X-CSRF-Token', XSRF_TOKEN);} else {system.stderr.writeLine('NOT ADDING XSRF TOKEN');}},
             success: function (data) {
-                results['actions'][service_name] = data;
+                if (typeof results['actions'][service_name] != "undefined") { // Merge if a new version is added by AWS with same service name prefix
+                    results['actions'][service_name]['_links']['results'].push(data['_links']['results']);
+                    merge( results['actions'][service_name]['_embedded'], data['_embedded']);
+                } else {
+                    results['actions'][service_name] = data;
+                }
                 progress[actions_url] = 'COMPLETE';
             },
             error: function(asdf) {
@@ -128,6 +133,11 @@ var advisor = function() {
             }
         });
     };
+
+    var merge = function(objOne, objTwo) {
+        Object.keys(objTwo).forEach(function(key) { objOne[key] = objTwo[key]; });
+        return objOne;
+    }
 
     var checkProgress = function() {
         for (var idx in Object.keys(progress)) {
