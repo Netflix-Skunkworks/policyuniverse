@@ -7418,6 +7418,105 @@
     },
     "prefix": "aws-portal"
   },
+  "Braket": {
+    "actions": {
+      "CancelQuantumTask": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to cancel a quantum task.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/braket/latest/APIReference/API_CancelQuantumTask.html"
+        }
+      },
+      "CreateQuantumTask": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create a quantum task.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/braket/latest/APIReference/API_CreateQuantumTask.html"
+        }
+      },
+      "GetDevice": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve information about the devices available in Amazon Braket.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/braket/latest/APIReference/API_GetDevice.html"
+        }
+      },
+      "GetQuantumTask": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve quantum tasks.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/braket/latest/APIReference/API_GetQuantumTask.html"
+        }
+      },
+      "SearchDevices": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to search for devices available in Amazon Braket.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/braket/latest/APIReference/API_SearchDevices.html"
+        }
+      },
+      "SearchQuantumTasks": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to search for quantum tasks.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/braket/latest/APIReference/API_SearchQuantumTasks.html"
+        }
+      }
+    },
+    "arn_format": "arn:${Partition}:braket:<region>:<account_ID>:.+",
+    "arn_regex": "^arn:${Partition}:braket::.+",
+    "description": "Amazon Braket",
+    "docs": {
+      "actions_doc_root": "https://docs.aws.amazon.com/braket/latest/APIReference/",
+      "api_detail_root": "",
+      "api_doc_root": "",
+      "api_reference_doc_page": "${DocHomeURL}braket/latest/APIReference/",
+      "authz_doc_page": "https://docs.aws.amazon.com/braket/latest/UserGuide/braket-manage-access.html",
+      "concepts_doc_root": "https://docs.aws.amazon.com/braket/latest/UserGuide/",
+      "context_keys_doc_root": "https://docs.aws.amazon.com/braket/latest/UserGuide/braket-manage-access.html#condition-keys"
+    },
+    "prefix": "braket"
+  },
   "Budget": {
     "actions": {
       "ModifyBudget": {
@@ -42428,6 +42527,45 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_AuthorizeCacheSecurityGroupIngress.html"
         }
       },
+      "BatchApplyUpdateAction": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Apply the service update.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_BatchApplyUpdateAction.html"
+        }
+      },
+      "BatchStopUpdateAction": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Stop the service update.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_BatchStopUpdateAction.html"
+        }
+      },
+      "CompleteMigration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Stop the service update.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CompleteMigration.html"
+        }
+      },
       "CopySnapshot": {
         "aws_action_groups": [
           "ReadWrite"
@@ -42493,6 +42631,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheSubnetGroup.html"
         }
       },
+      "CreateGlobalReplicationGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "The CreateGlobalReplicationGroup action creates a global datastore.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateGlobalReplicationGroup.html"
+        }
+      },
       "CreateReplicationGroup": {
         "aws_action_groups": [
           "ReadWrite"
@@ -42517,6 +42668,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateSnapshot.html"
+        }
+      },
+      "DecreaseNodeGroupsInGlobalReplicationGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "The DecreaseNodeGroupsInGlobalReplicationGroup action dec a global datastore.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DecreaseNodeGroupsInGlobalReplicationGroup.html"
         }
       },
       "DecreaseReplicaCount": {
@@ -42584,6 +42748,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DeleteCacheSubnetGroup.html"
         }
       },
+      "DeleteGlobalReplicationGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "The DeleteGlobalReplicationGroup action deletes a global datastore.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DeleteGlobalReplicationGroup.html"
+        }
+      },
       "DeleteReplicationGroup": {
         "aws_action_groups": [
           "ReadWrite"
@@ -42648,7 +42825,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "The DescribeCacheParameterGroups action returns a list of cache parameter group descriptions.",
+        "description": "The DescribeCacheParameterGroups action returns information about parameter groups for this account, or a particular parameter group.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -42678,7 +42855,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "The DescribeCacheSecurityGroups action returns a list of cache security group descriptions.",
+        "description": "The DescribeCacheSecurityGroups action returns a list of cache security group descriptions, or the description of the specified security group.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -42693,7 +42870,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "The DescribeCacheSubnetGroups action returns a list of cache subnet group descriptions.",
+        "description": "The DescribeCacheSubnetGroups action returns a list of cache subnet group descriptions, or the description of the specified subnet group.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -42730,6 +42907,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeEvents.html"
         }
       },
+      "DescribeGlobalReplicationGroups": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "The DescribeGlobalReplicationGroups action returns information about global datastores for this account, or a particular global datastore.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeGlobalReplicationGroups.html"
+        }
+      },
       "DescribeReplicationGroups": {
         "aws_action_groups": [
           "ListOnly",
@@ -42738,7 +42930,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "The DescribeReplicationGroups action returns information about a particular replication group.",
+        "description": "The DescribeReplicationGroups action returns information about replication groups for this account, or a particular replication group.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -42753,7 +42945,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "The DescribeReservedCacheNodes action returns information about reserved cache nodes for this account, or about a specified reserved cache node.",
+        "description": "The DescribeReservedCacheNodes action returns information about reserved cache nodes for this account, or a particular reserved cache node.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -42775,6 +42967,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeReservedCacheNodesOfferings.html"
         }
       },
+      "DescribeServiceUpdates": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Returns details of the service updates",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeServiceUpdates.html"
+        }
+      },
       "DescribeSnapshots": {
         "aws_action_groups": [
           "ListOnly",
@@ -42788,6 +42995,60 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeSnapshots.html"
+        }
+      },
+      "DescribeUpdateActions": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Returns details of the update actions.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeUpdateActions.html"
+        }
+      },
+      "DisassociateGlobalReplicationGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "The DisassociateGlobalReplicationGroup action removes a secondary Replication Group from the Global Datastore.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DisassociateGlobalReplicationGroup.html"
+        }
+      },
+      "FailoverGlobalReplicationGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "The FailoverGlobalReplicationGroup action removes a secondary Replication Group from the Global Datastore.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_FailoverGlobalReplicationGroup.html"
+        }
+      },
+      "IncreaseNodeGroupsInGlobalReplicationGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "The IncreaseNodeGroupsInGlobalReplicationGroup action increases the number of node groups in the Global Datastore.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_IncreaseNodeGroupsInGlobalReplicationGroup.html"
         }
       },
       "IncreaseReplicaCount": {
@@ -42871,6 +43132,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheSubnetGroup.html"
         }
       },
+      "ModifyGlobalReplicationGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "The ModifyGlobalReplicationGroup action modifies the settings for a Global Datastore.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyGlobalReplicationGroup.html"
+        }
+      },
       "ModifyReplicationGroup": {
         "aws_action_groups": [
           "ReadWrite"
@@ -42908,6 +43182,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_PurchaseReservedCacheNodesOffering.html"
+        }
+      },
+      "RebalanceSlotsInGlobalReplicationGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "The RebalanceSlotsInGlobalReplicationGroup action redistributes slots to ensure uniform distribution across existing shards in the cluster.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_RebalanceSlotsInGlobalReplicationGroup.html"
         }
       },
       "RebootCacheCluster": {
@@ -42963,6 +43250,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_RevokeCacheSecurityGroupIngress.html"
         }
       },
+      "StartMigration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Start the migration of data.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_StartMigration.html"
+        }
+      },
       "TestFailover": {
         "aws_action_groups": [
           "ReadWrite"
@@ -42977,8 +43277,8 @@
         }
       }
     },
-    "arn_format": "",
-    "arn_regex": "",
+    "arn_format": "arn:<partition>:elasticache:<region>:<account-id>:<resource-type>:<resource_name>",
+    "arn_regex": "^arn:.+:elasticache:.+:.+:.+",
     "description": "Amazon ElastiCache",
     "docs": {
       "actions_doc_root": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/",
@@ -62020,6 +62320,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/greengrass/latest/apireference/disassociateservicerolefromaccount-delete.html"
         }
       },
+      "Discover": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve information required to connect to a Greengrass core.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "https://docs.aws.amazon.com/greengrass/latest/developerguide/gg-discover-api.html",
+          "doc_page_rel": "https://docs.aws.amazon.com/greengrass/latest/developerguide/gg-discover-api.html"
+        }
+      },
       "GetAssociatedRole": {
         "aws_action_groups": [
           "ReadWrite",
@@ -62945,7 +63259,7 @@
       "api_detail_root": "",
       "api_doc_root": "",
       "api_reference_doc_page": "https://docs.aws.amazon.com/greengrass/latest/apireference/",
-      "authz_doc_page": "https://docs.aws.amazon.com/greengrass/latest/developerguide/gg-sec.html#gg-config-sec-min-iot-policy",
+      "authz_doc_page": "https://docs.aws.amazon.com/greengrass/latest/developerguide/security_iam_service-with-iam.html",
       "concepts_doc_root": "https://docs.aws.amazon.com/greengrass/latest/developerguide/",
       "context_keys_doc_root": "https://docs.aws.amazon.com/IAM/latest/UserGuide/"
     },
@@ -66040,6 +66354,32 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_SplitShard.html"
+        }
+      },
+      "StartStreamEncryption": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to enable or update server-side encryption using an AWS KMS key for a specified stream.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_StartStreamEncryption.html"
+        }
+      },
+      "StopStreamEncryption": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to disable server-side encryption for a specified stream.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_StopStreamEncryption.html"
         }
       },
       "SubscribeToShard": {
