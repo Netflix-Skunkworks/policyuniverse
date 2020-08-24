@@ -7838,6 +7838,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_DeletePermission.html"
         }
       },
+      "DeletePolicy": {
+        "aws_action_groups": [
+          "Permissions"
+        ],
+        "calculated_action_group": "Permissions",
+        "condition_keys": [],
+        "description": "Deletes the policy for an ACM Private CA.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_DeletePolicy.html"
+        }
+      },
       "DescribeCertificateAuthority": {
         "aws_action_groups": [
           "ReadOnly",
@@ -7906,6 +7919,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_GetCertificateAuthorityCsr.html"
+        }
+      },
+      "GetPolicy": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Retrieves the policy on an ACM Private CA.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_GetPolicy.html"
         }
       },
       "ImportCertificateAuthorityCertificate": {
@@ -7977,6 +8004,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_ListTags.html"
+        }
+      },
+      "PutPolicy": {
+        "aws_action_groups": [
+          "Permissions"
+        ],
+        "calculated_action_group": "Permissions",
+        "condition_keys": [],
+        "description": "Puts a policy on an ACM Private CA.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_PutPolicy.html"
         }
       },
       "RestoreCertificateAuthority": {
@@ -56621,6 +56661,81 @@
     },
     "prefix": "iq-permission"
   },
+  "Identity Store": {
+    "actions": {
+      "DescribeGroup": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Retrieves information about group from the directory that AWS Identity Store provides by default",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_DescribeGroup.html"
+        }
+      },
+      "DescribeUser": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Retrieves information about user from the directory that AWS Identity Store provides by default",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_DescribeUser.html"
+        }
+      },
+      "ListGroups": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Search for groups within the associated directory",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_ListGroups.html"
+        }
+      },
+      "ListUsers": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Search for users within the associated directory",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_ListUsers.html"
+        }
+      }
+    },
+    "arn_format": "arn:${Partition}:identitystore:${Region}:${Account}:<relative-id>",
+    "arn_regex": "^arn:${Partition}:identitystore:${Region}:.+",
+    "description": "AWS Identity Store",
+    "docs": {
+      "actions_doc_root": "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/",
+      "api_detail_root": "",
+      "api_doc_root": "",
+      "api_reference_doc_page": "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/Welcome.html",
+      "authz_doc_page": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access.html",
+      "concepts_doc_root": "https://docs.aws.amazon.com/singlesignon/latest/",
+      "context_keys_doc_root": ""
+    },
+    "prefix": "identitystore"
+  },
   "Import/Export": {
     "actions": {
       "CancelJob": {
@@ -57254,6 +57369,19 @@
           "doc_page_rel": "${ResourcesDocRoot}/API_DeleteChannel.html"
         }
       },
+      "DeletePlaybackKeyPair": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete the playback key pair for a specified ARN",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_DeletePlaybackKeyPair.html"
+        }
+      },
       "DeleteStreamKey": {
         "aws_action_groups": [
           "ReadWrite"
@@ -57279,6 +57407,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "${ResourcesDocRoot}/API_GetChannel.html"
+        }
+      },
+      "GetPlaybackKeyPair": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to get the playback keypair information for a specified ARN",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_GetPlaybackKeyPair.html"
         }
       },
       "GetStream": {
@@ -57309,6 +57451,22 @@
           "doc_page_rel": "${ResourcesDocRoot}/API_GetStreamKey.html"
         }
       },
+      "ImportPlaybackKeyPair": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to import the public key.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_ImportPlaybackKeyPair.html"
+        }
+      },
       "ListChannels": {
         "aws_action_groups": [
           "ListOnly",
@@ -57322,6 +57480,21 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "${ResourcesDocRoot}/API_ListChannels.html"
+        }
+      },
+      "ListPlaybackKeyPairs": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to get summary information about playback key pairs",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "${ResourcesDocRoot}/API_ListPlaybackKeyPairs.html"
         }
       },
       "ListStreamKeys": {
@@ -74267,6 +74440,20 @@
         "calculated_action_group": "Read",
         "condition_keys": [],
         "description": "Grants permission to describe an input device",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com//medialive/latest/ug/edit-input-device.html"
+        }
+      },
+      "DescribeInputDeviceThumbnail": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to describe an input device thumbnail",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -94541,6 +94728,7 @@
           "aws:PrincipalTag/${TagKey}",
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
+          "iam:ResourceTag/${TagKey}",
           "sts:ExternalId",
           "sts:RoleSessionName",
           "sts:TransitiveTagKeys"
@@ -103775,7 +103963,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}"
+        ],
         "description": "Grants permission to delete a specified SSM parameter",
         "docs": {
           "api_doc": "",
@@ -103788,7 +103978,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}"
+        ],
         "description": "Grants permission to delete multiple specified SSM parameters",
         "docs": {
           "api_doc": "",
@@ -104595,7 +104787,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}"
+        ],
         "description": "Grants permission to view information about a specified parameter",
         "docs": {
           "api_doc": "",
@@ -104609,7 +104803,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}"
+        ],
         "description": "Grants permission to view details and changes for a specified parameter",
         "docs": {
           "api_doc": "",
@@ -104623,7 +104819,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}"
+        ],
         "description": "Grants permission to view information about multiple specified parameters",
         "docs": {
           "api_doc": "",
@@ -105496,8 +105694,8 @@
         }
       }
     },
-    "arn_format": "arn:aws:textract:<region>:<accountID>:<relative-id>",
-    "arn_regex": "^arn:aws:textract::.+",
+    "arn_format": "arn:<partition>:textract:<region>:<accountID>:<relative-id>",
+    "arn_regex": "^arn:<partition>:textract::.+",
     "description": "Amazon Textract",
     "docs": {
       "actions_doc_root": "https://docs.aws.amazon.com/textract/latest/dg/",
