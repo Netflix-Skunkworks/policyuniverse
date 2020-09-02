@@ -8601,6 +8601,22 @@
           "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/API_CreateMeeting.html"
         }
       },
+      "CreateMeetingWithAttendees": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to create a new Amazon Chime SDK meeting in the specified media Region, with a set of attendees",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/chime/latest/APIReference/API_CreateMeetingWithAttendees.html"
+        }
+      },
       "CreatePhoneNumberOrder": {
         "aws_action_groups": [
           "ReadWrite"
@@ -34101,6 +34117,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateCapacityReservation.html"
         }
       },
+      "CreateCarrierGateway": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create a carrier gateway and provides CSP connectivity to VPC customers.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateCarrierGateway.html"
+        }
+      },
       "CreateClientVpnEndpoint": {
         "aws_action_groups": [
           "ReadWrite"
@@ -34791,6 +34820,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpnGateway.html"
+        }
+      },
+      "DeleteCarrierGateway": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete a carrier gateway",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteCarrierGateway.html"
         }
       },
       "DeleteClientVpnEndpoint": {
@@ -35573,6 +35615,21 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeCapacityReservations.html"
+        }
+      },
+      "DescribeCarrierGateways": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to describe one or more Carrier Gateways",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeCarrierGateways.html"
         }
       },
       "DescribeClassicLinkInstances": {
@@ -49485,6 +49542,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_AcceptMatch.html"
         }
       },
+      "ClaimGameServer": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Locates and reserves a game server to host a new game session.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_ClaimGameServer.html"
+        }
+      },
       "CreateAlias": {
         "aws_action_groups": [
           "ReadWrite"
@@ -49534,6 +49604,23 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateFleet.html"
+        }
+      },
+      "CreateGameServerGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Creates a new game server group, sets up a corresponding Auto Scaling group, and launches instances to host game servers.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateGameServerGroup.html"
         }
       },
       "CreateGameSession": {
@@ -49708,6 +49795,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_DeleteFleet.html"
         }
       },
+      "DeleteGameServerGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Permanently deletes a game server group and terminates FleetIQ activity for the corresponding Auto Scaling group.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_DeleteGameServerGroup.html"
+        }
+      },
       "DeleteGameSessionQueue": {
         "aws_action_groups": [
           "ReadWrite"
@@ -49797,6 +49897,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_DeleteVpcPeeringConnection.html"
+        }
+      },
+      "DeregisterGameServer": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Removes a game server from a game server group.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_DeregisterGameServer.html"
         }
       },
       "DescribeAlias": {
@@ -49909,6 +50022,48 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetUtilization.html"
+        }
+      },
+      "DescribeGameServer": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Retrieves properties for a game server.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeGameServer.html"
+        }
+      },
+      "DescribeGameServerGroup": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Retrieves properties for a game server group.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeGameServerGroup.html"
+        }
+      },
+      "DescribeGameServerInstances": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Retrieves the status of EC2 instances in a game server group.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeGameServerInstances.html"
         }
       },
       "DescribeGameSessionDetails": {
@@ -50180,6 +50335,36 @@
           "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_ListFleets.html"
         }
       },
+      "ListGameServerGroups": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Retrieves all game server groups that are defined in the current region.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_ListGameServerGroups.html"
+        }
+      },
+      "ListGameServers": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Retrieves all game servers that are currently running in a game server group.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_ListGameServers.html"
+        }
+      },
       "ListScripts": {
         "aws_action_groups": [
           "ListOnly",
@@ -50203,7 +50388,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "List Tags for GameLift Resource",
+        "description": "Lists tags for GameLift resources",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -50221,6 +50406,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_PutScalingPolicy.html"
+        }
+      },
+      "RegisterGameServer": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Notifies GameLift FleetIQ when a new game server is ready to host gameplay.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_RegisterGameServer.html"
         }
       },
       "RequestUploadCredentials": {
@@ -50249,6 +50447,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_ResolveAlias.html"
+        }
+      },
+      "ResumeGameServerGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Reinstates suspended FleetIQ activity for a game server group.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_ResumeGameServerGroup.html"
         }
       },
       "SearchGameSessions": {
@@ -50356,6 +50567,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_StopMatchmaking.html"
         }
       },
+      "SuspendGameServerGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Temporarily stops FleetIQ activity for a game server group.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_SuspendGameServerGroup.html"
+        }
+      },
       "TagResource": {
         "aws_action_groups": [
           "ReadWrite",
@@ -50366,7 +50590,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Tags GameLift Resources",
+        "description": "Tags GameLift resources",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -50382,7 +50606,7 @@
         "condition_keys": [
           "aws:TagKeys"
         ],
-        "description": "Untagging GameLift Resources",
+        "description": "Untags GameLift resources",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -50452,6 +50676,32 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetPortSettings.html"
+        }
+      },
+      "UpdateGameServer": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Changes game server properties, health status, or utilization status.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateGameServer.html"
+        }
+      },
+      "UpdateGameServerGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates properties for game server group, including allowed instance types.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateGameServerGroup.html"
         }
       },
       "UpdateGameSession": {
@@ -71164,6 +71414,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn.html#DeleteCluster"
         }
       },
+      "DeleteConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete the specified MSK configuration.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/configurations-arn.html#DeleteConfiguration"
+        }
+      },
       "DescribeCluster": {
         "aws_action_groups": [
           "ReadWrite",
@@ -71405,6 +71668,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-version.html#UpdateClusterKafkaVersion"
+        }
+      },
+      "UpdateConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create a new revision of the configuration.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/configurations-arn.html#updateconfiguration"
         }
       },
       "UpdateMonitoring": {
@@ -73014,11 +73290,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Allows a user to access the File Upload page inside the AWS Marketplace Management Portal.",
+        "description": "Allows access to the File Upload page inside the AWS Marketplace Management Portal.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/controlling-access/marketplace-management-portal-user-access.html#detailed-management-portal-permissions"
+          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/userguide/detailed-management-portal-permissions.html#seller-ammp-permissions"
         }
       },
       "viewMarketing": {
@@ -73029,11 +73305,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Allows a user to access the Marketing page inside the AWS Marketplace Management Portal.",
+        "description": "Allows access to the Marketing page inside the AWS Marketplace Management Portal.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/controlling-access/marketplace-management-portal-user-access.html#detailed-management-portal-permissions"
+          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/userguide/detailed-management-portal-permissions.html#seller-ammp-permissions"
         }
       },
       "viewReports": {
@@ -73044,11 +73320,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Allows a user to access the Reports page inside the AWS Marketplace Management Portal.",
+        "description": "Allows access to the Reports page inside the AWS Marketplace Management Portal.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/controlling-access/marketplace-management-portal-user-access.html#detailed-management-portal-permissions"
+          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/userguide/detailed-management-portal-permissions.html#seller-ammp-permissions"
         }
       },
       "viewSettings": {
@@ -73059,11 +73335,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Allows a user to access the Settings page inside the AWS Marketplace Management Portal.",
+        "description": "Allows access to the Settings page inside the AWS Marketplace Management Portal.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/controlling-access/marketplace-management-portal-user-access.html#detailed-management-portal-permissions"
+          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/userguide/detailed-management-portal-permissions.html#seller-ammp-permissions"
         }
       },
       "viewSupport": {
@@ -73074,11 +73350,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Allows a user to access the Customer Support Eligibility page inside the AWS Marketplace Management Portal.",
+        "description": "Allows access to the Customer Support Eligibility page inside the AWS Marketplace Management Portal.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/controlling-access/marketplace-management-portal-user-access.html#detailed-management-portal-permissions"
+          "doc_page_rel": "https://docs.aws.amazon.com/marketplace/latest/userguide/detailed-management-portal-permissions.html#seller-ammp-permissions"
         }
       }
     },
@@ -73086,13 +73362,13 @@
     "arn_regex": "",
     "description": "AWS Marketplace Management Portal",
     "docs": {
-      "actions_doc_root": "https://docs.aws.amazon.com/marketplace/latest/controlling-access/",
+      "actions_doc_root": "https://docs.aws.amazon.com/marketplace/latest/userguide/",
       "api_detail_root": "",
       "api_doc_root": "",
-      "api_reference_doc_page": "${DocHomeURL}marketplaceentitlement/latest/APIReference/",
-      "authz_doc_page": "https://docs.aws.amazon.com/marketplace/latest/controlling-access/marketplace-management-portal-user-access.html#detailed-management-portal-permissions",
-      "concepts_doc_root": "https://docs.aws.amazon.com/marketplace/latest/controlling-access/",
-      "context_keys_doc_root": ""
+      "api_reference_doc_page": "",
+      "authz_doc_page": "https://docs.aws.amazon.com/marketplace/latest/userguide/marketplace-management-portal-user-access.html",
+      "concepts_doc_root": "https://docs.aws.amazon.com/marketplace/latest/userguide/",
+      "context_keys_doc_root": "https://docs.aws.amazon.com/marketplace/latest/userguide/"
     },
     "prefix": "aws-marketplace-management"
   },
@@ -89008,11 +89284,24 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to associate a specified IP address with a resolver endpoint. This is an IP address that DNS queries pass through on the way to your network (outbound) or your VPCs (inbound).",
+        "description": "Grants permission to associate a specified IP address with a Resolver endpoint. This is an IP address that DNS queries pass through on the way to your network (outbound) or your VPCs (inbound)",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_AssociateResolverEndpointIpAddress.html"
+        }
+      },
+      "AssociateResolverQueryLogConfig": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to associate an Amazon VPC with a specified query logging configuration",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_AssociateResolverQueryLogConfig.html"
         }
       },
       "AssociateResolverRule": {
@@ -89021,7 +89310,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to associate a specified resolver rule with a specified VPC.",
+        "description": "Grants permission to associate a specified Resolver rule with a specified VPC",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -89034,11 +89323,24 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to create a resolver endpoint. There are two types of resolver endpoints, inbound and outbound.",
+        "description": "Grants permission to create a Resolver endpoint. There are two types of Resolver endpoints, inbound and outbound",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateResolverEndpoint.html"
+        }
+      },
+      "CreateResolverQueryLogConfig": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create a Resolver query logging configuration, which defines where you want Resolver to save DNS query logs that originate in your VPCs",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateResolverQueryLogConfig.html"
         }
       },
       "CreateResolverRule": {
@@ -89047,7 +89349,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "For DNS queries that originate in your VPC, grants permission to define how to route the queries out of the VPC.",
+        "description": "For DNS queries that originate in your VPC, grants permission to define how to route the queries out of the VPC",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -89060,11 +89362,24 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to delete a resolver endpoint. The effect of deleting a resolver endpoint depends on whether it's an inbound or an outbound resolver endpoint.",
+        "description": "Grants permission to delete a Resolver endpoint. The effect of deleting a Resolver endpoint depends on whether it's an inbound or an outbound endpoint",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DeleteResolverEndpoint.html"
+        }
+      },
+      "DeleteResolverQueryLogConfig": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete a Resolver query logging configuration",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DeleteResolverQueryLogConfig.html"
         }
       },
       "DeleteResolverRule": {
@@ -89073,7 +89388,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to delete a resolver rule.",
+        "description": "Grants permission to delete a Resolver rule",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -89086,11 +89401,24 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to remove a specified IP address from a resolver endpoint. This is an IP address that DNS queries pass through on the way to your network (outbound) or your VPCs (inbound).",
+        "description": "Grants permission to remove a specified IP address from a Resolver endpoint. This is an IP address that DNS queries pass through on the way to your network (outbound) or your VPCs (inbound)",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DisassociateResolverEndpointIpAddress.html"
+        }
+      },
+      "DisassociateResolverQueryLogConfig": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to remove the association between a specified Resolver query logging configuration and a specified VPC",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DisassociateResolverQueryLogConfig.html"
         }
       },
       "DisassociateResolverRule": {
@@ -89099,7 +89427,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to remove the association between a specified resolver rule and a specified VPC.",
+        "description": "Grants permission to remove the association between a specified Resolver rule and a specified VPC",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -89113,11 +89441,53 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to get information about a specified resolver endpoint, such as whether it's an inbound or an outbound resolver endpoint, and the IP addresses in your VPC that DNS queries are forwarded to on the way into or out of your VPC.",
+        "description": "Grants permission to get information about a specified Resolver endpoint, such as whether it's an inbound or an outbound endpoint, and the IP addresses in your VPC that DNS queries are forwarded to on the way into or out of your VPC",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_GetResolverEndpoint.html"
+        }
+      },
+      "GetResolverQueryLogConfig": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to get information about a specified Resolver query logging configuration, such as the number of VPCs that the configuration is logging queries for and the location that logs are sent to",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_GetResolverQueryLogConfig.html"
+        }
+      },
+      "GetResolverQueryLogConfigAssociation": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to get information about a specified association between a Resolver query logging configuration and an Amazon VPC. When you associate a VPC with a query logging configuration, Resolver logs DNS queries that originate in that VPC",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_GetResolverQueryLogConfigAssociation.html"
+        }
+      },
+      "GetResolverQueryLogConfigPolicy": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to get information about a specified Resolver query logging policy, which specifies the Resolver query logging operations and resources that you want to allow another AWS account to use",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_GetResolverQueryLogConfigPolicy.html"
         }
       },
       "GetResolverRule": {
@@ -89127,7 +89497,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to get information about a specified resolver rule, such as the domain name that the rule forwards DNS queries for and the IP address that queries are forwarded to.",
+        "description": "Grants permission to get information about a specified Resolver rule, such as the domain name that the rule forwards DNS queries for and the IP address that queries are forwarded to.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -89141,7 +89511,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to get information about an association between a specified resolver rule and a VPC.",
+        "description": "Grants permission to get information about an association between a specified Resolver rule and a VPC",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -89155,7 +89525,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to get information about a resolver rule policy.",
+        "description": "Grants permission to get information about a Resolver rule policy, which specifies the Resolver operations and resources that you want to allow another AWS account to use",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -89170,7 +89540,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "For a specified resolver endpoint, grants permission to list the IP addresses that DNS queries pass through on the way to your network (outbound) or your VPCs (inbound).",
+        "description": "For a specified Resolver endpoint, grants permission to list the IP addresses that DNS queries pass through on the way to your network (outbound) or your VPCs (inbound)",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -89185,11 +89555,41 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to list all the resolver endpoints that were created using the current AWS account.",
+        "description": "Grants permission to list all the Resolver endpoints that were created using the current AWS account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListResolverEndpoints.html"
+        }
+      },
+      "ListResolverQueryLogConfigAssociations": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list information about associations between Amazon VPCs and query logging configurations",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListResolverQueryLogConfigAssociations.html"
+        }
+      },
+      "ListResolverQueryLogConfigs": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list information about the specified query logging configurations, which define where you want Resolver to save DNS query logs and specify the VPCs that you want to log queries for",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListResolverQueryLogConfigs.html"
         }
       },
       "ListResolverRuleAssociations": {
@@ -89200,7 +89600,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to list the associations that were created between resolver rules and VPCs using the current AWS account.",
+        "description": "Grants permission to list the associations that were created between Resolver rules and VPCs using the current AWS account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -89215,7 +89615,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to list the resolver rules that were created using the current AWS account.",
+        "description": "Grants permission to list the Resolver rules that were created using the current AWS account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -89229,11 +89629,24 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to list the tags that you associated with the specified resource.",
+        "description": "Grants permission to list the tags that you associated with the specified resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListTagsForResource.html"
+        }
+      },
+      "PutResolverQueryLogConfigPolicy": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to specify an AWS account that you want to share a query logging configuration with, the query logging configuration that you want to share, and the operations that you want the account to be able to perform on the configuration",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_PutResolverQueryLogConfigPolicy.html"
         }
       },
       "PutResolverRulePolicy": {
@@ -89242,7 +89655,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to specify the Resolver operations and resources that you want to allow another AWS account to use.",
+        "description": "Grants permission to specify an AWS account that you want to share rules with, the Resolver rules that you want to share, and the operations that you want the account to be able to perform on those rules",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -89256,7 +89669,7 @@
         ],
         "calculated_action_group": "Tagging",
         "condition_keys": [],
-        "description": "Grants permission to add one or more tags to a specified resource.",
+        "description": "Grants permission to add one or more tags to a specified resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -89270,7 +89683,7 @@
         ],
         "calculated_action_group": "Tagging",
         "condition_keys": [],
-        "description": "Grants permission to remove one or more tags from a specified resource.",
+        "description": "Grants permission to remove one or more tags from a specified resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -89283,7 +89696,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to update selected settings for an inbound or an outbound resolver endpoint.",
+        "description": "Grants permission to update selected settings for an inbound or an outbound Resolver endpoint",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -89296,7 +89709,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to update settings for a specified resolver rule.",
+        "description": "Grants permission to update settings for a specified Resolver rule",
         "docs": {
           "api_doc": "",
           "doc_page": "",
