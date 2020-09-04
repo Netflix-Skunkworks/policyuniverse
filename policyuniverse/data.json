@@ -79108,10 +79108,10 @@
       "actions_doc_root": "https://docs.aws.amazon.com/organizations/latest/APIReference/",
       "api_detail_root": "",
       "api_doc_root": "",
-      "api_reference_doc_page": "https://docs.aws.amazon.com/organizations/latest/APIReference/",
+      "api_reference_doc_page": "https://docs.aws.amazon.com/organizations/latest/APIReference//",
       "authz_doc_page": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_permissions.html",
       "concepts_doc_root": "https://docs.aws.amazon.com/organizations/latest/userguide/",
-      "context_keys_doc_root": "${ActionsDocRoot}"
+      "context_keys_doc_root": "${ActionsDocRoot}/"
     },
     "prefix": "organizations"
   },
@@ -113227,12 +113227,13 @@
     "actions": {
       "BatchGetTraces": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Retrieves a list of traces specified by ID. Each trace is a collection of segment documents that originates from a single request. Use GetTraceSummaries to get a list of trace IDs.",
+        "description": "Grants permission to retrieve a list of traces specified by ID. Each trace is a collection of segment documents that originates from a single request. Use GetTraceSummaries to get a list of trace IDs",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -113244,8 +113245,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Creates a group resource with a name and a filter expression.",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to create a group resource with a name and a filter expression",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -113257,8 +113261,11 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Creates a rule to control sampling behavior for instrumented applications.",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to create a rule to control sampling behavior for instrumented applications",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -113270,8 +113277,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Deletes a group resource.",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Grants permission to delete a group resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -113283,8 +113292,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Deletes a sampling rule.",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Grants permission to delete a sampling rule",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -113297,7 +113308,7 @@
         ],
         "calculated_action_group": "Permissions",
         "condition_keys": [],
-        "description": "Retrieves the current encryption configuration for X-Ray data.",
+        "description": "Grants permission to retrieve the current encryption configuration for X-Ray data",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -113310,8 +113321,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
-        "description": "Retrieves group resource details.",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Grants permission to retrieve group resource details",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -113325,11 +113338,67 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Retrieves all active group details.",
+        "description": "Grants permission to retrieve all active group details",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/xray/latest/api/API_GetGroups.html"
+        }
+      },
+      "GetInsight": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve the details of a specific insight",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/xray/latest/api/API_GetInsight.html"
+        }
+      },
+      "GetInsightEvents": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve the events of a specific insight",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/xray/latest/api/API_GetInsightEvents.html"
+        }
+      },
+      "GetInsightImpactGraph": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve the part of the service graph which is impacted for a specific insight",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/xray/latest/api/API_GetInsightImpactGraph.html"
+        }
+      },
+      "GetInsightSummaries": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve the summary of all insights for a group and time range with optional filters",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/xray/latest/api/API_GetInsightSummaries.html"
         }
       },
       "GetSamplingRules": {
@@ -113339,7 +113408,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Retrieves all sampling rules.",
+        "description": "Grants permission to retrieve all sampling rules",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -113353,7 +113422,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Retrieves information about recent sampling results for all sampling rules.",
+        "description": "Grants permission to retrieve information about recent sampling results for all sampling rules",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -113367,7 +113436,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Requests a sampling quota for rules that the service is using to sample requests.",
+        "description": "Grants permission to request a sampling quota for rules that the service is using to sample requests",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -113381,7 +113450,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Retrieves a document that describes services that process incoming requests, and downstream services that they call as a result.",
+        "description": "Grants permission to retrieve a document that describes services that process incoming requests, and downstream services that they call as a result",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -113395,7 +113464,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get an aggregation of service statistics defined by a specific time range bucketed into time intervals.",
+        "description": "Grants permission to retrieve an aggregation of service statistics defined by a specific time range bucketed into time intervals",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -113409,7 +113478,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Retrieves a service graph for one or more specific trace IDs.",
+        "description": "Grants permission to retrieve a service graph for one or more specific trace IDs",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -113423,11 +113492,26 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Retrieves IDs and metadata for traces available for a specified time frame using an optional filter. To get the full traces, pass the trace IDs to BatchGetTraces.",
+        "description": "Grants permission to retrieve IDs and metadata for traces available for a specified time frame using an optional filter. To get the full traces, pass the trace IDs to BatchGetTraces",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/xray/latest/api/API_GetTraceSummaries.html"
+        }
+      },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list tags for an X-Ray resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/xray/latest/api/API_ListTagsForResource.html"
         }
       },
       "PutEncryptionConfig": {
@@ -113436,7 +113520,7 @@
         ],
         "calculated_action_group": "Permissions",
         "condition_keys": [],
-        "description": "Updates the encryption configuration for X-Ray data.",
+        "description": "Grants permission to update the encryption configuration for X-Ray data",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -113449,7 +113533,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Used by the AWS X-Ray daemon to send telemetry to the service.",
+        "description": "Grants permission to send AWS X-Ray daemon telemetry to the service",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -113462,11 +113546,44 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Uploads segment documents to AWS X-Ray. The X-Ray SDK generates segment documents and sends them to the X-Ray daemon, which uploads them in batches.",
+        "description": "Grants permission to upload segment documents to AWS X-Ray. The X-Ray SDK generates segment documents and sends them to the X-Ray daemon, which uploads them in batches",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/xray/latest/api/API_PutTraceSegments.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to add tags to an X-Ray resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/xray/latest/api/API_TagResource.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to remove tags from an X-Ray resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/xray/latest/api/API_UntagResource.html"
         }
       },
       "UpdateGroup": {
@@ -113474,8 +113591,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Updates a group resource.",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Grants permission to update a group resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -113487,8 +113606,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
-        "description": "Modifies a sampling rule's configuration.",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Grants permission to modify a sampling rule's configuration",
         "docs": {
           "api_doc": "",
           "doc_page": "",
