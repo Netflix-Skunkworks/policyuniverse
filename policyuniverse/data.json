@@ -3686,11 +3686,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to create a login profile to be used with AppFlow flows",
+        "description": "Grants permission to create a login profile to be used with Amazon AppFlow flows",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}",
-          "doc_page_rel": "${DocHomeURL}"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appflow/1.0/APIReference/API_CreateConnectorProfile.html"
         }
       },
       "CreateFlow": {
@@ -3702,11 +3702,11 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to create an AppFlow flow",
+        "description": "Grants permission to create an Amazon AppFlow flow",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}",
-          "doc_page_rel": "${DocHomeURL}"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appflow/1.0/APIReference/API_CreateFlow.html"
         }
       },
       "DeleteConnectorProfile": {
@@ -3715,11 +3715,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to delete a login profile set up for use with AppFlow",
+        "description": "Grants permission to delete a login profile configured in Amazon AppFlow",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}",
-          "doc_page_rel": "${DocHomeURL}"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appflow/1.0/APIReference/API_DescribeConnectorProfiles.html"
         }
       },
       "DeleteFlow": {
@@ -3731,11 +3731,25 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to delete an AppFlow flow",
+        "description": "Grants permission to delete an Amazon AppFlow flow",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}",
-          "doc_page_rel": "${DocHomeURL}"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appflow/1.0/APIReference/API_DeleteFlow.html"
+        }
+      },
+      "DescribeConnectorEntity": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to describe all fields for an object in a login profile configured in Amazon AppFlow",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appflow/1.0/APIReference/API_DescribeConnectorEntity.html"
         }
       },
       "DescribeConnectorFields": {
@@ -3745,11 +3759,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to describe all fields supported by AppFlow",
+        "description": "Grants permission to describe all fields for an object in a login profile configured in Amazon AppFlow (Console Only)",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}",
-          "doc_page_rel": "${DocHomeURL}"
+          "doc_page": "${DocHomeURL}appflow/latest/userguide/identity-access-management.html#appflow-api-actions",
+          "doc_page_rel": "${DocHomeURL}appflow/latest/userguide/identity-access-management.html#appflow-api-actions"
         }
       },
       "DescribeConnectorProfiles": {
@@ -3759,11 +3773,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to describe all login profiles configured in AppFlow",
+        "description": "Grants permission to describe all login profiles configured in Amazon AppFlow",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}",
-          "doc_page_rel": "${DocHomeURL}"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appflow/1.0/APIReference/API_DescribeConnectorProfiles.html"
         }
       },
       "DescribeConnectors": {
@@ -3773,11 +3787,25 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to describe all connectors supported by AppFlow",
+        "description": "Grants permission to describe all connectors supported by Amazon AppFlow",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}",
-          "doc_page_rel": "${DocHomeURL}"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appflow/1.0/APIReference/API_DescribeConnectors.html "
+        }
+      },
+      "DescribeFlow": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to describe a specific flow configured in Amazon AppFlow",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appflow/1.0/APIReference/API_DescribeFlow.html"
         }
       },
       "DescribeFlowExecution": {
@@ -3787,11 +3815,25 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to describe all flow executions for a flow configured in AppFlow",
+        "description": "Grants permission to describe all flow executions for a flow configured in Amazon AppFlow (Console Only)",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}",
-          "doc_page_rel": "${DocHomeURL}"
+          "doc_page": "${DocHomeURL}appflow/latest/userguide/identity-access-management.html#appflow-api-actions",
+          "doc_page_rel": "${DocHomeURL}appflow/latest/userguide/identity-access-management.html#appflow-api-actions"
+        }
+      },
+      "DescribeFlowExecutionRecords": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to describe all flow executions for a flow configured in Amazon AppFlow",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appflow/1.0/APIReference/API_DescribeFlowExecutionRecords.html"
         }
       },
       "DescribeFlows": {
@@ -3801,11 +3843,26 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to describe all flows configured in AppFlow",
+        "description": "Grants permission to describe all flows configured in Amazon AppFlow (Console Only)",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}",
-          "doc_page_rel": "${DocHomeURL}"
+          "doc_page": "${DocHomeURL}appflow/latest/userguide/identity-access-management.html#appflow-api-actions",
+          "doc_page_rel": "${DocHomeURL}appflow/latest/userguide/identity-access-management.html#appflow-api-actions"
+        }
+      },
+      "ListConnectorEntities": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ListOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list all objects for a login profile configured in Amazon AppFlow",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ListConnectorEntities.html"
         }
       },
       "ListConnectorFields": {
@@ -3815,11 +3872,26 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to list all fields supported by AppFlow",
+        "description": "Grants permission to list all objects for a login profile configured in Amazon AppFlow (Console Only)",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}",
-          "doc_page_rel": "${DocHomeURL}"
+          "doc_page": "${DocHomeURL}appflow/latest/userguide/identity-access-management.html#appflow-api-actions",
+          "doc_page_rel": "${DocHomeURL}appflow/latest/userguide/identity-access-management.html#appflow-api-actions"
+        }
+      },
+      "ListFlows": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ListOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list all flows configured in Amazon AppFlow",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ListFlows.html"
         }
       },
       "ListTagsForResource": {
@@ -3834,7 +3906,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/appflow/latest/APIReference/API_ListTagsForResource.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ListTagsForResource.html"
         }
       },
       "RunFlow": {
@@ -3843,11 +3915,37 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to run a flow configured in AppFlow",
+        "description": "Grants permission to run a flow configured in Amazon AppFlow (Console Only)",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}",
-          "doc_page_rel": "${DocHomeURL}"
+          "doc_page": "${DocHomeURL}appflow/latest/userguide/identity-access-management.html#appflow-api-actions",
+          "doc_page_rel": "${DocHomeURL}appflow/latest/userguide/identity-access-management.html#appflow-api-actions"
+        }
+      },
+      "StartFlow": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to activate (for scheduled and event-triggered flows) or run (for on-demand flows) a flow configured in Amazon AppFlow",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appflow/1.0/APIReference/API_StartFlow.html"
+        }
+      },
+      "StopFlow": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to deactivate a scheduled or event-triggered flow configured in Amazon AppFlow",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appflow/1.0/APIReference/API_StopFlow.html"
         }
       },
       "TagResource": {
@@ -3864,7 +3962,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/appflow/latest/APIReference/API_TagResource.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/appflow/1.0/APIReference/API_TagResource.html"
         }
       },
       "UntagResource": {
@@ -3880,7 +3978,20 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/appflow/latest/APIReference/API_UntagResource.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/appflow/1.0/APIReference/API_UntagResource.html"
+        }
+      },
+      "UpdateConnectorProfile": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to update a login profile configured in Amazon AppFlow",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appflow/1.0/APIReference/API_UpdateConnectorProfile.html"
         }
       },
       "UpdateFlow": {
@@ -3889,11 +4000,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to update an AppFlow flow",
+        "description": "Grants permission to update a flow configured in Amazon AppFlow",
         "docs": {
           "api_doc": "",
-          "doc_page": "${DocHomeURL}",
-          "doc_page_rel": "${DocHomeURL}"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appflow/1.0/APIReference/API_UpdateFlow.html"
         }
       }
     },
@@ -3901,13 +4012,13 @@
     "arn_regex": "^arn:aws:appflow:.+:.+:.+",
     "description": "Amazon AppFlow",
     "docs": {
-      "actions_doc_root": "https://docs.aws.amazon.com/appflow/latest/APIReference/",
+      "actions_doc_root": "https://docs.aws.amazon.com/appflow/1.0/APIReference/",
       "api_detail_root": "",
       "api_doc_root": "",
-      "api_reference_doc_page": "${DocHomeURL}appflow/latest/APIReference/",
+      "api_reference_doc_page": "${DocHomeURL}appflow/1.0/APIReference/Welcome.html",
       "authz_doc_page": "https://docs.aws.amazon.com/appflow/latest/userguide/auth-and-access-control.html",
       "concepts_doc_root": "https://docs.aws.amazon.com/appflow/latest/userguide/",
-      "context_keys_doc_root": "https://docs.aws.amazon.com/appflow/latest/userguide/"
+      "context_keys_doc_root": "https://docs.aws.amazon.com/appflow/latest/userguide/identity-access-management.html/"
     },
     "prefix": "appflow"
   },
@@ -12916,17 +13027,30 @@
   },
   "CloudFront": {
     "actions": {
+      "CreateCachePolicy": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "This action adds a new cache policy to CloudFront.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateCachePolicy.html"
+        }
+      },
       "CreateCloudFrontOriginAccessIdentity": {
         "aws_action_groups": [
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action creates a new CloudFront origin access identity (POST /2019-03-26/origin-access-identity/cloudfront).",
+        "description": "This action creates a new CloudFront origin access identity.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_CreateCloudFrontOriginAccessIdentity.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateCloudFrontOriginAccessIdentity.html"
         }
       },
       "CreateDistribution": {
@@ -12935,11 +13059,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action creates a new web distribution (POST /2019-03-26/distribution).",
+        "description": "This action creates a new web distribution.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_CreateDistribution.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistribution.html"
         }
       },
       "CreateDistributionWithTags": {
@@ -12952,11 +13076,11 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "This action creates a new web distribution with tags (POST /2019-03-26/distribution?WithTags).",
+        "description": "This action creates a new web distribution with tags.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_CreateDistributionWithTags.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistributionWithTags.html"
         }
       },
       "CreateFieldLevelEncryptionConfig": {
@@ -12965,11 +13089,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action creates a new field-level encryption configuration. (POST /2019-03-26/field-level-encryption).",
+        "description": "This action creates a new field-level encryption configuration.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_CreateFieldLevelEncryptionConfig.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateFieldLevelEncryptionConfig.html"
         }
       },
       "CreateFieldLevelEncryptionProfile": {
@@ -12978,11 +13102,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action creates a field-level encryption profile. (POST /2019-03-26/field-level-encryption-profile).",
+        "description": "This action creates a field-level encryption profile.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_CreateFieldLevelEncryptionProfile.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateFieldLevelEncryptionProfile.html"
         }
       },
       "CreateInvalidation": {
@@ -12991,11 +13115,24 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action creates a new invalidation batch request (POST /2019-03-26/distribution/<DISTRIBUTION_ID>/invalidation).",
+        "description": "This action creates a new invalidation batch request.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_CreateInvalidation.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateInvalidation.html"
+        }
+      },
+      "CreateOriginRequestPolicy": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "This action adds a new origin request policy to CloudFront.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateOriginRequestPolicy.html"
         }
       },
       "CreatePublicKey": {
@@ -13004,11 +13141,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action adds a new public key to CloudFront. (POST /2019-03-26/public-key).",
+        "description": "This action adds a new public key to CloudFront.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_CreatePublicKey.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreatePublicKey.html"
         }
       },
       "CreateStreamingDistribution": {
@@ -13017,11 +13154,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action creates a new RTMP distribution (POST /2019-03-26/streaming-distribution).",
+        "description": "This action creates a new RTMP distribution.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_CreateStreamingDistribution.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateStreamingDistribution.html"
         }
       },
       "CreateStreamingDistributionWithTags": {
@@ -13034,11 +13171,24 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "This action creates a new RTMP distribution with tags (POST /2019-03-26/streaming-distribution?WithTags).",
+        "description": "This action creates a new RTMP distribution with tags.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_CreateStreamingDistributionWithTags.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateStreamingDistributionWithTags.html"
+        }
+      },
+      "DeleteCachePolicy": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "This action deletes a cache policy.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_DeleteCachePolicy.html"
         }
       },
       "DeleteCloudFrontOriginAccessIdentity": {
@@ -13047,11 +13197,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action deletes a CloudFront origin access identity (DELETE /2019-03-26/origin-access-identity/cloudfront/<OAI_ID>).",
+        "description": "This action deletes a CloudFront origin access identity.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_DeleteCloudFrontOriginAccessIdentity.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_DeleteCloudFrontOriginAccessIdentity.html"
         }
       },
       "DeleteDistribution": {
@@ -13060,11 +13210,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action deletes a web distribution (DELETE /2019-03-26/distribution/<DISTRIBUTION_ID>).",
+        "description": "This action deletes a web distribution.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_DeleteDistribution.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_DeleteDistribution.html"
         }
       },
       "DeleteFieldLevelEncryptionConfig": {
@@ -13073,11 +13223,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action deletes a field-level encryption configuration. (DELETE /2019-03-26/field-level-encryption/Id/<Id>).",
+        "description": "This action deletes a field-level encryption configuration.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_DeleteFieldLevelEncryptionConfig.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_DeleteFieldLevelEncryptionConfig.html"
         }
       },
       "DeleteFieldLevelEncryptionProfile": {
@@ -13086,11 +13236,24 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action deletes a field-level encryption profile. (DELETE /2019-03-26/field-level-encryption-profile/<Id>).",
+        "description": "This action deletes a field-level encryption profile.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_DeleteFieldLevelEncryptionProfile.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_DeleteFieldLevelEncryptionProfile.html"
+        }
+      },
+      "DeleteOriginRequestPolicy": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "This action deletes an origin request policy.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_DeleteOriginRequestPolicy.html"
         }
       },
       "DeletePublicKey": {
@@ -13099,11 +13262,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action deletes a public key from CloudFront. (DELETE /2019-03-26/public-key/<Id>).",
+        "description": "This action deletes a public key from CloudFront.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_DeletePublicKey.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_DeletePublicKey.html"
         }
       },
       "DeleteStreamingDistribution": {
@@ -13112,11 +13275,39 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action deletes an RTMP distribution (DELETE /2019-03-26/streaming-distribution/<DISTRIBUTION_ID>).",
+        "description": "This action deletes an RTMP distribution.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_DeleteStreamingDistribution.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_DeleteStreamingDistribution.html"
+        }
+      },
+      "GetCachePolicy": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Get the cache policy",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetCachePolicy.html"
+        }
+      },
+      "GetCachePolicyConfig": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Get the cache policy configuration",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetCachePolicyConfig.html"
         }
       },
       "GetCloudFrontOriginAccessIdentity": {
@@ -13126,11 +13317,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get the information about a CloudFront origin access identity (GET /2019-03-26/origin-access-identity/cloudfront/<OAI_ID>).",
+        "description": "Get the information about a CloudFront origin access identity.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_GetCloudFrontOriginAccessIdentity.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetCloudFrontOriginAccessIdentity.html"
         }
       },
       "GetCloudFrontOriginAccessIdentityConfig": {
@@ -13140,11 +13331,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get the configuration information about a Cloudfront origin access identity (GET /2019-03-26/origin-access-identity/cloudfront/<OAI_ID>/config).",
+        "description": "Get the configuration information about a Cloudfront origin access identity.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_GetCloudFrontOriginAccessIdentityConfig.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetCloudFrontOriginAccessIdentityConfig.html"
         }
       },
       "GetDistribution": {
@@ -13154,11 +13345,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get the information about a web distribution (GET /2019-03-26/distribution/<DISTRIBUTION_ID>).",
+        "description": "Get the information about a web distribution.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_GetDistribution.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetDistribution.html"
         }
       },
       "GetDistributionConfig": {
@@ -13168,11 +13359,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get the configuration information about a distribution (GET /2019-03-26/distribution/<DISTRIBUTION_ID>/config).",
+        "description": "Get the configuration information about a distribution.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_GetDistributionConfig.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetDistributionConfig.html"
         }
       },
       "GetFieldLevelEncryption": {
@@ -13182,11 +13373,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get the field-level encryption configuration information. (GET /2019-03-26/field-level-encryption/<Id>).",
+        "description": "Get the field-level encryption configuration information.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_GetFieldLevelEncryption.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetFieldLevelEncryption.html"
         }
       },
       "GetFieldLevelEncryptionConfig": {
@@ -13196,11 +13387,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get the field-level encryption configuration information (GET /2019-03-26/field-level-encryption/<Id>/config).",
+        "description": "Get the field-level encryption configuration information.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_GetFieldLevelEncryptionConfig.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetFieldLevelEncryptionConfig.html"
         }
       },
       "GetFieldLevelEncryptionProfile": {
@@ -13210,11 +13401,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get the field-level encryption configuration information (GET /2019-03-26/field-level-encryption/<Id>/config).",
+        "description": "Get the field-level encryption configuration information.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_GetFieldLevelEncryptionProfile.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetFieldLevelEncryptionProfile.html"
         }
       },
       "GetFieldLevelEncryptionProfileConfig": {
@@ -13224,11 +13415,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get the field-level encryption profile configuration information (GET /2019-03-26/field-level-encryption-profile/<Id>/config).",
+        "description": "Get the field-level encryption profile configuration information.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_GetFieldLevelEncryptionProfileConfig.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetFieldLevelEncryptionProfileConfig.html"
         }
       },
       "GetInvalidation": {
@@ -13238,11 +13429,39 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get the information about an invalidation (GET /2019-03-26/distribution/<DISTRIBUTION_ID>/invalidation/<INVALIDATION_ID>).",
+        "description": "Get the information about an invalidation.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_GetInvalidation.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetInvalidation.html"
+        }
+      },
+      "GetOriginRequestPolicy": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Get the origin request policy",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetOriginRequestPolicy.html"
+        }
+      },
+      "GetOriginRequestPolicyConfig": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Get the origin request policy configuration",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetOriginRequestPolicyConfig.html"
         }
       },
       "GetPublicKey": {
@@ -13252,11 +13471,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get the public key information (GET /2019-03-26/public-key/<Id>).",
+        "description": "Get the public key information.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_GetPublicKey.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetPublicKey.html"
         }
       },
       "GetPublicKeyConfig": {
@@ -13266,11 +13485,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get the public key configuration information (GET /2019-03-26/public-key/<Id>/config).",
+        "description": "Get the public key configuration information.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_GetPublicKeyConfig.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetPublicKeyConfig.html"
         }
       },
       "GetStreamingDistribution": {
@@ -13280,11 +13499,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get the information about an RTMP distribution (GET /2019-03-26/streaming-distribution/<DISTRIBUTION_ID>).",
+        "description": "Get the information about an RTMP distribution.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_GetStreamingDistribution.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetStreamingDistribution.html"
         }
       },
       "GetStreamingDistributionConfig": {
@@ -13294,11 +13513,26 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get the configuration information about a streaming distribution (GET /2019-03-26/streaming-distribution/<DISTRIBUTION_ID>/config).",
+        "description": "Get the configuration information about a streaming distribution.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_GetStreamingDistributionConfig.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetStreamingDistributionConfig.html"
+        }
+      },
+      "ListCachePolicies": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "List all cache policies that have been created in CloudFront for this account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ListCachePolicies.html"
         }
       },
       "ListCloudFrontOriginAccessIdentities": {
@@ -13309,11 +13543,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "List your CloudFront origin access identities (GET /2019-03-26/origin-access-identity/cloudfront?Marker=<MARKER>&MaxItems=<MAX_ITEMS>).",
+        "description": "List your CloudFront origin access identities.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_ListCloudFrontOriginAccessIdentities.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ListCloudFrontOriginAccessIdentities.html"
         }
       },
       "ListDistributions": {
@@ -13324,14 +13558,14 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "List the distributions associated with your AWS account (GET /2019-03-26/distribution?Marker=<MARKER>&MaxItems=<MAX_ITEMS>).",
+        "description": "List the distributions associated with your AWS account.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_ListDistributions.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ListDistributions.html"
         }
       },
-      "ListDistributionsByLambdaFunction": {
+      "ListDistributionsByCachePolicyId": {
         "aws_action_groups": [
           "ListOnly",
           "ReadOnly",
@@ -13339,11 +13573,26 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "List the distributions associated a Lambda function.",
+        "description": "List distribution IDs for distributions that have a cache behavior that's associated with the specified cache policy.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": ""
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ListDistributionsByCachePolicyId.html"
+        }
+      },
+      "ListDistributionsByOriginRequestPolicyId": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "List distribution IDs for distributions that have a cache behavior that's associated with the specified origin request policy.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ListDistributionsByOriginRequestPolicyId.html"
         }
       },
       "ListDistributionsByWebACLId": {
@@ -13354,11 +13603,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "List the distributions associated with your AWS account with given AWS WAF web ACL (GET /2019-03-26/distributionsByWebACLId/<WEB_ACL_ID>?Marker=<MARKER>&MaxItems=<MAX_ITEMS>).",
+        "description": "List the distributions associated with your AWS account with given AWS WAF web ACL.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_ListDistributionsByWebACLId.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ListDistributionsByWebACLId.html"
         }
       },
       "ListFieldLevelEncryptionConfigs": {
@@ -13369,11 +13618,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "List all field-level encryption configurations that have been created in CloudFront for this account (GET /2019-03-26/field-level-encryption?Marker=<MARKER>&MaxItems=<MAX_ITEMS>).",
+        "description": "List all field-level encryption configurations that have been created in CloudFront for this account.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_ListFieldLevelEncryptionConfigs.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ListFieldLevelEncryptionConfigs.html"
         }
       },
       "ListFieldLevelEncryptionProfiles": {
@@ -13384,11 +13633,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "List all field-level encryption profiles that have been created in CloudFront for this account. (GET /2019-03-26/field-level-encryption-profile?Marker=<MARKER>&MaxItems=<MAX_ITEMS>).",
+        "description": "List all field-level encryption profiles that have been created in CloudFront for this account.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_ListFieldLevelEncryptionProfiles.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ListFieldLevelEncryptionProfiles.html"
         }
       },
       "ListInvalidations": {
@@ -13399,11 +13648,26 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "List your invalidation batches (GET /2019-03-26/distribution/<DISTRIBUTION_ID>/invalidation?Marker=<MARKER>&MaxItems=<MAX_ITEMS>).",
+        "description": "List your invalidation batches.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_ListInvalidations.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ListInvalidations.html"
+        }
+      },
+      "ListOriginRequestPolicies": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "List all origin request policies that have been created in CloudFront for this account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ListOriginRequestPolicies.html"
         }
       },
       "ListPublicKeys": {
@@ -13414,11 +13678,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "List all public keys that have been added to CloudFront for this account. (GET /2019-03-26/public-key?Marker=<MARKER>&MaxItems=<MAX_ITEMS>).",
+        "description": "List all public keys that have been added to CloudFront for this account.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_ListPublicKeys.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ListPublicKeys.html"
         }
       },
       "ListStreamingDistributions": {
@@ -13429,11 +13693,11 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "List your RTMP distributions (GET /2019-03-26/streaming-distribution?Marker=<MARKER>&MaxItems=<MAX_ITEMS>).",
+        "description": "List your RTMP distributions.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_ListStreamingDistributions.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ListStreamingDistributions.html"
         }
       },
       "ListTagsForResource": {
@@ -13443,11 +13707,11 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "List tags for a CloudFront resource (GET /2019-03-26/tagging?Resource=<RESOURCE>).",
+        "description": "List tags for a CloudFront resource.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_ListTagsForResource.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ListTagsForResource.html"
         }
       },
       "TagResource": {
@@ -13460,11 +13724,11 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Add tags to a CloudFront resource (POST /2019-03-26/tagging?Operation=Tag?Resource=<RESOURCE>).",
+        "description": "Add tags to a CloudFront resource.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_TagResource.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_TagResource.html"
         }
       },
       "UntagResource": {
@@ -13476,11 +13740,24 @@
         "condition_keys": [
           "aws:TagKeys"
         ],
-        "description": "Remove tags from a CloudFront resource (POST /2019-03-26/tagging?Operation=Untag?Resource=<RESOURCE>).",
+        "description": "Remove tags from a CloudFront resource.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_UntagResource.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_UntagResource.html"
+        }
+      },
+      "UpdateCachePolicy": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "This action updates a cache policy.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_UpdateCachePolicy.html"
         }
       },
       "UpdateCloudFrontOriginAccessIdentity": {
@@ -13489,11 +13766,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action sets the configuration for a CloudFront origin access identity (PUT /2019-03-26/origin-access-identity/cloudfront/<OAI_ID>/config).",
+        "description": "This action sets the configuration for a CloudFront origin access identity.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_UpdateCloudFrontOriginAccessIdentity.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_UpdateCloudFrontOriginAccessIdentity.html"
         }
       },
       "UpdateDistribution": {
@@ -13502,11 +13779,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action updates the configuration for a web distribution (PUT /2019-03-26/distribution/<DISTRIBUTION_ID>/config).",
+        "description": "This action updates the configuration for a web distribution.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_UpdateDistribution.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_UpdateDistribution.html"
         }
       },
       "UpdateFieldLevelEncryptionConfig": {
@@ -13515,11 +13792,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action updates a field-level encryption configuration. (PUT /2019-03-26/field-level-encryption/<Id>/config).",
+        "description": "This action updates a field-level encryption configuration.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_UpdateFieldLevelEncryptionConfig.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_UpdateFieldLevelEncryptionConfig.html"
         }
       },
       "UpdateFieldLevelEncryptionProfile": {
@@ -13528,11 +13805,24 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action updates a field-level encryption profile. (PUT /2019-03-26/field-level-encryption-profile/<Id>/config).",
+        "description": "This action updates a field-level encryption profile.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_UpdateFieldLevelEncryptionProfile.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_UpdateFieldLevelEncryptionProfile.html"
+        }
+      },
+      "UpdateOriginRequestPolicy": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "This action updates an origin request policy.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_UpdateOriginRequestPolicy.html"
         }
       },
       "UpdatePublicKey": {
@@ -13541,11 +13831,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action updates public key information. (PUT /2019-03-26/public-key/<Id>/config).",
+        "description": "This action updates public key information.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_UpdatePublicKey.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_UpdatePublicKey.html"
         }
       },
       "UpdateStreamingDistribution": {
@@ -13554,11 +13844,11 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "This action updates the configuration for an RTMP distribution (PUT /2019-03-26/streaming-distribution/<DISTRIBUTION_ID>/config).",
+        "description": "This action updates the configuration for an RTMP distribution.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/API_UpdateStreamingDistribution.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_UpdateStreamingDistribution.html"
         }
       }
     },
@@ -13566,10 +13856,10 @@
     "arn_regex": "^arn:${Partition}:cloudfront::[0-9]+:.+",
     "description": "Amazon CloudFront",
     "docs": {
-      "actions_doc_root": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/",
+      "actions_doc_root": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/",
       "api_detail_root": "",
       "api_doc_root": "",
-      "api_reference_doc_page": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Operations.html/",
+      "api_reference_doc_page": "https://docs.aws.amazon.com/cloudfront/latest/APIReference/",
       "authz_doc_page": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/auth-and-access-control.html/",
       "concepts_doc_root": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/",
       "context_keys_doc_root": ""
@@ -27097,8 +27387,8 @@
         "description": "Grants permissions to cancel a job.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-jobs.html#CancelJob",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-jobs.html#CancelJob"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-jobs.html#CancelJob",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-jobs.html#CancelJob"
         }
       },
       "CreateAsset": {
@@ -27114,8 +27404,8 @@
         "description": "Grants permission to create an asset (for example, in a Job).",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions.html#CreateAsset",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions.html#CreateAsset"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions.html#CreateAsset",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions.html#CreateAsset"
         }
       },
       "CreateDataSet": {
@@ -27131,8 +27421,8 @@
         "description": "Grants permission to create a data set.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-data-sets.html#CreateDataSet",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-data-sets.html#CreateDataSet"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets.html#CreateDataSet",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets.html#CreateDataSet"
         }
       },
       "CreateJob": {
@@ -27144,8 +27434,8 @@
         "description": "Grants permissions to create a job to import or export assets.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-jobs.html#CreateJob",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-jobs.html#CreateJob"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-jobs.html#CreateJob",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-jobs.html#CreateJob"
         }
       },
       "CreateRevision": {
@@ -27161,8 +27451,8 @@
         "description": "Grants permission to create a revision.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions.html#CreateRevision",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions.html#CreateRevision"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions.html#CreateRevision",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions.html#CreateRevision"
         }
       },
       "DeleteAsset": {
@@ -27174,8 +27464,8 @@
         "description": "Grants permissions to delete an asset.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions-revisionid-assets-assetid.html#DeleteAsset",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions-revisionid-assets-assetid.html#DeleteAsset"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions-revisionid-assets-assetid.html#DeleteAsset",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions-revisionid-assets-assetid.html#DeleteAsset"
         }
       },
       "DeleteDataSet": {
@@ -27187,8 +27477,8 @@
         "description": "Grants permissions to delete a data set.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-data-sets-datasetid.html#DeleteDataSet",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-data-sets-datasetid.html#DeleteDataSet"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid.html#DeleteDataSet",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid.html#DeleteDataSet"
         }
       },
       "DeleteRevision": {
@@ -27200,8 +27490,8 @@
         "description": "Grants permissions to delete a revision.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions-revisionid.html#DeleteRevision",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions-revisionid.html#DeleteRevision"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions-revisionid.html#DeleteRevision",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions-revisionid.html#DeleteRevision"
         }
       },
       "GetAsset": {
@@ -27214,8 +27504,8 @@
         "description": "Grants permissions to get information about an asset and to export it (for example, in a Job).",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions-revisionid-assets-assetid.html#GetAsset",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions-revisionid-assets-assetid.html#GetAsset"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions-revisionid-assets-assetid.html#GetAsset",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions-revisionid-assets-assetid.html#GetAsset"
         }
       },
       "GetDataSet": {
@@ -27228,8 +27518,8 @@
         "description": "Grants permission to get information about a data set.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-data-sets-datasetid.html#GetDataSet",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-data-sets-datasetid.html#GetDataSet"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid.html#GetDataSet",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid.html#GetDataSet"
         }
       },
       "GetJob": {
@@ -27241,8 +27531,8 @@
         "description": "Grants permissions to get information about a job.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-jobs.html#GetJob",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-jobs.html#GetJob"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-jobs.html#GetJob",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-jobs.html#GetJob"
         }
       },
       "GetRevision": {
@@ -27255,8 +27545,8 @@
         "description": "Grants permission to get information about a revision.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions-revisionid.html#GetRevision",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions-revisionid.html#GetRevision"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions-revisionid.html#GetRevision",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions-revisionid.html#GetRevision"
         }
       },
       "ListDataSetRevisions": {
@@ -27270,8 +27560,8 @@
         "description": "Grants permissions to list the revisions of a data set.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions.html#ListDataSetRevisions",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions.html#ListDataSetRevisions"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions.html#ListDataSetRevisions",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions.html#ListDataSetRevisions"
         }
       },
       "ListDataSets": {
@@ -27285,8 +27575,8 @@
         "description": "Grants permission to list data sets for the account.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-data-sets.html#ListDataSets",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-data-sets.html#ListDataSets"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets.html#ListDataSets",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets.html#ListDataSets"
         }
       },
       "ListJobs": {
@@ -27300,8 +27590,8 @@
         "description": "Grants permissions to list jobs for the account.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-jobs.html#ListJobs",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-jobs.html#ListJobs"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-jobs.html#ListJobs",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-jobs.html#ListJobs"
         }
       },
       "ListRevisionAssets": {
@@ -27315,8 +27605,8 @@
         "description": "Grants permissions to get list the assets of a revision.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions-revisionid-assets.html#ListRevisionAssets",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions-revisionid-assets.html#ListRevisionAssets"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions-revisionid-assets.html#ListRevisionAssets",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions-revisionid-assets.html#ListRevisionAssets"
         }
       },
       "ListTagsForResource": {
@@ -27329,8 +27619,8 @@
         "description": "Grants permission to list the tags that you associated with the specified resource.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/tags-resource-arn.html#ListTagsForResource",
-          "doc_page_rel": "${APIReferenceDocPage}/tags-resource-arn.html#ListTagsForResource"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/tags-resource-arn.html#ListTagsForResource",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/tags-resource-arn.html#ListTagsForResource"
         }
       },
       "StartJob": {
@@ -27342,8 +27632,8 @@
         "description": "Grants permissions to start a job.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-jobs.html#StartJob",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-jobs.html#StartJob"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-jobs.html#StartJob",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-jobs.html#StartJob"
         }
       },
       "TagResource": {
@@ -27359,8 +27649,8 @@
         "description": "Grants permission to add one or more tags to a specified resource.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/tags-resource-arn.html#TagResource",
-          "doc_page_rel": "${APIReferenceDocPage}/tags-resource-arn.html#TagResource"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/tags-resource-arn.html#TagResource",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/tags-resource-arn.html#TagResource"
         }
       },
       "UntagResource": {
@@ -27375,8 +27665,8 @@
         "description": "Grants permission to remove one or more tags from a specified resource.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/tags-resource-arn.html#UntagResource",
-          "doc_page_rel": "${APIReferenceDocPage}/tags-resource-arn.html#UntagResource"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/tags-resource-arn.html#UntagResource",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/tags-resource-arn.html#UntagResource"
         }
       },
       "UpdateAsset": {
@@ -27388,8 +27678,8 @@
         "description": "Grants permissions to get update information about an asset.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions-revisionid-assets-assetid.html#UpdateAsset",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions-revisionid-assets-assetid.html#UpdateAsset"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions-revisionid-assets-assetid.html#UpdateAsset",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions-revisionid-assets-assetid.html#UpdateAsset"
         }
       },
       "UpdateDataSet": {
@@ -27401,8 +27691,8 @@
         "description": "Grants permissions to update information about a data set.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-data-sets-datasetid.html#UpdateDataSet",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-data-sets-datasetid.html#UpdateDataSet"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid.html#UpdateDataSet",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid.html#UpdateDataSet"
         }
       },
       "UpdateRevision": {
@@ -27414,8 +27704,8 @@
         "description": "Grants permissions to update information about a revision.",
         "docs": {
           "api_doc": "",
-          "doc_page": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions-revisionid.html#UpdateRevision",
-          "doc_page_rel": "${APIReferenceDocPage}/v1-data-sets-datasetid-revisions-revisionid.html#UpdateRevision"
+          "doc_page": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions-revisionid.html#UpdateRevision",
+          "doc_page_rel": "${DocHomeURL}data-exchange/latest/apireference/v1-data-sets-datasetid-revisions-revisionid.html#UpdateRevision"
         }
       }
     },
@@ -34666,6 +34956,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTransitGatewayPeeringAttachment.html"
         }
       },
+      "CreateTransitGatewayPrefixListReference": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create a transit gateway prefix list reference",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTransitGatewayPrefixListReference.html"
+        }
+      },
       "CreateTransitGatewayRoute": {
         "aws_action_groups": [
           "ReadWrite"
@@ -35289,6 +35592,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteTransitGatewayPeeringAttachment.html"
+        }
+      },
+      "DeleteTransitGatewayPrefixListReference": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete a transit gateway prefix list reference",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteTransitGatewayPrefixListReference.html"
         }
       },
       "DeleteTransitGatewayRoute": {
@@ -37821,6 +38137,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetTransitGatewayMulticastDomainAssociations.html"
         }
       },
+      "GetTransitGatewayPrefixListReferences": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to get information about prefix list references for a transit gateway route table",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetTransitGatewayPrefixListReference.html"
+        }
+      },
       "GetTransitGatewayRouteTableAssociations": {
         "aws_action_groups": [
           "ListOnly",
@@ -38265,6 +38596,32 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyTrafficMirrorSession.html"
+        }
+      },
+      "ModifyTransitGateway": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to modify a transit gateway",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyTransitGateway.html"
+        }
+      },
+      "ModifyTransitGatewayPrefixListReference": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to modify a transit gateway prefix list reference",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyTransitGatewayPrefixListReference.html"
         }
       },
       "ModifyTransitGatewayVpcAttachment": {
@@ -43896,6 +44253,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/api/API_ListTagsForResource.html"
+        }
+      },
+      "PutInstanceStatistics": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to submit instance statistics for enhanced health.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}elasticbeanstalk/latest/dg/health-enhanced.html#health-enhanced-authz",
+          "doc_page_rel": "${DocHomeURL}elasticbeanstalk/latest/dg/health-enhanced.html#health-enhanced-authz"
         }
       },
       "RebuildEnvironment": {
@@ -71372,6 +71742,32 @@
   },
   "MSK": {
     "actions": {
+      "BatchAssociateScramSecret": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to associate one or more Scram Secrets with an Amazon MSK cluster.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-scram-secrets.html#BatchAssociateScramSecret"
+        }
+      },
+      "BatchDisassociateScramSecret": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to disassociate one or more Scram Secrets from an Amazon MSK cluster.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-scram-secrets.html#BatchDisassociateScramSecret"
+        }
+      },
       "CreateCluster": {
         "aws_action_groups": [
           "ReadWrite"
@@ -71381,7 +71777,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to create a cluster.",
+        "description": "Grants permission to create a cluster",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -71515,9 +71911,10 @@
       "ListClusterOperations": {
         "aws_action_groups": [
           "ReadWrite",
-          "ReadOnly"
+          "ReadOnly",
+          "ListOnly"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Returns a list of all the operations that have been performed on the specified MSK cluster.",
         "docs": {
@@ -71571,12 +71968,28 @@
           "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-nodes.html#ListNodes"
         }
       },
+      "ListScramSecrets": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly",
+          "ListOnly"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to return a list of the Scram Secrets associated with an Amazon MSK cluster.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-scram-secrets.html#ListScramSecrets"
+        }
+      },
       "ListTagsForResource": {
         "aws_action_groups": [
           "ReadWrite",
-          "ReadOnly"
+          "ReadOnly",
+          "ListOnly"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Grants permission to list tags of a MSK resource.",
         "docs": {
@@ -79108,10 +79521,10 @@
       "actions_doc_root": "https://docs.aws.amazon.com/organizations/latest/APIReference/",
       "api_detail_root": "",
       "api_doc_root": "",
-      "api_reference_doc_page": "https://docs.aws.amazon.com/organizations/latest/APIReference//",
+      "api_reference_doc_page": "https://docs.aws.amazon.com/organizations/latest/APIReference/",
       "authz_doc_page": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_permissions.html",
       "concepts_doc_root": "https://docs.aws.amazon.com/organizations/latest/userguide/",
-      "context_keys_doc_root": "${ActionsDocRoot}/"
+      "context_keys_doc_root": "${ActionsDocRoot}"
     },
     "prefix": "organizations"
   },
@@ -86547,6 +86960,151 @@
     },
     "prefix": "redshift"
   },
+  "Redshift Data API": {
+    "actions": {
+      "CancelStatement": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to cancel a running query",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/redshift-data/latest/APIReference/API_CancelStatement.html"
+        }
+      },
+      "DescribeStatement": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve detailed information about a statement execution",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/redshift-data/latest/APIReference/API_DescribeStatement.html"
+        }
+      },
+      "DescribeTable": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve metadata about a particular table",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/redshift-data/latest/APIReference/API_DescribeTable.html"
+        }
+      },
+      "ExecuteStatement": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to execute a query",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/redshift-data/latest/APIReference/API_ExecuteStatement.html"
+        }
+      },
+      "GetStatementResult": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to fetch the result of a query",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/redshift-data/latest/APIReference/API_FetchResult.html"
+        }
+      },
+      "ListDatabases": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite",
+          "ListOnly"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list databases for a given cluster",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/redshift-data/latest/APIReference/API_ListDatabases.html"
+        }
+      },
+      "ListSchemas": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite",
+          "ListOnly"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list schemas for a given cluster",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/redshift-data/latest/APIReference/API_ListSchemas.html"
+        }
+      },
+      "ListStatements": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite",
+          "ListOnly"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list queries for a given principal",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/redshift-data/latest/APIReference/API_ListStatements.html"
+        }
+      },
+      "ListTables": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite",
+          "ListOnly"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list tables for a given cluster",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/redshift-data/latest/APIReference/API_ListTables.html"
+        }
+      }
+    },
+    "arn_format": "",
+    "arn_regex": "",
+    "description": "Amazon Redshift Data API",
+    "docs": {
+      "actions_doc_root": "https://docs.aws.amazon.com/redshift-data/latest/APIReference/",
+      "api_detail_root": "",
+      "api_doc_root": "",
+      "api_reference_doc_page": "https://docs.aws.amazon.com/redshift-data/latest/APIReference/",
+      "authz_doc_page": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-authentication-access-control.html",
+      "concepts_doc_root": "https://docs.aws.amazon.com/redshift/latest/",
+      "context_keys_doc_root": ""
+    },
+    "prefix": "redshift-data"
+  },
   "Rekognition": {
     "actions": {
       "CompareFaces": {
@@ -93899,6 +94457,32 @@
           "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
         }
       },
+      "AttachManagedPolicyToPermissionSet": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Attaches an AWS managed policy to a permission set.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "CreateAccountAssignment": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Assigns access to a Principal for a specified AWS account using a specified permission set.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
       "CreateApplicationInstance": {
         "aws_action_groups": [
           "ReadWrite"
@@ -93977,6 +94561,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
         }
       },
+      "DeleteAccountAssignment": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes a Principal's access from a specified AWS account using a specified permission set.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
       "DeleteApplicationInstance": {
         "aws_action_groups": [
           "ReadWrite"
@@ -93997,6 +94594,19 @@
         "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Delete an inactive or expired certificate from the application instance",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "DeleteInlinePolicyFromPermissionSet": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes the inline policy from a specified permission set.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -94055,6 +94665,62 @@
           "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
         }
       },
+      "DescribeAccountAssignmentCreationStatus": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes the status of the assignment creation request.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "DescribeAccountAssignmentDeletionStatus": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes the status of an assignment deletion request.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "DescribePermissionSet": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes a permission set",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "DescribePermissionSetProvisioningStatus": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describes the status for the given Permission Set Provisioning request.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
       "DescribePermissionsPolicies": {
         "aws_action_groups": [
           "ReadOnly",
@@ -94077,6 +94743,19 @@
         "calculated_action_group": "Read",
         "condition_keys": [],
         "description": "Obtains the regions where your organization has enabled AWS Single Sign-on",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "DetachManagedPolicyFromPermissionSet": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Detaches the attached AWS managed policy from the specified permission set.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -94131,6 +94810,20 @@
         "calculated_action_group": "Read",
         "condition_keys": [],
         "description": "Retrieve application template details",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "GetInlinePolicyForPermissionSet": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Obtains the inline policy assigned to the permission set.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -94276,6 +94969,62 @@
           "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
         }
       },
+      "ListAccountAssignmentCreationStatus": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Lists the status of the AWS account assignment creation requests for a specified SSO instance.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "ListAccountAssignmentDeletionStatus": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Lists the status of the AWS account assignment deletion requests for a specified SSO instance.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "ListAccountAssignments": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Lists the assignee of the specified AWS account with the specified permission set.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "ListAccountsForProvisionedPermissionSet": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Lists all the AWS accounts where the specified permission set is provisioned.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
       "ListApplicationInstanceCertificates": {
         "aws_action_groups": [
           "ReadOnly",
@@ -94347,6 +95096,48 @@
           "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
         }
       },
+      "ListInstances": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Lists the SSO Instances that the caller has access to.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "ListManagedPoliciesInPermissionSet": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Lists the AWS managed policies that are attached to a specified permission set.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "ListPermissionSetProvisioningStatus": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Lists the status of the Permission Set Provisioning requests for a specified SSO instance.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
       "ListPermissionSets": {
         "aws_action_groups": [
           "ReadOnly",
@@ -94355,6 +95146,20 @@
         "calculated_action_group": "Read",
         "condition_keys": [],
         "description": "Retrieve all permission sets",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "ListPermissionSetsProvisionedToAccount": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Lists all the permission sets that are provisioned to a specified AWS account.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -94383,6 +95188,46 @@
         "calculated_action_group": "Read",
         "condition_keys": [],
         "description": "Retrieve all profiles for an application instance",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Lists the tags that are attached to a specified resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "ProvisionPermissionSet": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "The process by which a specified permission set is provisioned to the specified target.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "PutInlinePolicyToPermissionSet": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Attaches an IAM inline policy to a permission set.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -94422,6 +95267,40 @@
         "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Initialize AWS Single Sign-On",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Associates a set of tags with a specified resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Disassociates a set of tags from a specified resource.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -94598,8 +95477,8 @@
         }
       }
     },
-    "arn_format": "arn:${Partition}:sso:${Region}:${Account}:<relative-id>",
-    "arn_regex": "^arn:${Partition}:sso:${Region}:.+",
+    "arn_format": "arn:${Partition}:sso:::<relative-id>",
+    "arn_regex": "^arn:${Partition}:sso:::.+",
     "description": "AWS SSO",
     "docs": {
       "actions_doc_root": "https://docs.aws.amazon.com/singlesignon/latest/userguide/",
@@ -97840,7 +98719,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Search for a training job.",
+        "description": "Search for SageMaker objects.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -98780,7 +99659,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "securityhub:ASFFSyntaxPath/${ASFFSyntaxPath}"
+        ],
         "description": "Grants permission to update customer-controlled fields for a selected set of Security Hub findings",
         "docs": {
           "api_doc": "",
@@ -100074,7 +100955,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Accepts a portfolio that has been shared with you",
+        "description": "Grants permission to accept a portfolio that has been shared with you",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100087,7 +100968,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Associates a budget with a resource.",
+        "description": "Grants permission to associate a budget with a resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100100,7 +100981,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Associates an IAM principal with a portfolio, giving the specified principal access to any products associated with the specified portfolio",
+        "description": "Grants permission to associate an IAM principal with a portfolio, giving the specified principal access to any products associated with the specified portfolio",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100113,7 +100994,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Associates a product with a portfolio",
+        "description": "Grants permission to associate a product with a portfolio",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100126,7 +101007,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Associates an action with a provisioning artifact",
+        "description": "Grants permission to associate an action with a provisioning artifact",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100139,7 +101020,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Associate the specified TagOption with the specified portfolio or product",
+        "description": "Grants permission to associate the specified TagOption with the specified portfolio or product",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100152,7 +101033,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Associates multiple self-service actions with provisioning artifacts.",
+        "description": "Grants permission to associate multiple self-service actions with provisioning artifacts",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100165,7 +101046,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Disassociates a batch of self-service actions from the specified provisioning artifact.",
+        "description": "Grants permission to disassociate a batch of self-service actions from the specified provisioning artifact",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100178,7 +101059,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Copies the specified source product to the specified target product or a new product.",
+        "description": "Grants permission to copy the specified source product to the specified target product or a new product",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100191,7 +101072,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a constraint on an associated product and portfolio",
+        "description": "Grants permission to create a constraint on an associated product and portfolio",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100207,7 +101088,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Creates a portfolio",
+        "description": "Grants permission to create a portfolio",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100220,7 +101101,7 @@
         ],
         "calculated_action_group": "Permissions",
         "condition_keys": [],
-        "description": "Shares a portfolio you own with another AWS account",
+        "description": "Grants permission to share a portfolio you own with another AWS account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100236,7 +101117,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Creates a product and that product's first provisioning artifact",
+        "description": "Grants permission to create a product and that product's first provisioning artifact",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100249,7 +101130,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Adds a new provisioned product plan",
+        "description": "Grants permission to add a new provisioned product plan",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100262,7 +101143,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Adds a new provisioning artifact to an existing product",
+        "description": "Grants permission to add a new provisioning artifact to an existing product",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100275,7 +101156,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a self-service action.",
+        "description": "Grants permission to create a self-service action",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100288,7 +101169,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a TagOption.",
+        "description": "Grants permission to create a TagOption",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100301,7 +101182,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Removes and deletes an existing constraint from an associated product and portfolio",
+        "description": "Grants permission to remove and delete an existing constraint from an associated product and portfolio",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100314,7 +101195,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a portfolio if all associations and shares have been removed from the portfolio",
+        "description": "Grants permission to delete a portfolio if all associations and shares have been removed from the portfolio",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100327,7 +101208,7 @@
         ],
         "calculated_action_group": "Permissions",
         "condition_keys": [],
-        "description": "Unshares a portfolio you own from an AWS account you previously shared the portfolio with",
+        "description": "Grants permission to unshare a portfolio you own from an AWS account you previously shared the portfolio with",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100340,7 +101221,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a product if all associations have been removed from the product",
+        "description": "Grants permission to delete a product if all associations have been removed from the product",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100353,7 +101234,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a provisioned product plan",
+        "description": "Grants permission to delete a provisioned product plan",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100366,7 +101247,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a provisioning artifact from a product",
+        "description": "Grants permission to delete a provisioning artifact from a product",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100379,7 +101260,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a self-service action.",
+        "description": "Grants permission to delete a self-service action",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100392,7 +101273,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes the specified TagOption.",
+        "description": "Grants permission to delete the specified TagOption",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100406,7 +101287,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes a constraint",
+        "description": "Grants permission to describe a constraint",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100420,7 +101301,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets the status of the specified copy product operation.",
+        "description": "Grants permission to get the status of the specified copy product operation",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100434,7 +101315,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes a portfolio",
+        "description": "Grants permission to describe a portfolio",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100448,7 +101329,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets the status of the specified portfolio share operation.",
+        "description": "Grants permission to get the status of the specified portfolio share operation",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100462,7 +101343,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes a product as an end-user",
+        "description": "Grants permission to describe a product as an end-user",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100476,7 +101357,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes a product as an admin",
+        "description": "Grants permission to describe a product as an admin",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100490,7 +101371,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes a product as an end-user",
+        "description": "Grants permission to describe a product as an end-user",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100504,7 +101385,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes a provisioned product",
+        "description": "Grants permission to describe a provisioned product",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100518,7 +101399,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes a provisioned product plan",
+        "description": "Grants permission to describe a provisioned product plan",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100532,7 +101413,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes a provisioning artifact",
+        "description": "Grants permission to describe a provisioning artifact",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100546,7 +101427,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the parameters that you need to specify to successfully provision a specified provisioning artifact",
+        "description": "Grants permission to describe the parameters that you need to specify to successfully provision a specified provisioning artifact",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100564,7 +101445,7 @@
           "servicecatalog:roleLevel",
           "servicecatalog:userLevel"
         ],
-        "description": "Describes a record and lists any outputs",
+        "description": "Grants permission to describe a record and lists any outputs",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100578,7 +101459,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes a self-service action.",
+        "description": "Grants permission to describe a self-service action",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100592,7 +101473,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets the default parameters if you executed the specified Service Action on the specified Provisioned Product.",
+        "description": "Grants permission to get the default parameters if you executed the specified Service Action on the specified Provisioned Product",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100606,7 +101487,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets information about the specified TagOption.",
+        "description": "Grants permission to get information about the specified TagOption",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100619,7 +101500,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Disable portfolio sharing through AWS Organizations feature.",
+        "description": "Grants permission to disable portfolio sharing through AWS Organizations feature",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100632,7 +101513,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Disassociates a budget from a resource.",
+        "description": "Grants permission to disassociate a budget from a resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100645,7 +101526,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Disassociates an IAM principal from a portfolio.",
+        "description": "Grants permission to disassociate an IAM principal from a portfolio",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100658,7 +101539,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Disassociates a product from a portfolio",
+        "description": "Grants permission to disassociate a product from a portfolio",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100671,7 +101552,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Disassociates the specified self-service action association from the specified provisioning artifact.",
+        "description": "Grants permission to disassociate the specified self-service action association from the specified provisioning artifact",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100684,7 +101565,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Disassociates the specified TagOption from the specified resource.",
+        "description": "Grants permission to disassociate the specified TagOption from the specified resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100697,7 +101578,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Enable portfolio sharing feature through AWS Organizations.",
+        "description": "Grants permission to enable portfolio sharing feature through AWS Organizations",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100710,7 +101591,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Executes a provisioned product plan",
+        "description": "Grants permission to execute a provisioned product plan",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100723,7 +101604,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Executes a provisioned product plan",
+        "description": "Grants permission to executes a provisioned product plan",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100737,7 +101618,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Get the Access Status for AWS Organization portfolio share feature.",
+        "description": "Grants permission to get the access status of AWS Organization portfolio share feature",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100752,7 +101633,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the portfolios that have been shared with you and you have accepted",
+        "description": "Grants permission to list the portfolios that have been shared with you and you have accepted",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100767,7 +101648,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists all the budgets associated to a resource.",
+        "description": "Grants permission to list all the budgets associated to a resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100782,7 +101663,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists constraints associated with a given portfolio",
+        "description": "Grants permission to list constraints associated with a given portfolio",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100797,7 +101678,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the different ways to launch a given product as an end-user",
+        "description": "Grants permission to list the different ways to launch a given product as an end-user",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100812,7 +101693,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the organization nodes that have access to the specified portfolio.",
+        "description": "Grants permission to list the organization nodes that have access to the specified portfolio",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100827,7 +101708,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the AWS accounts you have shared a given portfolio with",
+        "description": "Grants permission to list the AWS accounts you have shared a given portfolio with",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100842,7 +101723,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the portfolios in your account",
+        "description": "Grants permission to list the portfolios in your account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100857,7 +101738,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the portfolios associated with a given product",
+        "description": "Grants permission to list the portfolios associated with a given product",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100872,7 +101753,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the IAM principals associated with a given portfolio",
+        "description": "Grants permission to list the IAM principals associated with a given portfolio",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100887,7 +101768,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the provisioned product plans",
+        "description": "Grants permission to list the provisioned product plans",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100902,7 +101783,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the provisioning artifacts associated with a given product",
+        "description": "Grants permission to list the provisioning artifacts associated with a given product",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100917,7 +101798,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists all provisioning artifacts for the specified self-service action.",
+        "description": "Grants permission to list all provisioning artifacts for the specified self-service action",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100936,7 +101817,7 @@
           "servicecatalog:roleLevel",
           "servicecatalog:userLevel"
         ],
-        "description": "Lists all the records in your account or all the records related to a given provisioned product",
+        "description": "Grants permission to list all the records in your account or all the records related to a given provisioned product",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100951,7 +101832,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the resources associated with the specified TagOption.",
+        "description": "Grants permission to list the resources associated with the specified TagOption",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100966,7 +101847,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists all self-service actions.",
+        "description": "Grants permission to list all self-service actions",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100981,7 +101862,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists all the service actions associated with the specified provisioning artifact in your account",
+        "description": "Grants permission to list all the service actions associated with the specified provisioning artifact in your account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -100996,7 +101877,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists account, region and status of each stack instances that are associated with a CFN_STACKSET type provisioned product",
+        "description": "Grants permission to list account, region and status of each stack instances that are associated with a CFN_STACKSET type provisioned product",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -101011,7 +101892,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the specified TagOptions or all TagOptions.",
+        "description": "Grants permission to list the specified TagOptions or all TagOptions",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -101024,7 +101905,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Provisions a product with a specified provisioning artifact and launch parameters",
+        "description": "Grants permission to provision a product with a specified provisioning artifact and launch parameters",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -101037,7 +101918,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Rejects a portfolio that has been shared with you that you previously accepted",
+        "description": "Grants permission to reject a portfolio that has been shared with you that you previously accepted",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -101056,7 +101937,7 @@
           "servicecatalog:roleLevel",
           "servicecatalog:userLevel"
         ],
-        "description": "Lists all the provisioned products in your account",
+        "description": "Grants permission to list all the provisioned products in your account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -101071,7 +101952,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the products available to you as an end-user",
+        "description": "Grants permission to list the products available to you as an end-user",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -101086,7 +101967,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists all the products in your account or all the products associated with a given portfolio",
+        "description": "Grants permission to list all the products in your account or all the products associated with a given portfolio",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -101105,7 +101986,7 @@
           "servicecatalog:roleLevel",
           "servicecatalog:userLevel"
         ],
-        "description": "Lists all the provisioned products in your account",
+        "description": "Grants permission to list all the provisioned products in your account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -101122,7 +102003,7 @@
           "servicecatalog:roleLevel",
           "servicecatalog:userLevel"
         ],
-        "description": "Terminates an existing provisioned product",
+        "description": "Grants permission to terminate an existing provisioned product",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -101135,7 +102016,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the metadata fields of an existing constraint",
+        "description": "Grants permission to update the metadata fields of an existing constraint",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -101151,7 +102032,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Updates the metadata fields and/or tags of an existing portfolio",
+        "description": "Grants permission to update the metadata fields and/or tags of an existing portfolio",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -101167,7 +102048,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Updates the metadata fields and/or tags of an existing product",
+        "description": "Grants permission to update the metadata fields and/or tags of an existing product",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -101184,7 +102065,7 @@
           "servicecatalog:roleLevel",
           "servicecatalog:userLevel"
         ],
-        "description": "Updates an existing provisioned product",
+        "description": "Grants permission to update an existing provisioned product",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -101197,7 +102078,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the properties of an existing provisioned product",
+        "description": "Grants permission to update the properties of an existing provisioned product",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -101210,7 +102091,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the metadata fields of an existing provisioning artifact",
+        "description": "Grants permission to update the metadata fields of an existing provisioning artifact",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -101223,7 +102104,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates a self-service action.",
+        "description": "Grants permission to update a self-service action",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -101236,7 +102117,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the specified TagOption.",
+        "description": "Grants permission to update the specified TagOption",
         "docs": {
           "api_doc": "",
           "doc_page": "",
