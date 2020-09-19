@@ -23542,7 +23542,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Detects the language or languages present in the list of text documents.",
+        "description": "Grants permission to detect the language or languages present in the list of text documents",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23556,7 +23556,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Detects the named entities (\"People\", \"Places\", \"Locations\", etc) within the given list of text documents.",
+        "description": "Grants permission to detect the named entities (\"People\", \"Places\", \"Locations\", etc) within the given list of text documents",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23570,7 +23570,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Detects the phrases in the list of text documents that are most indicative of the content.",
+        "description": "Grants permission to detect the phrases in the list of text documents that are most indicative of the content",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23584,7 +23584,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Detects the sentiment of a text in the list of documents (Positive, Negative, Neutral, or Mixed).",
+        "description": "Grants permission to detect the sentiment of a text in the list of documents (Positive, Negative, Neutral, or Mixed)",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23598,7 +23598,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Detects syntactic information (like Part of Speech, Tokens) in a list of text documents.",
+        "description": "Grants permission to detect syntactic information (like Part of Speech, Tokens) in a list of text documents",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23614,7 +23614,7 @@
         "condition_keys": [
           "aws:ResourceTag/${TagKey}"
         ],
-        "description": "Creates a new document classification request to analyze a single document in real-time, using a previously created and trained custom model and an endpoint.",
+        "description": "Grants permission to create a new document classification request to analyze a single document in real-time, using a previously created and trained custom model and an endpoint",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23631,7 +23631,7 @@
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Creates a new document classifier that you can use to categorize documents.",
+        "description": "Grants permission to create a new document classifier that you can use to categorize documents",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23648,7 +23648,7 @@
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Creates a model-specific endpoint for synchronous inference for a previously trained custom model",
+        "description": "Grants permission to create a model-specific endpoint for synchronous inference for a previously trained custom model",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23665,7 +23665,7 @@
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Creates an entity recognizer using submitted files.",
+        "description": "Grants permission to create an entity recognizer using submitted files",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23680,7 +23680,7 @@
         "condition_keys": [
           "aws:ResourceTag/${TagKey}"
         ],
-        "description": "Deletes a previously created document classifier.",
+        "description": "Grants permission to delete a previously created document classifier",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23695,7 +23695,7 @@
         "condition_keys": [
           "aws:ResourceTag/${TagKey}"
         ],
-        "description": "Deletes a model-specific endpoint for a previously-trained custom model. All endpoints must be deleted in order for the model to be deleted.",
+        "description": "Grants permission to delete a model-specific endpoint for a previously-trained custom model. All endpoints must be deleted in order for the model to be deleted",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23710,7 +23710,7 @@
         "condition_keys": [
           "aws:ResourceTag/${TagKey}"
         ],
-        "description": "Deletes a submitted entity recognizer.",
+        "description": "Grants permission to delete a submitted entity recognizer",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23724,7 +23724,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets the properties associated with a document classification job.",
+        "description": "Grants permission to get the properties associated with a document classification job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23740,7 +23740,7 @@
         "condition_keys": [
           "aws:ResourceTag/${TagKey}"
         ],
-        "description": "Gets the properties associated with a document classifier.",
+        "description": "Grants permission to get the properties associated with a document classifier",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23754,7 +23754,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets the properties associated with a dominant language detection job.",
+        "description": "Grants permission to get the properties associated with a dominant language detection job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23770,7 +23770,7 @@
         "condition_keys": [
           "aws:ResourceTag/${TagKey}"
         ],
-        "description": "Gets the properties associated with a specific endpoint. Use this operation to get the status of an endpoint.",
+        "description": "Grants permission to get the properties associated with a specific endpoint. Use this operation to get the status of an endpoint",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23784,7 +23784,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets the properties associated with an entities detection job.",
+        "description": "Grants permission to get the properties associated with an entities detection job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23800,7 +23800,7 @@
         "condition_keys": [
           "aws:ResourceTag/${TagKey}"
         ],
-        "description": "Provides details about an entity recognizer including status, S3 buckets containing training data, recognizer metadata, metrics, and so on.",
+        "description": "Grants permission to provide details about an entity recognizer including status, S3 buckets containing training data, recognizer metadata, metrics, and so on",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23814,11 +23814,25 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets the properties associated with a key phrases detection job.",
+        "description": "Grants permission to get the properties associated with a key phrases detection job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/comprehend/latest/dg/API_DescribeKeyPhrasesDetectionJob.html"
+        }
+      },
+      "DescribePiiEntitiesDetectionJob": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to get the properties associated with a PII entities detection job",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/comprehend/latest/dg/API_DescribePiiEntitiesDetectionJob.html"
         }
       },
       "DescribeSentimentDetectionJob": {
@@ -23828,7 +23842,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets the properties associated with a sentiment detection job.",
+        "description": "Grants permission to get the properties associated with a sentiment detection job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23842,7 +23856,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets the properties associated with a topic detection job.",
+        "description": "Grants permission to get the properties associated with a topic detection job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23856,7 +23870,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Detects the language or languages present in the text.",
+        "description": "Grants permission to detect the language or languages present in the text",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23870,7 +23884,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Detects the named entities (\"People\", \"Places\", \"Locations\", etc) within the given text document.",
+        "description": "Grants permission to detect the named entities (\"People\", \"Places\", \"Locations\", etc) within the given text document",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23884,11 +23898,25 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Detects the phrases in the text that are most indicative of the content.",
+        "description": "Grants permission to detect the phrases in the text that are most indicative of the content",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/comprehend/latest/dg/API_DetectKeyPhrases.html"
+        }
+      },
+      "DetectPiiEntities": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to detect the personally identifiable information entities (\"Name\", \"SSN\", \"PIN\", etc) within the given text document",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/comprehend/latest/dg/API_DetectPiiEntities.html"
         }
       },
       "DetectSentiment": {
@@ -23898,7 +23926,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Detects the sentiment of a text in a document (Positive, Negative, Neutral, or Mixed).",
+        "description": "Grants permission to detect the sentiment of a text in a document (Positive, Negative, Neutral, or Mixed)",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23912,7 +23940,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Detects syntactic information (like Part of Speech, Tokens) in a text document.",
+        "description": "Grants permission to detect syntactic information (like Part of Speech, Tokens) in a text document",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23927,7 +23955,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Gets a list of the document classification jobs that you have submitted.",
+        "description": "Grants permission to get a list of the document classification jobs that you have submitted",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23944,7 +23972,7 @@
         "condition_keys": [
           "aws:ResourceTag/${TagKey}"
         ],
-        "description": "Gets a list of the document classifiers that you have created.",
+        "description": "Grants permission to get a list of the document classifiers that you have created",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23959,7 +23987,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Gets a list of the dominant language detection jobs that you have submitted.",
+        "description": "Grants permission to get a list of the dominant language detection jobs that you have submitted",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23976,7 +24004,7 @@
         "condition_keys": [
           "aws:ResourceTag/${TagKey}"
         ],
-        "description": "Gets a list of all existing endpoints that you've created.",
+        "description": "Grants permission to get a list of all existing endpoints that you've created",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -23991,7 +24019,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Gets a list of the entity detection jobs that you have submitted.",
+        "description": "Grants permission to get a list of the entity detection jobs that you have submitted",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24008,7 +24036,7 @@
         "condition_keys": [
           "aws:ResourceTag/${TagKey}"
         ],
-        "description": "Gets a list of the properties of all entity recognizers that you created, including recognizers currently in training.",
+        "description": "Grants permission to get a list of the properties of all entity recognizers that you created, including recognizers currently in training",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24023,11 +24051,26 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Get a list of key phrase detection jobs that you have submitted.",
+        "description": "Grants permission to get a list of key phrase detection jobs that you have submitted",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/comprehend/latest/dg/API_ListKeyPhrasesDetectionJobs.html"
+        }
+      },
+      "ListPiiEntitiesDetectionJobs": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ListOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to get a list of PII entities detection jobs that you have submitted",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/comprehend/latest/dg/API_ListPiiEntitiesDetectionJobs.html"
         }
       },
       "ListSentimentDetectionJobs": {
@@ -24038,7 +24081,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Gets a list of sentiment detection jobs that you have submitted.",
+        "description": "Grants permission to get a list of sentiment detection jobs that you have submitted",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24055,7 +24098,7 @@
         "condition_keys": [
           "aws:ResourceTag/${TagKey}"
         ],
-        "description": "Lists tags for a resource",
+        "description": "Grants permission to list tags for a resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24070,7 +24113,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Gets a list of the topic detection jobs that you have submitted.",
+        "description": "Grants permission to get a list of the topic detection jobs that you have submitted",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24083,7 +24126,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Starts an asynchronous document classification job.",
+        "description": "Grants permission to start an asynchronous document classification job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24096,7 +24139,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Starts an asynchronous dominant language detection job for a collection of documents.",
+        "description": "Grants permission to start an asynchronous dominant language detection job for a collection of documents",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24109,7 +24152,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Starts an asynchronous entity detection job for a collection of documents.",
+        "description": "Grants permission to start an asynchronous entity detection job for a collection of documents",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24122,11 +24165,24 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Starts an asynchronous key phrase detection job for a collection of documents.",
+        "description": "Grants permission to start an asynchronous key phrase detection job for a collection of documents",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/comprehend/latest/dg/API_StartKeyPhrasesDetectionJob.html"
+        }
+      },
+      "StartPiiEntitiesDetectionJob": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to start an asynchronous PII entities detection job for a collection of documents",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/comprehend/latest/dg/API_StartPiiEntitiesDetectionJob.html"
         }
       },
       "StartSentimentDetectionJob": {
@@ -24135,7 +24191,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Starts an asynchronous sentiment detection job for a collection of documents.",
+        "description": "Grants permission to start an asynchronous sentiment detection job for a collection of documents",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24148,7 +24204,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Starts an asynchronous job to detect the most common topics in the collection of documents and the phrases associated with each topic.",
+        "description": "Grants permission to start an asynchronous job to detect the most common topics in the collection of documents and the phrases associated with each topic",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24161,7 +24217,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Stops a dominant language detection job.",
+        "description": "Grants permission to stop a dominant language detection job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24174,7 +24230,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Stops an entity detection job.",
+        "description": "Grants permission to stop an entity detection job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24187,11 +24243,24 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Stops a key phrase detection job.",
+        "description": "Grants permission to stop a key phrase detection job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/comprehend/latest/dg/API_StopKeyPhrasesDetectionJob.html"
+        }
+      },
+      "StopPiiEntitiesDetectionJob": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to stop a PII entities detection job",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/comprehend/latest/dg/API_StopPiiEntitiesDetectionJob.html"
         }
       },
       "StopSentimentDetectionJob": {
@@ -24200,7 +24269,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Stops a sentiment detection job.",
+        "description": "Grants permission to stop a sentiment detection job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24215,7 +24284,7 @@
         "condition_keys": [
           "aws:ResourceTag/${TagKey}"
         ],
-        "description": "Stop a previously created document classifier training job.",
+        "description": "Grants permission to stop a previously created document classifier training job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24230,7 +24299,7 @@
         "condition_keys": [
           "aws:ResourceTag/${TagKey}"
         ],
-        "description": "Stop a previously created entity recognizer training job.",
+        "description": "Grants permission to stop a previously created entity recognizer training job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24248,7 +24317,7 @@
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Tags a resource with given key value pairs",
+        "description": "Grants permission to tag a resource with given key value pairs",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24265,7 +24334,7 @@
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Untags a resource with given key",
+        "description": "Grants permission to untag a resource with given key",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24280,7 +24349,7 @@
         "condition_keys": [
           "aws:ResourceTag/${TagKey}"
         ],
-        "description": "Updates information about the specified endpoint.",
+        "description": "Grants permission to update information about the specified endpoint",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -25595,6 +25664,37 @@
   },
   "Connect": {
     "actions": {
+      "AssociateRoutingProfileQueues": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Grants permissions to associate queues with a routing profile in an Amazon Connect instance.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_AssociateRoutingProfileQueues.html"
+        }
+      },
+      "CreateContactFlow": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permissions to create a contact flow in an Amazon Connect instance.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateContactFlow.html"
+        }
+      },
       "CreateInstance": {
         "aws_action_groups": [
           "ReadWrite"
@@ -25606,6 +25706,22 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/amazon-connect-instances.html"
+        }
+      },
+      "CreateRoutingProfile": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to create a routing profile in an Amazon Connect instance.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateRoutingProfile.html"
         }
       },
       "CreateUser": {
@@ -25639,6 +25755,22 @@
           "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_DeleteUser.html"
         }
       },
+      "DescribeContactFlow": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Grants permissions to describe a contact flow in an Amazon Connect instance.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeContactFlow.html"
+        }
+      },
       "DescribeInstance": {
         "aws_action_groups": [
           "ReadOnly",
@@ -25651,6 +25783,22 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/amazon-connect-instances.html"
+        }
+      },
+      "DescribeRoutingProfile": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Grants permissions to describe a routing profile in an Amazon Connect instance.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeRoutingProfile.html"
         }
       },
       "DescribeUser": {
@@ -25708,6 +25856,21 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/amazon-connect-instances.html"
+        }
+      },
+      "DisassociateRoutingProfileQueues": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Grants permissions to disassociate queues from a routing profile in an Amazon Connect instance.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_DisassociateRoutingProfileQueues.html"
         }
       },
       "GetContactAttributes": {
@@ -25839,6 +26002,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_ListPhoneNumbers.html"
         }
       },
+      "ListPrompts": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permissions to list prompt resources in an Amazon Connect instance.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_ListPrompts.html"
+        }
+      },
       "ListQueues": {
         "aws_action_groups": [
           "ListOnly",
@@ -25852,6 +26030,22 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_ListQueues.html"
+        }
+      },
+      "ListRoutingProfileQueues": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Grants permissions to list queue resources in a routing profile in an Amazon Connect instance.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_ListRoutingProfileQueues.html"
         }
       },
       "ListRoutingProfiles": {
@@ -26080,6 +26274,96 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactAttributes.html"
+        }
+      },
+      "UpdateContactFlowContent": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Grants permissions to update contact flow content in an Amazon Connect instance.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactFlowContent.html"
+        }
+      },
+      "UpdateContactFlowName": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Grants permissions to update the name and description of a contact flow in an Amazon Connect instance.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactFlowName.html"
+        }
+      },
+      "UpdateRoutingProfileConcurrency": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Grants permissions to update the concurrency in a routing profile in an Amazon Connect instance.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateRoutingProfileConcurrency.html"
+        }
+      },
+      "UpdateRoutingProfileDefaultOutboundQueue": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Grants permissions to update the outbound queue in a routing profile in an Amazon Connect instance.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateRoutingProfileDefaultOutboundQueue.html"
+        }
+      },
+      "UpdateRoutingProfileName": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Grants permissions to update a routing profile name and description in an Amazon Connect instance.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateRoutingProfileName.html"
+        }
+      },
+      "UpdateRoutingProfileQueues": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Grants permissions to update the queues in routing profile in an Amazon Connect instance.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateRoutingProfileQueues.html"
         }
       },
       "UpdateUserHierarchy": {
@@ -41164,7 +41448,8 @@
         "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
-          "aws:TagKeys"
+          "aws:TagKeys",
+          "elasticfilesystem:Encrypted"
         ],
         "description": "Creates a new, empty file system.",
         "docs": {
@@ -78821,7 +79106,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create an AWS account that is automatically a member of the organization with the credentials that made the request.",
         "docs": {
           "api_doc": "",
@@ -78834,7 +79122,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create an AWS GovCloud (US) account.",
         "docs": {
           "api_doc": "",
@@ -78860,7 +79151,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create an organizational unit (OU) within a root or parent OU.",
         "docs": {
           "api_doc": "",
@@ -78874,6 +79168,8 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
           "organizations:PolicyType"
         ],
         "description": "Grants permission to create a policy that you can attach to a root, an organizational unit (OU), or an individual AWS account.",
@@ -79147,7 +79443,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to send an invitation to another AWS account, asking it to join your organization as a member account.",
         "docs": {
           "api_doc": "",
@@ -79463,7 +79762,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to add one or more tags to the specified resource.",
         "docs": {
           "api_doc": "",
@@ -79477,7 +79779,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Tagging",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to remove one or more tags from the specified resource.",
         "docs": {
           "api_doc": "",
@@ -79524,7 +79828,7 @@
       "api_reference_doc_page": "https://docs.aws.amazon.com/organizations/latest/APIReference/",
       "authz_doc_page": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_permissions.html",
       "concepts_doc_root": "https://docs.aws.amazon.com/organizations/latest/userguide/",
-      "context_keys_doc_root": "${ActionsDocRoot}"
+      "context_keys_doc_root": "https://docs.aws.amazon.com/organizations/latest/userguide/"
     },
     "prefix": "organizations"
   },
