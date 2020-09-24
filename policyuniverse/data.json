@@ -24748,6 +24748,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_DeleteRemediationExceptions.html"
         }
       },
+      "DeleteResourceConfig": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Records the configuration state for a custom resource that has been deleted.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_DeleteResourceConfig.html"
+        }
+      },
       "DeleteRetentionConfiguration": {
         "aws_action_groups": [
           "ReadWrite"
@@ -25519,6 +25532,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_PutRemediationExceptions.html"
+        }
+      },
+      "PutResourceConfig": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Records the configuration state for the resource provided in the request.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_PutResourceConfig.html"
         }
       },
       "PutRetentionConfiguration": {
@@ -26516,17 +26542,69 @@
   },
   "Cost Explorer Service": {
     "actions": {
+      "CreateAnomalyMonitor": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create a new Anomaly Monitor",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CreateAnomalyMonitor.html"
+        }
+      },
+      "CreateAnomalySubscription": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create a new Anomaly Subscription",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CreateAnomalySubscription.html"
+        }
+      },
       "CreateCostCategoryDefinition": {
         "aws_action_groups": [
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to create a new Cost Category with the requested name and rules.",
+        "description": "Grants permission to create a new Cost Category with the requested name and rules",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CreateCostCategoryDefinition.html"
+        }
+      },
+      "DeleteAnomalyMonitor": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete an Anomaly Monitor",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_DeleteAnomalyMonitor.html"
+        }
+      },
+      "DeleteAnomalySubscription": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete an Anomaly Subscription",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_DeleteAnomalySubscription.html"
         }
       },
       "DeleteCostCategoryDefinition": {
@@ -26535,7 +26613,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to delete a Cost Category.",
+        "description": "Grants permission to delete a Cost Category",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -26549,11 +26627,53 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve descriptions such as the name, ARN, rules, definition, and effective dates of a Cost Category.",
+        "description": "Grants permission to retrieve descriptions such as the name, ARN, rules, definition, and effective dates of a Cost Category",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_DescribeCostCategoryDefinition.html"
+        }
+      },
+      "GetAnomalies": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve anomalies",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetAnomalies.html"
+        }
+      },
+      "GetAnomalyMonitors": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to query Anomaly Monitors",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetAnomalyMonitors.html"
+        }
+      },
+      "GetAnomalySubscriptions": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to query Anomaly Subscriptions",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetAnomalySubscriptions.html"
         }
       },
       "GetCostAndUsage": {
@@ -26563,7 +26683,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve the cost and usage metrics for your account.",
+        "description": "Grants permission to retrieve the cost and usage metrics for your account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -26577,7 +26697,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve the cost and usage metrics with resources for your account.",
+        "description": "Grants permission to retrieve the cost and usage metrics with resources for your account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -26591,7 +26711,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve a cost forecast for a forecast time period.",
+        "description": "Grants permission to retrieve a cost forecast for a forecast time period",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -26605,7 +26725,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve all available filter values for a filter for a period of time.",
+        "description": "Grants permission to retrieve all available filter values for a filter for a period of time",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -26619,7 +26739,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve the reservation coverage for your account.",
+        "description": "Grants permission to retrieve the reservation coverage for your account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -26633,7 +26753,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve the reservation recommendations for your account.",
+        "description": "Grants permission to retrieve the reservation recommendations for your account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -26647,7 +26767,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve the reservation utilization for your account.",
+        "description": "Grants permission to retrieve the reservation utilization for your account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -26661,7 +26781,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve the rightsizing recommendations for your account.",
+        "description": "Grants permission to retrieve the rightsizing recommendations for your account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -26675,7 +26795,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve the Savings Plans coverage for your account.",
+        "description": "Grants permission to retrieve the Savings Plans coverage for your account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -26689,7 +26809,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve the Savings Plans recommendations for your account.",
+        "description": "Grants permission to retrieve the Savings Plans recommendations for your account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -26703,7 +26823,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve the Savings Plans utilization for your account.",
+        "description": "Grants permission to retrieve the Savings Plans utilization for your account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -26717,7 +26837,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve the Savings Plans utilization details for your account.",
+        "description": "Grants permission to retrieve the Savings Plans utilization details for your account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -26731,7 +26851,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to query tags for a specified time period.",
+        "description": "Grants permission to query tags for a specified time period",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -26745,7 +26865,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve a usage forecast for a forecast time period.",
+        "description": "Grants permission to retrieve a usage forecast for a forecast time period",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -26760,11 +26880,50 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to retrieve names, ARN, and effective dates for all Cost Categories.",
+        "description": "Grants permission to retrieve names, ARN, and effective dates for all Cost Categories",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_ListCostCategoryDefinitions.html"
+        }
+      },
+      "ProvideAnomalyFeedback": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to provide feedback on detected anomalies",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_ProvideAnomalyFeedback.html"
+        }
+      },
+      "UpdateAnomalyMonitor": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to update an existing Anomaly Monitor",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_UpdateAnomalyMonitor.html"
+        }
+      },
+      "UpdateAnomalySubscription": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to update an existing Anomaly Subscription",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_UpdateAnomalySubscription.html"
         }
       },
       "UpdateCostCategoryDefinition": {
@@ -26773,7 +26932,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to update an existing Cost Category.",
+        "description": "Grants permission to update an existing Cost Category",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -28567,6 +28726,22 @@
           "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationNfs.html"
         }
       },
+      "CreateLocationObjectStorage": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Creates an endpoint for a self-managed object storage bucket.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationObjectStorage.html"
+        }
+      },
       "CreateLocationS3": {
         "aws_action_groups": [
           "ReadWrite"
@@ -28720,6 +28895,22 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_DescribeLocationNfs.html"
+        }
+      },
+      "DescribeLocationObjectStorage": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Returns metadata about a self-managed object storage server location.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/datasync/latest/userguide/API_DescribeLocationObjectStorage.html"
         }
       },
       "DescribeLocationS3": {
@@ -58760,6 +58951,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/policy-actions.html"
         }
       },
+      "CreateAuditSuppression": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Creates a Device Defender audit suppression.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_CreateAuditSuppression.html"
+        }
+      },
       "CreateAuthorizer": {
         "aws_action_groups": [
           "ReadWrite"
@@ -58817,6 +59021,22 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_CreateDimension.html"
+        }
+      },
+      "CreateDomainConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Creates a domain configuration.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_CreateDomainConfiguration.html"
         }
       },
       "CreateDynamicThingGroup": {
@@ -59104,6 +59324,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DeleteAccountAuditConfiguration.html"
         }
       },
+      "DeleteAuditSuppression": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes a Device Defender audit suppression.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DeleteAuditSuppression.html"
+        }
+      },
       "DeleteAuthorizer": {
         "aws_action_groups": [
           "ReadWrite"
@@ -59172,6 +59405,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DeleteDimension.html"
+        }
+      },
+      "DeleteDomainConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Deletes a domain configuration.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DeleteDomainConfiguration.html"
         }
       },
       "DeleteDynamicThingGroup": {
@@ -59488,6 +59734,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DescribeAccountAuditConfiguration.html"
         }
       },
+      "DescribeAuditFinding": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Gets information about a single audit finding. Properties include the reason for noncompliance, the severity of the issue, and when the audit that returned the finding was started.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DescribeAuditFinding.html"
+        }
+      },
       "DescribeAuditMitigationActionsTask": {
         "aws_action_groups": [
           "ReadOnly",
@@ -59500,6 +59760,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DescribeAuditMitigationActionsTask.html"
+        }
+      },
+      "DescribeAuditSuppression": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Gets information about a Device Defender audit suppression.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DescribeAuditSuppression.html"
         }
       },
       "DescribeAuditTask": {
@@ -59602,6 +59876,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DescribeDimension.html"
+        }
+      },
+      "DescribeDomainConfiguration": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Gets information about the domain configuration.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_DescribeDomainConfiguration.html"
         }
       },
       "DescribeEndpoint": {
@@ -60229,6 +60517,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_ListAuditMitigationActionsTasks.html"
         }
       },
+      "ListAuditSuppressions": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists your Device Defender audit suppressions.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_ListAuditSuppressions.html"
+        }
+      },
       "ListAuditTasks": {
         "aws_action_groups": [
           "ListOnly",
@@ -60332,6 +60635,21 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_ListDimensions.html"
+        }
+      },
+      "ListDomainConfigurations": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists the domain configuration created by your AWS account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_ListDomainConfigurations.html"
         }
       },
       "ListIndices": {
@@ -61282,6 +61600,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_UpdateAccountAuditConfiguration.html"
         }
       },
+      "UpdateAuditSuppression": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates a Device Defender audit suppression.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_UpdateAuditSuppression.html"
+        }
+      },
       "UpdateAuthorizer": {
         "aws_action_groups": [
           "ReadWrite"
@@ -61349,6 +61680,19 @@
           "api_doc": "",
           "doc_page": "API_UpdateDimension.html",
           "doc_page_rel": "API_UpdateDimension.html"
+        }
+      },
+      "UpdateDomainConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Updates a domain configuration.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_UpdateDomainConfiguration.html"
         }
       },
       "UpdateDynamicThingGroup": {
@@ -83981,7 +84325,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to copy the specified DB cluster parameter group",
         "docs": {
           "api_doc": "",
@@ -83994,7 +84341,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create a snapshot of a DB cluster",
         "docs": {
           "api_doc": "",
@@ -84007,7 +84357,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to copy the specified DB parameter group",
         "docs": {
           "api_doc": "",
@@ -84020,7 +84373,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to copy the specified DB snapshot",
         "docs": {
           "api_doc": "",
@@ -84033,7 +84389,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to copy the specified option group",
         "docs": {
           "api_doc": "",
@@ -87331,7 +87690,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/redshift-data/latest/APIReference/API_FetchResult.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/redshift-data/latest/APIReference/API_GetStatementResult.html"
         }
       },
       "ListDatabases": {
