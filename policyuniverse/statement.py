@@ -128,6 +128,9 @@ class Statement(object):
             if "Service" in principal:
                 self._add_or_extend(principal["Service"], principals)
 
+            if "Federated" in principal:
+                self._add_or_extend(principal["Federated"], principals)
+
         else:
             self._add_or_extend(principal, principals)
 
