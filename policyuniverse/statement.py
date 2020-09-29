@@ -180,6 +180,7 @@ class Statement(object):
             "aws:sourceip": "cidr",
             "aws:sourcevpc": "vpc",
             "aws:sourcevpce": "vpce",
+            "saml:aud": "saml-endpoint"
         }
 
         relevant_condition_operators = [
