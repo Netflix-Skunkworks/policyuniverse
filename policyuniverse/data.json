@@ -7339,7 +7339,12 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
+          "batch:AWSLogsCreateGroup",
+          "batch:AWSLogsGroup",
+          "batch:AWSLogsRegion",
+          "batch:AWSLogsStreamPrefix",
           "batch:Image",
+          "batch:LogDriver",
           "batch:Privileged",
           "batch:User"
         ],
@@ -44950,6 +44955,19 @@
   },
   "Elastic Block Store": {
     "actions": {
+      "CompleteSnapshot": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to seal and complete the snapshot after all of the required blocks of data have been written to it.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/ebs/latest/APIReference/API_CompleteSnapshot.html"
+        }
+      },
       "GetSnapshotBlock": {
         "aws_action_groups": [
           "ReadOnly",
@@ -44971,7 +44989,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to list the block indexes and block tokens for blocks that are different between two Amazon Elastic Block Store (EBS) snapshots of the same volume/snapshot lineage",
+        "description": "Grants permission to list the blocks that are different between two Amazon Elastic Block Store (EBS) snapshots of the same volume/snapshot lineage",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -44985,11 +45003,40 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to list the block indexes and block tokens for blocks in an Amazon Elastic Block Store (EBS) snapshot.",
+        "description": "Grants permission to list the blocks in an Amazon Elastic Block Store (EBS) snapshot.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/ebs/latest/APIReference/API_ListSnapshotBlocks.html"
+        }
+      },
+      "PutSnapshotBlock": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to write a block of data to a snapshot created by the StartSnapshot operation.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/ebs/latest/APIReference/API_PutSnapshotBlock.html"
+        }
+      },
+      "StartSnapshot": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to create a new EBS snapshot.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/ebs/latest/APIReference/API_StartSnapshot.html"
         }
       }
     },
@@ -99782,6 +99829,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/savingsplans/latest/APIReference/API_CreateSavingsPlan.html"
         }
       },
+      "DeleteQueuedSavingsPlan": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "description": "Grants permission to delete the queued savings plan associated with customers account",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/savingsplans/latest/APIReference/API_DeleteQueuedSavingsPlan.html"
+        }
+      },
       "DescribeSavingsPlanRates": {
         "aws_action_groups": [
           "ReadOnly",
@@ -106526,6 +106588,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_AutomationExecution.html"
+        }
+      },
+      "GetCalendarState": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to view the calendar state for a change calendar or a list of change calendars",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_GetCalendarState.html"
         }
       },
       "GetCommandInvocation": {
