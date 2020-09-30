@@ -128,6 +128,9 @@ class Statement(object):
             if "Service" in principal:
                 self._add_or_extend(principal["Service"], principals)
 
+            if "Federated" in principal:
+                self._add_or_extend(principal["Federated"], principals)
+
         else:
             self._add_or_extend(principal, principals)
 
@@ -177,6 +180,10 @@ class Statement(object):
             "aws:sourceip": "cidr",
             "aws:sourcevpc": "vpc",
             "aws:sourcevpce": "vpce",
+            # a key for SAML Federation trust policy.
+            # https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_saml.html
+            # https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_saml_assertions.html
+            "saml:aud": "saml-endpoint"
         }
 
         relevant_condition_operators = [
