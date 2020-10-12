@@ -7202,7 +7202,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates an AWS Batch compute environment.",
         "docs": {
           "api_doc": "",
@@ -7215,7 +7218,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates an AWS Batch job queue.",
         "docs": {
           "api_doc": "",
@@ -7333,12 +7339,29 @@
           "doc_page_rel": "https://docs.aws.amazon.com/batch/latest/APIReference/API_ListJobs.html"
         }
       },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ListOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "List tags for the specified resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/batch/latest/APIReference/API_ListTagsForResource.html"
+        }
+      },
       "RegisterJobDefinition": {
         "aws_action_groups": [
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
           "batch:AWSLogsCreateGroup",
           "batch:AWSLogsGroup",
           "batch:AWSLogsRegion",
@@ -7360,12 +7383,32 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Submits an AWS Batch job from a job definition.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/batch/latest/APIReference/API_SubmitJob.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Tags the specified resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/batch/latest/APIReference/API_TagResource.html"
         }
       },
       "TerminateJob": {
@@ -7374,11 +7417,27 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Terminates jobs in a job queue.",
+        "description": "Terminates a job in an AWS Batch job queue.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/batch/latest/APIReference/API_TerminateJob.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "Untags the specified resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/batch/latest/APIReference/API_UntagResource.html"
         }
       },
       "UpdateComputeEnvironment": {
@@ -26586,6 +26645,32 @@
           "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CreateCostCategoryDefinition.html"
         }
       },
+      "CreateNotificationSubscription": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create Reservation expiration alerts",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html",
+          "doc_page_rel": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html"
+        }
+      },
+      "CreateReport": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create Cost Explorer Reports",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html",
+          "doc_page_rel": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html"
+        }
+      },
       "DeleteAnomalyMonitor": {
         "aws_action_groups": [
           "ReadWrite"
@@ -26625,6 +26710,32 @@
           "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_DeleteCostCategoryDefinition.html"
         }
       },
+      "DeleteNotificationSubscription": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete Reservation expiration alerts",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html",
+          "doc_page_rel": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html"
+        }
+      },
+      "DeleteReport": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete Cost Explorer Reports",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html",
+          "doc_page_rel": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html"
+        }
+      },
       "DescribeCostCategoryDefinition": {
         "aws_action_groups": [
           "ReadOnly",
@@ -26637,6 +26748,34 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_DescribeCostCategoryDefinition.html"
+        }
+      },
+      "DescribeNotificationSubscription": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to view Reservation expiration alerts",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html",
+          "doc_page_rel": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html"
+        }
+      },
+      "DescribeReport": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to view Cost Explorer Reports page",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html",
+          "doc_page_rel": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html"
         }
       },
       "GetAnomalies": {
@@ -26735,6 +26874,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetDimensionValues.html"
+        }
+      },
+      "GetPreferences": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to view Cost Explorer Preferences page",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html",
+          "doc_page_rel": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html"
         }
       },
       "GetReservationCoverage": {
@@ -26942,6 +27095,45 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_UpdateCostCategoryDefinition.html"
+        }
+      },
+      "UpdateNotificationSubscription": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to update Reservation expiration alerts",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html",
+          "doc_page_rel": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html"
+        }
+      },
+      "UpdatePreferences": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to edit Cost Explorer Preferences page",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html",
+          "doc_page_rel": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html"
+        }
+      },
+      "UpdateReport": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to update Cost Explorer Reports",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html",
+          "doc_page_rel": "${DocHomeURL}awsaccountbilling/latest/aboutv2/billing-permissions-ref.html"
         }
       }
     },
@@ -42374,8 +42566,7 @@
         "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
-          "aws:TagKeys",
-          "elasticloadbalancing:ResourceTag/${TagKey}"
+          "aws:TagKeys"
         ],
         "description": "Adds the specified tags to the specified load balancer. Each load balancer can have a maximum of 10 tags",
         "docs": {
@@ -42390,7 +42581,8 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [
-          "elasticloadbalancing:ResourceTag/${TagKey}"
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
         ],
         "description": "Creates a listener for the specified Application Load Balancer",
         "docs": {
@@ -42406,8 +42598,7 @@
         "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
-          "aws:TagKeys",
-          "elasticloadbalancing:ResourceTag/${TagKey}"
+          "aws:TagKeys"
         ],
         "description": "Creates a load balancer",
         "docs": {
@@ -42421,7 +42612,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a rule for the specified listener",
         "docs": {
           "api_doc": "",
@@ -42434,7 +42628,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a target group.",
         "docs": {
           "api_doc": "",
@@ -42460,9 +42657,7 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [
-          "elasticloadbalancing:ResourceTag/${TagKey}"
-        ],
+        "condition_keys": [],
         "description": "Deletes the specified load balancer",
         "docs": {
           "api_doc": "",
@@ -42614,7 +42809,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the tags associated with the specified load balancers",
+        "description": "Describes the tags associated with the specified resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -42681,9 +42876,7 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [
-          "elasticloadbalancing:ResourceTag/${TagKey}"
-        ],
+        "condition_keys": [],
         "description": "Modifies the attributes of the specified load balancer",
         "docs": {
           "api_doc": "",
@@ -42764,8 +42957,7 @@
         "calculated_action_group": "Tagging",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
-          "aws:TagKeys",
-          "elasticloadbalancing:ResourceTag/${TagKey}"
+          "aws:TagKeys"
         ],
         "description": "Removes one or more tags from the specified load balancer",
         "docs": {
@@ -42779,9 +42971,7 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [
-          "elasticloadbalancing:ResourceTag/${TagKey}"
-        ],
+        "condition_keys": [],
         "description": "Not found",
         "docs": {
           "api_doc": "",
@@ -42807,9 +42997,7 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [
-          "elasticloadbalancing:ResourceTag/${TagKey}"
-        ],
+        "condition_keys": [],
         "description": "Associates the specified security groups with the specified load balancer ",
         "docs": {
           "api_doc": "",
@@ -42822,9 +43010,7 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [
-          "elasticloadbalancing:ResourceTag/${TagKey}"
-        ],
+        "condition_keys": [],
         "description": "Enables the Availability Zone for the specified subnets for the specified load balancer ",
         "docs": {
           "api_doc": "",
@@ -43605,6 +43791,32 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateSnapshot.html"
         }
       },
+      "CreateUser": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "The CreateUser action creates a new user.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateUser.html"
+        }
+      },
+      "CreateUserGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "The CreateUserGroup action creates a new user group.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateUserGroup.html"
+        }
+      },
       "DecreaseNodeGroupsInGlobalReplicationGroup": {
         "aws_action_groups": [
           "ReadWrite"
@@ -43720,6 +43932,32 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DeleteSnapshot.html"
+        }
+      },
+      "DeleteUser": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "The DeleteUser action deletes an existing user.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DeleteUser.html"
+        }
+      },
+      "DeleteUserGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "The DeleteUserGroup action deletes an existing user group.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DeleteUserGroup.html"
         }
       },
       "DescribeCacheClusters": {
@@ -43947,6 +44185,36 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeUpdateActions.html"
         }
       },
+      "DescribeUserGroups": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "The DescribeUserGroups action returns information about all user groups for this account, or a particular user group.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeUserGroups.html"
+        }
+      },
+      "DescribeUsers": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "The DescribeUsers action returns information about all users for this account, or a particular user.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeUsers.html"
+        }
+      },
       "DisassociateGlobalReplicationGroup": {
         "aws_action_groups": [
           "ReadWrite"
@@ -44104,6 +44372,32 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyReplicationGroupShardConfiguration.html"
+        }
+      },
+      "ModifyUser": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "The ModifyUser action modifies an existing user.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyUser.html"
+        }
+      },
+      "ModifyUserGroup": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "The ModifyUserGroup action modifies an existing user group.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyUserGroup.html"
         }
       },
       "PurchaseReservedCacheNodesOffering": {
@@ -52583,10 +52877,9 @@
       },
       "BatchDeleteTableVersion": {
         "aws_action_groups": [
-          "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to delete one or more versions of a table",
         "docs": {
@@ -53047,10 +53340,9 @@
       },
       "DeleteTableVersion": {
         "aws_action_groups": [
-          "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permission to delete a version of a table",
         "docs": {
@@ -54715,7 +55007,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to accept invitations to become a GuardDuty member account.",
+        "description": "Grants permission to accept invitations to become a GuardDuty member account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54728,7 +55020,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to archive GuardDuty findings.",
+        "description": "Grants permission to archive GuardDuty findings",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54744,7 +55036,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to create a detector.",
+        "description": "Grants permission to create a detector",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54760,7 +55052,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to create GuardDuty filters. A filters defines finding attributes and conditions used to filter findings.",
+        "description": "Grants permission to create GuardDuty filters. A filters defines finding attributes and conditions used to filter findings",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54776,7 +55068,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to create an IPSet.",
+        "description": "Grants permission to create an IPSet",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54789,7 +55081,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to create GuardDuty member accounts. The account used to create a member becomes the GuardDuty master account.",
+        "description": "Grants permission to create GuardDuty member accounts, where the account used to create a member becomes the GuardDuty administrator account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54802,7 +55094,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to create a publishing destination.",
+        "description": "Grants permission to create a publishing destination",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54815,7 +55107,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to create sample findings.",
+        "description": "Grants permission to create sample findings",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54831,7 +55123,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to create GuardDuty ThreatIntelSets. A ThreatIntelSet consists of known malicious IP addresses used by GuardDuty to generate findings.",
+        "description": "Grants permission to create GuardDuty ThreatIntelSets, where a ThreatIntelSet consists of known malicious IP addresses used by GuardDuty to generate findings",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54844,7 +55136,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to decline invitations to become a GuardDuty member account.",
+        "description": "Grants permission to decline invitations to become a GuardDuty member account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54857,7 +55149,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to delete GuardDuty detectors.",
+        "description": "Grants permission to delete GuardDuty detectors",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54870,7 +55162,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to delete GuardDuty filters.",
+        "description": "Grants permission to delete GuardDuty filters",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54883,7 +55175,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to delete GuardDuty IPSets.",
+        "description": "Grants permission to delete GuardDuty IPSets",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54896,7 +55188,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to delete invitations to become a GuardDuty member account.",
+        "description": "Grants permission to delete invitations to become a GuardDuty member account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54909,7 +55201,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to delete GuardDuty member accounts.",
+        "description": "Grants permission to delete GuardDuty member accounts",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54922,7 +55214,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to delete a publishing destination.",
+        "description": "Grants permission to delete a publishing destination",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54935,7 +55227,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to delete GuardDuty ThreatIntelSets.",
+        "description": "Grants permission to delete GuardDuty ThreatIntelSets",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54949,7 +55241,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve details about the delegated administrator associated with a GuardDuty detector.",
+        "description": "Grants permission to retrieve details about the delegated administrator associated with a GuardDuty detector",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54963,7 +55255,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve details about a publishing destination.",
+        "description": "Grants permission to retrieve details about a publishing destination",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54976,7 +55268,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to disable the organization delegated administrator for GuardDuty.",
+        "description": "Grants permission to disable the organization delegated administrator for GuardDuty",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -54989,7 +55281,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to disassociate a GuardDuty member account from its GuardDuty master account.",
+        "description": "Grants permission to disassociate a GuardDuty member account from its GuardDuty master account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55002,7 +55294,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to disassociate GuardDuty member accounts from their master GuardDuty account.",
+        "description": "Grants permission to disassociate GuardDuty member accounts from their master GuardDuty account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55015,7 +55307,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to enable an organization delegated administrator for GuardDuty.",
+        "description": "Grants permission to enable an organization delegated administrator for GuardDuty",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55029,7 +55321,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve GuardDuty detectors.",
+        "description": "Grants permission to retrieve GuardDuty detectors",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55043,7 +55335,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve GuardDuty filters.",
+        "description": "Grants permission to retrieve GuardDuty filters",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55057,7 +55349,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve GuardDuty findings.",
+        "description": "Grants permission to retrieve GuardDuty findings",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55071,7 +55363,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve a list of GuardDuty finding statistics.",
+        "description": "Grants permission to retrieve a list of GuardDuty finding statistics",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55085,7 +55377,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permsission to retrieve GuardDuty IPSets.",
+        "description": "Grants permsission to retrieve GuardDuty IPSets",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55099,7 +55391,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve the count of all GuardDuty invitations sent to a specified account. The count does not include an accepted invitation.",
+        "description": "Grants permission to retrieve the count of all GuardDuty invitations sent to a specified account, which does not include the accepted invitation",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55113,7 +55405,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve details of the GuardDuty master account associated with a member account.",
+        "description": "Grants permission to retrieve details of the GuardDuty master account associated with a member account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55127,7 +55419,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve the member accounts associated with a master account.",
+        "description": "Grants permission to retrieve the member accounts associated with a master account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55141,7 +55433,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to retrieve GuardDuty ThreatIntelSets.",
+        "description": "Grants permission to retrieve GuardDuty ThreatIntelSets",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55154,7 +55446,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to invite other AWS accounts to enable GuardDuty and become GuardDuty member accounts.",
+        "description": "Grants permission to invite other AWS accounts to enable GuardDuty and become GuardDuty member accounts",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55169,7 +55461,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to retrieve a list of GuardDuty detectors.",
+        "description": "Grants permission to retrieve a list of GuardDuty detectors",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55184,7 +55476,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to retrieve a list of GuardDuty filters.",
+        "description": "Grants permission to retrieve a list of GuardDuty filters",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55199,11 +55491,26 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to retrieve a list of GuardDuty findings.",
+        "description": "Grants permission to retrieve a list of GuardDuty findings",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListFindings.html"
+        }
+      },
+      "ListIPSets": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve a list of GuardDuty IPSets",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListIPSets.html"
         }
       },
       "ListInvitations": {
@@ -55214,7 +55521,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to retrieve a lists of all of the GuardDuty membership invitations that were sent to an AWS account.",
+        "description": "Grants permission to retrieve a lists of all of the GuardDuty membership invitations that were sent to an AWS account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55229,7 +55536,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to retrierve a lsit of GuardDuty member accounts associated with a master account.",
+        "description": "Grants permission to retrierve a lsit of GuardDuty member accounts associated with a master account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55244,7 +55551,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to list details about the organization delegated administrator for GuardDuty.",
+        "description": "Grants permission to list details about the organization delegated administrator for GuardDuty",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55259,7 +55566,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to retrieve a list of publishing destinations.",
+        "description": "Grants permission to retrieve a list of publishing destinations",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55274,7 +55581,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to retrieve a list of tags associated with a GuardDuty resource.",
+        "description": "Grants permission to retrieve a list of tags associated with a GuardDuty resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55289,7 +55596,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to retrieve a list of GuardDuty ThreatIntelSets.",
+        "description": "Grants permission to retrieve a list of GuardDuty ThreatIntelSets",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55302,7 +55609,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to a master account to monitor findings from GuardDuty member accounts. Use this after disabling monitoring of member accounts using the StopMonitoringMembers operation.",
+        "description": "Grants permission to a GuardDuty administrator account to monitor findings from GuardDuty member accounts",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55315,7 +55622,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to disable monitoring findings from member accounts.",
+        "description": "Grants permission to disable monitoring findings from member accounts",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55331,7 +55638,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to add tags to a GuardDuty resource. There is a limit of 50 tags per resource.",
+        "description": "Grants permission to add tags to a GuardDuty resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55344,7 +55651,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to unarchive GuardDuty findings.",
+        "description": "Grants permission to unarchive GuardDuty findings",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55359,7 +55666,7 @@
         "condition_keys": [
           "aws:TagKeys"
         ],
-        "description": "Grants permission to remove tags from a GuardDuty resource.",
+        "description": "Grants permission to remove tags from a GuardDuty resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55372,7 +55679,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to update GuardDuty detectors.",
+        "description": "Grants permission to update GuardDuty detectors",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55385,7 +55692,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to updates GuardDuty filters.",
+        "description": "Grants permission to updates GuardDuty filters",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55398,7 +55705,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to update findings feedback to mark GuardDuty findings as useful or not useful.",
+        "description": "Grants permission to update findings feedback to mark GuardDuty findings as useful or not useful",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55411,7 +55718,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to update GuardDuty IPSets.",
+        "description": "Grants permission to update GuardDuty IPSets",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55424,7 +55731,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to update the delegated administrator configuration associated with a GuardDuty detector.",
+        "description": "Grants permission to update the delegated administrator configuration associated with a GuardDuty detector",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55437,7 +55744,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to update a publishing destination.",
+        "description": "Grants permission to update a publishing destination",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -55450,7 +55757,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to updates the GuardDuty ThreatIntelSets.",
+        "description": "Grants permission to updates the GuardDuty ThreatIntelSets",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -63306,8 +63613,8 @@
         }
       }
     },
-    "arn_format": "arn:aws:iotevents:<region>:<account-id>:<resource-type>/<resource_name>",
-    "arn_regex": "^arn:aws:iotevents:.+",
+    "arn_format": "arn:${Partition}:iotevents:<region>:<account-id>:<resource-type>/<resource_name>",
+    "arn_regex": "^arn:${Partition}:iotevents:.+",
     "description": "AWS IoT Events",
     "docs": {
       "actions_doc_root": "https://docs.aws.amazon.com/iotevents/latest/apireference/",
@@ -75590,6 +75897,45 @@
   },
   "MediaLive": {
     "actions": {
+      "BatchDelete": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete channels, inputs, input security groups, and multiplexes.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com//medialive/latest/ug/editing-deleting-channel.html"
+        }
+      },
+      "BatchStart": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to start channels and multiplexes.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com//medialive/latest/ug/starting-stopping-deleting-a-channel.html"
+        }
+      },
+      "BatchStop": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to stop channels and multiplexes.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com//medialive/latest/ug/starting-stopping-deleting-a-channel.html"
+        }
+      },
       "BatchUpdateSchedule": {
         "aws_action_groups": [
           "ReadWrite"
@@ -89164,6 +89510,19 @@
   },
   "RoboMaker": {
     "actions": {
+      "BatchDeleteWorlds": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Delete one or more worlds in a batch operation",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_BatchDeleteWorlds.html"
+        }
+      },
       "BatchDescribeSimulationJob": {
         "aws_action_groups": [
           "ReadOnly",
@@ -89215,6 +89574,32 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_CancelSimulationJobBatch.html"
+        }
+      },
+      "CancelWorldExportJob": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Cancel a world export job",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_CancelWorldExportJob.html"
+        }
+      },
+      "CancelWorldGenerationJob": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Cancel a world generation job",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_CancelWorldGenerationJob.html"
         }
       },
       "CreateDeploymentJob": {
@@ -89339,6 +89724,45 @@
           "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_CreateSimulationJob.html"
         }
       },
+      "CreateWorldExportJob": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Create a world export job",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_CreateWorldExportJob.html"
+        }
+      },
+      "CreateWorldGenerationJob": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Create a world generation job",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_CreateWorldGenerationJob.html"
+        }
+      },
+      "CreateWorldTemplate": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Create a world template",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_CreateWorldTemplate.html"
+        }
+      },
       "DeleteFleet": {
         "aws_action_groups": [
           "ReadWrite"
@@ -89389,6 +89813,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_DeleteSimulationApplication.html"
+        }
+      },
+      "DeleteWorldTemplate": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Delete a world template",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_DeleteWorldTemplate.html"
         }
       },
       "DeregisterRobot": {
@@ -89502,6 +89939,76 @@
           "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_DescribeSimulationJobBatch.html"
         }
       },
+      "DescribeWorld": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describe a world",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_DescribeWorld.html"
+        }
+      },
+      "DescribeWorldExportJob": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describe a world export job",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_DescribeWorldExportJob.html"
+        }
+      },
+      "DescribeWorldGenerationJob": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describe a world generation job",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_DescribeWorldGenerationJob.html"
+        }
+      },
+      "DescribeWorldTemplate": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Describe a world template",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_DescribeWorldTemplate.html"
+        }
+      },
+      "GetWorldTemplateBody": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Get the body of a world template",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_GetWorldTemplateBody.html"
+        }
+      },
       "ListDeploymentJobs": {
         "aws_action_groups": [
           "ListOnly",
@@ -89607,6 +90114,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_ListSimulationJobs.html"
         }
       },
+      "ListSupportedAvailabilityZones": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists supported availability zones",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/"
+        }
+      },
       "ListTagsForResource": {
         "aws_action_groups": [
           "ListOnly",
@@ -89620,6 +90142,66 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_ListTagsForResource.html"
+        }
+      },
+      "ListWorldExportJobs": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "List world export jobs",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_ListWorldExportJobs.html"
+        }
+      },
+      "ListWorldGenerationJobs": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "List world generation jobs",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_ListWorldGenerationJobs.html"
+        }
+      },
+      "ListWorldTemplates": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "List world templates",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_ListWorldTemplates.html"
+        }
+      },
+      "ListWorlds": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "List worlds",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_ListWorlds.html"
         }
       },
       "RegisterRobot": {
@@ -89721,6 +90303,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_UpdateRobotApplication.html"
         }
       },
+      "UpdateRobotDeployment": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Report the deployment status for an individual robot",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/"
+        }
+      },
       "UpdateSimulationApplication": {
         "aws_action_groups": [
           "ReadWrite"
@@ -89732,6 +90327,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_UpdateSimulationApplication.html"
+        }
+      },
+      "UpdateWorldTemplate": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Update a world template",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/robomaker/latest/dg/API_UpdateWorldTemplate.html"
         }
       }
     },
@@ -91682,7 +92290,7 @@
           "s3:signatureversion",
           "s3:x-amz-content-sha256"
         ],
-        "description": "Grants permission to retrieve the configuration parameters and status for a batch operations job.",
+        "description": "Grants permission to retrieve the configuration parameters and status for a batch operations job",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -92408,21 +93016,6 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketReplication.html"
-        }
-      },
-      "HeadBucket": {
-        "aws_action_groups": [
-          "ListOnly",
-          "ReadOnly",
-          "ReadWrite"
-        ],
-        "calculated_action_group": "List",
-        "condition_keys": [],
-        "description": "Grants permission to determine if a bucket exists and if a user has permission to access it",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_HeadBucket.html"
         }
       },
       "ListAccessPoints": {
@@ -93320,6 +93913,677 @@
       "context_keys_doc_root": "https://docs.aws.amazon.com/AmazonS3/latest/dev/amazon-s3-policy-keys.html"
     },
     "prefix": "s3"
+  },
+  "S3 Outposts": {
+    "actions": {
+      "AbortMultipartUpload": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3-outposts:AccessPointNetworkOrigin",
+          "s3-outposts:DataAccessPointAccount",
+          "s3-outposts:DataAccessPointArn",
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to abort a multipart upload",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_AbortMultipartUpload.html"
+        }
+      },
+      "CreateAccessPoint": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3-outposts:AccessPointNetworkOrigin",
+          "s3-outposts:DataAccessPointAccount",
+          "s3-outposts:DataAccessPointArn",
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to create a new access point",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateAccessPoint.html"
+        }
+      },
+      "CreateBucket": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to create a new bucket",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateBucket.html"
+        }
+      },
+      "CreateEndpoint": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create a new endpoint",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_CreateEndpoint.html"
+        }
+      },
+      "DeleteAccessPoint": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3-outposts:AccessPointNetworkOrigin",
+          "s3-outposts:DataAccessPointAccount",
+          "s3-outposts:DataAccessPointArn",
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to delete the access point named in the URI",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPoint.html"
+        }
+      },
+      "DeleteAccessPointPolicy": {
+        "aws_action_groups": [
+          "Permissions"
+        ],
+        "calculated_action_group": "Permissions",
+        "condition_keys": [
+          "s3-outposts:AccessPointNetworkOrigin",
+          "s3-outposts:DataAccessPointAccount",
+          "s3-outposts:DataAccessPointArn",
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to delete the policy on a specified access point",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessPointPolicy.html"
+        }
+      },
+      "DeleteBucket": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to delete the bucket named in the URI",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteBucket.html"
+        }
+      },
+      "DeleteBucketPolicy": {
+        "aws_action_groups": [
+          "Permissions"
+        ],
+        "calculated_action_group": "Permissions",
+        "condition_keys": [
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to delete the policy on a specified bucket",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteBucketPolicy.html"
+        }
+      },
+      "DeleteEndpoint": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete the endpoint named in the URI",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html"
+        }
+      },
+      "DeleteObject": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3-outposts:AccessPointNetworkOrigin",
+          "s3-outposts:DataAccessPointAccount",
+          "s3-outposts:DataAccessPointArn",
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to remove the null version of an object and insert a delete marker, which becomes the current version of the object",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObject.html"
+        }
+      },
+      "DeleteObjectTagging": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "s3-outposts:AccessPointNetworkOrigin",
+          "s3-outposts:DataAccessPointAccount",
+          "s3-outposts:DataAccessPointArn",
+          "s3-outposts:ExistingObjectTag/<key>",
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to use the tagging subresource to remove the entire tag set from the specified object",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObjectTagging.html"
+        }
+      },
+      "GetAccessPoint": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "s3-outposts:AccessPointNetworkOrigin",
+          "s3-outposts:DataAccessPointAccount",
+          "s3-outposts:DataAccessPointArn",
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to return configuration information about the specified access point",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPoint.html"
+        }
+      },
+      "GetAccessPointPolicy": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "s3-outposts:AccessPointNetworkOrigin",
+          "s3-outposts:DataAccessPointAccount",
+          "s3-outposts:DataAccessPointArn",
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to returns the access point policy associated with the specified access point",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetAccessPointPolicy.html"
+        }
+      },
+      "GetBucket": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to return the bucket configuration associated with an Amazon S3 bucket",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucket.html"
+        }
+      },
+      "GetBucketPolicy": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to return the policy of the specified bucket",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketPolicy.html"
+        }
+      },
+      "GetBucketTagging": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to return the tag set associated with an Amazon S3 bucket",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketTagging.html"
+        }
+      },
+      "GetLifecycleConfiguration": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to return the lifecycle configuration information set on an Amazon S3 bucket",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketLifecycleConfiguration.html"
+        }
+      },
+      "GetObject": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "s3-outposts:AccessPointNetworkOrigin",
+          "s3-outposts:DataAccessPointAccount",
+          "s3-outposts:DataAccessPointArn",
+          "s3-outposts:ExistingObjectTag/<key>",
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to retrieve objects from Amazon S3",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html"
+        }
+      },
+      "GetObjectTagging": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "s3-outposts:AccessPointNetworkOrigin",
+          "s3-outposts:DataAccessPointAccount",
+          "s3-outposts:DataAccessPointArn",
+          "s3-outposts:ExistingObjectTag/<key>",
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to return the tag set of an object",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObjectTagging.html"
+        }
+      },
+      "ListAccessPoints": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to list access points",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListAccessPoints.html"
+        }
+      },
+      "ListBucket": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [
+          "s3-outposts:AccessPointNetworkOrigin",
+          "s3-outposts:DataAccessPointAccount",
+          "s3-outposts:DataAccessPointArn",
+          "s3-outposts:authType",
+          "s3-outposts:delimiter",
+          "s3-outposts:max-keys",
+          "s3-outposts:prefix",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to list some or all of the objects in an Amazon S3 bucket (up to 1000)",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjectsV2.html"
+        }
+      },
+      "ListBucketMultipartUploads": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [
+          "s3-outposts:AccessPointNetworkOrigin",
+          "s3-outposts:DataAccessPointAccount",
+          "s3-outposts:DataAccessPointArn",
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to list in-progress multipart uploads",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListMultipartUploads.html"
+        }
+      },
+      "ListEndpoints": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list endpoints",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_ListEndpoints.html"
+        }
+      },
+      "ListMultipartUploadParts": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [
+          "s3-outposts:AccessPointNetworkOrigin",
+          "s3-outposts:DataAccessPointAccount",
+          "s3-outposts:DataAccessPointArn",
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to list the parts that have been uploaded for a specific multipart upload",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListParts.html"
+        }
+      },
+      "ListRegionalBuckets": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to list all buckets owned by the authenticated sender of the request",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListRegionalBuckets.html"
+        }
+      },
+      "PutAccessPointPolicy": {
+        "aws_action_groups": [
+          "Permissions"
+        ],
+        "calculated_action_group": "Permissions",
+        "condition_keys": [
+          "s3-outposts:AccessPointNetworkOrigin",
+          "s3-outposts:DataAccessPointAccount",
+          "s3-outposts:DataAccessPointArn",
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to associate an access policy with a specified access point",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutAccessPointPolicy.html"
+        }
+      },
+      "PutBucketPolicy": {
+        "aws_action_groups": [
+          "Permissions"
+        ],
+        "calculated_action_group": "Permissions",
+        "condition_keys": [
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to add or replace a bucket policy on a bucket",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutBucketPolicy.html"
+        }
+      },
+      "PutBucketTagging": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to add a set of tags to an existing Amazon S3 bucket",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutBucketTagging.html"
+        }
+      },
+      "PutLifecycleConfiguration": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to create a new lifecycle configuration for the bucket or replace an existing lifecycle configuration",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutBucketLifecycleConfiguration.html"
+        }
+      },
+      "PutObject": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3-outposts:AccessPointNetworkOrigin",
+          "s3-outposts:DataAccessPointAccount",
+          "s3-outposts:DataAccessPointArn",
+          "s3-outposts:RequestObjectTag/<key>",
+          "s3-outposts:RequestObjectTagKeys",
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-acl",
+          "s3-outposts:x-amz-content-sha256",
+          "s3-outposts:x-amz-copy-source",
+          "s3-outposts:x-amz-metadata-directive",
+          "s3-outposts:x-amz-server-side-encryption",
+          "s3-outposts:x-amz-storage-class"
+        ],
+        "description": "Grants permission to add an object to a bucket",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html"
+        }
+      },
+      "PutObjectAcl": {
+        "aws_action_groups": [
+          "Permissions"
+        ],
+        "calculated_action_group": "Permissions",
+        "condition_keys": [
+          "s3-outposts:AccessPointNetworkOrigin",
+          "s3-outposts:DataAccessPointAccount",
+          "s3-outposts:DataAccessPointArn",
+          "s3-outposts:ExistingObjectTag/<key>",
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-acl",
+          "s3-outposts:x-amz-content-sha256",
+          "s3-outposts:x-amz-storage-class"
+        ],
+        "description": "Grants permission to set the access control list (ACL) permissions for an object that already exists in a bucket",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObjectAcl.html"
+        }
+      },
+      "PutObjectTagging": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "s3-outposts:AccessPointNetworkOrigin",
+          "s3-outposts:DataAccessPointAccount",
+          "s3-outposts:DataAccessPointArn",
+          "s3-outposts:ExistingObjectTag/<key>",
+          "s3-outposts:RequestObjectTag/<key>",
+          "s3-outposts:RequestObjectTagKeys",
+          "s3-outposts:authType",
+          "s3-outposts:signatureAge",
+          "s3-outposts:signatureversion",
+          "s3-outposts:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to set the supplied tag-set to an object that already exists in a bucket",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObjectTagging.html"
+        }
+      }
+    },
+    "arn_format": "arn:${Partition}:s3-outposts:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:${Partition}:s3-outposts:.+",
+    "description": "Amazon S3 on Outposts",
+    "docs": {
+      "actions_doc_root": "https://docs.aws.amazon.com/AmazonS3/latest/API/",
+      "api_detail_root": "",
+      "api_doc_root": "",
+      "api_reference_doc_page": "https://docs.aws.amazon.com/AmazonS3/latest/API/Type_API_Reference.html",
+      "authz_doc_page": "https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-overview.html",
+      "concepts_doc_root": "https://docs.aws.amazon.com/AmazonS3/latest/dev/",
+      "context_keys_doc_root": "https://docs.aws.amazon.com/AmazonS3/latest/dev/amazon-s3-policy-keys.html"
+    },
+    "prefix": "s3-outposts"
   },
   "SES": {
     "actions": {
@@ -107740,6 +109004,297 @@
       "context_keys_doc_root": ""
     },
     "prefix": "textract"
+  },
+  "Timestream": {
+    "actions": {
+      "CancelQuery": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants Permission to cancel queries in your account",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_CancelQuery.html"
+        }
+      },
+      "CreateDatabase": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permissions to create a database in your account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_CreateDatabase.html"
+        }
+      },
+      "CreateTable": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permissions to create a table in your account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_CreateTable.html"
+        }
+      },
+      "DeleteDatabase": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permissions to delete a database in your account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_DeleteDatabase.html"
+        }
+      },
+      "DeleteTable": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permissions to delete a table in your account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_DeleteTable.html"
+        }
+      },
+      "DescribeDatabase": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permissions to describe a database in your account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_DescribeDatabase.html"
+        }
+      },
+      "DescribeEndpoints": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permissions to describe timestream endpoints.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_DescribeEndpoints.html"
+        }
+      },
+      "DescribeTable": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants Permissions to describe a table in your account",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_DescribeTable.html"
+        }
+      },
+      "ListDatabases": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants Permission to list databases in your account",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_ListDatabases.html"
+        }
+      },
+      "ListMeasures": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants Permissions to list measures of a table in your account",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_ListMeasures.html"
+        }
+      },
+      "ListTables": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants Permission to list tables in your account",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_ListTables.html"
+        }
+      },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permissions to list tags of a resource in your account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_ListTagsForResource.html"
+        }
+      },
+      "Select": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants Permission to issue 'select from table' queries",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_Query.html"
+        }
+      },
+      "SelectValues": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants Permissions to issue 'select 1' queries",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_Query.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permissions to add tags to a resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_TagResource.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "Grants permissions to remove a tag from a resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_UntagResource.html"
+        }
+      },
+      "UpdateDatabase": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permissions to update a database in your account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_UpdateDatabase.html"
+        }
+      },
+      "UpdateTable": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permissions to update a table in your account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_UpdateTable.html"
+        }
+      },
+      "WriteRecords": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permissions to ingest data to a table in your account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Timestream/latest/APIReference/API_WriteRecords.html"
+        }
+      }
+    },
+    "arn_format": "arn:${Partition}:timestream:${Region}:${Account}:database/${DatabaseName}/table/${TableName}",
+    "arn_regex": "^arn:${Partition}:timestream:.+",
+    "description": "AWS Timestream",
+    "docs": {
+      "actions_doc_root": "https://docs.aws.amazon.com/Timestream/latest/APIReference/",
+      "api_detail_root": "",
+      "api_doc_root": "",
+      "api_reference_doc_page": "https://docs.aws.amazon.com/Timestream/latest/APIReference/",
+      "authz_doc_page": "https://docs.aws.amazon.com/Timestream/latest/UserGuide/auth-and-access-control.html",
+      "concepts_doc_root": "https://docs.aws.amazon.com/Timestream/latest/UserGuide/",
+      "context_keys_doc_root": "https://docs.aws.amazon.com/Timestream/latest/UserGuide/reference_policies_condition-keys.html/"
+    },
+    "prefix": "timestream"
   },
   "Transcribe": {
     "actions": {
