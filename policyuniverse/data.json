@@ -5158,6 +5158,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/appsync/latest/APIReference/API_ListTypes.html"
         }
       },
+      "SetWebACL": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Gives WebAcl permissions to WAF.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/appsync/latest/APIReference/API_SetWebACL.html"
+        }
+      },
       "StartSchemaCreation": {
         "aws_action_groups": [
           "ReadWrite"
@@ -7694,6 +7707,101 @@
   },
   "Budget": {
     "actions": {
+      "CreateBudgetAction": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permissions to create and define a response that you can configure to execute once your budget has exceeded a specific budget threshold.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
+        }
+      },
+      "DeleteBudgetAction": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permissions to delete an action that is associated with a specific budget.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
+        }
+      },
+      "DescribeBudgetAction": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permissions to retrieve the details of specific budget action associated with a budget.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
+        }
+      },
+      "DescribeBudgetActionHistories": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permissions to retrieve a historical view of the budget actions statuses associated with a particular budget action. These status include statues such as 'Standby', 'Pending' and 'Executed'.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
+        }
+      },
+      "DescribeBudgetActionsForAccount": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permissions to retrieve the details of all of the budget actions associated with your account.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
+        }
+      },
+      "DescribeBudgetActionsForBudget": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permissions to retrieve the details of all of the budget actions associated with a budget.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
+        }
+      },
+      "ExecuteBudgetAction": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permissions to initiate a pending budget action as well as reverse a previously executed budget action.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
+        }
+      },
       "ModifyBudget": {
         "aws_action_groups": [
           "ReadWrite"
@@ -7701,6 +7809,19 @@
         "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Grants permissions to modify budgets and budget details",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
+        }
+      },
+      "UpdateBudgetAction": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permissions to update the details of a specific budget action associated with a budget.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15102,7 +15223,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes all specified alarms. In the event of an error, no alarms are deleted",
+        "description": "Grants permission to delete a collection of alarms",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15115,7 +15236,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes the specified anomaly detection model from your account.",
+        "description": "Grants permission to delete the specified anomaly detection model from your account.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15128,7 +15249,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes all CloudWatch dashboards that you specify",
+        "description": "Grants permission to delete all CloudWatch dashboards that you specify",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15141,7 +15262,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to delete a collection of insight rules.",
+        "description": "Grants permission to delete a collection of insight rules",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15155,7 +15276,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Retrieves history for the specified alarm",
+        "description": "Grants permission to retrieve the history for the specified alarm",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15169,7 +15290,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Retrieves alarms with the specified names",
+        "description": "Grants permission to describe all alarms, currently owned by the user's account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15183,7 +15304,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Retrieves all alarms for a single metric",
+        "description": "Grants permission to describe all alarms configured on the specified metric, currently owned by the user's account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15197,7 +15318,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Lists the anomaly detection models that you have created in your account.",
+        "description": "Grants permission to lists the anomaly detection models that you have created in your account.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15211,7 +15332,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to describe all insight rules, currently owned by the user's account.",
+        "description": "Grants permission to describe all insight rules, currently owned by the user's account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15224,7 +15345,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Disables actions for the specified alarms",
+        "description": "Grants permission to disable actions for a collection of alarms",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15237,7 +15358,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to disable a collection of insight rules.",
+        "description": "Grants permission to disable a collection of insight rules",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15250,7 +15371,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Enables actions for the specified alarms",
+        "description": "Grants permission to enable actions for a collection of alarms",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15263,7 +15384,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to enable a collection of insight rules.",
+        "description": "Grants permission to enable a collection of insight rules",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15277,7 +15398,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Displays the details of the CloudWatch dashboard you specify",
+        "description": "Grants permission to display the details of the CloudWatch dashboard you specify",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15291,7 +15412,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to return the top-N report of unique contributors over a time range for a given insight rule.",
+        "description": "Grants permission to return the top-N report of unique contributors over a time range for a given insight rule",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15305,7 +15426,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Required to retrieve batch amounts of CloudWatch metric data and perform metric math on retrieved data",
+        "description": "Grants permission to retrieve batch amounts of CloudWatch metric data and perform metric math on retrieved data",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15319,7 +15440,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Gets statistics for the specified metric",
+        "description": "Grants permission to retrieve statistics for the specified metric",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15333,7 +15454,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Required to retrieve snapshots of metric widgets",
+        "description": "Grants permission to retrieve snapshots of metric widgets",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15348,7 +15469,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns a list of all CloudWatch dashboards in your account",
+        "description": "Grants permission to return a list of all CloudWatch dashboards in your account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15363,7 +15484,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Returns a list of valid metrics stored for the AWS account owner",
+        "description": "Grants permission to retrieve a list of valid metrics stored for the AWS account owner",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15378,7 +15499,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "This action lists tags for an Amazon CloudWatch resource.",
+        "description": "Grants permission to list tags for an Amazon CloudWatch resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15391,11 +15512,27 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates or updates an anomaly detection model for a CloudWatch metric.",
+        "description": "Grants permission to create or update an anomaly detection model for a CloudWatch metric.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutAnomalyDetector.html"
+        }
+      },
+      "PutCompositeAlarm": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to create or update a composite alarm",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutCompositeAlarm.html"
         }
       },
       "PutDashboard": {
@@ -15404,7 +15541,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a CloudWatch dashboard, or updates an existing dashboard if it already exists",
+        "description": "Grants permission to create a CloudWatch dashboard, or update an existing dashboard if it already exists",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15420,7 +15557,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to create a new insight rule or replace an existing insight rule.",
+        "description": "Grants permission to create a new insight rule or replace an existing insight rule",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15436,7 +15573,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Creates or updates an alarm and associates it with the specified Amazon CloudWatch metric",
+        "description": "Grants permission to create or update an alarm and associates it with the specified Amazon CloudWatch metric",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15451,7 +15588,7 @@
         "condition_keys": [
           "cloudwatch:namespace"
         ],
-        "description": "Publishes metric data points to Amazon CloudWatch",
+        "description": "Grants permission to publish metric data points to Amazon CloudWatch",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15464,7 +15601,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Temporarily sets the state of an alarm for testing purposes",
+        "description": "Grants permission to temporarily set the state of an alarm for testing purposes",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15481,7 +15618,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "This action tags an Amazon CloudWatch resource.",
+        "description": "Grants permission to add tags to an Amazon CloudWatch resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -15497,7 +15634,7 @@
         "condition_keys": [
           "aws:TagKeys"
         ],
-        "description": "This action removes a tag from an Amazon CloudWatch resource.",
+        "description": "Grants permission to remove a tag from an Amazon CloudWatch resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -21156,6 +21293,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_CreateConnection.html"
         }
       },
+      "CreateHost": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "codestar-connections:ProviderType"
+        ],
+        "description": "Grants permission to create a host resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_CreateHost.html"
+        }
+      },
       "DeleteConnection": {
         "aws_action_groups": [
           "ReadWrite"
@@ -21170,6 +21322,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_DeleteConnection.html"
+        }
+      },
+      "DeleteHost": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete a host resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_DeleteHost.html"
         }
       },
       "GetConnection": {
@@ -21187,6 +21352,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_GetConnection.html"
+        }
+      },
+      "GetHost": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to get details about a host resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_GetHost.html"
         }
       },
       "GetIndividualAccessToken": {
@@ -21238,6 +21417,23 @@
           "doc_page_rel": "https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_ListConnections.html"
         }
       },
+      "ListHosts": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [
+          "codestar-connections:ProviderTypeFilter"
+        ],
+        "description": "Grants permission to list host resources",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_ListHosts.html"
+        }
+      },
       "ListInstallationTargets": {
         "aws_action_groups": [
           "ListOnly",
@@ -21284,6 +21480,38 @@
           "api_doc": "",
           "doc_page": "${AuthZDocPage}#connections-passconnection",
           "doc_page_rel": "${AuthZDocPage}#connections-passconnection"
+        }
+      },
+      "RegisterAppCode": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "codestar-connections:HostArn"
+        ],
+        "description": "Grants permission to associate a third party server, such as a GitHub Enterprise Server instance, with a Host",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${AuthZDocPage}#connections-permissions-actions-host-registration",
+          "doc_page_rel": "${AuthZDocPage}#connections-permissions-actions-host-registration"
+        }
+      },
+      "StartAppRegistrationHandshake": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "codestar-connections:HostArn"
+        ],
+        "description": "Grants permission to associate a third party server, such as a GitHub Enterprise Server instance, with a Host",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${AuthZDocPage}#connections-permissions-actions-host-registration",
+          "doc_page_rel": "${AuthZDocPage}#connections-permissions-actions-host-registration"
         }
       },
       "StartOAuthHandshake": {
@@ -41404,6 +41632,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/imagebuilder/latest/APIReference/API_ListImageBuildVersions.html"
         }
       },
+      "ListImagePipelineImages": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Returns a list of images created by the specified pipeline",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/imagebuilder/latest/APIReference/API_ListImagePipelineImages.html"
+        }
+      },
       "ListImagePipelines": {
         "aws_action_groups": [
           "ListOnly",
@@ -45650,10 +45893,11 @@
       },
       "ListTagsForResource": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [
           "aws:ResourceTag/${TagKey}",
           "ecr:ResourceTag/${TagKey}"
@@ -59323,7 +59567,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates an authorizer.",
         "docs": {
           "api_doc": "",
@@ -59384,7 +59631,8 @@
         "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
-          "aws:TagKeys"
+          "aws:TagKeys",
+          "iot:DomainName"
         ],
         "description": "Creates a domain configuration.",
         "docs": {
@@ -59477,7 +59725,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates an AWS IoT policy.",
         "docs": {
           "api_doc": "",
@@ -59490,7 +59741,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Creates a new version of the specified AWS IoT policy.",
         "docs": {
           "api_doc": "",
@@ -59503,7 +59756,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Creates a provisioning claim.",
         "docs": {
           "api_doc": "",
@@ -59516,7 +59771,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a fleet provisioning template.",
         "docs": {
           "api_doc": "",
@@ -59529,7 +59787,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Creates a new version of a fleet provisioning template.",
         "docs": {
           "api_doc": "",
@@ -59542,7 +59802,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Creates a role alias.",
         "docs": {
           "api_doc": "",
@@ -59696,7 +59959,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified authorizer.",
         "docs": {
           "api_doc": "",
@@ -59725,7 +59990,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes a registered CA certificate.",
         "docs": {
           "api_doc": "",
@@ -59766,7 +60033,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes a domain configuration.",
         "docs": {
           "api_doc": "",
@@ -59855,7 +60124,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified policy.",
         "docs": {
           "api_doc": "",
@@ -59868,7 +60139,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified version of the specified policy.",
         "docs": {
           "api_doc": "",
@@ -59881,7 +60154,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes a fleet provisioning template.",
         "docs": {
           "api_doc": "",
@@ -59894,7 +60169,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes a fleet provisioning template version.",
         "docs": {
           "api_doc": "",
@@ -59920,7 +60197,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Deletes the specified role alias.",
         "docs": {
           "api_doc": "",
@@ -60150,7 +60429,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Describes an authorizer.",
         "docs": {
           "api_doc": "",
@@ -60180,7 +60461,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Describes a registered CA certificate.",
         "docs": {
           "api_doc": "",
@@ -60238,7 +60521,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Gets information about the domain configuration.",
         "docs": {
           "api_doc": "",
@@ -60342,7 +60627,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Returns information about a fleet provisioning template.",
         "docs": {
           "api_doc": "",
@@ -60356,7 +60643,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Returns information about a fleet provisioning template version.",
         "docs": {
           "api_doc": "",
@@ -60370,7 +60659,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Describes a role alias.",
         "docs": {
           "api_doc": "",
@@ -60702,7 +60993,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Gets information about the specified policy with the policy document of the default version.",
         "docs": {
           "api_doc": "",
@@ -60716,7 +61009,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Gets information about the specified policy version.",
         "docs": {
           "api_doc": "",
@@ -61163,7 +61458,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Lists the versions of the specified policy, and identifies the default version.",
         "docs": {
           "api_doc": "",
@@ -61208,7 +61505,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "A list of fleet provisioning template versions.",
         "docs": {
           "api_doc": "",
@@ -61332,7 +61631,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "List",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "List targets for the specified policy.",
         "docs": {
           "api_doc": "",
@@ -61605,7 +61906,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Registers a CA certificate with AWS IoT.",
         "docs": {
           "api_doc": "",
@@ -61727,7 +62031,9 @@
           "Permissions"
         ],
         "calculated_action_group": "Permissions",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Sets the default authorizer. This will be used if a websocket connection is made without specifying an authorizer.",
         "docs": {
           "api_doc": "",
@@ -61740,7 +62046,9 @@
           "Permissions"
         ],
         "calculated_action_group": "Permissions",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Sets the specified version of the specified policy as the policy's default (operative) version.",
         "docs": {
           "api_doc": "",
@@ -61879,8 +62187,8 @@
         "description": "Tag a specified resource",
         "docs": {
           "api_doc": "",
-          "doc_page": "API_TagResource.html",
-          "doc_page_rel": "API_TagResource.html"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_TagResource.html"
         }
       },
       "TestAuthorization": {
@@ -61903,7 +62211,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Read",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Invoke the specified custom authorizer for testing purposes.",
         "docs": {
           "api_doc": "",
@@ -61937,8 +62247,8 @@
         "description": "Untag a specified resource",
         "docs": {
           "api_doc": "",
-          "doc_page": "API_UntagResource.html",
-          "doc_page_rel": "API_UntagResource.html"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_UntagResource.html"
         }
       },
       "UpdateAccountAuditConfiguration": {
@@ -61972,12 +62282,14 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Updates an authorizer",
         "docs": {
           "api_doc": "",
-          "doc_page": "API_UpdateAuthorizer.html",
-          "doc_page_rel": "API_UpdateAuthorizer.html"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_UpdateAuthorizer.html"
         }
       },
       "UpdateBillingGroup": {
@@ -62000,7 +62312,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Updates a registered CA certificate.",
         "docs": {
           "api_doc": "",
@@ -62032,8 +62346,8 @@
         "description": "Updates the definition for a dimension.",
         "docs": {
           "api_doc": "",
-          "doc_page": "API_UpdateDimension.html",
-          "doc_page_rel": "API_UpdateDimension.html"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_UpdateDimension.html"
         }
       },
       "UpdateDomainConfiguration": {
@@ -62041,7 +62355,9 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Updates a domain configuration.",
         "docs": {
           "api_doc": "",
@@ -62129,8 +62445,8 @@
         "description": "Updates the definition for the specified mitigation action.",
         "docs": {
           "api_doc": "",
-          "doc_page": "API_UpdateMitigationAction.html",
-          "doc_page_rel": "API_UpdateMitigationAction.html"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_UpdateMitigationAction.html"
         }
       },
       "UpdateProvisioningTemplate": {
@@ -62138,12 +62454,14 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Updates a fleet provisioning template.",
         "docs": {
           "api_doc": "",
-          "doc_page": "API_UpdateProvisioningTemplate.html",
-          "doc_page_rel": "API_UpdateProvisioningTemplate.html"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_UpdateProvisioningTemplate.html"
         }
       },
       "UpdateRoleAlias": {
@@ -62151,12 +62469,14 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
         "description": "Updates the role alias",
         "docs": {
           "api_doc": "",
-          "doc_page": "API_UpdateRoleAlias.html",
-          "doc_page_rel": "API_UpdateRoleAlias.html"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_UpdateRoleAlias.html"
         }
       },
       "UpdateScheduledAudit": {
@@ -62170,8 +62490,8 @@
         "description": "Updates a scheduled audit, including what checks are performed and how often the audit takes place.",
         "docs": {
           "api_doc": "",
-          "doc_page": "API_UpdateScheduledAudit.html",
-          "doc_page_rel": "API_UpdateScheduledAudit.html"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_UpdateScheduledAudit.html"
         }
       },
       "UpdateSecurityProfile": {
@@ -62185,8 +62505,8 @@
         "description": "Updates a Device Defender security profile.",
         "docs": {
           "api_doc": "",
-          "doc_page": "API_UpdateSecurityProfile.html",
-          "doc_page_rel": "API_UpdateSecurityProfile.html"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_UpdateSecurityProfile.html"
         }
       },
       "UpdateStream": {
@@ -62270,8 +62590,8 @@
         "description": "Validates a Device Defender security profile behaviors specification.",
         "docs": {
           "api_doc": "",
-          "doc_page": "API_ValidateSecurityProfileBehaviors.html",
-          "doc_page_rel": "API_ValidateSecurityProfileBehaviors.html"
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/iot/latest/apireference/API_ValidateSecurityProfileBehaviors.html"
         }
       }
     },
@@ -75951,10 +76271,9 @@
       },
       "CreateChannel": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -75968,10 +76287,9 @@
       },
       "CreateInput": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -75985,10 +76303,9 @@
       },
       "CreateInputSecurityGroup": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -76002,10 +76319,9 @@
       },
       "CreateMultiplex": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -76015,6 +76331,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com//medialive/latest/ug/creating-multiplex.html"
+        }
+      },
+      "CreateMultiplexProgram": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create a multiplex program",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com//medialive/latest/ug/multiplex-create.html"
         }
       },
       "CreateTags": {
@@ -76084,6 +76413,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com//medialive/latest/ug/delete-multiplex.html"
+        }
+      },
+      "DeleteMultiplexProgram": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete a multiplex program",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com//medialive/latest/ug/delete-multiplex-program.html"
         }
       },
       "DeleteReservation": {
@@ -76199,6 +76541,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com//medialive/latest/ug/viewing-multiplex-configuration.html"
         }
       },
+      "DescribeMultiplexProgram": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to describe a multiplex program",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com//medialive/latest/ug/monitoring-multiplex-console.html"
+        }
+      },
       "DescribeOffering": {
         "aws_action_groups": [
           "ReadWrite",
@@ -76301,6 +76657,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com//medialive/latest/ug/edit-input.html"
         }
       },
+      "ListMultiplexPrograms": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly",
+          "ListOnly"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list multiplex programs",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com//medialive/latest/ug/monitoring-multiplex-console.html"
+        }
+      },
       "ListMultiplexes": {
         "aws_action_groups": [
           "ReadWrite",
@@ -76363,10 +76734,9 @@
       },
       "PurchaseOffering": {
         "aws_action_groups": [
-          "ReadWrite",
-          "Tagging"
+          "ReadWrite"
         ],
-        "calculated_action_group": "Tagging",
+        "calculated_action_group": "Write",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
@@ -76506,6 +76876,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com//medialive/latest/ug/edit-multiplex.html"
+        }
+      },
+      "UpdateMultiplexProgram": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to update a multiplex program",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com//medialive/latest/ug/edit-multiplex-program-channel.html"
         }
       },
       "UpdateReservation": {
@@ -79728,6 +80111,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/opsworks-cm/latest/APIReference/API_DisassociateNode.html"
         }
       },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "List the tags that are applied to the specified server or backup.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/opsworks-cm/latest/APIReference/API_ListTagsForResource.html"
+        }
+      },
       "RestoreServer": {
         "aws_action_groups": [
           "ReadWrite"
@@ -79752,6 +80150,34 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/opsworks-cm/latest/APIReference/API_StartMaintenance.html"
+        }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [],
+        "description": "Applies tags to the specified server or backup.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/opsworks-cm/latest/APIReference/API_TagResource.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "Tagging"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [],
+        "description": "Removes tags from the specified server or backup.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/opsworks-cm/latest/APIReference/API_UntagResource.html"
         }
       },
       "UpdateServer": {
@@ -82899,7 +83325,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/pinpoint-sms-voice/latest/apireference/v1-sms-voice-configuration-sets.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/pinpoint-sms-voice/latest/APIReference/v1-sms-voice-configuration-sets.html"
         }
       },
       "CreateConfigurationSetEventDestination": {
@@ -82912,7 +83338,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/pinpoint-sms-voice/latest/apireference/v1-sms-voice-configuration-sets-configurationsetname-event-destinations.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/pinpoint-sms-voice/latest/APIReference/v1-sms-voice-configuration-sets-configurationsetname-event-destinations.html"
         }
       },
       "DeleteConfigurationSet": {
@@ -82925,7 +83351,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/pinpoint-sms-voice/latest/apireference/v1-sms-voice-configuration-sets-configurationsetname.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/pinpoint-sms-voice/latest/APIReference/v1-sms-voice-configuration-sets-configurationsetname.html"
         }
       },
       "DeleteConfigurationSetEventDestination": {
@@ -82938,7 +83364,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/pinpoint-sms-voice/latest/apireference/v1-sms-voice-configuration-sets-configurationsetname-event-destinations-eventdestinationname.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/pinpoint-sms-voice/latest/APIReference/v1-sms-voice-configuration-sets-configurationsetname-event-destinations-eventdestinationname.html"
         }
       },
       "GetConfigurationSetEventDestinations": {
@@ -82952,7 +83378,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/pinpoint-sms-voice/latest/apireference/v1-sms-voice-configuration-sets-configurationsetname-event-destinations.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/pinpoint-sms-voice/latest/APIReference/v1-sms-voice-configuration-sets-configurationsetname-event-destinations.html"
         }
       },
       "ListConfigurationSets": {
@@ -82966,7 +83392,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/pinpoint-sms-voice/latest/apireference/v1-sms-voice-configuration-sets.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/pinpoint-sms-voice/latest/APIReference/v1-sms-voice-configuration-sets.html"
         }
       },
       "SendVoiceMessage": {
@@ -82979,7 +83405,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/pinpoint-sms-voice/latest/apireference/v1-sms-voice-voice-message.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/pinpoint-sms-voice/latest/APIReference/v1-sms-voice-voice-message.html"
         }
       },
       "UpdateConfigurationSetEventDestination": {
@@ -82992,7 +83418,7 @@
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/pinpoint-sms-voice/latest/apireference/v1-sms-voice-configuration-sets-configurationsetname-event-destinations-eventdestinationname.html"
+          "doc_page_rel": "https://docs.aws.amazon.com/pinpoint-sms-voice/latest/APIReference/v1-sms-voice-configuration-sets-configurationsetname-event-destinations-eventdestinationname.html"
         }
       }
     },
@@ -83000,10 +83426,10 @@
     "arn_regex": "^arn:aws:sms-voice:.+:.+:.+",
     "description": "Amazon Pinpoint SMS and Voice Service",
     "docs": {
-      "actions_doc_root": "https://docs.aws.amazon.com/pinpoint-sms-voice/latest/apireference/",
+      "actions_doc_root": "https://docs.aws.amazon.com/pinpoint-sms-voice/latest/APIReference/",
       "api_detail_root": "",
       "api_doc_root": "",
-      "api_reference_doc_page": "${DocHomeURL}pinpoint-sms-voice/latest/apireference/",
+      "api_reference_doc_page": "${DocHomeURL}pinpoint-sms-voice/latest/APIReference/",
       "authz_doc_page": "https://docs.aws.amazon.com/pinpoint/latest/developerguide/permissions-actions.html#permissions-actions-apiactions",
       "concepts_doc_root": "https://docs.aws.amazon.com/pinpoint/latest/developerguide/",
       "context_keys_doc_root": ""
@@ -83630,6 +84056,22 @@
   },
   "QuickSight": {
     "actions": {
+      "CreateAccountCustomization": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to create an account customization for QuickSight account or namespace",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateAccountCustomization.html"
+        }
+      },
       "CreateAdmin": {
         "aws_action_groups": [
           "ReadWrite"
@@ -83637,6 +84079,19 @@
         "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "CreateAdmin enables the user to provision Amazon QuickSight administrators, authors, and readers.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${ConceptsDocRoot}iam-actions.html",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/iam-actions.html"
+        }
+      },
+      "CreateCustomPermissions": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create a custom permissions resource for restricting user access",
         "docs": {
           "api_doc": "",
           "doc_page": "${ConceptsDocRoot}iam-actions.html",
@@ -83696,6 +84151,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateIAMPolicyAssignment.html"
+        }
+      },
+      "CreateNamespace": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to create an QuickSight namespace",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateNamespace.html"
         }
       },
       "CreateReader": {
@@ -83782,6 +84250,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/iam-actions.html"
         }
       },
+      "DeleteAccountCustomization": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete an account customization for QuickSight account or namespace",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DeleteAccountCustomization.html"
+        }
+      },
       "DeleteDashboard": {
         "aws_action_groups": [
           "ReadWrite"
@@ -83832,6 +84313,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DeleteIAMPolicyAssignment.html"
+        }
+      },
+      "DeleteNamespace": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete a QuickSight namespace",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DeleteNamespace.html"
         }
       },
       "DeleteTemplate": {
@@ -83912,6 +84406,47 @@
           "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DeleteUserByPrincipalId.html"
         }
       },
+      "DescribeAccountCustomization": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to describe an account customization for QuickSight account or namespace",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeAccountCustomization.html"
+        }
+      },
+      "DescribeAccountSettings": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to describe the administrative account settings for QuickSight account",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeAccountSettings.html"
+        }
+      },
+      "DescribeCustomPermissions": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to describe a custom permissions resource in a QuickSight account",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${ConceptsDocRoot}iam-actions.html",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/iam-actions.html"
+        }
+      },
       "DescribeDashboard": {
         "aws_action_groups": [
           "ReadOnly",
@@ -83966,6 +84501,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeIAMPolicyAssignment.html"
+        }
+      },
+      "DescribeNamespace": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to describe a QuickSight namespace",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeNamespace.html"
         }
       },
       "DescribeTemplate": {
@@ -84108,6 +84657,33 @@
           "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/iam-actions.html"
         }
       },
+      "GetSessionEmbedUrl": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to get a URL to embed QuickSight console experience.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_GetSessionEmbedUrl.html"
+        }
+      },
+      "ListCustomPermissions": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to list custom permissions resources in QuickSight account",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${ConceptsDocRoot}iam-actions.html",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/iam-actions.html"
+        }
+      },
       "ListDashboardVersions": {
         "aws_action_groups": [
           "ListOnly",
@@ -84196,6 +84772,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListIAMPolicyAssignmentsForUser.html"
+        }
+      },
+      "ListNamespaces": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to lists all namespaces in a QuickSight account",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListNamespaces.html"
         }
       },
       "ListTagsForResource": {
@@ -84429,6 +85018,45 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UntagResource.html"
+        }
+      },
+      "UpdateAccountCustomization": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to update an account customization for QuickSight account or namespace",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateAccountCustomization.html"
+        }
+      },
+      "UpdateAccountSettings": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to update the administrative account settings for QuickSight account",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateAccountSettings.html"
+        }
+      },
+      "UpdateCustomPermissions": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to update a custom permissions resource",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${ConceptsDocRoot}iam-actions.html",
+          "doc_page_rel": "https://docs.aws.amazon.com/quicksight/latest/APIReference/iam-actions.html"
         }
       },
       "UpdateDashboard": {
@@ -85029,6 +85657,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateOptionGroup.html"
         }
       },
+      "CrossRegionCommunication": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to access a resource in the remote Region when executing cross-Region operations, such as cross-Region snapshot copy or cross-Region read replica creation",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "${ConceptsDocRoot}security_iam_service-with-iam.html#UsingWithRDS.IAM.Conditions",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/security_iam_service-with-iam.html#UsingWithRDS.IAM.Conditions"
+        }
+      },
       "DeleteDBCluster": {
         "aws_action_groups": [
           "ReadWrite"
@@ -85139,7 +85780,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to delete a DB security group.",
+        "description": "Grants permission to delete a DB security group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -86146,7 +86787,7 @@
           "aws:TagKeys",
           "rds:req-tag/${TagKey}"
         ],
-        "description": "Grants permission to remove metadata tags from an Amazon RDS resource.",
+        "description": "Grants permission to remove metadata tags from an Amazon RDS resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -88406,6 +89047,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/rekognition/latest/dg/API_DetectModerationLabels.html"
         }
       },
+      "DetectProtectiveEquipment": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Detects Protective Equipment in the input image.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/rekognition/latest/dg/API_DetectProtectiveEquipment.html"
+        }
+      },
       "DetectText": {
         "aws_action_groups": [
           "ReadOnly",
@@ -89093,6 +89748,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/ram/latest/APIReference/API_ListResourceSharePermissions.html"
         }
       },
+      "ListResourceTypes": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Lists the shareable resource types supported by AWS RAM",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/ram/latest/APIReference/API_ListResourceTypes.html"
+        }
+      },
       "ListResources": {
         "aws_action_groups": [
           "ListOnly",
@@ -89106,6 +89776,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/ram/latest/APIReference/API_ListResources.html"
+        }
+      },
+      "PromoteResourceShareCreatedFromPolicy": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Use this API action to promote the resource share",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html"
         }
       },
       "RejectResourceShareInvitation": {
@@ -90914,6 +91597,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListHostedZonesByName.html"
         }
       },
+      "ListHostedZonesByVPC": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to get a list of all the private hosted zones that a specified VPC is associated with",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListHostedZonesByVPC.html"
+        }
+      },
       "ListQueryLoggingConfigs": {
         "aws_action_groups": [
           "ListOnly",
@@ -90961,10 +91659,11 @@
       },
       "ListTagsForResource": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Grants permission to list tags for one health check or hosted zone",
         "docs": {
@@ -90975,10 +91674,11 @@
       },
       "ListTagsForResources": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Grants permission to list tags for up to 10 health checks or hosted zones",
         "docs": {
@@ -90989,10 +91689,11 @@
       },
       "ListTrafficPolicies": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Grants permission to get information about the latest version for every traffic policy that is associated with the current AWS account. Policies are listed in the order in which they were created.",
         "docs": {
@@ -91003,10 +91704,11 @@
       },
       "ListTrafficPolicyInstances": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Grants permission to get information about the traffic policy instances that you created by using the current AWS account",
         "docs": {
@@ -91017,10 +91719,11 @@
       },
       "ListTrafficPolicyInstancesByHostedZone": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Grants permission to get information about the traffic policy instances that you created in a specified hosted zone",
         "docs": {
@@ -91031,10 +91734,11 @@
       },
       "ListTrafficPolicyInstancesByPolicy": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Grants permission to get information about the traffic policy instances that you created using a specified traffic policy version",
         "docs": {
@@ -91045,10 +91749,11 @@
       },
       "ListTrafficPolicyVersions": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Grants permission to get information about all the versions for a specified traffic policy",
         "docs": {
@@ -91059,10 +91764,11 @@
       },
       "ListVPCAssociationAuthorizations": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Grants permission to get a list of the VPCs that were created by other accounts and that can be associated with a specified hosted zone",
         "docs": {
@@ -92130,6 +92836,24 @@
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteBucket.html"
         }
       },
+      "DeleteBucketOwnershipControls": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to delete ownership controls on a bucket",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteBucketOwnershipControls.html"
+        }
+      },
       "DeleteBucketPolicy": {
         "aws_action_groups": [
           "Permissions"
@@ -92526,6 +93250,25 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObjectLockConfiguration.html"
+        }
+      },
+      "GetBucketOwnershipControls": {
+        "aws_action_groups": [
+          "ReadWrite",
+          "ReadOnly"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to retrieve ownership controls on a bucket",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketOwnershipControls.html"
         }
       },
       "GetBucketPolicy": {
@@ -93085,10 +93828,11 @@
       },
       "ListBucketMultipartUploads": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
@@ -93107,10 +93851,11 @@
       },
       "ListBucketVersions": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
@@ -93132,10 +93877,11 @@
       },
       "ListJobs": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [
           "s3:authType",
           "s3:signatureAge",
@@ -93151,10 +93897,11 @@
       },
       "ListMultipartUploadParts": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [
           "s3:AccessPointNetworkOrigin",
           "s3:DataAccessPointAccount",
@@ -93357,6 +94104,24 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObjectLockConfiguration.html"
+        }
+      },
+      "PutBucketOwnershipControls": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "description": "Grants permission to add or replace ownership controls on a bucket",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketOwnershipControls.html"
         }
       },
       "PutBucketPolicy": {
@@ -93625,7 +94390,7 @@
           "s3:x-amz-grant-write-acp",
           "s3:x-amz-storage-class"
         ],
-        "description": "Grants permission to set the access control list (ACL) permissions for an object that already exists in a bucket",
+        "description": "Grants permission to set the access control list (ACL) permissions for new or existing objects in an S3 bucket.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -96945,10 +97710,11 @@
       },
       "ListAccountAssignmentCreationStatus": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadWrite",
           "ReadOnly"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Lists the status of the AWS account assignment creation requests for a specified SSO instance.",
         "docs": {
@@ -96959,10 +97725,11 @@
       },
       "ListAccountAssignmentDeletionStatus": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadWrite",
           "ReadOnly"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Lists the status of the AWS account assignment deletion requests for a specified SSO instance.",
         "docs": {
@@ -96973,10 +97740,11 @@
       },
       "ListAccountAssignments": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadWrite",
           "ReadOnly"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Lists the assignee of the specified AWS account with the specified permission set.",
         "docs": {
@@ -96987,10 +97755,11 @@
       },
       "ListAccountsForProvisionedPermissionSet": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadWrite",
           "ReadOnly"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Lists all the AWS accounts where the specified permission set is provisioned.",
         "docs": {
@@ -97001,10 +97770,11 @@
       },
       "ListApplicationInstanceCertificates": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Retrieve all of the certificates for a given application instance",
         "docs": {
@@ -97030,10 +97800,11 @@
       },
       "ListApplicationTemplates": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Retrieve all supported application templates",
         "docs": {
@@ -97044,10 +97815,11 @@
       },
       "ListApplications": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Retrieve all supported applications",
         "docs": {
@@ -97058,10 +97830,11 @@
       },
       "ListDirectoryAssociations": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Retrieve details about the directory connected to AWS Single Sign-On",
         "docs": {
@@ -97072,10 +97845,11 @@
       },
       "ListInstances": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadWrite",
           "ReadOnly"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Lists the SSO Instances that the caller has access to.",
         "docs": {
@@ -97086,10 +97860,11 @@
       },
       "ListManagedPoliciesInPermissionSet": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadWrite",
           "ReadOnly"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Lists the AWS managed policies that are attached to a specified permission set.",
         "docs": {
@@ -97100,10 +97875,11 @@
       },
       "ListPermissionSetProvisioningStatus": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadWrite",
           "ReadOnly"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Lists the status of the Permission Set Provisioning requests for a specified SSO instance.",
         "docs": {
@@ -97114,10 +97890,11 @@
       },
       "ListPermissionSets": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Retrieve all permission sets",
         "docs": {
@@ -97128,10 +97905,11 @@
       },
       "ListPermissionSetsProvisionedToAccount": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadWrite",
           "ReadOnly"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Lists all the permission sets that are provisioned to a specified AWS account.",
         "docs": {
@@ -97142,10 +97920,11 @@
       },
       "ListProfileAssociations": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Retrieve the directory user or group associated with the profile",
         "docs": {
@@ -97156,10 +97935,11 @@
       },
       "ListProfiles": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Retrieve all profiles for an application instance",
         "docs": {
@@ -97170,10 +97950,11 @@
       },
       "ListTagsForResource": {
         "aws_action_groups": [
+          "ListOnly",
           "ReadWrite",
           "ReadOnly"
         ],
-        "calculated_action_group": "Read",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Lists the tags that are attached to a specified resource.",
         "docs": {
@@ -97228,6 +98009,34 @@
         "calculated_action_group": "Write",
         "condition_keys": [],
         "description": "Add a policy to a permission set",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "SearchGroups": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Search for groups within the associated directory",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "SearchUsers": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Search for users within the associated directory",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97473,7 +98282,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Adds member to the group in the directory that AWS SSO provides by default",
+        "description": "Grants permission to add a member to a group in the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97486,7 +98295,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Completes the creation process of a virtual MFA device",
+        "description": "Grants permission to complete the creation process of a virtual MFA device",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97499,7 +98308,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates an alias for the directory that AWS SSO provides by default",
+        "description": "Grants permission to create an alias for the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97512,7 +98321,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a bearer token for a given provisioning tenant.",
+        "description": "Grants permission to create a bearer token for a given provisioning tenant",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97525,7 +98334,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Create an External Identity Provider configuration for the directory",
+        "description": "Grants permission to create an External Identity Provider configuration for the directory",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97538,7 +98347,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a group in the directory that AWS SSO provides by default",
+        "description": "Grants permission to create a group in the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97551,7 +98360,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a provisioning tenant for a given directory.",
+        "description": "Grants permission to create a provisioning tenant for a given directory",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97564,7 +98373,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Creates a user in the directory that AWS SSO provides by default",
+        "description": "Grants permission to create a user in the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97577,7 +98386,20 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes the bearer token.",
+        "description": "Grants permission to delete a bearer token",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "DeleteExternalIdPCertificate": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete the given external IdP certificate",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97590,7 +98412,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Delete an External Identity Provider configuration associated with the directory",
+        "description": "Grants permission to delete an External Identity Provider configuration associated with the directory",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97603,7 +98425,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a group from the directory that AWS SSO provides by default",
+        "description": "Grants permission to delete a group from the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97616,7 +98438,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a MFA device by device name for a given user",
+        "description": "Grants permission to delete a MFA device by device name for a given user",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97629,7 +98451,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes the provisioning tenant.",
+        "description": "Grants permission to delete the provisioning tenant",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97642,7 +98464,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes a user from the directory that AWS SSO provides by default",
+        "description": "Grants permission to delete a user from the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97656,7 +98478,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Retrieve information about the directory that AWS SSO provides by default",
+        "description": "Grants permission to retrieve information about the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97671,7 +98493,21 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Retrieves information about group from the directory that AWS SSO provides by default",
+        "description": "Grants permission to retrieve information about a group from the directory that AWS SSO provides by default",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "DescribeUser": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to retrieve information about a user from the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97686,7 +98522,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Retrieves information about user from the directory that AWS SSO provides by default",
+        "description": "Grants permission to retrieve information about user from the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97699,7 +98535,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Disable authentication of end users with an External Identity Provider",
+        "description": "Grants permission to disable authentication of end users with an External Identity Provider",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97712,7 +98548,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deactivates user in the directory that AWS SSO provides by default",
+        "description": "Grants permission to deactivate a user in the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97725,7 +98561,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Enable authentication of end users with an External Identity Provider",
+        "description": "Grants permission to enable authentication of end users with an External Identity Provider",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97738,7 +98574,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Activates user in the directory that AWS SSO provides by default",
+        "description": "Grants permission to activate user in the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97752,7 +98588,34 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Retrieve the AWS SSO Service Provider configurations for the directory",
+        "description": "Grants permission to retrieve the AWS SSO Service Provider configurations for the directory",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "ImportExternalIdPCertificate": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to import the IdP certificate used for verifying external IdP responses",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "IsMemberInGroup": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to check if a member is a part of the group in the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97767,7 +98630,22 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists bearer tokens for a given provisioning tenant.",
+        "description": "Grants permission to list bearer tokens for a given provisioning tenant",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/singlesignon/latest/userguide/iam-auth-access-using-id-policies.html#policyexample"
+        }
+      },
+      "ListExternalIdPCertificates": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to list the external IdP certificates of a given directory and IdP",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97782,7 +98660,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "List all the External Identity Provider configurations created for the directory",
+        "description": "Grants permission to list all the External Identity Provider configurations created for the directory",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97797,7 +98675,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists groups for a user from the directory that AWS SSO provides by default ",
+        "description": "Grants permission to list groups for a user from the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97812,7 +98690,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Retrieves all members that are part of the group in the directory that AWS SSO provides by default",
+        "description": "Grants permission to retrieve all members that are part of a group in the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97827,7 +98705,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists all active MFA devices and their MFA device metadata for a user",
+        "description": "Grants permission to list all active MFA devices and their MFA device metadata for a user",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97842,7 +98720,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists provisioning tenants for a given directory.",
+        "description": "Grants permission to list provisioning tenants for a given directory",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97855,7 +98733,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Removes member that are part of the group in the directory that AWS SSO provides by default",
+        "description": "Grants permission to remove a member that is part of a group in the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97869,7 +98747,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Search for groups within the associated directory",
+        "description": "Grants permission to search for groups within the associated directory",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97883,7 +98761,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Search for users within the associated directory",
+        "description": "Grants permission to search for users within the associated directory",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97896,7 +98774,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Begins the creation process of virtual mfa device",
+        "description": "Grants permission to begin the creation process of virtual mfa device",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97909,7 +98787,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Update an External Identity Provider configuration associated with the directory",
+        "description": "Grants permission to update an External Identity Provider configuration associated with the directory",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97922,7 +98800,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates information about group in the directory that AWS SSO provides by default",
+        "description": "Grants permission to update information about a group in the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97935,7 +98813,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates password by sending password reset link via email or generating one time password for a user in the directory that AWS SSO provides by default",
+        "description": "Grants permission to update a password by sending password reset link via email or generating one time password for a user in the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97948,7 +98826,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates user information in the directory that AWS SSO provides by default",
+        "description": "Grants permission to update user information in the directory that AWS SSO provides by default",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -97961,7 +98839,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Verify email address of an User",
+        "description": "Grants permission to verify an email address of an User",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -99059,7 +99937,7 @@
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys",
-          "sagemaker:AppNetworkAccess",
+          "sagemaker:AppNetworkAccessType",
           "sagemaker:DomainSharingOutputKmsKey",
           "sagemaker:HomeEfsFileSystemKmsKey",
           "sagemaker:InstanceTypes",
@@ -114625,6 +115503,19 @@
           "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/APIReference/API_AssociateMemberToGroup.html"
         }
       },
+      "CancelMailboxExportJob": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Cancels a currently running mailbox export job.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/APIReference/API_CancelMailboxExportJob.html"
+        }
+      },
       "CreateAlias": {
         "aws_action_groups": [
           "ReadWrite"
@@ -115041,6 +115932,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/users_overview.html"
         }
       },
+      "DescribeMailboxExportJob": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Retrieve details of a mailbox export job.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/APIReference/API_DescribeMailboxExportJob.html"
+        }
+      },
       "DescribeOrganization": {
         "aws_action_groups": [
           "ListOnly",
@@ -115435,6 +116340,21 @@
           "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/email-flows.html#email-flows-rule-actions"
         }
       },
+      "ListMailboxExportJobs": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "List mailbox export jobs.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/APIReference/API_ListMailboxExportJobs.html"
+        }
+      },
       "ListMailboxPermissions": {
         "aws_action_groups": [
           "ListOnly",
@@ -115750,6 +116670,19 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/adminguide/edit_organization_mobile_policy.html"
+        }
+      },
+      "StartMailboxExportJob": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Start a new mailbox export job.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/workmail/latest/APIReference/API_StartMailboxExportJob.html"
         }
       },
       "TagResource": {
