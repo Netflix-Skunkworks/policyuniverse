@@ -81535,9 +81535,10 @@
       },
       "GetPersonalizedRanking": {
         "aws_action_groups": [
+          "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Read",
         "condition_keys": [],
         "description": "Gets a re-ranked list of recommendations",
         "docs": {
@@ -81750,6 +81751,32 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/personalize/latest/dg/API_Operations.htmlAPI_UBS_PutEvents.html"
+        }
+      },
+      "PutItems": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Ingest Items data",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/personalize/latest/dg/API_Operations.htmlAPI_UBS_PutItems.html"
+        }
+      },
+      "PutUsers": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Ingest Users data",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/personalize/latest/dg/API_Operations.htmlAPI_UBS_PutUsers.html"
         }
       },
       "UpdateCampaign": {
