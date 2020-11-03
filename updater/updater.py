@@ -93,7 +93,7 @@ def parse_service_data(data):
     services = defaultdict()
     for service_url, service_details in data["services"]["_embedded"].items():
         service = Service(service_url, service_details)
-        services[service.display_name] = service
+        services[service.service_name] = service
     return services
 
 

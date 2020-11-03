@@ -94,7 +94,7 @@ var advisor = function() {
                     function(service_url) {
                         var service_data = results['services']['_embedded'][service_url];
                         var actions_url = service_data['_links']['actions']['href'];
-                        var service_name = service_data['serviceDisplayName']; // Some services may have same service name so using display name
+                        var service_name = service_data['serviceName'];
                         progress[actions_url] = "NOT_STARTED";
                         results['actions'] = {};
                         collectServiceActions(actions_url, service_name);
