@@ -12,19 +12,19 @@ def translate_aws_action_groups(groups):
         - ListOnly
         - ReadOnly
         - Tagging
-    
+
     The meaning of these groups was not immediately obvious to me.
-    
+
     Permissions: ability to modify (create/update/remove) permissions.
     ReadWrite: Indicates a data-plane operation.
     ReadOnly: Always used with ReadWrite. Indicates a read-only data-plane operation.
     ListOnly: Always used with [ReadWrite, ReadOnly]. Indicates an action which
         lists resources, which is a subcategory of read-only data-plane operations.
     Tagging: Always used with ReadWrite. Indicates a permission that can mutate tags.
-    
+
     So an action with ReadWrite, but without ReadOnly, is a mutating data-plane operation.
     An action with Permission never has any other groups.
-    
+
     This method will take the AWS categories and translate them to one of the following:
 
     - List
@@ -61,9 +61,9 @@ def build_action_categories_from_service_data(service_data):
 def categories_for_actions(actions):
     """
     Given an iterable of actions, return a mapping of action groups.
-    
+
     actions: {'ec2:authorizesecuritygroupingress', 'iam:putrolepolicy', 'iam:listroles'}
-    
+
     Returns:
         {
             'ec2': {'Write'},
@@ -80,10 +80,10 @@ def categories_for_actions(actions):
 def actions_for_category(category):
     """
     Returns set of actions containing each group passed in.
-    
+
     Param:
         category must be in {'Permissions', 'List', 'Read', 'Tagging', 'Write'}
-    
+
     Returns:
         set of matching actions
     """
