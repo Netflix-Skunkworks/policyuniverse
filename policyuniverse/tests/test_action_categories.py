@@ -89,6 +89,7 @@ class ActionGroupTestCase(unittest.TestCase):
                 "personalize:getpersonalizedranking",
                 "redshift:getclustercredentials",
                 "states:getactivitytask",
+                "quicksight:describecustompermissions",
             }:  # miscategorized AWS actions
                 continue
             self.assertFalse(":get" in action)

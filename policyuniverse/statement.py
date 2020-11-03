@@ -76,9 +76,9 @@ class Statement(object):
 
     def whos_allowed(self):
         """Returns set containing any entries from principal and condition section.
-        
+
         Example:
-        
+
         statement = Statement(dict(
             Effect='Allow',
             Principal='arn:aws:iam::*:role/Hello',
@@ -128,6 +128,9 @@ class Statement(object):
             if "Service" in principal:
                 self._add_or_extend(principal["Service"], principals)
 
+            if "Federated" in principal:
+                self._add_or_extend(principal["Federated"], principals)
+
         else:
             self._add_or_extend(principal, principals)
 
@@ -141,16 +144,16 @@ class Statement(object):
 
     def _condition_entries(self):
         """Extracts any ARNs, Account Numbers, UserIDs, Usernames, CIDRs, VPCs, and VPC Endpoints from a condition block.
-        
+
         Ignores any negated condition operators like StringNotLike.
         Ignores weak condition keys like referer, date, etc.
-        
+
         Reason: A condition is meant to limit the principal in a statement.  Often, resource policies use a wildcard principal
         and rely exclusively on the Condition block to limit access.
-        
+
         We would want to alert if the Condition had no limitations (like a non-existent Condition block), or very weak limitations.  Any negation
         would be weak, and largely equivelant to having no condition block whatsoever.
-        
+
         The alerting code that relies on this data must ensure the condition has at least one of the following:
         - A limiting ARN
         - Account Identifier
@@ -177,6 +180,10 @@ class Statement(object):
             "aws:sourceip": "cidr",
             "aws:sourcevpc": "vpc",
             "aws:sourcevpce": "vpce",
+            # a key for SAML Federation trust policy.
+            # https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_saml.html
+            # https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_saml_assertions.html
+            "saml:aud": "saml-endpoint",
         }
 
         relevant_condition_operators = [
