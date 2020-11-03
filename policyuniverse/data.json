@@ -7626,7 +7626,10 @@
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
-        "condition_keys": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
         "description": "Grants permission to create a quantum task.",
         "docs": {
           "api_doc": "",
@@ -7662,6 +7665,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/braket/latest/APIReference/API_GetQuantumTask.html"
         }
       },
+      "ListTagsForResource": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Lists the tags that have been applied to the quantum task resource.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/braket/latest/APIReference/API_ListTagsForResource.html"
+        }
+      },
       "SearchDevices": {
         "aws_action_groups": [
           "ReadWrite",
@@ -7689,6 +7706,39 @@
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/braket/latest/APIReference/API_SearchQuantumTasks.html"
         }
+      },
+      "TagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Adds one or more tags to a quantum task.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/braket/latest/APIReference/API_TagResource.html"
+        }
+      },
+      "UntagResource": {
+        "aws_action_groups": [
+          "Tagging",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Tagging",
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "description": "Remove one or more tags from a quantum task resource. A tag consists of a key-value pair",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/braket/latest/APIReference/API_UntagResource.html"
+        }
       }
     },
     "arn_format": "arn:${Partition}:braket:<region>:<account_ID>:.+",
@@ -7699,9 +7749,9 @@
       "api_detail_root": "",
       "api_doc_root": "",
       "api_reference_doc_page": "${DocHomeURL}braket/latest/APIReference/",
-      "authz_doc_page": "https://docs.aws.amazon.com/braket/latest/UserGuide/braket-manage-access.html",
-      "concepts_doc_root": "https://docs.aws.amazon.com/braket/latest/UserGuide/",
-      "context_keys_doc_root": "https://docs.aws.amazon.com/braket/latest/UserGuide/braket-manage-access.html#condition-keys"
+      "authz_doc_page": "https://docs.aws.amazon.com/braket/latest/developerguide/braket-manage-access.html",
+      "concepts_doc_root": "https://docs.aws.amazon.com/braket/latest/developerguide/",
+      "context_keys_doc_root": "https://docs.aws.amazon.com/braket/latest/developerguide/braket-manage-access.html#condition-keys/"
     },
     "prefix": "braket"
   },
@@ -21380,8 +21430,8 @@
         "description": "Grants permission to associate a third party, such as a Bitbucket App installation, with a Connection",
         "docs": {
           "api_doc": "",
-          "doc_page": "${AuthZDocPage}#connections-permissions-actions-handshake",
-          "doc_page_rel": "${AuthZDocPage}#connections-permissions-actions-handshake"
+          "doc_page": "${ConceptsDocRoot}security-iam.html#permissions-reference-connections-handshake",
+          "doc_page_rel": "https://docs.aws.amazon.com/codestar-connections/latest/APIReference/security-iam.html#permissions-reference-connections-handshake"
         }
       },
       "GetInstallationUrl": {
@@ -21396,8 +21446,8 @@
         "description": "Grants permission to associate a third party, such as a Bitbucket App installation, with a Connection",
         "docs": {
           "api_doc": "",
-          "doc_page": "${AuthZDocPage}#connections-permissions-actions-handshake",
-          "doc_page_rel": "${AuthZDocPage}#connections-permissions-actions-handshake"
+          "doc_page": "${ConceptsDocRoot}security-iam.html#permissions-reference-connections-handshake",
+          "doc_page_rel": "https://docs.aws.amazon.com/codestar-connections/latest/APIReference/security-iam.html#permissions-reference-connections-handshake"
         }
       },
       "ListConnections": {
@@ -21445,8 +21495,8 @@
         "description": "Grants permission to associate a third party, such as a Bitbucket App installation, with a Connection",
         "docs": {
           "api_doc": "",
-          "doc_page": "${AuthZDocPage}#connections-permissions-actions-handshake",
-          "doc_page_rel": "${AuthZDocPage}#connections-permissions-actions-handshake"
+          "doc_page": "${ConceptsDocRoot}security-iam.html#permissions-reference-connections-handshake",
+          "doc_page_rel": "https://docs.aws.amazon.com/codestar-connections/latest/APIReference/security-iam.html#permissions-reference-connections-handshake"
         }
       },
       "ListTagsForResource": {
@@ -21478,8 +21528,8 @@
         "description": "Grants permission to pass a Connection resource to an AWS service that accepts a Connection ARN as input, such as codepipeline:CreatePipeline",
         "docs": {
           "api_doc": "",
-          "doc_page": "${AuthZDocPage}#connections-passconnection",
-          "doc_page_rel": "${AuthZDocPage}#connections-passconnection"
+          "doc_page": "${ConceptsDocRoot}security-iam.html#permissions-reference-connections-passconnection",
+          "doc_page_rel": "https://docs.aws.amazon.com/codestar-connections/latest/APIReference/security-iam.html#permissions-reference-connections-passconnection"
         }
       },
       "RegisterAppCode": {
@@ -21494,8 +21544,8 @@
         "description": "Grants permission to associate a third party server, such as a GitHub Enterprise Server instance, with a Host",
         "docs": {
           "api_doc": "",
-          "doc_page": "${AuthZDocPage}#connections-permissions-actions-host-registration",
-          "doc_page_rel": "${AuthZDocPage}#connections-permissions-actions-host-registration"
+          "doc_page": "${ConceptsDocRoot}security-iam.html#connections-permissions-actions-host-registration",
+          "doc_page_rel": "https://docs.aws.amazon.com/codestar-connections/latest/APIReference/security-iam.html#connections-permissions-actions-host-registration"
         }
       },
       "StartAppRegistrationHandshake": {
@@ -21510,8 +21560,8 @@
         "description": "Grants permission to associate a third party server, such as a GitHub Enterprise Server instance, with a Host",
         "docs": {
           "api_doc": "",
-          "doc_page": "${AuthZDocPage}#connections-permissions-actions-host-registration",
-          "doc_page_rel": "${AuthZDocPage}#connections-permissions-actions-host-registration"
+          "doc_page": "${ConceptsDocRoot}security-iam.html#connections-permissions-actions-host-registration",
+          "doc_page_rel": "https://docs.aws.amazon.com/codestar-connections/latest/APIReference/security-iam.html#connections-permissions-actions-host-registration"
         }
       },
       "StartOAuthHandshake": {
@@ -21526,8 +21576,8 @@
         "description": "Grants permission to associate a third party, such as a Bitbucket App installation, with a Connection",
         "docs": {
           "api_doc": "",
-          "doc_page": "${AuthZDocPage}#connections-permissions-actions-handshake",
-          "doc_page_rel": "${AuthZDocPage}#connections-permissions-actions-handshake"
+          "doc_page": "${ConceptsDocRoot}security-iam.html#permissions-reference-connections-handshake",
+          "doc_page_rel": "https://docs.aws.amazon.com/codestar-connections/latest/APIReference/security-iam.html#permissions-reference-connections-handshake"
         }
       },
       "TagResource": {
@@ -21577,8 +21627,8 @@
         "description": "Grants permission to update a Connection resource with an installation of the CodeStar Connections App",
         "docs": {
           "api_doc": "",
-          "doc_page": "${AuthZDocPage}#connections-permissions-actions-handshake",
-          "doc_page_rel": "${AuthZDocPage}#connections-permissions-actions-handshake"
+          "doc_page": "${ConceptsDocRoot}security-iam.html#permissions-reference-connections-handshake",
+          "doc_page_rel": "https://docs.aws.amazon.com/codestar-connections/latest/APIReference/security-iam.html#permissions-reference-connections-handshake"
         }
       },
       "UseConnection": {
@@ -21597,8 +21647,8 @@
         "description": "Grants permission to use a Connection resource to call provider actions",
         "docs": {
           "api_doc": "",
-          "doc_page": "${AuthZDocPage}#connections-use",
-          "doc_page_rel": "${AuthZDocPage}#connections-use"
+          "doc_page": "${ConceptsDocRoot}security-iam.html#permissions-reference-connections-use",
+          "doc_page_rel": "https://docs.aws.amazon.com/codestar-connections/latest/APIReference/security-iam.html#permissions-reference-connections-use"
         }
       }
     },
@@ -21610,9 +21660,9 @@
       "api_detail_root": "",
       "api_doc_root": "",
       "api_reference_doc_page": "https://docs.aws.amazon.com/codestar-connections/latest/APIReference/Welcome.html",
-      "authz_doc_page": "https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-permissions.html",
-      "concepts_doc_root": "https://docs.aws.amazon.com/codepipeline/latest/userguide/connections.html",
-      "context_keys_doc_root": "https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-permissions.html"
+      "authz_doc_page": "https://docs.aws.amazon.com/dtconsole/latest/userguide/security-iam.html",
+      "concepts_doc_root": "https://docs.aws.amazon.com/dtconsole/latest/userguide/",
+      "context_keys_doc_root": "https://docs.aws.amazon.com/dtconsole/latest/userguide/security-iam.html"
     },
     "prefix": "codestar-connections"
   },
@@ -76937,6 +76987,22 @@
           "doc_page_rel": "https://docs.aws.amazon.com/mediapackage/latest/apireference/channels.html#channelspost"
         }
       },
+      "CreateHarvestJob": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "description": "Grants permission to create a harvest job in AWS Elemental MediaPackage.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/mediapackage/latest/apireference/harvest_jobs.html#harvest_jobspost"
+        }
+      },
       "CreateOriginEndpoint": {
         "aws_action_groups": [
           "ReadWrite"
@@ -76993,6 +77059,20 @@
           "doc_page_rel": "https://docs.aws.amazon.com/mediapackage/latest/apireference/channels-id.html#channels-idget"
         }
       },
+      "DescribeHarvestJob": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to view the details of a harvest job in AWS Elemental MediaPackage.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/mediapackage/latest/apireference/harvest_jobs-id.html#harvest_jobs-idget"
+        }
+      },
       "DescribeOriginEndpoint": {
         "aws_action_groups": [
           "ReadOnly",
@@ -77019,6 +77099,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/mediapackage/latest/apireference/channels.html#channelsget"
+        }
+      },
+      "ListHarvestJobs": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to view a list of harvest jobs in AWS Elemental MediaPackage.",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/mediapackage/latest/apireference/harvest_jobs.html#harvest_jobsget"
         }
       },
       "ListOriginEndpoints": {
@@ -77071,11 +77165,11 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to assign tags to a Channel or OriginEndpoint.",
+        "description": "",
         "docs": {
           "api_doc": "",
           "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/mediapackage/latest/apireference/tags-resource-arn.html#tags-resource-arnpost"
+          "doc_page_rel": "https://docs.aws.amazon.com/mediapackage/latest/apireference/hj-create.html"
         }
       },
       "UntagResource": {
