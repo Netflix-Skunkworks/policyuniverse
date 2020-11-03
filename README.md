@@ -2,7 +2,7 @@
 
 [![Version](http://img.shields.io/pypi/v/policyuniverse.svg?style=flat)](https://pypi.python.org/pypi/policyuniverse/)
 
-[![Build Status](https://travis-ci.org/Netflix-Skunkworks/policyuniverse.svg?branch=master)](https://travis-ci.org/Netflix-Skunkworks/policyuniverse)
+[![Build Status](https://github.com/Netflix-Skunkworks/policyuniverse/workflows/Python%20package/badge.svg)](https://github.com/Netflix-Skunkworks/policyuniverse/actions)
 
 [![Coverage Status](https://coveralls.io/repos/github/Netflix-Skunkworks/policyuniverse/badge.svg?branch=master&1)](https://coveralls.io/github/Netflix-Skunkworks/policyuniverse?branch=master)
 
