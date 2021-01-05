@@ -53,7 +53,7 @@ class ActionGroupTestCase(unittest.TestCase):
                 "imagebuilder:getimagepolicy",
                 "imagebuilder:getimagerecipepolicy",
                 "signer:listprofilepermissions",
-                "monitron:listprojectadminusers"
+                "monitron:listprojectadminusers",
             }:  # miscategorized AWS actions
                 continue
 
@@ -93,7 +93,7 @@ class ActionGroupTestCase(unittest.TestCase):
                 "states:getactivitytask",
                 "quicksight:describecustompermissions",
                 "cloudshell:getfiledownloadurls",
-                "cloudshell:getfileuploadurls"
+                "cloudshell:getfileuploadurls",
             }:  # miscategorized AWS actions
                 continue
             self.assertFalse(":get" in action)
