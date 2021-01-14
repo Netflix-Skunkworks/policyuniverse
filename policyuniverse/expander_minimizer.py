@@ -78,7 +78,7 @@ def _expand_wildcard_action(actions):
     if isinstance(actions, str):
         # Bail early if we have a string with no wildcard
         if "*" not in actions:
-            return [actions]
+            return [actions.lower()]
         actions = [actions]
 
     # Map _expand function to action list, resulting in a list of lists of expanded actions.
