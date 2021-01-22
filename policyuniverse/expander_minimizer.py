@@ -57,31 +57,38 @@ def _get_prefixes_for_action(action):
     return retval
 
 
-def _expand_wildcard_action(action):
+def _expand(action):
     """
     :param action: 'autoscaling:*'
     :return: A list of all autoscaling permissions matching the wildcard
     """
-    if isinstance(action, list):
-        expanded_actions = []
-        for item in action:
-            expanded_actions.extend(_expand_wildcard_action(item))
-        return expanded_actions
+    expanded = fnmatch.filter(all_permissions, action.lower())
+    # if we get a wildcard for a tech we've never heard of, just return the wildcard
+    if not expanded:
+        return [action]
+    return expanded
 
-    else:
-        if "*" in action:
-            expanded = [
-                expanded_action.lower()
-                for expanded_action in all_permissions
-                if fnmatch.fnmatchcase(expanded_action.lower(), action.lower())
-            ]
 
-            # if we get a wildcard for a tech we've never heard of, just return the wildcard
-            if not expanded:
-                return [action.lower()]
+def _expand_wildcard_action(actions):
+    """Expand wildcards in a list of actions (or a single action string), returning a list of all matching actions.
 
-            return expanded
-        return [action.lower()]
+    :param actions: ['autoscaling:*']
+    :return: A list of all permissions matching the action globs
+    """
+    if isinstance(actions, str):
+        # Bail early if we have a string with no wildcard
+        if "*" not in actions:
+            return [actions.lower()]
+        actions = [actions]
+
+    # Map _expand function to action list, resulting in a list of lists of expanded actions.
+    temp = map(_expand, actions)
+
+    # This flattens the list of lists. It's hard to read, but it's a hot path and the optimization
+    # speeds it up by 90% or more.
+    expanded = [item.lower() for sublist in temp for item in sublist]
+
+    return expanded
 
 
 def _get_desired_actions_from_statement(statement):
