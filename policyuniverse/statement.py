@@ -20,12 +20,10 @@
 
 """
 from policyuniverse.arn import ARN
-from policyuniverse.expander_minimizer import (
-    _expand_wildcard_action,
-    get_actions_from_statement,
-)
+from policyuniverse.expander_minimizer import get_actions_from_statement
 from policyuniverse import logger
 from policyuniverse.action_categories import categories_for_actions
+from policyuniverse.common import ensure_array, is_array
 
 import re
 from collections import namedtuple
@@ -54,8 +52,7 @@ class Statement(object):
         actions = self.statement.get("Action")
         if not actions:
             return set()
-        if not isinstance(actions, list):
-            actions = [actions]
+        actions = ensure_array(actions)
         return set(actions)
 
     def action_summary(self):
@@ -69,9 +66,7 @@ class Statement(object):
         if "NotResource" in self.statement:
             return set(["*"])
 
-        resources = self.statement.get("Resource")
-        if not isinstance(resources, list):
-            resources = [resources]
+        resources = ensure_array(self.statement.get("Resource"))
         return set(resources)
 
     def whos_allowed(self):
@@ -137,7 +132,7 @@ class Statement(object):
         return principals
 
     def _add_or_extend(self, value, structure):
-        if isinstance(value, list):
+        if is_array(value):
             structure.update(set(value))
         else:
             structure.add(value)
@@ -209,13 +204,13 @@ class Statement(object):
 
                     # ForAllValues and ForAnyValue must be paired with a list.
                     # Otherwise, skip over entries.
-                    if not isinstance(
-                        value, list
-                    ) and condition_operator.lower().startswith("for"):
+                    if not is_array(value) and condition_operator.lower().startswith(
+                        "for"
+                    ):
                         continue
 
                     if key.lower() in key_mapping:
-                        if isinstance(value, list):
+                        if is_array(value):
                             for v in value:
                                 conditions.append(
                                     ConditionTuple(

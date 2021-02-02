@@ -226,7 +226,26 @@ class TestMethods(unittest.TestCase):
         expected_result = {"ec2:thispermissiondoesntexist"}
         result = get_actions_from_statement(statement)
         self.assertEqual(result, expected_result)
-        get_actions_from_statement(dict(NotAction="abc"))
+        result = get_actions_from_statement(dict(NotAction="abc"))
+        self.assertSetEqual(result, set(all_permissions))
+
+        statement = {
+            "Action": (
+                "ec2:updatesecuritygroupruledescriptionsegress",
+                "ec2:cancelcapacityreservation",
+            ),
+            "NotAction": tuple(),
+            "Resource": "*",
+            "Effect": "Allow",
+        }
+        result = get_actions_from_statement(statement)
+        self.assertSetEqual(
+            result,
+            {
+                "ec2:updatesecuritygroupruledescriptionsegress",
+                "ec2:cancelcapacityreservation",
+            },
+        )
 
     def test_minimize_statement_actions(self):
         statement = dict(Effect="Deny")

@@ -21,6 +21,7 @@
 """
 from __future__ import print_function
 from policyuniverse import all_permissions
+from policyuniverse.common import ensure_array
 import json
 import fnmatch
 import sys
@@ -171,17 +172,15 @@ def minimize_statement_actions(statement, minchars=None):
 def get_actions_from_statement(statement):
     allowed_actions = set()
 
-    if not type(statement.get("Action", [])) == list:
-        statement["Action"] = [statement["Action"]]
+    statement["Action"] = ensure_array(statement.get("Action", []))
 
-    for action in statement.get("Action", []):
+    for action in statement["Action"]:
         allowed_actions = allowed_actions.union(set(_expand_wildcard_action(action)))
 
-    if not type(statement.get("NotAction", [])) == list:
-        statement["NotAction"] = [statement["NotAction"]]
+    statement["NotAction"] = ensure_array(statement.get("NotAction", []))
 
     inverted_actions = set()
-    for action in statement.get("NotAction", []):
+    for action in statement["NotAction"]:
         inverted_actions = inverted_actions.union(set(_expand_wildcard_action(action)))
 
     if inverted_actions:
@@ -201,8 +200,7 @@ def expand_policy(policy=None, expand_deny=False):
     # Perform a deepcopy to avoid mutating the input
     result = copy.deepcopy(policy)
 
-    if type(result["Statement"]) is dict:
-        result["Statement"] = [result["Statement"]]
+    result["Statement"] = ensure_array(result["Statement"])
     for statement in result["Statement"]:
         if statement["Effect"].lower() == "deny" and not expand_deny:
             continue

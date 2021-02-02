@@ -20,6 +20,7 @@
 
 """
 from policyuniverse.statement import Statement
+from policyuniverse.common import ensure_array
 from collections import defaultdict
 
 
@@ -28,9 +29,7 @@ class Policy(object):
         self.policy = policy
         self.statements = []
 
-        statement_structure = self.policy.get("Statement", [])
-        if not isinstance(statement_structure, list):
-            statement_structure = [statement_structure]
+        statement_structure = ensure_array(self.policy.get("Statement", []))
 
         for statement in statement_structure:
             self.statements.append(Statement(statement))
