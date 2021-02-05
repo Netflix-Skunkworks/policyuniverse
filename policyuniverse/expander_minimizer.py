@@ -171,16 +171,15 @@ def minimize_statement_actions(statement, minchars=None):
 
 def get_actions_from_statement(statement):
     allowed_actions = set()
+    actions = ensure_array(statement.get("Action", []))
 
-    statement["Action"] = ensure_array(statement.get("Action", []))
-
-    for action in statement["Action"]:
+    for action in actions:
         allowed_actions = allowed_actions.union(set(_expand_wildcard_action(action)))
 
-    statement["NotAction"] = ensure_array(statement.get("NotAction", []))
-
     inverted_actions = set()
-    for action in statement["NotAction"]:
+    not_actions = ensure_array(statement.get("NotAction", []))
+
+    for action in not_actions:
         inverted_actions = inverted_actions.union(set(_expand_wildcard_action(action)))
 
     if inverted_actions:
