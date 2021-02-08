@@ -238,3 +238,23 @@ class PolicyTestCase(unittest.TestCase):
 
         policy = Policy(json.loads(SQS_NOTIFICATION_POLICY))
         self.assertTrue(policy.is_internet_accessible())
+
+    def test_non_list_sequence_statement(self):
+        policy_document = dict(
+            Version="2012-10-08",
+            Statement=(
+                dict(
+                    Effect="Allow",
+                    Principal="*",
+                    Action=["rds:*"],
+                    Resource="*",
+                    Condition={"IpAddress": {"AWS:SourceIP": ["0.0.0.0/0"]}},
+                ),
+            ),
+        )
+        policy = Policy(policy_document)
+        self.assertTrue(policy.is_internet_accessible())
+        self.assertListEqual(
+            list(s.statement for s in policy.statements),
+            [policy_document["Statement"][0]],
+        )
