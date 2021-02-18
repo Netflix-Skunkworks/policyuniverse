@@ -28,6 +28,11 @@ from policyuniverse.common import ensure_array, is_array
 import re
 from collections import namedtuple
 
+try:
+    from collections.abc import Mapping
+except ImportError:
+    # Python 2.7 compatibility
+    from collections import Mapping
 
 PrincipalTuple = namedtuple("Principal", "category value")
 ConditionTuple = namedtuple("Condition", "category value")
@@ -115,7 +120,7 @@ class Statement(object):
             # It is possible not to define a principal, AWS ignores these statements.
             return principals
 
-        if isinstance(principal, dict):
+        if isinstance(principal, Mapping):
 
             if "AWS" in principal:
                 self._add_or_extend(principal["AWS"], principals)

@@ -22,6 +22,8 @@
 from policyuniverse.statement import Statement
 import unittest
 
+from .helpers import CustomMapping, CustomSequence
+
 # NotPrincipal
 statement01 = dict(
     Effect="Allow",
@@ -327,6 +329,17 @@ statement30 = dict(
     Condition={"StringLike": {"AWS:PrincipalOrgID": "o-*"}},
 )
 
+# Custom Mapping / Sequence types
+statement31 = CustomMapping(
+    dict(
+        Action="s3:GetBucketAcl",
+        Effect="Allow",
+        Principal=CustomMapping({"AWS": "*"}),
+        Resource="arn:aws:s3:::example-bucket",
+        Sid="Public Access",
+    )
+)
+
 
 class StatementTestCase(unittest.TestCase):
     def test_statement_effect(self):
@@ -372,6 +385,10 @@ class StatementTestCase(unittest.TestCase):
         del statement_wo_principal["Principal"]
         statement = Statement(statement_wo_principal)
         self.assertEqual(statement.principals, set([]))
+
+        # Custom types
+        statement = Statement(statement31)
+        self.assertSetEqual(statement.principals, set(["*"]))
 
     def test_statement_conditions(self):
         statement = Statement(statement07)
