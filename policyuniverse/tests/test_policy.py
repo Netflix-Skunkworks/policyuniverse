@@ -24,6 +24,8 @@ from policyuniverse import logger
 import unittest
 import json
 
+from .helpers import CustomMapping, CustomSequence
+
 
 policy01 = dict(
     Version="2012-10-08",
@@ -120,6 +122,26 @@ policy06 = dict(
             Condition={"StringEquals": {"AWS:PrincipalOrgID": "o-xxxxxxxxxx"}},
         )
     ],
+)
+
+# Custom types
+policy07 = CustomMapping(
+    dict(
+        Statement=CustomSequence(
+            [
+                CustomMapping(
+                    dict(
+                        Action="s3:GetBucketAcl",
+                        Effect="Allow",
+                        Principal=CustomMapping({"AWS": "*"}),
+                        Resource="arn:aws:s3:::example-bucket",
+                        Sid="Public Access",
+                    )
+                )
+            ]
+        ),
+        Version="2012-10-17",
+    )
 )
 
 
@@ -258,3 +280,8 @@ class PolicyTestCase(unittest.TestCase):
             list(s.statement for s in policy.statements),
             [policy_document["Statement"][0]],
         )
+
+    def test_mapping_and_sequence_policy_document(self):
+        policy = Policy(policy07)
+        self.assertSetEqual(policy.principals, set("*"))
+        self.assertIs(policy.is_internet_accessible(), True)
