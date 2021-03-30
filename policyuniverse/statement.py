@@ -207,13 +207,6 @@ class Statement(object):
             ):
                 for key, value in condition[condition_operator].items():
 
-                    # ForAllValues and ForAnyValue must be paired with a list.
-                    # Otherwise, skip over entries.
-                    if not is_array(value) and condition_operator.lower().startswith(
-                        "for"
-                    ):
-                        continue
-
                     if key.lower() in key_mapping:
                         if is_array(value):
                             for v in value:

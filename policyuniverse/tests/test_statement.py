@@ -283,7 +283,7 @@ statement26 = dict(
 )
 
 # Testing ForAnyValue/ForAllValues without list
-# Like statement 07, but this one shouldn't work
+# Like statement 07, this should work, even though it's using a set operator
 statement27 = dict(
     Effect="Allow",
     Principal="*",
@@ -297,7 +297,7 @@ statement27 = dict(
 )
 
 # Testing ForAnyValue/ForAllValues without list
-# Like statement 10, but this one shouldn't work
+# Like statement 10, this should work, even though it's using a set operator
 statement28 = dict(
     Effect="Allow",
     Principal="*",
@@ -398,7 +398,10 @@ class StatementTestCase(unittest.TestCase):
         )
 
         statement = Statement(statement27)
-        self.assertEqual(statement.condition_arns, set([]))
+        self.assertEqual(
+            statement.condition_arns,
+            set(["arn:aws:iam::012345678910:role/SomeTestRoleForTesting"]),
+        )
 
         statement = Statement(statement08)
         self.assertEqual(
@@ -417,7 +420,9 @@ class StatementTestCase(unittest.TestCase):
         )
 
         statement = Statement(statement28)
-        self.assertEqual(statement.condition_accounts, set([]))
+        self.assertEqual(
+            statement.condition_accounts, set(["012345678910", "123456789123"])
+        )
 
         statement = Statement(statement11)
         self.assertEqual(
@@ -486,11 +491,11 @@ class StatementTestCase(unittest.TestCase):
         # 22 is a likely malformed user ARN, but lacking an account number
         self.assertTrue(Statement(statement22).is_internet_accessible())
 
-        # 27 is like 07, but with the mistake of not providing a list for ForAny/ForAll
-        self.assertTrue(Statement(statement27).is_internet_accessible())
+        # 27 is like 07, but does not provide a list for ForAny/ForAll
+        self.assertFalse(Statement(statement27).is_internet_accessible())
 
-        # 28 is like 10, but with the mistake of not providing a list for ForAny/ForAll
-        self.assertTrue(Statement(statement28).is_internet_accessible())
+        # 28 is like 10, but does not provide a list for ForAny/ForAll
+        self.assertFalse(Statement(statement28).is_internet_accessible())
 
         # AWS:PrincipalOrgID
         self.assertFalse(Statement(statement29).is_internet_accessible())
