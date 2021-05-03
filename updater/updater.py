@@ -70,10 +70,10 @@ def call_phantom(token, output_file):
         # print("Calling Phantom!")
         p = subprocess.Popen(
             ["/home/runner/work/policyuniverse/policyuniverse/phantomjs-2.1.1-linux-x86_64/bin/phantomjs", console_js, token, output_file],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.STDOUT,
+            # stdout=subprocess.PIPE,
+            # stderr=subprocess.STDOUT,
         )
-        output, errs = p.communicate(timeout=120)
+        output, errs = p.communicate(timeout=3600)
         # print("Output: ", output)
         if errs:
             print("Errors: ", errs)
