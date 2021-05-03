@@ -39,6 +39,7 @@ jobs:
           AWS_ROLE_NAME: ${{ secrets.AWS_ROLE_NAME }}
         id: runupdater
         run: |
+          aws sts get-caller-identity
           cd updater
           python updater.py
           output_summary=`cat output_summary.txt`
