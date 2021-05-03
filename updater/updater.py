@@ -115,8 +115,6 @@ def gather_data_from_console():
         if ret_code == 0:
             service_data = json.loads(service_data)
         else:
-            print(f"Phantom process returned non-zero exit code: {ret_code}")
-            print(f"File contents:\n{service_data}")
             raise Exception(f"Phantom returned non-zero exit code: {ret_code}")
     return service_data
 

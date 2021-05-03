@@ -41,6 +41,7 @@ jobs:
         run: |
           cd updater
           python updater.py > output_summary.txt
+          cat output_summary.txt
           output_summary=`cat output_summary.txt`
           output_summary="${output_summary//'%'/'%25'}"
           output_summary="${output_summary//$'\n'/'%0A'}"
