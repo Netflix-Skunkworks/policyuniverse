@@ -11,10 +11,8 @@ var iam_url = 'https://console.aws.amazon.com/iam/home?region=us-east-1';
 var federation_base_url = 'https://signin.aws.amazon.com/federation';
 
 var signinToken = system.args[1];
-// var arn_file = system.args[2];
 var OUTPUT_FILE = system.args[2];
 
-// var arns = JSON.parse(fs.read(arn_file));
 
 var page = webPage.create();
 page.settings.userAgent = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36';
@@ -43,6 +41,18 @@ page.onResourceReceived = function(resource) {
     }
 };
 
+phantom.onError = function(msg, trace) {
+var msgStack = ['PHANTOM ERROR: ' + msg];
+    if (trace && trace.length) {
+        msgStack.push('TRACE:');
+        trace.forEach(function(t) {
+        msgStack.push(' -> ' + (t.file || t.sourceURL) + ': ' + t.line + (t.function ? ' (in function ' + t.function +')' : ''));
+        });
+    }
+    console.log(msgStack.join('\n'));
+    phantom.exit(1);
+};
+
 var getSessionCookies = function(token) {
     var url = federation_base_url + '?Action=login'
                                   + '&Issuer=tripleA'
@@ -52,8 +62,10 @@ var getSessionCookies = function(token) {
     statusCode = 400; // default fail
 
     var onComplete = function(response) {
+        console.log("status code: " + statusCode)
         if(statusCode < 400) {
             console.log('Successfully logged in')
+            page.render("help.png")
             page.includeJs(
                 "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js",
                 function() {
@@ -63,7 +75,7 @@ var getSessionCookies = function(token) {
         } else {
             console.log('Failed to log in')
             console.log('Account '+response+'.');
-            phantom.exit(-1);
+            phantom.exit(1);
         }
     };
     page.open(url, function(response) { setTimeout(onComplete, 20000, response) });
@@ -77,7 +89,6 @@ var advisor = function() {
     var progress = {};
 
     XSRF_TOKEN = window.Csrf.fromCookie(null);
-    // XSRF_TOKEN = app.orcaCsrf.token;
 
     var collectServices = function() {
         console.log("Asking for services.");
@@ -156,5 +167,3 @@ var advisor = function() {
 
     collectServices();
 };
-
-
