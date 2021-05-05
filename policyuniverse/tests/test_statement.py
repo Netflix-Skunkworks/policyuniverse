@@ -346,7 +346,11 @@ statement32 = dict(
     Principal="*",
     Action=["s3:*"],
     Resource="*",
-    Condition={"ArnEquals": {"AWS:PrincipalARN": "arn:aws:iam::012345678910:role/SomePrincipalRole"}},
+    Condition={
+        "ArnEquals": {
+            "AWS:PrincipalARN": "arn:aws:iam::012345678910:role/SomePrincipalRole"
+        }
+    },
 )
 
 
