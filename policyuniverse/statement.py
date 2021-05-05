@@ -172,6 +172,7 @@ class Statement(object):
 
         key_mapping = {
             "aws:sourcearn": "arn",
+            "aws:principalarn": "arn",
             "aws:sourceowner": "account",
             "aws:sourceaccount": "account",
             "aws:principalorgid": "org-id",
