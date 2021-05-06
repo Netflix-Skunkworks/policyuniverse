@@ -49,4 +49,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       if: success() && matrix.python-version == '3.7'
       run: |
-        coveralls
+        coveralls -v --service=github-actions
