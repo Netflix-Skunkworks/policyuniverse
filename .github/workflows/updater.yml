@@ -3,6 +3,7 @@ name: "PolicyUniverse Updater - Action"
 on:
   schedule:
     - cron: '15 10 * * *'
+  workflow_dispatch:
 
 jobs:
   Update-Job:

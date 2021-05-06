@@ -111,9 +111,13 @@ def gather_data_from_console():
     token = _get_signin_token(creds)
     with tempfile.NamedTemporaryFile() as f:
         ret_code = call_phantom(token, f.name)
+        service_data = f.read()
         if ret_code == 0:
-            service_data = f.read()
             service_data = json.loads(service_data)
+        else:
+            print("Phantom process returned non-zero exit code: {ret_code}".format(ret_code=ret_code))
+            print("File contents:\n{service_data}".format(service_data=service_data))
+            raise Exception("Phantom returned non-zero exit code: {ret_code}".format(ret_code=ret_code))
     return service_data
 
 
