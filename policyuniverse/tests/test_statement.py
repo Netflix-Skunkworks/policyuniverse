@@ -340,6 +340,19 @@ statement31 = CustomMapping(
     )
 )
 
+# aws:PrincipalARN in conditions
+statement32 = dict(
+    Effect="Allow",
+    Principal="*",
+    Action=["s3:*"],
+    Resource="*",
+    Condition={
+        "ArnEquals": {
+            "AWS:PrincipalARN": "arn:aws:iam::012345678910:role/SomePrincipalRole"
+        }
+    },
+)
+
 
 class StatementTestCase(unittest.TestCase):
     def test_statement_effect(self):
@@ -457,6 +470,12 @@ class StatementTestCase(unittest.TestCase):
         statement = Statement(statement30)
         self.assertEqual(statement.condition_orgids, set(["o-*"]))
 
+        statement = Statement(statement32)
+        self.assertEqual(
+            statement.condition_arns,
+            set(["arn:aws:iam::012345678910:role/SomePrincipalRole"]),
+        )
+
     def test_statement_internet_accessible(self):
         self.assertTrue(Statement(statement14).is_internet_accessible())
         self.assertTrue(Statement(statement15).is_internet_accessible())
@@ -502,3 +521,6 @@ class StatementTestCase(unittest.TestCase):
 
         # AWS:PrincipalOrgID Wildcard
         self.assertTrue(Statement(statement30).is_internet_accessible())
+
+        # AWS:PrincipalARN
+        self.assertFalse(Statement(statement32).is_internet_accessible())

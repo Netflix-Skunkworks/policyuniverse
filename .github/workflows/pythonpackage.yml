@@ -46,6 +46,7 @@ jobs:
     - name: Upload coverage data under py37
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       if: success() && matrix.python-version == '3.7'
       run: |
         coveralls
