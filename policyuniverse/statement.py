@@ -177,7 +177,7 @@ class Statement(object):
             "aws:sourceaccount": "account",
             "aws:principalorgid": "org-id",
             "kms:calleraccount": "account",
-            "aws:userid": "userid",
+            "aws:userid": "arn",
             "aws:sourceip": "cidr",
             "aws:sourcevpc": "vpc",
             "aws:sourcevpce": "vpce",
@@ -236,10 +236,6 @@ class Statement(object):
     @property
     def condition_orgids(self):
         return self._condition_field("org-id")
-
-    @property
-    def condition_userids(self):
-        return self._condition_field("userid")
 
     @property
     def condition_cidrs(self):
@@ -323,7 +319,7 @@ class Statement(object):
             # S3 ARNs typically don't have account numbers.
             return False
 
-        if not arn.account_number and not arn.service:
+        if not arn.account_number and not arn.service and not arn.unique_id:
             logger.warning(
                 "Auditor could not parse Account Number from ARN {arn}.".format(
                     arn=arn_input
