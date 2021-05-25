@@ -10,7 +10,7 @@ dev_require = ["pre-commit", "black"]
 
 setup(
     name="policyuniverse",
-    version="1.3.5.20210511",
+    version="1.3.5.20210525",
     description="Parse and Process AWS IAM Policies, Statements, ARNs, and wildcards.",
     long_description=open(os.path.join(ROOT, "README.md")).read(),
     long_description_content_type="text/markdown",
