@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# from distutils.core import setup
+from setuptools import setup
 import os
 
 from setuptools import setup
@@ -12,7 +12,7 @@ dev_require = ["pre-commit", "black"]
 
 setup(
     name="policyuniverse",
-    version="1.3.4.20210402",
+    version="1.3.5.20210527",
     description="Parse and Process AWS IAM Policies, Statements, ARNs, and wildcards.",
     long_description=open(os.path.join(ROOT, "README.md")).read(),
     long_description_content_type="text/markdown",
