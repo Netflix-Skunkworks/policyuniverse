@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 
 # from distutils.core import setup
-from setuptools import setup
 import os
+
+from setuptools import setup
 
 ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__)))
 
-tests_require = ["pytest", "coveralls"]
+tests_require = ["pytest", "coveralls", "bandit"]
 dev_require = ["pre-commit", "black"]
 
 setup(

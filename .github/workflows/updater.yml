@@ -73,4 +73,3 @@ jobs:
         run: |
           echo "Pull Request Number - ${{ env.PULL_REQUEST_NUMBER }}"
           echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
-          
