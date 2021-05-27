@@ -20,11 +20,15 @@ class ServiceActionTest(ServiceTest):
             docPage="",
             id="PurgeQueue",
             contextKeys=list(
-                [{'description': 'Filters actions based on the Amazon Id in the request',
-                    'docPage': '',
-                    'docPageRel': 'https://docs.aws.amazon.com/a4b/latest/APIReference/API_RegisterAVSDevice.html',
-                    'name': 'a4b:amazonId',
-                    'type': 'String'}]
+                [
+                    {
+                        "description": "Filters actions based on the Amazon Id in the request",
+                        "docPage": "",
+                        "docPageRel": "https://docs.aws.amazon.com/a4b/latest/APIReference/API_RegisterAVSDevice.html",
+                        "name": "a4b:amazonId",
+                        "type": "String",
+                    }
+                ]
             ),
         )
 
