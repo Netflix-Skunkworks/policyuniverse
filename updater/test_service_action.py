@@ -1,5 +1,6 @@
-import logging
 import json
+import logging
+
 from service import Service
 from service_action import ServiceAction
 from test_service import ServiceTest

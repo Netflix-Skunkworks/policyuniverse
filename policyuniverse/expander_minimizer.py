@@ -20,12 +20,14 @@
 
 """
 from __future__ import print_function
+
+import copy
+import fnmatch
+import json
+import sys
+
 from policyuniverse import all_permissions
 from policyuniverse.common import ensure_array
-import json
-import fnmatch
-import sys
-import copy
 
 policy_headers = ["rolepolicies", "grouppolicies", "userpolicies", "policy"]
 

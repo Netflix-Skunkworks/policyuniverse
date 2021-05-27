@@ -19,8 +19,9 @@
 .. moduleauthor:: Patrick Kelley <patrickbarrettkelley@gmail.com> @patrickbkelley
 
 """
-from policyuniverse import logger
 import re
+
+from policyuniverse import logger
 
 
 class ARN(object):

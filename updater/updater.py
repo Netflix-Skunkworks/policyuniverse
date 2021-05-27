@@ -1,13 +1,13 @@
-from collections import defaultdict
 import json
-import urllib.parse
-import tempfile
 import os
-from subprocess import CalledProcessError
 import subprocess
+import tempfile
+import urllib.parse
+from collections import defaultdict
+from subprocess import CalledProcessError
+
 import requests
 from cloudaux.aws.sts import boto3_cached_conn
-
 from service import Service
 from service_action import ServiceAction
 

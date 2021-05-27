@@ -19,9 +19,10 @@
 .. moduleauthor::  George Psarakis <giwrgos.psarakis@gmail.com>
 
 """
-from policyuniverse.common import is_array, ensure_array
 import unittest
 from collections.abc import Sequence
+
+from policyuniverse.common import ensure_array, is_array
 
 
 class CustomSequence(Sequence):
