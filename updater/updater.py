@@ -229,6 +229,7 @@ def main():
 
     with open("output_formatted.json", "w") as outfile:
         json.dump(service_data, outfile, indent=2, sort_keys=True)
+        outfile.write("\n")
 
     # print(json.dumps(service_data, indent=2, sort_keys=True))
 
