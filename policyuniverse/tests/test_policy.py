@@ -19,13 +19,12 @@
 .. moduleauthor::  Patrick Kelley <patrick@netflix.com>
 
 """
-from policyuniverse.policy import Policy
-from policyuniverse import logger
-import unittest
 import json
+import unittest
+
+from policyuniverse.policy import Policy
 
 from .helpers import CustomMapping, CustomSequence
-
 
 policy01 = dict(
     Version="2012-10-08",

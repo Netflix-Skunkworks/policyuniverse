@@ -19,9 +19,10 @@
 .. moduleauthor::  Mike Grima <mgrima@netflix.com>
 
 """
-from policyuniverse.arn import ARN
-from policyuniverse import logger
 import unittest
+
+from policyuniverse import logger
+from policyuniverse.arn import ARN
 
 
 class ARNTestCase(unittest.TestCase):
