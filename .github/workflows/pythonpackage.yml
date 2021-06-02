@@ -31,18 +31,10 @@ jobs:
         pre-commit run -a
     - name: Test with pytest/coverage
       run: |
-        pip install pytest coveralls
-        coverage run -a -m py.test policyuniverse/tests/test_expander_minimizer.py
-        coverage run -a -m py.test policyuniverse/tests/test_arn.py
-        coverage run -a -m py.test policyuniverse/tests/test_statement.py
-        coverage run -a -m py.test policyuniverse/tests/test_policy.py
-        coverage run -a -m py.test updater/test_service.py
-        coverage run -a -m py.test updater/test_service_action.py
-
-    - name: Upload coverage data under py37
+        pip install pytest pytest-cov coveralls==2.2.0
+        pytest --cov
+    - name: Upload coverage data to coveralls.io
+      if: success() && matrix.python-version == '3.7'
+      run: coveralls
       env:
-        COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      if: success() && matrix.python-version == '3.7' && github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]'
-      run: |
-        coveralls --service=github
