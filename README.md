@@ -4,6 +4,8 @@
 
 [![Build Status](https://github.com/Netflix-Skunkworks/policyuniverse/workflows/Python%20package/badge.svg)](https://github.com/Netflix-Skunkworks/policyuniverse/actions)
 
+[![Updater Status](https://github.com/Netflix-Skunkworks/policyuniverse/actions/workflows/updater.yml/badge.svg)](https://github.com/Netflix-Skunkworks/policyuniverse/actions/workflows/updater.yml)
+
 [![Coverage Status](https://coveralls.io/repos/github/Netflix-Skunkworks/policyuniverse/badge.svg?branch=master&1)](https://coveralls.io/github/Netflix-Skunkworks/policyuniverse?branch=master)
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
