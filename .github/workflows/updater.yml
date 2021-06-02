@@ -67,8 +67,12 @@ jobs:
           title: 'Updating PolicyUniverse Data.json'
           body: ${{ steps.runupdater.outputs.updatersummary }}
           labels: data-update, automated pr
-          assignees: scriptsrc
-          reviewers: scriptsrc
+          assignees: |
+            scriptsrc
+            patricksanders
+          reviewers: |
+            scriptsrc
+            patricksanders
           team-reviewers: owners, maintainers
           draft: false
           branch: auto_data_update
