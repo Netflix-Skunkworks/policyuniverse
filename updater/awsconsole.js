@@ -100,7 +100,7 @@ var advisor = function() {
                         collectServiceActions(actions_url, service_name);
                     }
                 );
-            
+
                 checkProgress();
             },
             error: function(asdf) {

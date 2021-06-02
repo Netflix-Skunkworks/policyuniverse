@@ -1,13 +1,13 @@
-from collections import defaultdict
 import json
-import urllib.parse
-import tempfile
 import os
-from subprocess import CalledProcessError
 import subprocess
+import tempfile
+import urllib.parse
+from collections import defaultdict
+from subprocess import CalledProcessError
+
 import requests
 from cloudaux.aws.sts import boto3_cached_conn
-
 from service import Service
 from service_action import ServiceAction
 
@@ -69,7 +69,12 @@ def call_phantom(token, output_file):
     try:
         # print("Calling Phantom!")
         p = subprocess.Popen(
-            ["/home/runner/work/policyuniverse/policyuniverse/phantomjs-2.1.1-linux-x86_64/bin/phantomjs", console_js, token, output_file],
+            [
+                "/home/runner/work/policyuniverse/policyuniverse/phantomjs-2.1.1-linux-x86_64/bin/phantomjs",
+                console_js,
+                token,
+                output_file,
+            ],
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
         )
@@ -115,9 +120,17 @@ def gather_data_from_console():
         if ret_code == 0:
             service_data = json.loads(service_data)
         else:
-            print("Phantom process returned non-zero exit code: {ret_code}".format(ret_code=ret_code))
+            print(
+                "Phantom process returned non-zero exit code: {ret_code}".format(
+                    ret_code=ret_code
+                )
+            )
             print("File contents:\n{service_data}".format(service_data=service_data))
-            raise Exception("Phantom returned non-zero exit code: {ret_code}".format(ret_code=ret_code))
+            raise Exception(
+                "Phantom returned non-zero exit code: {ret_code}".format(
+                    ret_code=ret_code
+                )
+            )
     return service_data
 
 

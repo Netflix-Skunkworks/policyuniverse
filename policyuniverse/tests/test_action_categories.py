@@ -61,21 +61,22 @@ class ActionGroupTestCase(unittest.TestCase):
             self.assertFalse(":get" in action)
 
         for action in list_only_actions:
-            self.assertFalse(":put" in action)
-            self.assertFalse(":create" in action)
-            self.assertFalse(":attach" in action)
+            self.assertFalse(":put" in action, action)
+            self.assertFalse(":create" in action, action)
+            self.assertFalse(":attach" in action, action)
 
         for action in read_only_actions:
-            # read actions shouldn't start with "Put" unless they are miscategorized.
+            # read actions shouldn't start with "Put" or "Create" unless they are miscategorized.
             if action in {
                 "codeguru-reviewer:createconnectiontoken",
                 "ssm:putconfigurepackageresult",
+                "kinesisanalytics:createapplicationpresignedurl",
             }:  # miscategorized AWS actions
                 continue
             # self.assertFalse(':list' in action)  # Tons of list* permissions are mis-categorized(?) as Read.
-            self.assertFalse(":put" in action)
-            self.assertFalse(":create" in action)
-            self.assertFalse(":attach" in action)
+            self.assertFalse(":put" in action, action)
+            self.assertFalse(":create" in action, action)
+            self.assertFalse(":attach" in action, action)
 
         for action in write_actions:
             # write actions shouldn't start with "get" unless they are miscategorized.

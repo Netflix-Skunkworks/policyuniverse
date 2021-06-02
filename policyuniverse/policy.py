@@ -19,9 +19,10 @@
 .. moduleauthor::  Patrick Kelley <patrickbarrettkelley@gmail.com> @patrickbkelley
 
 """
-from policyuniverse.statement import Statement
-from policyuniverse.common import ensure_array
 from collections import defaultdict
+
+from policyuniverse.common import ensure_array
+from policyuniverse.statement import Statement
 
 
 class Policy(object):

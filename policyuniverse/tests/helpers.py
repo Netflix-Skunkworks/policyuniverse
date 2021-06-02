@@ -1,5 +1,5 @@
-from policyuniverse.statement import Mapping
 from policyuniverse.common import Sequence
+from policyuniverse.statement import Mapping
 
 
 class CustomSequence(Sequence):

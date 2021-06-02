@@ -19,10 +19,11 @@
 .. moduleauthor::  Patrick Kelley <patrickbarrettkelley@gmail.com> @patrickbkelley
 
 """
-from policyuniverse.statement import Statement
 import unittest
 
-from .helpers import CustomMapping, CustomSequence
+from policyuniverse.statement import Statement
+
+from .helpers import CustomMapping
 
 # NotPrincipal
 statement01 = dict(

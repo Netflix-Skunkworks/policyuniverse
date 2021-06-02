@@ -213,7 +213,7 @@ policy = {
             "Effect": "Allow"
           }]
       }
-      
+
 expanded_policy = expand_policy(policy=policy)
 >>> Start size: 131. End size: 286
 print(expanded_policy == {

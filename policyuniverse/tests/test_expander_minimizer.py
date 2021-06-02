@@ -19,18 +19,20 @@
 .. moduleauthor::  Mike Grima <mgrima@netflix.com>
 
 """
-import unittest
 import copy
-from policyuniverse.expander_minimizer import expand_policy
-from policyuniverse.expander_minimizer import minimize_policy
-from policyuniverse.expander_minimizer import expand_minimize_over_policies
-from policyuniverse.expander_minimizer import get_actions_from_statement
-from policyuniverse.expander_minimizer import all_permissions
-from policyuniverse.expander_minimizer import minimize_statement_actions
-from policyuniverse.expander_minimizer import _get_prefixes_for_action
-from policyuniverse.expander_minimizer import _expand_wildcard_action
-from policyuniverse.expander_minimizer import _get_desired_actions_from_statement
+import unittest
 
+from policyuniverse.expander_minimizer import (
+    _expand_wildcard_action,
+    _get_desired_actions_from_statement,
+    _get_prefixes_for_action,
+    all_permissions,
+    expand_minimize_over_policies,
+    expand_policy,
+    get_actions_from_statement,
+    minimize_policy,
+    minimize_statement_actions,
+)
 
 WILDCARD_ACTION_1 = "swf:res*"
 
@@ -95,6 +97,7 @@ AUTOSCALING_PERMISSIONS = sorted(
         "autoscaling:deletepolicy",
         "autoscaling:deletescheduledaction",
         "autoscaling:deletetags",
+        "autoscaling:deletewarmpool",
         "autoscaling:describeaccountlimits",
         "autoscaling:describeadjustmenttypes",
         "autoscaling:describeautoscalinggroups",
@@ -114,6 +117,7 @@ AUTOSCALING_PERMISSIONS = sorted(
         "autoscaling:describescheduledactions",
         "autoscaling:describetags",
         "autoscaling:describeterminationpolicytypes",
+        "autoscaling:describewarmpool",
         "autoscaling:detachinstances",
         "autoscaling:detachloadbalancers",
         "autoscaling:detachloadbalancertargetgroups",
@@ -126,6 +130,7 @@ AUTOSCALING_PERMISSIONS = sorted(
         "autoscaling:putnotificationconfiguration",
         "autoscaling:putscalingpolicy",
         "autoscaling:putscheduledupdategroupaction",
+        "autoscaling:putwarmpool",
         "autoscaling:recordlifecycleactionheartbeat",
         "autoscaling:resumeprocesses",
         "autoscaling:setdesiredcapacity",

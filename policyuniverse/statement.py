@@ -19,14 +19,14 @@
 .. moduleauthor::  Patrick Kelley <patrickbarrettkelley@gmail.com> @patrickbkelley
 
 """
-from policyuniverse.arn import ARN
-from policyuniverse.expander_minimizer import get_actions_from_statement
-from policyuniverse import logger
-from policyuniverse.action_categories import categories_for_actions
-from policyuniverse.common import ensure_array, is_array
-
 import re
 from collections import namedtuple
+
+from policyuniverse import logger
+from policyuniverse.action_categories import categories_for_actions
+from policyuniverse.arn import ARN
+from policyuniverse.common import ensure_array, is_array
+from policyuniverse.expander_minimizer import get_actions_from_statement
 
 try:
     from collections.abc import Mapping
@@ -151,8 +151,8 @@ class Statement(object):
         Reason: A condition is meant to limit the principal in a statement.  Often, resource policies use a wildcard principal
         and rely exclusively on the Condition block to limit access.
 
-        We would want to alert if the Condition had no limitations (like a non-existent Condition block), or very weak limitations.  Any negation
-        would be weak, and largely equivelant to having no condition block whatsoever.
+        We would want to alert if the Condition had no limitations (like a non-existent Condition block), or very weak
+        limitations.  Any negation would be weak, and largely equivelant to having no condition block whatsoever.
 
         The alerting code that relies on this data must ensure the condition has at least one of the following:
         - A limiting ARN

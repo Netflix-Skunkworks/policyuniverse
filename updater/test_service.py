@@ -1,6 +1,7 @@
+import json
 import logging
 import unittest
-import json
+
 from service import Service
 
 logging.basicConfig(
