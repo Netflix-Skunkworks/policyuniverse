@@ -175,6 +175,7 @@ class Statement(object):
             "aws:principalarn": "arn",
             "aws:sourceowner": "account",
             "aws:sourceaccount": "account",
+            "aws:principalaccount": "account",
             "aws:principalorgid": "org-id",
             "kms:calleraccount": "account",
             "aws:userid": "userid",
