@@ -34,6 +34,7 @@ class ARN(object):
     error = False
     root = False
     service = False
+    unique_id = None
 
     def __init__(self, input):
         self.arn = input
@@ -62,6 +63,13 @@ class ARN(object):
             self._from_aws_service(input, aws_service_match.group(1))
             return
 
+        aws_service_match = re.search(
+            r"^A(BI|CC|GP|ID|IP|KI|NP|NV|PK|RO|SC|SI)A", input
+        )
+        if aws_service_match:
+            self._from_unique_id(input)
+            return
+
         self.error = True
         logger.warning("ARN Could not parse [{}].".format(input))
 
@@ -78,3 +86,6 @@ class ARN(object):
     def _from_aws_service(self, input, service):
         self.tech = service
         self.service = True
+
+    def _from_unique_id(self, input):
+        self.unique_id = input

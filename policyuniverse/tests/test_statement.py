@@ -354,6 +354,14 @@ statement32 = dict(
     },
 )
 
+# Principal using IAM Unique ID
+statement33 = dict(
+    Effect="Allow",
+    Principal="AIDAJQABLZS4A3QDU576Q",
+    Action=["rds:*"],
+    Resource="*",
+)
+
 
 class StatementTestCase(unittest.TestCase):
     def test_statement_effect(self):
@@ -445,10 +453,10 @@ class StatementTestCase(unittest.TestCase):
 
         statement = Statement(statement12)
         self.assertEqual(
-            statement.condition_arns, set(["arn:aws:iam::012345678910:role/Admin"])
+            statement.condition_arns,
+            set(["AROAI1111111111111111:*", "arn:aws:iam::012345678910:role/Admin"]),
         )
         self.assertEqual(statement.condition_accounts, set(["012345678910"]))
-        self.assertEqual(statement.condition_userids, set(["AROAI1111111111111111:*"]))
         self.assertEqual(
             statement.condition_cidrs,
             set(["123.45.67.89", "10.0.7.0/24", "172.16.0.0/16"]),
@@ -460,8 +468,6 @@ class StatementTestCase(unittest.TestCase):
         self.assertEqual(
             statement.condition_arns, set(["arn:aws:iam::012345678910:role/Admin"])
         )
-        self.assertEqual(len(statement.condition_userids), 0)
-
         statement = Statement(statement23)
         self.assertEqual(statement.condition_accounts, set(["222222222222"]))
 
@@ -525,3 +531,6 @@ class StatementTestCase(unittest.TestCase):
 
         # AWS:PrincipalARN
         self.assertFalse(Statement(statement32).is_internet_accessible())
+
+        # IAM Unique ID in Principal
+        self.assertFalse(Statement(statement33).is_internet_accessible())
