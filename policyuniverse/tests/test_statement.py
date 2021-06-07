@@ -354,6 +354,19 @@ statement32 = dict(
     },
 )
 
+# aws:PrincipalAccount in conditions
+statement33 = dict(
+    Effect="Allow",
+    Principal="*",
+    Action=["rds:*"],
+    Resource="*",
+    Condition={
+        "ForAnyValue:StringEquals": {
+            "AWS:PrincipalAccount": ["012345678910", "123456789123"]
+        }
+    },
+)
+
 
 class StatementTestCase(unittest.TestCase):
     def test_statement_effect(self):
@@ -477,6 +490,11 @@ class StatementTestCase(unittest.TestCase):
             set(["arn:aws:iam::012345678910:role/SomePrincipalRole"]),
         )
 
+        statement = Statement(statement33)
+        self.assertEqual(
+            statement.condition_accounts, set(["012345678910", "123456789123"])
+        )
+
     def test_statement_internet_accessible(self):
         self.assertTrue(Statement(statement14).is_internet_accessible())
         self.assertTrue(Statement(statement15).is_internet_accessible())
@@ -525,3 +543,6 @@ class StatementTestCase(unittest.TestCase):
 
         # AWS:PrincipalARN
         self.assertFalse(Statement(statement32).is_internet_accessible())
+
+        # AWS:PrincipalAccount
+        self.assertFalse(Statement(statement33).is_internet_accessible())
