@@ -38,44 +38,47 @@ class Organization(object):
             component = components_list[component_index]
 
             if component_index == 0:
-                if component.startswith("o-") or component == "*":
-                    self.organization = component
-                else:
-                    self.error = True
-                    logger.warning(
-                        "Organization Org ID parse error [{}].".format(input)
-                    )
-                    return
-
+                self._parse_organization(component)
             elif component_index == 1:
-                if component.startswith("r-") or component == "*":
-                    self.root = component
-                else:
-                    self.error = True
-                    logger.warning("Organization root parse error [{}].".format(input))
-                    return
-
+                self._parse_root(component)
             else:
-                if self.valid_for_parent_ou or self.valid_for_child_ous:
-                    self.error = True
-                    logger.warning("Organization OU validity error [{}].".format(input))
-                    return
+                self._parse_ou_path(component)
 
-                if not component:
-                    self.valid_for_parent_ou = True
-                elif component == "*":
-                    self.valid_for_child_ous = True
-                    self.valid_for_parent_ou = True
-                elif component == "ou-*":
-                    self.valid_for_child_ous = True
-                else:
-                    self.valid_for_all_ous = False
+            if self.error:
+                return
 
-                    if component.startswith("ou-"):
-                        self.ou_path.append(component)
-                    else:
-                        self.error = True
-                        logger.warning(
-                            "Organization OU parse error [{}].".format(input)
-                        )
-                        return
+    def _parse_organization(self, orgid):
+        if orgid.startswith("o-") or orgid == "*":
+            self.organization = orgid
+        else:
+            self.error = True
+            logger.warning("Organization Org ID parse error [{}].".format(input))
+
+    def _parse_root(self, root):
+        if root.startswith("r-") or root == "*":
+            self.root = root
+        else:
+            self.error = True
+            logger.warning("Organization root parse error [{}].".format(input))
+
+    def _parse_ou_path(self, ou):
+        if self.valid_for_parent_ou or self.valid_for_child_ous:
+            self.error = True
+            logger.warning("Organization OU validity error [{}].".format(input))
+            return
+
+        if not ou:
+            self.valid_for_parent_ou = True
+        elif ou == "*":
+            self.valid_for_child_ous = True
+            self.valid_for_parent_ou = True
+        elif ou == "ou-*":
+            self.valid_for_child_ous = True
+        else:
+            self.valid_for_all_ous = False
+
+            if ou.startswith("ou-"):
+                self.ou_path.append(ou)
+            else:
+                self.error = True
+                logger.warning("Organization OU parse error [{}].".format(input))
