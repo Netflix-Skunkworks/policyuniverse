@@ -27,6 +27,7 @@ from policyuniverse.action_categories import categories_for_actions
 from policyuniverse.arn import ARN
 from policyuniverse.common import ensure_array, is_array
 from policyuniverse.expander_minimizer import get_actions_from_statement
+from policyuniverse.organization import Organization
 
 try:
     from collections.abc import Mapping
@@ -176,7 +177,8 @@ class Statement(object):
             "aws:sourceowner": "account",
             "aws:sourceaccount": "account",
             "aws:principalaccount": "account",
-            "aws:principalorgid": "org-id",
+            "aws:principalorgid": "organization",
+            "aws:principalorgpaths": "organization",
             "kms:calleraccount": "account",
             "aws:userid": "userid",
             "aws:sourceip": "cidr",
@@ -236,7 +238,17 @@ class Statement(object):
 
     @property
     def condition_orgids(self):
-        return self._condition_field("org-id")
+        return set(
+            [
+                Organization(entry.value).organization
+                for entry in self.condition_entries
+                if entry.category == "organization"
+            ]
+        )
+
+    @property
+    def condition_orgpaths(self):
+        return self._condition_field("organization")
 
     @property
     def condition_userids(self):
@@ -290,6 +302,9 @@ class Statement(object):
         if entry.category == "arn":
             return self._arn_internet_accessible(entry.value)
 
+        if entry.category == "organization":
+            return self._organization_internet_accessible(entry.value)
+
         if entry.category == "userid":
             return self._userid_internet_accessible(entry.value)
 
@@ -333,6 +348,17 @@ class Statement(object):
             return True
 
         if arn.account_number == "*":
+            return True
+
+        return False
+
+    def _organization_internet_accessible(self, org_input):
+        organization = Organization(org_input)
+        if organization.error:
+            logger.warning("Auditor could not parse Org {org}.".format(org=org_input))
+            return "o-*" in org_input
+
+        if organization.organization == "o-*":
             return True
 
         return False

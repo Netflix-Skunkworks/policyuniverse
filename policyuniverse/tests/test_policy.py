@@ -185,7 +185,7 @@ class PolicyTestCase(unittest.TestCase):
 
         self.assertEqual(
             Policy(policy06).condition_entries,
-            set([ConditionTuple(category="org-id", value="o-xxxxxxxxxx")]),
+            set([ConditionTuple(category="organization", value="o-xxxxxxxxxx")]),
         )
 
     def test_whos_allowed(self):

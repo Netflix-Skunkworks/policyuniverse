@@ -367,6 +367,35 @@ statement33 = dict(
     },
 )
 
+# aws:PrincipalOrgPath in conditions
+statement34 = dict(
+    Effect="Allow",
+    Principal="*",
+    Action=["rds:*"],
+    Resource="*",
+    Condition={
+        "ForAnyValue:StringEquals": {
+            "aws:PrincipalOrgPaths": ["o-a1b2c3d4e5/r-ab12/ou-ab12-11111111"]
+        }
+    },
+)
+
+# aws:PrincipalOrgPath in conditions with wildcard Organization ID
+# this is vulnerable because the Root and OU IDs are not globally unique
+statement35 = dict(
+    Effect="Allow",
+    Principal="*",
+    Action=["rds:*"],
+    Resource="*",
+    Condition={
+        "ForAnyValue:StringEquals": {
+            "aws:PrincipalOrgPaths": [
+                "o-*/r-ab12/ou-ab12-11111111/ou-ab12-22222222/ou-*"
+            ]
+        }
+    },
+)
+
 
 class StatementTestCase(unittest.TestCase):
     def test_statement_effect(self):
@@ -480,9 +509,11 @@ class StatementTestCase(unittest.TestCase):
 
         statement = Statement(statement29)
         self.assertEqual(statement.condition_orgids, set(["o-xxxxxxxxxx"]))
+        self.assertEqual(statement.condition_orgpaths, set(["o-xxxxxxxxxx"]))
 
         statement = Statement(statement30)
         self.assertEqual(statement.condition_orgids, set(["o-*"]))
+        self.assertEqual(statement.condition_orgpaths, set(["o-*"]))
 
         statement = Statement(statement32)
         self.assertEqual(
@@ -493,6 +524,19 @@ class StatementTestCase(unittest.TestCase):
         statement = Statement(statement33)
         self.assertEqual(
             statement.condition_accounts, set(["012345678910", "123456789123"])
+        )
+
+        statement = Statement(statement34)
+        self.assertEqual(statement.condition_orgids, set(["o-a1b2c3d4e5"]))
+        self.assertEqual(
+            statement.condition_orgpaths, set(["o-a1b2c3d4e5/r-ab12/ou-ab12-11111111"])
+        )
+
+        statement = Statement(statement35)
+        self.assertEqual(statement.condition_orgids, set(["o-*"]))
+        self.assertEqual(
+            statement.condition_orgpaths,
+            set(["o-*/r-ab12/ou-ab12-11111111/ou-ab12-22222222/ou-*"]),
         )
 
     def test_statement_internet_accessible(self):
@@ -546,3 +590,9 @@ class StatementTestCase(unittest.TestCase):
 
         # AWS:PrincipalAccount
         self.assertFalse(Statement(statement33).is_internet_accessible())
+
+        # AWS:PrincipalOrgPath
+        self.assertFalse(Statement(statement34).is_internet_accessible())
+
+        # AWS:PrincipalOrgPath Wildcard
+        self.assertTrue(Statement(statement35).is_internet_accessible())
