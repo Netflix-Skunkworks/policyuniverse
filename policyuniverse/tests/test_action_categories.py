@@ -57,8 +57,8 @@ class ActionGroupTestCase(unittest.TestCase):
             }:  # miscategorized AWS actions
                 continue
 
-            self.assertFalse(":list" in action)
-            self.assertFalse(":get" in action)
+            self.assertFalse(":list" in action, action)
+            self.assertFalse(":get" in action, action)
 
         for action in list_only_actions:
             self.assertFalse(":put" in action, action)
@@ -95,7 +95,8 @@ class ActionGroupTestCase(unittest.TestCase):
                 "quicksight:describecustompermissions",
                 "cloudshell:getfiledownloadurls",
                 "cloudshell:getfileuploadurls",
+                "bugbust:getjoineventstatus",
             }:  # miscategorized AWS actions
                 continue
-            self.assertFalse(":get" in action)
-            self.assertFalse(":describe" in action)
+            self.assertFalse(":get" in action, action)
+            self.assertFalse(":describe" in action, action)
