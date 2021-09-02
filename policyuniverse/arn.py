@@ -52,7 +52,9 @@ class ARN(object):
             self._from_account_number(input)
             return
 
-        aws_service_match = re.search(r"^(([^.]+)(.[^.]+)?)\.amazon(aws)?\.com$", input)
+        aws_service_match = re.search(
+            r"^(([^.])((.*)[^.])?)\.amazon(aws)?\.com$", input
+        )
         if aws_service_match:
             self._from_aws_service(input, aws_service_match.group(1))
             return

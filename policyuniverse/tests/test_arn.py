@@ -28,8 +28,12 @@ from policyuniverse.arn import ARN
 class ARNTestCase(unittest.TestCase):
     def test_from_arn(self):
         proper_arns = [
+            "ec2.amazonaws.com",
             "events.amazonaws.com",
             "cloudtrail.amazonaws.com",
+            "stacksets.cloudformation.amazonaws.com",
+            "aws-artifact-account-sync.amazonaws.com",
+            "member.org.stacksets.cloudformation.amazonaws.com",
             "arn:aws:iam::012345678910:root",
             "arn:aws:iam::012345678910:role/SomeTestRoleForTesting",
             "arn:aws:iam::012345678910:instance-profile/SomeTestInstanceProfileForTesting",
@@ -103,3 +107,18 @@ class ARNTestCase(unittest.TestCase):
             arn_obj = ARN(accnt)
 
             self.assertTrue(arn_obj.error)
+
+    def test_aws_service_arn_tech(self):
+        proper_arn_techs = {
+            "ec2.amazonaws.com": "ec2",
+            "events.amazonaws.com": "events",
+            "cloudtrail.amazonaws.com": "cloudtrail",
+            "stacksets.cloudformation.amazonaws.com": "stacksets.cloudformation",
+            "aws-artifact-account-sync.amazonaws.com": "aws-artifact-account-sync",
+            "member.org.stacksets.cloudformation.amazonaws.com": "member.org.stacksets.cloudformation",
+        }
+
+        for arn, tech in proper_arn_techs.items():
+            arn_obj = ARN(arn)
+            self.assertFalse(arn_obj.error)
+            self.assertTrue(arn_obj.tech == tech)
