@@ -322,7 +322,8 @@ class Statement(object):
     def _userid_internet_accessible(self, userid):
         # Trailing wildcards are okay for userids:
         # AROAIIIIIIIIIIIIIIIII:*
-        if userid.index("*") == len(userid) - 1:
+        if userid.find("*") == len(userid) - 1:
+            # note: this will also return False for a zero-length userid
             return False
         return True
 
