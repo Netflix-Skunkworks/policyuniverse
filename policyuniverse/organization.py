@@ -52,19 +52,19 @@ class Organization(object):
             self.organization = orgid
         else:
             self.error = True
-            logger.warning("Organization Org ID parse error [{}].".format(input))
+            logger.debug("Organization Org ID parse error [{}].".format(input))
 
     def _parse_root(self, root):
         if root.startswith("r-") or root == "*":
             self.root = root
         else:
             self.error = True
-            logger.warning("Organization root parse error [{}].".format(input))
+            logger.debug("Organization root parse error [{}].".format(input))
 
     def _parse_ou_path(self, ou):
         if self.valid_for_parent_ou or self.valid_for_child_ous:
             self.error = True
-            logger.warning("Organization OU validity error [{}].".format(input))
+            logger.debug("Organization OU validity error [{}].".format(input))
             return
 
         if not ou:
@@ -81,4 +81,4 @@ class Organization(object):
                 self.ou_path.append(ou)
             else:
                 self.error = True
-                logger.warning("Organization OU parse error [{}].".format(input))
+                logger.debug("Organization OU parse error [{}].".format(input))
