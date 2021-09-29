@@ -396,6 +396,15 @@ statement35 = dict(
     },
 )
 
+# AWS:userid with no *
+statement36 = dict(
+    Effect="Allow",
+    Principal="*",
+    Action=["rds:*"],
+    Resource="*",
+    Condition={"StringLike": {"AWS:userid": "AROAI1111111111111111:"}},
+)
+
 
 class StatementTestCase(unittest.TestCase):
     def test_statement_effect(self):
@@ -596,3 +605,6 @@ class StatementTestCase(unittest.TestCase):
 
         # AWS:PrincipalOrgPath Wildcard
         self.assertTrue(Statement(statement35).is_internet_accessible())
+
+        # AWS:userid with no *
+        self.assertTrue(Statement(statement36).is_internet_accessible())
