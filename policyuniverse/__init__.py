@@ -13,7 +13,6 @@ from policyuniverse.action import build_service_actions_from_service_data
 
 
 # Logging
-logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Read Input Data

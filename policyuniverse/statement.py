@@ -332,7 +332,7 @@ class Statement(object):
 
         arn = ARN(arn_input)
         if arn.error:
-            logger.warning("Auditor could not parse ARN {arn}.".format(arn=arn_input))
+            logger.debug("Auditor could not parse ARN {arn}.".format(arn=arn_input))
             return "*" in arn_input
 
         if arn.tech == "s3":
@@ -340,7 +340,7 @@ class Statement(object):
             return False
 
         if not arn.account_number and not arn.service:
-            logger.warning(
+            logger.debug(
                 "Auditor could not parse Account Number from ARN {arn}.".format(
                     arn=arn_input
                 )
@@ -355,7 +355,7 @@ class Statement(object):
     def _organization_internet_accessible(self, org_input):
         organization = Organization(org_input)
         if organization.error:
-            logger.warning("Auditor could not parse Org {org}.".format(org=org_input))
+            logger.debug("Auditor could not parse Org {org}.".format(org=org_input))
             return "o-*" in org_input
 
         if organization.organization == "o-*":
