@@ -29,6 +29,7 @@ setup(
     ],
     packages=["policyuniverse"],
     package_data={"policyuniverse": ["data.json"]},
+    python_requires='>=3.7',
     include_package_data=True,
     zip_safe=False,
     classifiers=["License :: OSI Approved :: Apache Software License"],
