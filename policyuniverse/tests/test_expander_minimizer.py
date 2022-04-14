@@ -126,6 +126,7 @@ AUTOSCALING_PERMISSIONS = sorted(
         "autoscaling:enterstandby",
         "autoscaling:executepolicy",
         "autoscaling:exitstandby",
+        "autoscaling:getpredictivescalingforecast",
         "autoscaling:putlifecyclehook",
         "autoscaling:putnotificationconfiguration",
         "autoscaling:putscalingpolicy",
