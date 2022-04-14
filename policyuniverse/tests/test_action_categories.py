@@ -68,6 +68,7 @@ class ActionGroupTestCase(unittest.TestCase):
         for action in read_only_actions:
             # read actions shouldn't start with "Put" or "Create" unless they are miscategorized.
             if action in {
+                "cloud9:createenvironmenttoken",
                 "codeguru-reviewer:createconnectiontoken",
                 "ssm:putconfigurepackageresult",
                 "kinesisanalytics:createapplicationpresignedurl",
@@ -96,6 +97,8 @@ class ActionGroupTestCase(unittest.TestCase):
                 "cloudshell:getfiledownloadurls",
                 "cloudshell:getfileuploadurls",
                 "bugbust:getjoineventstatus",
+                "elasticmapreduce:getpersistentappuipresignedurl",
+                "elasticmapreduce:getonclusterappuipresignedurl",
             }:  # miscategorized AWS actions
                 continue
             self.assertFalse(":get" in action, action)
