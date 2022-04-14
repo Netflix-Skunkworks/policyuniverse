@@ -35,7 +35,7 @@ class ActionGroupTestCase(unittest.TestCase):
         self.assertIn("ec2", groups.keys())
         self.assertIn("iam", groups.keys())
         self.assertEqual(groups["ec2"], {"Write"})
-        self.assertEqual(groups["iam"], {u"Permissions", "List"})
+        self.assertEqual(groups["iam"], {"Permissions", "List"})
 
     def test_actions_for_category(self):
         from policyuniverse.action_categories import actions_for_category
