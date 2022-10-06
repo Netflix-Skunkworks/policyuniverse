@@ -171,21 +171,21 @@ class PolicyTestCase(unittest.TestCase):
         )
 
     def test_condition_entries(self):
-        from policyuniverse.statement import ConditionTuple
+        from policyuniverse.condition import Condition
 
         self.assertEqual(
             Policy(policy05).condition_entries,
             set(
                 [
-                    ConditionTuple(category="cidr", value="0.0.0.0/0"),
-                    ConditionTuple(category="account", value="012345678910"),
+                    Condition(location=1, key="IpAddress", category="cidr", value="0.0.0.0/0"),
+                    Condition(location=0, key="StringLike", category="account", value="012345678910"),
                 ]
             ),
         )
 
         self.assertEqual(
             Policy(policy06).condition_entries,
-            set([ConditionTuple(category="organization", value="o-xxxxxxxxxx")]),
+            set([Condition(location=0, key="StringEquals", category="organization", value="o-xxxxxxxxxx")]),
         )
 
     def test_whos_allowed(self):

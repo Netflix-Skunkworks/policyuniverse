@@ -26,6 +26,7 @@ from policyuniverse import logger
 from policyuniverse.action_categories import categories_for_actions
 from policyuniverse.arn import ARN
 from policyuniverse.common import ensure_array, is_array
+from policyuniverse.condition import Condition
 from policyuniverse.expander_minimizer import get_actions_from_statement
 from policyuniverse.organization import Organization
 
@@ -99,7 +100,9 @@ class Statement(object):
         for principal in self.principals:
             principal = PrincipalTuple(category="principal", value=principal)
             who.add(principal)
-        who = who.union(self.condition_entries)
+        for condition in self.condition_entries:
+            condition = ConditionTuple(category=condition.category, value=condition.value)
+            who.add(condition)
         return who
 
     def _principals(self):
@@ -204,6 +207,7 @@ class Statement(object):
             ),
         ]
 
+        location = 0
         for condition_operator in condition.keys():
             if any(
                 regex.match(condition_operator)
@@ -213,18 +217,26 @@ class Statement(object):
 
                     if key.lower() in key_mapping:
                         if is_array(value):
+                            location += 1
                             for v in value:
                                 conditions.append(
-                                    ConditionTuple(
-                                        value=v, category=key_mapping[key.lower()]
+                                    Condition(
+                                        location=location,
+                                        key=condition_operator,
+                                        category=key_mapping[key.lower()],
+                                        value=v
                                     )
                                 )
                         else:
                             conditions.append(
-                                ConditionTuple(
-                                    value=value, category=key_mapping[key.lower()]
+                                Condition(
+                                    location=location,
+                                    key=condition_operator,
+                                    category=key_mapping[key.lower()],
+                                    value=value
                                 )
                             )
+            location += 1
 
         return conditions
 
@@ -292,11 +304,17 @@ class Statement(object):
         if len(condition_entries) == 0:
             return True
 
-        for entry in condition_entries:
-            if self._is_condition_entry_internet_accessible(entry):
-                return True
+        state_at_location = {}
 
-        return False
+        for entry in condition_entries:
+            entry_is_internet_accessible = self._is_condition_entry_internet_accessible(entry)
+
+            if entry.location in state_at_location.keys():
+                state_at_location[entry.location] = entry_is_internet_accessible or state_at_location[entry.location]
+            else:
+                state_at_location[entry.location] = entry_is_internet_accessible
+
+        return all(state_at_location.values())
 
     def _is_condition_entry_internet_accessible(self, entry):
         if entry.category == "arn":
