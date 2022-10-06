@@ -32,15 +32,19 @@ class Condition(object):
         if not isinstance(other, Condition):
             return NotImplemented
 
-        return all([
-            self.location == other.location,
-            self.key == other.key,
-            self.category == other.category,
-            self.value == other.value
-        ])
+        return all(
+            [
+                self.location == other.location,
+                self.key == other.key,
+                self.category == other.category,
+                self.value == other.value,
+            ]
+        )
 
     def __hash__(self):
         return hash(str(self.location) + self.key + self.category + self.value)
 
     def __repr__(self):
-        return "Condition: " + str(self.location) + self.key + self.category + self.value
+        return (
+            "Condition: " + str(self.location) + self.key + self.category + self.value
+        )

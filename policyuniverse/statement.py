@@ -101,7 +101,9 @@ class Statement(object):
             principal = PrincipalTuple(category="principal", value=principal)
             who.add(principal)
         for condition in self.condition_entries:
-            condition = ConditionTuple(category=condition.category, value=condition.value)
+            condition = ConditionTuple(
+                category=condition.category, value=condition.value
+            )
             who.add(condition)
         return who
 
@@ -224,7 +226,7 @@ class Statement(object):
                                         location=location,
                                         key=condition_operator,
                                         category=key_mapping[key.lower()],
-                                        value=v
+                                        value=v,
                                     )
                                 )
                         else:
@@ -233,7 +235,7 @@ class Statement(object):
                                     location=location,
                                     key=condition_operator,
                                     category=key_mapping[key.lower()],
-                                    value=value
+                                    value=value,
                                 )
                             )
             location += 1
@@ -307,10 +309,14 @@ class Statement(object):
         state_at_location = {}
 
         for entry in condition_entries:
-            entry_is_internet_accessible = self._is_condition_entry_internet_accessible(entry)
+            entry_is_internet_accessible = self._is_condition_entry_internet_accessible(
+                entry
+            )
 
             if entry.location in state_at_location.keys():
-                state_at_location[entry.location] = entry_is_internet_accessible or state_at_location[entry.location]
+                state_at_location[entry.location] = (
+                    entry_is_internet_accessible or state_at_location[entry.location]
+                )
             else:
                 state_at_location[entry.location] = entry_is_internet_accessible
 
