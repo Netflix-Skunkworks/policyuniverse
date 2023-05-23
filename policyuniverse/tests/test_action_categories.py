@@ -47,13 +47,16 @@ class ActionGroupTestCase(unittest.TestCase):
 
         for action in permission_actions:
             if action in {
-                "iotsitewise:listaccesspolicies",
-                "xray:getencryptionconfig",
+                "glue:getdatapreviewstatement",
+                "glue:getnotebookinstancestatus",
                 "imagebuilder:getcomponentpolicy",
                 "imagebuilder:getimagepolicy",
                 "imagebuilder:getimagerecipepolicy",
-                "signer:listprofilepermissions",
+                "iotsitewise:listaccesspolicies",
+                "managedblockchain:get",
                 "monitron:listprojectadminusers",
+                "signer:listprofilepermissions",
+                "xray:getencryptionconfig",
             }:  # miscategorized AWS actions
                 continue
 
@@ -70,8 +73,8 @@ class ActionGroupTestCase(unittest.TestCase):
             if action in {
                 "cloud9:createenvironmenttoken",
                 "codeguru-reviewer:createconnectiontoken",
-                "ssm:putconfigurepackageresult",
                 "kinesisanalytics:createapplicationpresignedurl",
+                "ssm:putconfigurepackageresult",
             }:  # miscategorized AWS actions
                 continue
             # self.assertFalse(':list' in action)  # Tons of list* permissions are mis-categorized(?) as Read.
@@ -83,22 +86,32 @@ class ActionGroupTestCase(unittest.TestCase):
             # write actions shouldn't start with "get" unless they are miscategorized.
             if action in {
                 "appstream:getparametersforthemeassetupload",
+                "backup-storage:describebackupjob",
+                "backup-storage:getbasebackup",
+                "backup-storage:getchunk",
+                "backup-storage:getincrementalbasebackup",
+                "backup-storage:getobjectmetadata",
+                "bugbust:getjoineventstatus",
+                "cloudshell:getfiledownloadurls",
+                "cloudshell:getfileuploadurls",
                 "cognito-identity:getid",
                 "connect:getfederationtokens",
                 "dataexchange:getjob",
+                "elasticmapreduce:getclustersessioncredentials",
+                "elasticmapreduce:getonclusterappuipresignedurl",
+                "elasticmapreduce:getpersistentappuipresignedurl",
+                "emr-containers:getmanagedendpointsessioncredentials",
                 "glue:getmapping",
                 "lakeformation:getdataaccess",
+                "license-manager-linux-subscriptions:getservicesettings",
                 "lightsail:getinstanceaccessdetails",
                 "lightsail:getrelationaldatabasemasteruserpassword",
                 "personalize:getpersonalizedranking",
-                "redshift:getclustercredentials",
-                "states:getactivitytask",
                 "quicksight:describecustompermissions",
-                "cloudshell:getfiledownloadurls",
-                "cloudshell:getfileuploadurls",
-                "bugbust:getjoineventstatus",
-                "elasticmapreduce:getpersistentappuipresignedurl",
-                "elasticmapreduce:getonclusterappuipresignedurl",
+                "redshift-serverless:getcredentials",
+                "redshift:getclustercredentials",
+                "redshift:getclustercredentialswithiam",
+                "states:getactivitytask",
             }:  # miscategorized AWS actions
                 continue
             self.assertFalse(":get" in action, action)

@@ -73,7 +73,6 @@ jobs:
           reviewers: |
             scriptsrc
             patricksanders
-          team-reviewers: owners, maintainers
           draft: false
           branch: auto_data_update
           request-to-parent: false
