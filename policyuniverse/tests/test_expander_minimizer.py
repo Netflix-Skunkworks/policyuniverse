@@ -202,9 +202,6 @@ class TestMethods(unittest.TestCase):
 
     def test_expand_wildcard_action(self):
         result = _expand_wildcard_action(["autoscaling:*"])
-        from pprint import pprint
-
-        pprint(result)
         self.assertEqual(sorted(result), AUTOSCALING_PERMISSIONS)
 
     def test_expand_wildcard_action_2(self):
