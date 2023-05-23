@@ -112,7 +112,6 @@ class ActionGroupTestCase(unittest.TestCase):
                 "redshift:getclustercredentials",
                 "redshift:getclustercredentialswithiam",
                 "states:getactivitytask",
-
             }:  # miscategorized AWS actions
                 continue
             self.assertFalse(":get" in action, action)
