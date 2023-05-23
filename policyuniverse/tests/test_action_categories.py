@@ -54,6 +54,9 @@ class ActionGroupTestCase(unittest.TestCase):
                 "imagebuilder:getimagerecipepolicy",
                 "signer:listprofilepermissions",
                 "monitron:listprojectadminusers",
+                "glue:getdatapreviewstatement",
+                "glue:getnotebookinstancestatus",
+                "managedblockchain:get",
             }:  # miscategorized AWS actions
                 continue
 
@@ -99,6 +102,16 @@ class ActionGroupTestCase(unittest.TestCase):
                 "bugbust:getjoineventstatus",
                 "elasticmapreduce:getpersistentappuipresignedurl",
                 "elasticmapreduce:getonclusterappuipresignedurl",
+                "elasticmapreduce:getclustersessioncredentials",
+                "backup-storage:getincrementalbasebackup",
+                "emr-containers:getmanagedendpointsessioncredentials",
+                "backup-storage:describebackupjob",
+                "license-manager-linux-subscriptions:getservicesettings",
+                "backup-storage:getbasebackup",
+                "redshift-serverless:getcredentials",
+                "redshift:getclustercredentialswithiam",
+                "backup-storage:getchunk",
+                "backup-storage:getobjectmetadata",
             }:  # miscategorized AWS actions
                 continue
             self.assertFalse(":get" in action, action)
