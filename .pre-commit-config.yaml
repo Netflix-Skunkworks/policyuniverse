@@ -17,10 +17,10 @@ repos:
         -   id: autopep8
 
 -   repo: https://github.com/pycqa/flake8
-    rev: 6.0.0
+    rev: 4.0.0
     hooks:
     -   id: flake8
-        exclude: 'venv/|\.tox/|\.eggs/'
+        args: ["--exclude", "venv/,.tox/,.eggs/"]
 
 -   repo: https://github.com/pre-commit/mirrors-isort
     rev: 'v5.10.1'

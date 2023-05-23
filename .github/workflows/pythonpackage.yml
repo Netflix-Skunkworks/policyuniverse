@@ -14,7 +14,8 @@ jobs:
       max-parallel: 5
       matrix:
         python-version:
-          - "3.8.2"
+          - "3.7"
+          - "3.8"
           - "3.9"
           - "3.10"
 
@@ -37,7 +38,7 @@ jobs:
         pip install pytest pytest-cov coveralls==2.2.0
         pytest --cov
     - name: Upload coverage data to coveralls.io
-      if: success() && matrix.python-version == '3.8.1'
+      if: success() && matrix.python-version == '3.7'
       run: coveralls
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
