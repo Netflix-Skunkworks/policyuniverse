@@ -3,18 +3,16 @@ var fs = require('fs');
 var webPage = require('webpage');
 
 if (system.args.length != 3) {
-    console.log('Usage: access_adviser.js <signinToken> <output_file>');
+    console.log('Usage: awsconsole.js <signinToken> <output_file>');
     phantom.exit(-1);
 }
 
-var iam_url = 'https://console.aws.amazon.com/iam/home?region=us-east-1';
+var iam_url = 'https://us-east-1.console.aws.amazon.com/iam/home#/roles/policyuniverse_updater_role$createPolicy?step=edit';
 var federation_base_url = 'https://signin.aws.amazon.com/federation';
 
 var signinToken = system.args[1];
-// var arn_file = system.args[2];
 var OUTPUT_FILE = system.args[2];
 
-// var arns = JSON.parse(fs.read(arn_file));
 
 var page = webPage.create();
 page.settings.userAgent = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36';
@@ -57,11 +55,15 @@ var getSessionCookies = function(token) {
             page.includeJs(
                 "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js",
                 function() {
+                    console.log("Successfully loaded jQuery");
                     page.evaluate(advisor);
+                    console.log("Advisor started");
                 }
             );
+            console.log("Waiting for advisor to finish");
         } else {
-            console.log('Failed to log in')
+            console.log('Failed to log in');
+            console.log("Status Code: "+statusCode);
             console.log('Account '+response+'.');
             phantom.exit(-1);
         }
@@ -72,12 +74,13 @@ var getSessionCookies = function(token) {
 getSessionCookies(signinToken);
 
 var advisor = function() {
+    console.log("Starting advisor");
     var PERIOD = 5000; // 10 seconds
     var results = {};
     var progress = {};
 
-    XSRF_TOKEN = window.Csrf.fromCookie(null);
-    // XSRF_TOKEN = app.orcaCsrf.token;
+    // XSRF_TOKEN = window.Csrf.fromCookie(null);
+    XSRF_TOKEN = app.orcaCsrf.token;
 
     var collectServices = function() {
         console.log("Asking for services.");
