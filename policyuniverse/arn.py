@@ -78,3 +78,10 @@ class ARN(object):
     def _from_aws_service(self, service):
         self.tech = service
         self.service = True
+
+    def __hash__(self):
+        return hash(self.arn)
+
+    def __eq__(self, other):
+        if isinstance(other, ARN):
+            return self.__hash__() == other.__hash__()
