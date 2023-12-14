@@ -47,6 +47,7 @@ class ActionGroupTestCase(unittest.TestCase):
 
         for action in permission_actions:
             if action in {
+                "datazone:getiamportalloginurl",
                 "glue:getdatapreviewstatement",
                 "glue:getnotebookinstancestatus",
                 "imagebuilder:getcomponentpolicy",
