@@ -405,6 +405,13 @@ statement36 = dict(
     Condition={"StringLike": {"AWS:userid": "AROAI1111111111111111:"}},
 )
 
+# iam:PassRole with StringEquals condition on iam:PassedToService
+statement37 = dict(
+    Effect="Allow",
+    Action=["iam:PassRole"],
+    Resource="*",
+    Condition={"StringEquals": {"iam:PassedToService": "cloudwatch.amazonaws.com"}},
+)
 
 class StatementTestCase(unittest.TestCase):
     def test_statement_effect(self):
@@ -547,6 +554,9 @@ class StatementTestCase(unittest.TestCase):
             statement.condition_orgpaths,
             set(["o-*/r-ab12/ou-ab12-11111111/ou-ab12-22222222/ou-*"]),
         )
+
+        statement = Statement(statement37)
+        self.assertEqual(statement.condition_services, set(["cloudwatch.amazonaws.com"]))
 
     def test_statement_internet_accessible(self):
         self.assertTrue(Statement(statement14).is_internet_accessible())

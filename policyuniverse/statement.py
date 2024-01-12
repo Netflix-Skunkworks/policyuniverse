@@ -144,7 +144,7 @@ class Statement(object):
             structure.add(value)
 
     def _condition_entries(self):
-        """Extracts any ARNs, Account Numbers, UserIDs, Usernames, CIDRs, VPCs, and VPC Endpoints from a condition block.
+        """Extracts any ARNs, Account Numbers, UserIDs, Usernames, AWS Services, CIDRs, VPCs, and VPC Endpoints from a condition block.
 
         Ignores any negated condition operators like StringNotLike.
         Ignores weak condition keys like referer, date, etc.
@@ -159,6 +159,7 @@ class Statement(object):
         - A limiting ARN
         - Account Identifier
         - AWS Organization Principal Org ID
+        - AWS Service
         - User ID
         - Source IP / CIDR
         - VPC
@@ -188,6 +189,7 @@ class Statement(object):
             # https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_saml.html
             # https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_saml_assertions.html
             "saml:aud": "saml-endpoint",
+            "iam:passedtoservice": "service",
         }
 
         relevant_condition_operators = [
@@ -265,6 +267,10 @@ class Statement(object):
     @property
     def condition_vpces(self):
         return self._condition_field("vpce")
+    
+    @property
+    def condition_services(self):
+        return self._condition_field("service")
 
     def _condition_field(self, field):
         return set(
