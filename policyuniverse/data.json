@@ -22982,9 +22982,10 @@
       },
       "ValidateE911Address": {
         "aws_action_groups": [
+          "ReadOnly",
           "ReadWrite"
         ],
-        "calculated_action_group": "Write",
+        "calculated_action_group": "Read",
         "condition_keys": [],
         "description": "Grants permission to validate an address to be used for 911 calls made with Amazon Chime Voice Connectors",
         "docs": {
@@ -175219,9 +175220,9 @@
       },
       "DescribeEndpointAuthorization": {
         "aws_action_groups": [
-          "Permissions"
+          "ListOnly"
         ],
-        "calculated_action_group": "Permissions",
+        "calculated_action_group": "List",
         "condition_keys": [],
         "description": "Grants permission to authorize describe activity for redshift-managed vpc endpoint",
         "docs": {
