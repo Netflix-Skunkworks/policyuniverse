@@ -2,7 +2,6 @@ from collections import defaultdict
 
 from policyuniverse import _action_categories
 
-
 def translate_aws_action_groups(groups):
     """
     Problem - AWS provides the following five groups:
@@ -34,26 +33,25 @@ def translate_aws_action_groups(groups):
     """
     if "Permissions" in groups:
         return "Permissions"
-    if "ListOnly" in groups:
+    if "ListOnly" in groups or "List" in groups:
         return "List"
-    if "ReadOnly" in groups:
+    if "Read" in groups or "ReadOnly" in groups:
         return "Read"
     if "Tagging" in groups:
         return "Tagging"
-    if "ReadWrite" in groups:
+    if "Write" in groups or "ReadWrite" in groups:
         return "Write"
     return "Unknown"
 
 
-def build_action_categories_from_service_data(service_data):
+def build_action_categories_from_service_data(iam_data):
     action_categories = dict()
-    for service_name in service_data:
-        service_body = service_data[service_name]
-        prefix = service_body["prefix"]
-        service_actions = service_body["actions"]
-        for service_action, service_action_body in service_actions.items():
-            key = "{}:{}".format(prefix, service_action.lower())
-            action_categories[key] = service_action_body["calculated_action_group"]
+    for service_key in iam_data.services.get_service_keys():
+        service_name = iam_data.services.get_service_name(service_key)
+        for action in iam_data.actions.get_actions_for_service(service_key):
+            key = "{}:{}".format(service_key, action.lower())
+            action_details = iam_data.actions.get_action_details(service_key, action)
+            action_categories[key] = translate_aws_action_groups(action_details['accessLevel'])
     return action_categories
 
 

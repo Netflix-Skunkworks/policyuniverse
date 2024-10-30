@@ -20,14 +20,12 @@
 
 """
 
-
-def build_service_actions_from_service_data(service_data):
+def build_service_actions_from_service_data(iam_data):
     permissions = set()
-    for service_name in service_data:
-        prefix = service_data[service_name]["prefix"]
-        service_actions = service_data[service_name]["actions"]
-        for action in service_actions:
-            permissions.add("{}:{}".format(prefix, action.lower()))
+    for service_key in iam_data.services.get_service_keys():
+        service_name = iam_data.services.get_service_name(service_key)
+        for action in iam_data.actions.get_actions_for_service(service_key):
+            permissions.add("{}:{}".format(service_key, action.lower()))
     return permissions
 
 

@@ -48,8 +48,27 @@ class ActionGroupTestCase(unittest.TestCase):
         for action in permission_actions:
             if action in {
                 "datazone:getiamportalloginurl",
+                "events:putpermission",
+                "fsx:getresourcepolicy",
                 "glue:getdatapreviewstatement",
                 "glue:getnotebookinstancestatus",
+                "glue:getstages",
+                "glue:getstorage",
+                "glue:getstageattempttasksummary",
+                "glue:getrecipeaction",
+                "glue:getlogparsingstatus",
+                "glue:getstageattempttasklist",
+                "glue:getstorageunit",
+                "glue:getexecutors",
+                "glue:getstageattempt",
+                "glue:listconnectiontypes",
+                "glue:getenvironment",
+                "glue:getexecutorsthreads",
+                "glue:getstagefiles",
+                "glue:getstage",
+                "glue:getquery",
+                "glue:getqueries",
+                "glue:listentities",
                 "imagebuilder:getcomponentpolicy",
                 "imagebuilder:getimagepolicy",
                 "imagebuilder:getimagerecipepolicy",
@@ -60,7 +79,6 @@ class ActionGroupTestCase(unittest.TestCase):
                 "xray:getencryptionconfig",
             }:  # miscategorized AWS actions
                 continue
-
             self.assertFalse(":list" in action, action)
             self.assertFalse(":get" in action, action)
 
@@ -75,6 +93,7 @@ class ActionGroupTestCase(unittest.TestCase):
                 "cloud9:createenvironmenttoken",
                 "codeguru-reviewer:createconnectiontoken",
                 "kinesisanalytics:createapplicationpresignedurl",
+                "s3express:createsession",
                 "ssm:putconfigurepackageresult",
             }:  # miscategorized AWS actions
                 continue
@@ -98,6 +117,7 @@ class ActionGroupTestCase(unittest.TestCase):
                 "cognito-identity:getid",
                 "connect:getfederationtokens",
                 "dataexchange:getjob",
+                "deadline:getjobtemplate",
                 "elasticmapreduce:getclustersessioncredentials",
                 "elasticmapreduce:getonclusterappuipresignedurl",
                 "elasticmapreduce:getpersistentappuipresignedurl",
@@ -112,6 +132,7 @@ class ActionGroupTestCase(unittest.TestCase):
                 "redshift-serverless:getcredentials",
                 "redshift:getclustercredentials",
                 "redshift:getclustercredentialswithiam",
+                "social-messaging:getwhatsappmessagemedia",
                 "states:getactivitytask",
             }:  # miscategorized AWS actions
                 continue

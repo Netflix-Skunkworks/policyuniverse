@@ -4,8 +4,6 @@
 
 [![Build Status](https://github.com/Netflix-Skunkworks/policyuniverse/workflows/Python%20package/badge.svg)](https://github.com/Netflix-Skunkworks/policyuniverse/actions)
 
-[![Updater Status](https://github.com/Netflix-Skunkworks/policyuniverse/actions/workflows/updater.yml/badge.svg)](https://github.com/Netflix-Skunkworks/policyuniverse/actions/workflows/updater.yml)
-
 [![Coverage Status](https://coveralls.io/repos/github/Netflix-Skunkworks/policyuniverse/badge.svg?branch=master&1)](https://coveralls.io/github/Netflix-Skunkworks/policyuniverse?branch=master)
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
@@ -14,7 +12,7 @@ This package provides classes to parse AWS IAM and Resource Policies.
 
 Additionally, this package can expand wildcards in AWS Policies using permissions obtained from the AWS Policy Generator.
 
-See the [Service and Permissions data](policyuniverse/data.json).
+Service data is sourced from [iamdata](https://pypi.org/project/iamdata/) which checks for updates daily. It's automaticaly installed as a dependency. Use `pip install iamdata --upgrade` to get the latest service data.
 
 _This package can also minify an AWS policy to help you stay under policy size limits. Avoid doing this if possible, as it creates ugly policies._ 💩
 
