@@ -292,9 +292,14 @@ class Statement(object):
         if len(condition_entries) == 0:
             return True
 
+        each_condition_internet_accessible = []
         for entry in condition_entries:
-            if self._is_condition_entry_internet_accessible(entry):
-                return True
+            each_condition_internet_accessible.append(
+                self._is_condition_entry_internet_accessible(entry)
+            )
+        
+        if all(each_condition_internet_accessible):
+            return True
 
         return False
 

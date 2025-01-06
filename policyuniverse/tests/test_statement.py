@@ -405,6 +405,25 @@ statement36 = dict(
     Condition={"StringLike": {"AWS:userid": "AROAI1111111111111111:"}},
 )
 
+# aws:PrincipalArn with wildcard in condition AND aws:PrincipalOrgID with list
+statement37 = dict(
+    Effect="Allow",
+    Principal="*",
+    Action=["ecr:*"],
+    Resource="*",
+    Condition={
+        "StringLike": {
+            "aws:PrincipalArn": "arn:aws:iam::*:role/*-FancyRole"
+        },
+        "StringEquals": {
+            "aws:PrincipalOrgID": [
+                "o-xxxxxxxxxx",
+                "o-yyyyyyyyyy"
+            ]
+        }
+    },
+)
+
 
 class StatementTestCase(unittest.TestCase):
     def test_statement_effect(self):
@@ -608,3 +627,6 @@ class StatementTestCase(unittest.TestCase):
 
         # AWS:userid with no *
         self.assertTrue(Statement(statement36).is_internet_accessible())
+
+        # aws:PrincipalArn with wildcard in condition AND aws:PrincipalOrgID with list
+        self.assertFalse(Statement(statement37).is_internet_accessible())
